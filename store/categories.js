@@ -1,15 +1,13 @@
 export default {
   state: () => ({
-    categories: []
+    categories: [],
   }),
   getters: {
-    getCategoryBySlug: state => slug => {
-      return state.categories.find(category => category.slug === slug)
-    }
+    getCategoryBySlug: state => slug => state.categories.find(category => category.slug === slug),
   },
   mutations: {
     SET_CATEGORIES: (state, categories) => {
-      state.categories = categories
-    }
-  }
-}
+      state.categories = categories;
+    },
+  },
+};
