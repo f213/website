@@ -1,14 +1,14 @@
 <template>
-  <h1>Post: {{ slug }}, type: {{ pageType }} <Logo /></h1>
+  <AppContent :content="content" />
 </template>
 <script>
 import { mapState } from 'vuex';
 
-import Logo from '~/components/Logo.vue';
+import AppContent from '~/components/AppContent.vue';
 
 export default {
   components: {
-    Logo,
+    AppContent,
   },
   fetch({ store, route }) {
     const { slug } = route.params;
@@ -20,6 +20,7 @@ export default {
     },
     ...mapState({
       pageType: state => state.pageType,
+      content: state => state.posts.post || state.pages.page,
     }),
   },
 };
