@@ -1,6 +1,5 @@
 body {
   color: var(--text-color);
   background: var(--background-color);
-  height: 100vh;
   font: 15px 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
