@@ -21,6 +21,7 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'import/no-extraneous-dependencies': 'off',
     'no-param-reassign': 'off',
+    'vue/max-attributes-per-line': 'off',
   },
   settings: {
     'import/resolver': {

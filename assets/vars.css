@@ -1,0 +1,14 @@
+:root {
+  --text-color: #111;
+  --background-color: #fffff8;
+
+  --link-clor: #0060a0;
+  --link-border-color: rgba( 85, 102, 119, .4 );
+  --link-hover: #e05020;
+  --link-border-hover: rgba( 224, 80, 32, .5 );
+
+  --navigation-color: #008ace;
+  --navigation-border-color: #b2ccf0;
+  --navigation-hover: #cc0000;
+  --navigation-border-hover: var(--link-border-hover);
+}
