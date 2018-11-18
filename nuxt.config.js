@@ -34,7 +34,9 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [],
+  plugins: [
+    '~/plugins/ghost-auth.js',
+  ],
 
   /*
   ** Nuxt.js modules
@@ -47,7 +49,11 @@ module.exports = {
   ** Axios module configuration
   */
   axios: {
-    baseURL: process.env.BASE_URL || 'http://localhost:8000/wp-json/wp/v2/',
+    baseURL: process.env.BASE_URL || 'http://localhost:8000/ghost/api/v0.1/',
+  },
+  env: {
+    ghostClientId: process.env.GHOST_CLIENT_ID || 'ghost-frontend',
+    ghostClientSecret: process.env.GHOST_CLIENT_SECRET || '1f8d4a94693c',
   },
 
   /*

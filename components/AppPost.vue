@@ -1,8 +1,8 @@
 <template>
   <article class="app-post">
-    <h2 class="title is-3">{{ post.title.rendered }}</h2>
-    <p class="subtitle is-6">{{ post.date }}</p>
-    <AppContent :content="post.content.rendered"/>
+    <h2 class="title is-3">{{ post.title }}</h2>
+    <p class="subtitle is-6">{{ post.created_at }}</p>
+    <AppContent :content="post.html"/>
   </article>
 </template>
 <script>

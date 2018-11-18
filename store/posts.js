@@ -1,13 +1,15 @@
 export default {
   state: () => ({
     posts: [],
+    post_count: null,
+    pages: null,
     post: {},
     filters: {},
   }),
   actions: {
-    async GET_POSTS({ commit, state }) {
-      const posts = await this.$axios.$get('/posts/', { params: state.filters });
-      commit('SET_POSTS', posts);
+    async GET_POSTS({ commit }) {
+      const response = await this.$axios.$get('/posts/');
+      commit('SET_POSTS', response);
     },
     async FIND_POST(_, { slug }) {
       const found = await this.$axios.$get('/posts/', { params: { slug } });
@@ -19,8 +21,11 @@ export default {
     },
   },
   mutations: {
-    SET_POSTS: (state, posts) => {
-      state.posts = posts;
+    SET_POSTS: (state, response) => {
+      state.posts = response.posts;
+      const { pagination } = response.meta;
+      state.post_count = pagination.total;
+      state.pages = pagination.pages;
     },
     SET_POST: (state, post) => {
       state.post = post;

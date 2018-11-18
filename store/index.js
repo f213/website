@@ -15,10 +15,6 @@ export default {
     pageType: null,
   }),
   actions: {
-    async nuxtServerInit({ commit }) {
-      const categories = await this.$axios.$get('categories');
-      commit('categories/SET_CATEGORIES', categories);
-    },
     async FETCH_PAGE({ dispatch, commit }, { slug }) {
       for (const [page, type] of Object.entries(pageTypes)) {
         const found = await dispatch(type.findAction, { slug }, { global: true });
