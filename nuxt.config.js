@@ -49,7 +49,11 @@ module.exports = {
   ** Axios module configuration
   */
   axios: {
-    baseURL: process.env.BASE_URL || 'http://localhost:8000/ghost/api/v0.1/',
+    prefix: '/api/',
+    proxy: true,
+  },
+  proxy: {
+    '/api': 'http://localhost:8000/ghost/',
   },
   env: {
     ghostClientId: process.env.GHOST_CLIENT_ID || 'ghost-frontend',
