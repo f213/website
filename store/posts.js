@@ -6,14 +6,22 @@ export default {
     post: {},
   }),
   actions: {
-    async GET_POSTS({ commit }) {
-      const response = await this.$axios.$get('v0.1/posts/');
+    async GET_POSTS({ commit }, filters) {
+      const { perPage } = this.app.context.env;
+      const params = { ...filters, limit: perPage };
+
+      const response = await this.$axios.$get('v0.1/posts/', { params });
+      if (!response.posts.length) {
+        throw new Error('No posts found');
+      }
       commit('SET_POSTS', response);
     },
     async GET_POST({ commit }, { slug }) {
       const found = await this.$axios.$get(`v0.1/posts/slug/${slug}/`);
+      if (!found.posts.length) {
+        throw new Error('No posts');
+      }
       commit('SET_POST', found.posts[0]);
-      return found;
     },
   },
   mutations: {

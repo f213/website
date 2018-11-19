@@ -58,6 +58,7 @@ module.exports = {
   env: {
     ghostClientId: process.env.GHOST_CLIENT_ID || 'ghost-frontend',
     ghostClientSecret: process.env.GHOST_CLIENT_SECRET || '1f8d4a94693c',
+    perPage: 5,
   },
 
   /*

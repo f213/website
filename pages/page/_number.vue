@@ -13,8 +13,16 @@ export default {
   components: {
     AppPostList,
   },
-  async fetch({ store }) {
-    await store.dispatch('posts/GET_POSTS');
+  async fetch({ store, params, error }) {
+    const { number } = params;
+    try {
+      await store.dispatch('posts/GET_POSTS', { page: number });
+    } catch (e) {
+      error({
+        statusCode: 404,
+        message: e.message,
+      });
+    }
   },
 
   computed: mapState('posts', {
