@@ -17,3 +17,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.app-post {
+  margin-bottom: 4rem;
+}
+</style>
