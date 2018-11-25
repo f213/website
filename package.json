@@ -10,26 +10,51 @@
     "start": "cross-env NODE_ENV=production node server/index.js",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint",
+    "test": "jest"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.0.0",
     "@nuxtjs/bulma": "^1.2.1",
     "@nuxtjs/proxy": "^1.3.1",
+    "@vue/test-utils": "^1.0.0-beta.25",
     "cross-env": "^5.2.0",
     "express": "^4.16.3",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
+    "babel-jest": "^23.6.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
     "eslint": "^5.0.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-import-resolver-webpack": "^0.10.1",
     "eslint-loader": "^2.0.0",
     "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.0.0",
     "eslint-plugin-vue": "^4.0.0",
+    "jest": "^23.6.0",
     "nodemon": "^1.11.0",
     "postcss-nested": "^4.1.0",
-    "prettier": "1.14.3"
+    "prettier": "1.14.3",
+    "vue-jest": "^3.0.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+      ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
+    },
+    "moduleNameMapper": {
+      "^~/(.*)$": "<rootDir>/$1"
+    },
+    "setupFiles": [
+      "<rootDir>/tests/setup.js"
+    ]
   }
 }
