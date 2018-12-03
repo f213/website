@@ -390,14 +390,42 @@ figure.post__blackberry__img {
 }
 
 
-.app-content img.cover {
+.app-content img.cover,
+.app-content .cover p>img {
    max-width: 277px;
    margin: 20px 50px 30px !important;
 
-    @media all and (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 1.5/1), (min-device-pixel-ratio: 1.5), (min-resolution: 138dpi), (min-resolution: 1.5dppx) {
+   @media screen and (max-width: 1190px) {
       max-width: inherit;
       margin: 0 !important;
     }
 
     box-shadow: inset 0 1px 0 rgba( 255, 255, 255, .6 ), 0 22px 40px 4px       rgba( 0, 0, 0, .24 ), 0 0 0 1px rgba( 0, 0, 0, .3 );
+}
+
+.app-content .great {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 150px;
+
+  @media screen and (max-width: 1190px) {
+    padding-left: 0;
+    padding-right: 10px;
+  }
+
+  p {
+    font-size: 22px;
+    line-height: 35px;
+    max-width: 500px;
+    border-top: 1px solid rgba( 0, 0, 0, .5 );
+    border-bottom: 1px solid rgba( 0, 0, 0, .5 );
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    @media screen and (max-width: 1190px) {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
 }

@@ -30,6 +30,8 @@ module.exports = {
     '~/assets/legacy.css',
     '~/assets/vars.css',
     '~/assets/app.css',
+    '~/assets/content.css',
+    '~/assets/lists.css',
   ],
 
   /*
