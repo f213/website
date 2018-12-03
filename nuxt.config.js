@@ -27,6 +27,7 @@ module.exports = {
   ** Global CSS
   */
   css: [
+    '~/assets/legacy.css',
     '~/assets/vars.css',
     '~/assets/app.css',
   ],

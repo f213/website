@@ -29,6 +29,7 @@ export default {
     li:before {
       counter-increment: ol;
       content: counter( ol ) ')\a0';
+      position: absolute;
     }
   }
 }
@@ -48,6 +49,19 @@ export default {
     &:not(:hover) {
       transition: color .5s ease, border-color .5s ease;
     }
+  }
+  p + p {
+    margin-top: .8rem;
+  }
+  p img {
+    margin-bottom: 1rem;
+  }
+
+  h3 { /* like bulma's .title .is-4 */
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: .4rem;
   }
 }
 </style>

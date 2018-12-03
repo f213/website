@@ -1,0 +1,403 @@
+@media screen and (min-width: 641px) {
+  .post__criticism__yelling-men {
+    position: relative;
+    left: 40px;
+  }
+}
+
+.post__dev-automation__screenshot {
+  margin-bottom: 0 !important;
+}
+
+.content-developer-plateau code {
+  opacity: 0.8;
+}
+
+.post__in-two-days__no-work {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 641px) {
+  .post__in-two-days__no-work {
+    margin-left: 250px !important;
+  }
+}
+
+.post__fuck-touch-bar__touchbarshot {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+}
+@media screen and (min-width: 641px) {
+  .post__fuck-touch-bar__touchbarshot {
+    max-width: 800px;
+  }
+}
+.post__fuck-touch-bar__screenshot,
+.post__fuck-touch-bar__btt {
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+}
+.post__fuck-touch-bar__tray {
+  border-radius: 3px;
+  margin-left: 0 !important;
+}
+
+.post__iv__screenshot,
+.post__iv__likely {
+  margin: 0 !important;
+  max-width: 100% !important;
+}
+@media screen and (min-width: 641px) {
+  .post__iv__screenshot,
+  .post__iv__likely {
+    max-width: 800px;
+  }
+}
+.post__iv__example {
+  margin: 0 !important;
+}
+.post__iv__example figcaption {
+  position: relative;
+  top: -15px;
+}
+@media screen and (min-width: 641px) {
+  .post__iv__example figcaption {
+    position: relative;
+    top: -40px;
+  }
+}
+@media screen and (min-width: 641px) {
+  .post__iv__after-figure {
+    margin-top: -10px !important;
+  }
+}
+.content.content-instant-view code {
+  white-space: inherit;
+}
+
+.post__kpp__i-was-doing {
+  border-radius: 2px;
+}
+@media screen and (min-width: 641px) {
+  .post__kpp__i-was-doing {
+    margin-left: 150px !important;
+  }
+}
+
+.post__no-links__no-mail {
+  text-align: center;
+}
+.post__no-links__no-mail-img {
+  margin-left: 0 !important;
+}
+
+.telegram-subscribe {
+  text-align: center;
+  margin-top: 30px;
+}
+.telegram-subscribe__button {
+  font-size: 18px;
+  padding: 14px 30px;
+  border-radius: 4px;
+  background: #0084f6;
+  background: #0068c3 linear-gradient(180deg, #0084f6, #0068c3) repeat-x;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+  border: 1px solid #0068c3;
+  color: #fff;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.3);
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  line-height: 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+.telegram-subscribe__button:hover,
+.telegram-subscribe__button:focus {
+  background-position: 0 -14px;
+  color: #f7f7f7;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+.telegram-subscribe__button:active {
+  box-shadow: inset 0 1px 6.923076923076922px rgba(0,87,163,0.6);
+  text-shadow: 0 -1px 1px rgba(0,0,0,0.2);
+  border-color: #005fb2;
+}
+.telegram-subscribe__icon {
+  font-size: 25px;
+}
+.telegram-subscribe__caption {
+  position: relative;
+  top: -2px;
+}
+
+@media screen and (min-width: 641px) {
+  .post__time-and-money__wild {
+    margin-left: 150px !important;
+  }
+}
+@media screen and (max-width: 640px) {
+  .post__time-and-money__wild {
+    margin-left: 15px !important;
+  }
+  .post__time-and-money__wild img {
+    max-width: 95% !important;
+  }
+}
+
+.post__small-changes__review img,
+.post__small-changes__twitter img {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+@media screen and (min-width: 641px) {
+  .post__small-changes__word figcaption {
+    position: relative;
+    left: -5px;
+  }
+  .post__small-changes__review {
+    min-height: 405px;
+    height: 405px;
+  }
+  .post__small-changes__review img {
+    width: 600px;
+    height: 400px;
+  }
+  .post__small-changes__twitter img {
+    width: 600px;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .post__small-changes__review,
+  .post__small-changes__word,
+  .post__small-changes__twitter {
+    position: relative;
+    left: -5px;
+  }
+  .post__small-changes__review img,
+  .post__small-changes__word img,
+  .post__small-changes__twitter img {
+    max-width: 100%;
+  }
+}
+
+/*
+ * Form support is based on Axis (http://axis.netlify.com/#forms)
+ *
+ */
+.me-social {
+  margin-top: 30px;
+}
+.me-social__list {
+  margin-top: 15px;
+  padding: 0;
+  list-style-type: none;
+  position: relative;
+  left: -12px;
+}
+.me-social__list li {
+  display: inline;
+  margin-right: 5px;
+}
+.me-social__link {
+  border-bottom: 0;
+  font-size: 32px;
+}
+.me-social__link .icon-telegram {
+  font-size: 30px;
+}
+
+@media screen and (min-width: 641px) {
+  .post__book-selection__thrownaway-caption,
+  .post__book-selection__graph-caption {
+    position: relative;
+    left: 250px;
+    text-align: left !important;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .post__book-selection__thrownaway,
+  .post__book-selection__graph {
+    margin-left: 5px !important;
+  }
+  .post__book-selection__thrownaway-img,
+  .post__book-selection__graph-img {
+    max-width: 95% !important;
+  }
+}
+
+.post__clr__table__td-first {
+  white-space: nowrap;
+}
+.post__clr__checklist {
+  max-width: $length-overall;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+figure.post__blackberry__img {
+  margin-left: 0;
+  text-align: center;
+}
+@media screen and (max-width: 640px) {
+  figure.post__blackberry__img {
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 641px) {
+  .post__blackberry__cover {
+    margin-left: 130px;
+    margin-bottom: 30px;
+    max-width: 277px;
+    max-height: 422px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.6), 0 22px 40px 4px rgba(0,0,0,0.24), 0 0 0 1px rgba(0,0,0,0.3);
+  }
+}
+@media screen and (max-width: 640px) {
+  .post__blackberry__cover {
+    display: none;
+  }
+}
+@media screen and (min-width: 641px) {
+  .post__blackberry__850 {
+    position: relative;
+    left: 75px;
+  }
+}
+@media screen and (min-width: 641px) {
+  .post__blackberry__quark {
+    position: relative;
+    left: 120px;
+  }
+}
+@media screen and (min-width: 641px) {
+  .post__blackberry__electron {
+    position: relative;
+    left: 100px;
+  }
+}
+@media screen and (min-width: 641px) {
+  .post__blackberry__storm {
+    position: relative;
+    left: 125px;
+  }
+}
+.post__blackberry__iphone-op:after {
+  content: 'AT&T';
+}
+
+.disable-dock-bounce-dock {
+  margin-bottom: 0px !important;
+  margin-left: 50px;
+}
+
+#post__gantt-sucks__chart,
+.post__gantt-sucks__chart {
+  position: relative;
+  left: -10px;
+}
+
+.post__intelligent-mixes__soundcloud {
+  max-width: 90%;
+}
+.post__intelligent-mixes__embed {
+  overflow: hidden;
+  border: none;
+  max-height: 166px;
+  width: 100%;
+}
+
+.post__last-limo__video {
+  margin: 5px 0 20px;
+  position: relative;
+  padding-bottom: 56.25%;
+}
+.post__last-limo__video iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.post__phase-of-moon__unlucky-caption {
+  margin-top: 10px !important;
+}
+
+.post__naked-stats__wikipedia img {
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 2px;
+  margin-bottom: 15px !important;
+}
+.post__naked-stats__wikipedia img,
+.post__naked-stats__cover img {
+  margin-left: 50px;
+}
+@media screen and (max-width: 640px) {
+  .post__naked-stats__cover img {
+    display: none;
+  }
+  .post__naked-stats__wikipedia img {
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+}
+
+@media screen and (min-width: 641px) {
+  .post__slack-productivity__email-vs-slack {
+    margin-bottom: 5px;
+  }
+  .post__slack-productivity__bystanders {
+    position: relative;
+    left: 100px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .post__slack-productivity__email-vs-slack,
+  .post__slack-productivity__bystanders {
+    margin: 0 !important;
+    max-width: 98% !important;
+  }
+}
+
+#why-pomodoro-app-shot {
+  background-image: url("/i/old/why-pomodoro/appshot.png");
+  width: 260px;
+  height: 95px;
+  -webkit-box-shadow: inset 0 0 0 rgba(255,255,255,0.6), 0 12px 42px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.3);
+  box-shadow: inset 0 0 0 rgba(255,255,255,0.6), 0 12px 42px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.3);
+  border-radius: 6px;
+  position: fixed;
+  top: 30px;
+  left: 900px;
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 1.5/1), (min-device-pixel-ratio: 1.5), (min-resolution: 138dpi), (min-resolution: 1.5dppx) {
+  #why-pomodoro-app-shot {
+    background-image: url("/i/old/why-pomodoro/appshot@2x.png");
+    -webkit-background-size: 260px 95px;
+    -moz-background-size: 260px 95px;
+    background-size: 260px 95px;
+  }
+}
+@media screen and (max-width: 1190px) {
+  #why-pomodoro-app-shot {
+    display: none;
+  }
+}
+
+
+.app-content img.cover {
+   max-width: 277px;
+   margin: 20px 50px 30px !important;
+
+    @media all and (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 1.5/1), (min-device-pixel-ratio: 1.5), (min-resolution: 138dpi), (min-resolution: 1.5dppx) {
+      max-width: inherit;
+      margin: 0 !important;
+    }
+
+    box-shadow: inset 0 1px 0 rgba( 255, 255, 255, .6 ), 0 22px 40px 4px       rgba( 0, 0, 0, .24 ), 0 0 0 1px rgba( 0, 0, 0, .3 );
+}
