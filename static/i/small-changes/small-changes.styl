@@ -1,0 +1,31 @@
+.post__small-changes
+    &__review,
+    &__twitter
+        img
+            border: 1px solid #ccc
+            border-radius 3px
+
+    @media $desktop
+        &__word figcaption
+            position: relative
+            left: -5px
+
+        &__review
+            min-height: 405px
+            height: 405px
+            img
+                width: 600px
+                height: 400px
+
+        &__twitter img
+            width: 600px
+            height: 200px
+
+
+    @media $mobile
+        &__review,
+        &__word,
+        &__twitter
+            relative: left -5px
+            img
+                max-width: 100%

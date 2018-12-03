@@ -1,0 +1,42 @@
+figure.post__blackberry__img
+    margin-left: 0
+    text-align: center
+
+    @media $mobile
+        margin-top: 20px
+
+.post__blackberry
+    &__cover
+        @media $desktop
+            margin-left: 130px
+            margin-bottom: 30px
+            max-width: 277px
+            max-height: 422px
+            box-shadow: inset 0 1px 0 rgba( 255, 255, 255, .6 ), 0 22px 40px 4px rgba( 0, 0, 0, .24 ), 0 0 0 1px rgba( 0, 0, 0, .3 )
+
+        @media $mobile
+            display: none
+
+    &__850
+        @media $desktop
+            position: relative
+            left: 75px
+
+    &__quark
+        @media $desktop
+            position: relative
+            left: 120px
+
+    &__electron
+        @media $desktop
+            position: relative
+            left: 100px
+
+    &__storm
+        @media $desktop
+            position: relative
+            left: 125px
+
+    &__iphone-op:after
+        // this is a quick hack for typograf (https://github.com/typograf/typograf), which pronounces 'AT&T' as 'AT& T'
+        content 'AT&T'
