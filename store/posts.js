@@ -4,6 +4,7 @@ export default {
     post_count: null,
     pages: null,
     post: {},
+    similar: [],
   }),
   actions: {
     async GET_POSTS({ commit }, filters) {
@@ -22,7 +23,17 @@ export default {
       if (!found.posts.length) {
         throw new Error('No posts');
       }
-      commit('SET_POST', found.posts[0]);
+      const post = found.posts[0];
+      commit('SET_POST', post);
+
+      if (!post.page && post.primary_tag) {
+        const tag = post.primary_tag.slug;
+        await dispatch('GET_SIMILAR_POSTS', { tag });
+      }
+    },
+    async GET_SIMILAR_POSTS({ commit }, { tag }) {
+      const found = await this.$axios.$get(`v0.1/posts/?filter=tag:${tag}`);
+      commit('SET_SIMILAR', found.posts);
     },
   },
   mutations: {
@@ -34,6 +45,9 @@ export default {
     },
     SET_POST: (state, post) => {
       state.post = post;
+    },
+    SET_SIMILAR: (state, similar) => {
+      state.similar = similar.filter(similarPost => similarPost.id !== state.post.id);
     },
   },
 };

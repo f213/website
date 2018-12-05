@@ -80,7 +80,6 @@ export default {
 
 
   &__link {
-    text-decoration: none;
     border-bottom: 1px solid var(--link-border-color);
     color: var(--link-color);
     --webkit-tap-highlight-color: rgba( 0, 0, 0, 0 );

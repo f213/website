@@ -2,6 +2,7 @@
   <section class="section">
     <div class="container">
       <AppPost :post="post" />
+      <SimilarPosts :posts="similar" />
     </div>
   </section>
 </template>
@@ -9,10 +10,12 @@
 import { mapState } from 'vuex';
 
 import AppPost from '~/components/AppPost.vue';
+import SimilarPosts from '~/components/SimilarPosts.vue';
 
 export default {
   components: {
     AppPost,
+    SimilarPosts,
   },
   fetch({ store, route }) {
     const { slug } = route.params;
