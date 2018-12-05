@@ -25,6 +25,7 @@ module.exports = {
     'no-param-reassign': 'off',
     'vue/max-attributes-per-line': 'off',
     'vue/attributes-order': 'off',
+    'max-len': 'off',
   },
   settings: {
     'import/resolver': {
