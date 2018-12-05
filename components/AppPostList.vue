@@ -1,7 +1,7 @@
 <template>
-  <div class="container">
+  <div class="container app-post-list">
     <AppPagination destination="prev" />
-    <AppPost v-for="post in posts" :post="post" :key="post.id" />
+    <AppPost class="app-post-list__post" v-for="post in posts" :post="post" :key="post.id" />
     <AppPagination destination="next" />
   </div>
 </template>
@@ -20,3 +20,11 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.app-post-list {
+  &__post {
+    margin-bottom: 6rem;
+  }
+}
+</style>

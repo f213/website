@@ -15,10 +15,14 @@
   }
 
   p + p,
-  .cover + p {
+  .table,
+  blockquote
+   {
     margin-top: .8rem;
   }
-  p img {
+
+  p img,
+  figure {
     margin-bottom: 1rem;
   }
 
@@ -29,13 +33,25 @@
     margin-bottom: .4rem;
   }
 
-  figure {
+  h4 {
+    font-weight: 600;
+    font-size: 1.25rem;
     margin-top: 1rem;
+    margin-bottom: 0;
+  }
+
+  figure {
     margin-bottom: 2rem;
     text-align: center;
 
     figcaption {
       opacity: .8;
     }
+  }
+  blockquote {
+    margin-left: 1rem;
+    border-left: solid 1px grey;
+    padding-left: .5rem;
+    padding-top: .2rem;
   }
 }

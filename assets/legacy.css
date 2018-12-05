@@ -390,17 +390,23 @@ figure.post__blackberry__img {
 }
 
 
-.app-content img.cover,
-.app-content .cover p>img {
-   max-width: 277px;
-   margin: 20px 50px 30px !important;
+.app-content {
+  img.cover,
+  img[src*="cover@2x.jpg"],
+  img[src*="cover@2x.png"],
+  img[src*="cover.jpg"],
+  img[src*="cover.png"],
+  .cover p>img {
+    max-width: 277px;
+    margin: 20px 50px 30px !important;
 
-   @media screen and (max-width: 1190px) {
+    @media screen and (max-width: 1190px) {
       max-width: inherit;
       margin: 0 !important;
     }
 
     box-shadow: inset 0 1px 0 rgba( 255, 255, 255, .6 ), 0 22px 40px 4px       rgba( 0, 0, 0, .24 ), 0 0 0 1px rgba( 0, 0, 0, .3 );
+  }
 }
 
 .app-content .great {
