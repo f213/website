@@ -8,7 +8,7 @@ export default {
   actions: {
     async GET_POSTS({ commit }, filters) {
       const { perPage } = this.app.context.env;
-      const params = { ...filters, limit: perPage };
+      const params = { ...filters, limit: perPage, include: 'tags' };
 
       const response = await this.$axios.$get('v0.1/posts/', { params });
       if (!response.posts.length) {
@@ -16,8 +16,9 @@ export default {
       }
       commit('SET_POSTS', response);
     },
-    async GET_POST({ commit }, { slug }) {
-      const found = await this.$axios.$get(`v0.1/posts/slug/${slug}/`);
+    async GET_POST({ commit, dispatch }, { slug }) {
+      const params = { include: 'tags' };
+      const found = await this.$axios.$get(`v0.1/posts/slug/${slug}/`, { params });
       if (!found.posts.length) {
         throw new Error('No posts');
       }

@@ -1,14 +1,18 @@
 <template>
-  <AppContent :content="post.html" />
+  <section class="section">
+    <div class="container">
+      <AppPost :post="post" />
+    </div>
+  </section>
 </template>
 <script>
 import { mapState } from 'vuex';
 
-import AppContent from '~/components/AppContent.vue';
+import AppPost from '~/components/AppPost.vue';
 
 export default {
   components: {
-    AppContent,
+    AppPost,
   },
   fetch({ store, route }) {
     const { slug } = route.params;
@@ -20,6 +24,7 @@ export default {
     },
     ...mapState({
       post: state => state.posts.post,
+      similar: state => state.posts.similar,
     }),
   },
 };

@@ -24,6 +24,7 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     'no-param-reassign': 'off',
     'vue/max-attributes-per-line': 'off',
+    'vue/attributes-order': 'off',
   },
   settings: {
     'import/resolver': {

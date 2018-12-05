@@ -13,8 +13,9 @@ export default {
   components: {
     AppPostList,
   },
-  async fetch({ store }) {
-    await store.dispatch('posts/GET_POSTS');
+  async fetch({ store, route }) {
+    const { slug } = route.params;
+    await store.dispatch('posts/GET_POSTS', { filter: `tag:${slug}` });
   },
 
   computed: mapState('posts', {

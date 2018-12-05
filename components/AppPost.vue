@@ -3,14 +3,17 @@
     <h2 class="title is-3">{{ post.title }}</h2>
     <p class="subtitle is-6">{{ post.created_at }}</p>
     <AppContent :content="post.html"/>
+    <AppTags class="app-post__tags" :tags="post.tags" />
   </article>
 </template>
 <script>
 import AppContent from '~/components/AppContent.vue';
+import AppTags from '~/components/AppTags.vue';
 
 export default {
   components: {
     AppContent,
+    AppTags,
   },
   props: {
     post: { type: Object, required: true },
