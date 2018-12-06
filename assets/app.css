@@ -1,9 +1,0 @@
-body {
-  color: var(--text-color);
-  background: var(--background-color);
-  font: 15px 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-a {
-  text-decoration: none;
-}

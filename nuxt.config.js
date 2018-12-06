@@ -27,9 +27,9 @@ module.exports = {
   ** Global CSS
   */
   css: [
+    '~/assets/bulma.scss',
     '~/assets/legacy.css',
     '~/assets/vars.css',
-    '~/assets/app.css',
     '~/assets/content.css',
     '~/assets/lists.css',
   ],
@@ -46,7 +46,6 @@ module.exports = {
   */
   modules: [
     '@nuxtjs/axios',
-    '@nuxtjs/bulma',
   ],
   /*
   ** Axios module configuration
