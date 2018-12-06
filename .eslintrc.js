@@ -26,6 +26,7 @@ module.exports = {
     'vue/max-attributes-per-line': 'off',
     'vue/attributes-order': 'off',
     'max-len': 'off',
+    'import/prefer-default-export': 'off',
   },
   settings: {
     'import/resolver': {
