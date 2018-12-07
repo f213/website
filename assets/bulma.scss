@@ -1,4 +1,9 @@
 $body-background-color: #fffff8;
 $table-background-color: #fffff8;
 $body-color: #111;
-@import '~bulma'
+
+.is-borderless {
+  border: 0 !important;
+}
+
+@import '~bulma';
