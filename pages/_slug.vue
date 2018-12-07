@@ -1,19 +1,24 @@
 <template>
-  <section class="section">
-    <div class="container">
+  <section class="section is-paddingless">
+    <div class="container" v-if="!post.page">
       <AppPost :post="post" />
       <SimilarPosts :posts="similar" />
+    </div>
+    <div class="container" v-else>
+      <AppPage :page="post" />
     </div>
   </section>
 </template>
 <script>
 import { mapState } from 'vuex';
 
+import AppPage from '~/components/AppPage.vue';
 import AppPost from '~/components/AppPost.vue';
 import SimilarPosts from '~/components/SimilarPosts.vue';
 
 export default {
   components: {
+    AppPage,
     AppPost,
     SimilarPosts,
   },
