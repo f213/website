@@ -48,6 +48,9 @@ module.exports = {
     '@nuxtjs/axios',
     '@nuxtjs/font-awesome',
   ],
+  serverMiddleware: [
+    '~/middleware/redirect_to_trailing_slash',
+  ],
   /*
   ** Axios module configuration
   */
@@ -57,6 +60,13 @@ module.exports = {
   },
   proxy: {
     '/api': 'http://localhost:8000/ghost/',
+  },
+  router: {
+    extendRoutes(routes) {
+      routes = routes.map(route => (route.path.endsWith('/') ? route : { ...route, path: `${route.path}/` }));
+      routes = routes.map(route => ({ ...route, pathToRegexpOptions: { endsWith: '/', strict: true } }));
+      return routes;
+    },
   },
   env: {
     ghostClientId: process.env.GHOST_CLIENT_ID || 'ghost-frontend',

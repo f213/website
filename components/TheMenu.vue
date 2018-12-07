@@ -7,10 +7,10 @@
       <nuxt-link :to="{ name: 'featured' }" class="app-nav__link" active-class="app-nav__link--active">
         <span class="app-nav__label">Избранное</span>
       </nuxt-link>
-      <nuxt-link to="/me" class="app-nav__link" active-class="app-nav__link--active">
+      <nuxt-link to="/me/" class="app-nav__link" active-class="app-nav__link--active">
         <span class="app-nav__label">Обо мне</span>
       </nuxt-link>
-      <nuxt-link to="/books" class="app-nav__link" active-class="app-nav__link--active">
+      <nuxt-link to="/books/" class="app-nav__link" active-class="app-nav__link--active">
         <span class="app-nav__label">Книги</span>
       </nuxt-link>
     </div>

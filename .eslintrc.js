@@ -27,6 +27,7 @@ module.exports = {
     'vue/attributes-order': 'off',
     'max-len': 'off',
     'import/prefer-default-export': 'off',
+    'consistent-return': 'off',
   },
   settings: {
     'import/resolver': {
