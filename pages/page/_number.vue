@@ -1,7 +1,5 @@
 <template>
-  <section class="section">
-    <AppPostList :posts="posts" />
-  </section>
+  <AppPostList :posts="posts" />
 </template>
 
 <script>

@@ -2,7 +2,9 @@
   <div>
     <TheHeader />
     <TheMenu />
-    <nuxt/>
+    <section class="section is-paddingless">
+      <nuxt/>
+    </section>
   </div>
 </template>
 <script>

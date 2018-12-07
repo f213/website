@@ -1,13 +1,11 @@
 <template>
-  <section class="section is-paddingless">
-    <div class="container" v-if="!post.page">
-      <AppPost :post="post" />
-      <SimilarPosts :posts="similar" />
-    </div>
-    <div class="container" v-else>
-      <AppPage :page="post" />
-    </div>
-  </section>
+  <div class="container" v-if="!post.page">
+    <AppPost :post="post" />
+    <SimilarPosts :posts="similar" />
+  </div>
+  <div class="container" v-else>
+    <AppPage :page="post" />
+  </div>
 </template>
 <script>
 import { mapState } from 'vuex';
