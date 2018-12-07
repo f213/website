@@ -12,9 +12,9 @@ export default {
     AppPostList,
   },
   async fetch({ store, params, error }) {
-    const { number } = params;
+    const { number, slug } = params;
     try {
-      await store.dispatch('posts/GET_POSTS', { page: number });
+      await store.dispatch('posts/GET_POSTS', { page: number, filter: `tag:${slug}` });
     } catch (e) {
       error({
         statusCode: 404,
