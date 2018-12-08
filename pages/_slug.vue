@@ -33,5 +33,18 @@ export default {
       similar: state => state.posts.similar,
     }),
   },
+  head() {
+    const meta = [];
+    if (this.post.meta_description) {
+      meta.append({
+        name: 'description',
+        content: this.post.meta_description,
+      });
+    }
+    return {
+      title: this.post.meta_title,
+      meta,
+    };
+  },
 };
 </script>

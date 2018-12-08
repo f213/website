@@ -26,6 +26,13 @@ export default {
   computed: mapState('posts', {
     posts: posts => posts.posts,
   }),
+  head() {
+    const { number } = this.$route.params;
+    return {
+      title: `Блог CTO про управление проектами, продуктами и командами — страница ${number}`,
+      titleTemplate: '%s',
+    };
+  },
 
 };
 </script>

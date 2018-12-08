@@ -27,5 +27,11 @@ export default {
     posts: posts => posts.posts,
   }),
 
+  head() {
+    const { number } = this.$route.params;
+    return {
+      title: `Важные заметки — страница ${number}`,
+    };
+  },
 };
 </script>

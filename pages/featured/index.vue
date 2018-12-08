@@ -18,6 +18,10 @@ export default {
   computed: mapState('posts', {
     posts: posts => posts.posts,
   }),
-
+  head() {
+    return {
+      title: 'Избранное',
+    };
+  },
 };
 </script>
