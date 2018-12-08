@@ -44,9 +44,13 @@ module.exports = {
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/font-awesome',
+    '@nuxtjs/redirect-module',
   ],
   serverMiddleware: [
     '~/middleware/redirect_to_trailing_slash',
+  ],
+  redirect: [
+    { from: '/tags/favorites/', to: '/featured/', statusCode: 301 },
   ],
   /*
   ** Axios module configuration

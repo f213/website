@@ -984,6 +984,11 @@
     consola "^1.4.4"
     http-proxy-middleware "^0.19.0"
 
+"@nuxtjs/redirect-module@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/redirect-module/-/redirect-module-0.2.0.tgz#579eddd2278f421a25be23c1ecbad15d712ad39e"
+  integrity sha512-dXrjeNW7uvsPq2/v1gbdfnUvzIpw7qAOpJacEEYUyLAHuhnDhG58Cp7xJOKu0l4bLoTAnj8GKfVdoM3ze1cd9A==
+
 "@nuxtjs/youch@^4.2.3":
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/@nuxtjs/youch/-/youch-4.2.3.tgz#36f8b22df5a0efaa81373109851e1d857aca6bed"
