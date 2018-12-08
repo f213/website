@@ -1,5 +1,6 @@
 $body-background-color: #fffff8;
 $table-background-color: #fffff8;
+$content-blockquote-background-color: #fffff8;
 $body-color: #111;
 $title-weight: 400;
 $family-sans-serif: 'Noto Sans', sans-serif;
@@ -9,3 +10,7 @@ $family-sans-serif: 'Noto Sans', sans-serif;
 }
 
 @import '~bulma';
+
+.container {
+  max-width: 1000px;
+}
