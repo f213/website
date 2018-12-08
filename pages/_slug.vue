@@ -35,13 +35,13 @@ export default {
       similar: state => state.posts.similar,
     }),
   },
-  mounted() {
-    console.log(this.$route);
+  destroyed() {
+    this.$store.commit('posts/SET_POST', {});
   },
   head() {
     const meta = getMeta(this.post);
     return {
-      title: this.post.meta_title,
+      title: this.post.meta_title || this.post.title,
       meta,
     };
   },

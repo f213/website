@@ -1,7 +1,7 @@
 <template>
   <nav class="app-nav section">
     <div class="container">
-      <nuxt-link to="/" active-class="ignored" class="app-nav__link" :class="homePageActive">
+      <nuxt-link to="/" active-class="ignored" class="app-nav__link" :class="homePageClass">
         <span class="app-nav__label">Блог</span>
       </nuxt-link>
       <nuxt-link :to="{ name: 'featured' }" class="app-nav__link" active-class="app-nav__link--active">
@@ -17,12 +17,28 @@
   </nav>
 </template>
 <script>
+import { mapState } from 'vuex';
+
 export default {
   computed: {
-    homePageActive() {
+    isAtBlogPage() {
       const { name } = this.$route;
-      return ['index', 'page-number', 'tags-slug', 'tags-slug-page-number'].includes(name) ? 'app-nav__link--active' : '';
+      if (['index', 'page-number', 'tags-slug', 'tags-slug-page-number'].includes(name)) {
+        return true;
+      }
+
+      if (![null, undefined, {}].includes(this.post) && 'id' in this.post) {
+        return true;
+      }
+
+      return false;
     },
+    homePageClass() {
+      return this.isAtBlogPage ? 'app-nav__link--active' : '';
+    },
+    ...mapState({
+      post: state => state.posts.post,
+    }),
   },
 };
 </script>
