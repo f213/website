@@ -3,7 +3,7 @@ export default {
     posts: [],
     post_count: null,
     pages: null,
-    post: {},
+    post: null,
     similar: [],
   }),
   actions: {

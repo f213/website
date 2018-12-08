@@ -1,10 +1,10 @@
 <template>
-  <div class="container" v-if="!post.page">
-    <AppPost :post="post" />
-    <SimilarPosts :posts="similar" />
-  </div>
-  <div class="container" v-else>
-    <AppPage :page="post" />
+  <div class="container" v-if="post">
+    <template v-if="!post.page">
+      <AppPost :post="post" />
+      <SimilarPosts :posts="similar" />
+    </template>
+    <AppPage :page="post" v-else />
   </div>
 </template>
 <script>
@@ -22,9 +22,10 @@ export default {
     AppPost,
     SimilarPosts,
   },
-  fetch({ store, route }) {
+  async fetch({ store, route }) {
     const { slug } = route.params;
-    return store.dispatch('posts/GET_POST', { slug });
+    const post = await store.dispatch('posts/GET_POST', { slug });
+    return post;
   },
   computed: {
     slug() {
@@ -35,10 +36,10 @@ export default {
       similar: state => state.posts.similar,
     }),
   },
-  destroyed() {
-    this.$store.commit('posts/SET_POST', {});
-  },
   head() {
+    if ([null, undefined].includes(this.post)) {
+      return {};
+    }
     const meta = getMeta(this.post);
     return {
       title: this.post.meta_title || this.post.title,
