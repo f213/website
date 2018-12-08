@@ -1,11 +1,6 @@
 <template>
   <article class="app-post">
-    <h2 class="title is-3 is-marginless">
-      <template v-if="linked">
-        <nuxt-link class="app-post__title-link" :to="link">{{ post.title }}</nuxt-link>
-      </template>
-      <template v-else>{{ post.title }}</template>
-    </h2>
+    <PostTitle class="title is-3 is-marginless" :post="post" :linked="linked" />
     <TimeAgo class="app-post__time is-size-7" :date="post.created_at" />
     <AppContent :content="post.html"/>
     <AppTags class="app-post__tags" :tags="post.tags" />
@@ -14,6 +9,7 @@
 <script>
 import AppContent from '~/components/AppContent.vue';
 import AppTags from '~/components/AppTags.vue';
+import PostTitle from '~/components/PostTitle.vue';
 import TimeAgo from '~/components/TimeAgo.vue';
 
 
@@ -21,20 +17,12 @@ export default {
   components: {
     AppContent,
     AppTags,
+    PostTitle,
     TimeAgo,
   },
   props: {
     post: { type: Object, required: true },
     linked: { type: Boolean, default: false },
-  },
-  computed: {
-    link() {
-      const { slug } = this.post;
-      return {
-        name: 'slug',
-        params: { slug },
-      };
-    },
   },
 };
 </script>
@@ -49,17 +37,6 @@ export default {
     opacity: .5;
   }
 
-  &__title-link {
-    border-bottom: 1px solid rgba(0,0,160,0.15);
-    color: var(--text-color);
-    &:hover {
-        color: var(--link-hover);
-        border-color: var(--link-border-hover);
-    }
 
-    &:not(:hover) {
-      transition: color .5s ease, border-color .5s ease;
-    }
-  }
 }
 </style>
