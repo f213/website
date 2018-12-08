@@ -10,6 +10,8 @@
 <script>
 import { mapState } from 'vuex';
 
+import { getMeta } from '~/helpers/seo';
+
 import AppPage from '~/components/AppPage.vue';
 import AppPost from '~/components/AppPost.vue';
 import SimilarPosts from '~/components/SimilarPosts.vue';
@@ -34,13 +36,7 @@ export default {
     }),
   },
   head() {
-    const meta = [];
-    if (this.post.meta_description) {
-      meta.append({
-        name: 'description',
-        content: this.post.meta_description,
-      });
-    }
+    const meta = getMeta(this.post);
     return {
       title: this.post.meta_title,
       meta,
