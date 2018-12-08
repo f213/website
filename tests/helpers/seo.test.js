@@ -13,4 +13,8 @@ describe('getMeta helper', () => {
       content: 'Грузите апельсины бочками',
     });
   });
+  it('Is javascript-proof', () => {
+    const post = null;
+    expect(getMeta(post)).toEqual([]);
+  });
 });
