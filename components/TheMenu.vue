@@ -13,6 +13,12 @@
       <nuxt-link to="/books/" class="app-nav__link" active-class="app-nav__link--active">
         <span class="app-nav__label">Книги</span>
       </nuxt-link>
+      <a class="app-nav__link" href="tg://resolve?domain=pmdaily">
+        <span class="app-nav__label">
+          <i class="fa fa-telegram" />
+          Подписаться на телеграм
+        </span>
+      </a>
     </div>
   </nav>
 </template>
@@ -51,13 +57,13 @@ export default {
   &__link {
     border-bottom: 0;
     margin-right: 4px;
+
     &:not(:first-child):before {
       content: '·\a0\a0';
       margin-left: 3px;
     }
 
-    &--active
-    {
+    &--active {
       pointer-events: none;
       .app-nav__label {
           color: var(--text-color);
@@ -70,7 +76,8 @@ export default {
   &__label {
     border-bottom: 1px solid var(--navigation-border-color);
     color: var(--navigation-color);
-
+    white-space: nowrap;
+    line-height: 2rem;
     &:hover {
         color: var(--navigation-hover);
         border-color: var(--navigation-border-hover);
