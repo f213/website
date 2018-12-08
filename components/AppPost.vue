@@ -1,7 +1,7 @@
 <template>
   <article class="app-post">
-    <PostTitle class="title is-3 is-marginless" :post="post" :linked="linked" />
-    <TimeAgo class="app-post__time is-size-7" :date="post.created_at" />
+    <PostTitle class="title is-3 app-post__title" :class="{'is-marginless': withTime}" :post="post" :linked="linked"/>
+    <TimeAgo class="app-post__time is-size-7" :date="post.created_at" v-if="withTime" />
     <AppContent :content="post.html"/>
     <AppTags class="app-post__tags" :tags="post.tags" />
   </article>
@@ -23,6 +23,7 @@ export default {
   props: {
     post: { type: Object, required: true },
     linked: { type: Boolean, default: false },
+    withTime: { type: Boolean, default: false },
   },
 };
 </script>
@@ -35,6 +36,10 @@ export default {
     display: block;
     margin-bottom: 1rem;
     opacity: .5;
+  }
+
+  &__title {
+    margin-bottom: 1rem;
   }
 
 

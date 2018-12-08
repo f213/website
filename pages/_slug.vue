@@ -1,7 +1,7 @@
 <template>
   <div class="container" v-if="post">
     <template v-if="!post.page">
-      <AppPost :post="post" />
+      <AppPost with-time :post="post" />
       <SimilarPosts :posts="similar" />
     </template>
     <AppPage :page="post" v-else />

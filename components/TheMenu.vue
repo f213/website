@@ -46,6 +46,7 @@ export default {
 <style scoped>
 .app-nav {
   padding-top: 1.5rem;
+  margin-bottom: 2rem;
 
   &__link {
     border-bottom: 0;
