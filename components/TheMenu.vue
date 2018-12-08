@@ -21,7 +21,7 @@ export default {
   computed: {
     homePageActive() {
       const { name } = this.$route;
-      return ['index', 'page-number'].includes(name) ? 'app-nav__link--active' : '';
+      return ['index', 'page-number', 'tags-slug', 'tags-slug-page-number'].includes(name) ? 'app-nav__link--active' : '';
     },
   },
 };
