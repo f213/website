@@ -78,6 +78,7 @@ export default {
     color: var(--navigation-color);
     white-space: nowrap;
     line-height: 2rem;
+
     &:hover {
         color: var(--navigation-hover);
         border-color: var(--navigation-border-hover);

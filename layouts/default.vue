@@ -2,7 +2,7 @@
   <div>
     <TheHeader />
     <TheMenu />
-    <section class="section is-paddingless">
+    <section class="section default-section">
       <nuxt/>
     </section>
   </div>
@@ -18,3 +18,10 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.default-section {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+</style>
