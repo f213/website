@@ -35,6 +35,9 @@ export default {
       similar: state => state.posts.similar,
     }),
   },
+  mounted() {
+    console.log(this.$route);
+  },
   head() {
     const meta = getMeta(this.post);
     return {
