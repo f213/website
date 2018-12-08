@@ -47,7 +47,7 @@ module.exports = {
     '@nuxtjs/redirect-module',
   ],
   serverMiddleware: [
-    '~/middleware/redirect_to_trailing_slash',
+    '~/middleware/redirect-to-trailing-slash',
   ],
   redirect: [
     { from: '/tags/favorites/', to: '/featured/', statusCode: 301 },
