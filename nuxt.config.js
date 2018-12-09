@@ -68,6 +68,7 @@ module.exports = {
     '/i': `${BACKEND_URL}/content/images/`,
     '/content': BACKEND_URL,
     '/sitemap*.xml': BACKEND_URL,
+    '/ghost': BACKEND_URL,
   },
   router: {
     extendRoutes(routes) {
