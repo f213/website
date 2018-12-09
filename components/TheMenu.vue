@@ -1,55 +1,36 @@
 <template>
   <nav class="app-nav section">
     <div class="container app-container">
-      <nuxt-link to="/" active-class="ignored" class="app-nav__link" :class="homePageClass">
-        <span class="app-nav__label">Блог</span>
+      <HomePageLink class="app-nav__link" label-class="app-nav__label" active-class="app-nav__link--active" />
+      <nuxt-link v-for="(link, index) in links" :key="index" :to="link.to" class="app-nav__link" active-class="app-nav__link--active">
+        <span class="app-nav__label">{{ link.label }}</span>
       </nuxt-link>
-      <nuxt-link :to="{ name: 'featured' }" class="app-nav__link" active-class="app-nav__link--active">
-        <span class="app-nav__label">Избранное</span>
-      </nuxt-link>
-      <nuxt-link to="/me/" class="app-nav__link" active-class="app-nav__link--active">
-        <span class="app-nav__label">Обо мне</span>
-      </nuxt-link>
-      <nuxt-link to="/books/" class="app-nav__link" active-class="app-nav__link--active">
-        <span class="app-nav__label">Книги</span>
-      </nuxt-link>
-      <a class="app-nav__link" href="tg://resolve?domain=pmdaily">
-        <span class="app-nav__label">
-          <i class="fa fa-telegram" />
-          Подписаться на телеграм
-        </span>
-      </a>
+      <TgLink class="app-nav__link" label-class="app-nav__label" />
     </div>
   </nav>
 </template>
 <script>
-import { mapState } from 'vuex';
+import HomePageLink from '~/components/TheMenu/HomePageLink.vue';
+import TgLink from '~/components/TheMenu/TgLink.vue';
 
 export default {
-  computed: {
-    isAtBlogPage() {
-      const { name } = this.$route;
-      if (['index', 'page-number', 'tags-slug', 'tags-slug-page-number'].includes(name)) {
-        return true;
-      }
-
-      if (![null, undefined, {}].includes(this.post) && 'id' in this.post && !this.post.page) {
-        return true;
-      }
-
-      return false;
-    },
-    homePageClass() {
-      return this.isAtBlogPage ? 'app-nav__link--active' : '';
-    },
-    ...mapState({
-      post: state => state.posts.post,
-    }),
+  components: {
+    HomePageLink,
+    TgLink,
+  },
+  data() {
+    return {
+      links: [
+        { to: { name: 'featured' }, label: 'Избранное' },
+        { to: '/me/', label: 'Обо мне' },
+        { to: '/books/', label: 'Книги' },
+      ],
+    };
   },
 };
 </script>
 
-<style scoped>
+<style>
 .app-nav {
   padding-top: 1.5rem;
   margin-bottom: 2rem;
