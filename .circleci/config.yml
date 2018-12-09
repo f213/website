@@ -22,7 +22,7 @@ jobs:
 
       - run:
           name: Lint
-          command: yarnlint
+          command: yarn lint
 
       - run:
           name: Test
