@@ -1,3 +1,5 @@
+const BACKEND_URL = process.env.BACKEND_URL ? process.env.BACKEND_URL : 'http://localhost:8000';
+
 module.exports = {
   mode: 'universal',
 
@@ -61,7 +63,10 @@ module.exports = {
     proxy: true,
   },
   proxy: {
-    '/api': 'http://localhost:8000/ghost/',
+    '/api': `${BACKEND_URL}/ghost/`,
+    '/i': `${BACKEND_URL}/content/images/`,
+    '/content': BACKEND_URL,
+    '/sitemap*.xml': BACKEND_URL,
   },
   router: {
     extendRoutes(routes) {

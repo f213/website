@@ -13,7 +13,7 @@ function redirectUrl(req) {
     return url.slice(0, -1);
   }
 
-  if (url !== '/' && !url.endsWith('/') && !url.includes('?')) {
+  if (url !== '/' && !url.endsWith('/') && !url.includes('?') && !url.includes('.')) {
     return `${url}/`;
   }
 }
