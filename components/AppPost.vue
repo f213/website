@@ -4,10 +4,12 @@
     <TimeAgo class="app-post__time is-size-7" :date="post.created_at" v-if="withTime" />
     <AppContent :content="post.html"/>
     <AppTags class="app-post__tags" :tags="post.tags" />
+    <AppShare class="app-post__share" :page="post" />
   </article>
 </template>
 <script>
 import AppContent from '~/components/AppContent.vue';
+import AppShare from '~/components/AppShare.vue';
 import AppTags from '~/components/AppTags.vue';
 import PostTitle from '~/components/PostTitle.vue';
 import TimeAgo from '~/components/TimeAgo.vue';
@@ -16,6 +18,7 @@ import TimeAgo from '~/components/TimeAgo.vue';
 export default {
   components: {
     AppContent,
+    AppShare,
     AppTags,
     PostTitle,
     TimeAgo,

@@ -12,3 +12,5 @@ export const getMeta = (entity) => {
   }
   return meta;
 };
+
+export const getAbsoluteUrl = page => (!(page.url.includes('://')) ? process.env.absoluteHost + page.url : page.url);

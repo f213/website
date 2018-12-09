@@ -32,6 +32,7 @@ module.exports = {
     '~/assets/vars.css',
     '~/assets/content.css',
     '~/assets/lists.css',
+    'node_modules/ilyabirman-likely/release/likely.css',
   ],
 
   /*
@@ -79,6 +80,7 @@ module.exports = {
     ghostClientId: process.env.GHOST_CLIENT_ID || 'ghost-frontend',
     ghostClientSecret: process.env.GHOST_CLIENT_SECRET || '822c1fe05f96',
     perPage: 10,
+    absoluteHost: 'https://borshev.com',
   },
 
   /*
