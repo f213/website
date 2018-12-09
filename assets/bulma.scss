@@ -4,6 +4,7 @@ $content-blockquote-background-color: #fffff8;
 $body-color: #111;
 $title-weight: 400;
 $family-sans-serif: 'Noto Sans', sans-serif;
+$body-line-height: 1.9;
 
 .is-borderless {
   border: 0 !important;
@@ -11,6 +12,6 @@ $family-sans-serif: 'Noto Sans', sans-serif;
 
 @import '~bulma';
 
-.container {
+.app-container {
   max-width: 1000px;
 }

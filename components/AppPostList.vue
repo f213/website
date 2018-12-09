@@ -1,5 +1,5 @@
 <template>
-  <div class="container app-post-list">
+  <div class="container app-container app-post-list">
     <AppPagination destination="prev" />
     <AppPost class="app-post-list__post" v-for="post in posts" :post="post" :key="post.id" linked />
     <AppPagination destination="next" />

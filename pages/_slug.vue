@@ -1,5 +1,5 @@
 <template>
-  <div class="container" v-if="post">
+  <div class="container app-container" v-if="post">
     <template v-if="!post.page">
       <AppPost with-time :post="post" />
       <SimilarPosts :posts="similar" />

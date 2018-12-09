@@ -1,6 +1,6 @@
 <template>
   <nav class="app-nav section">
-    <div class="container">
+    <div class="container app-container">
       <nuxt-link to="/" active-class="ignored" class="app-nav__link" :class="homePageClass">
         <span class="app-nav__label">Блог</span>
       </nuxt-link>

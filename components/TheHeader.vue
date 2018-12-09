@@ -1,6 +1,6 @@
 <template>
   <header class="app-header section">
-    <div class="container">
+    <div class="container app-container">
       <div class="title is-3">
         <template v-if="isHomePage">{{ title }}</template>
         <nuxt-link class="app-header__title-link" v-else to="/">{{ title }}</nuxt-link>
