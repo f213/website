@@ -7,14 +7,14 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: deps-{{ checksum "yarn.lock" }}
+          key: deps-v2-{{ checksum "yarn.lock" }}
 
       - run:
           name: Install deps
           command: yarn install
 
       - save_cache:
-          key: deps-{{ checksum "yarn.lock" }}
+          key: deps-v2-{{ checksum "yarn.lock" }}
           paths:
             - "node_modules"
 
