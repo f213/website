@@ -82,6 +82,8 @@ module.exports = {
     ghostClientSecret: process.env.GHOST_CLIENT_SECRET || '822c1fe05f96',
     perPage: 10,
     absoluteHost: 'https://borshev.com',
+    copyrightYears: '2014–2018',
+    email: 'fedor@borshev.com',
   },
 
   /*
