@@ -13,7 +13,7 @@ jobs:
 
       - run:
           name: Install deps
-          command: yarn
+          command: yarn install --production=false
 
       - save_cache:
           key: deps-{{ checksum "yarn.lock" }}
