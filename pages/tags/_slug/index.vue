@@ -23,7 +23,15 @@ export default {
         message: e.message,
       });
     }
-    await store.dispatch('posts/GET_POSTS', { filter: `tag:${slug}` });
+
+    try {
+      await store.dispatch('posts/GET_POSTS', { filter: `tag:${slug}` });
+    } catch (e) {
+      error({
+        statusCode: 404,
+        message: e.message,
+      });
+    }
   },
 
   computed: mapState({
