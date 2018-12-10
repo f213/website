@@ -46,6 +46,7 @@ export default {
       meta,
       link: [
         { rel: 'amphtml', href: `https://mercury.postlight.com/amp?url=${getAbsoluteUrl(this.post)}` },
+        { rel: 'canonical', href: getAbsoluteUrl(this.post) },
       ],
     };
   },

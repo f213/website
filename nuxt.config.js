@@ -12,6 +12,7 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'author', content: 'Федор Борщев' },
+      { 'http-equiv': 'X-UA-Compatible', content='IE=Edge' },
       { property: 'og:site_name', content: 'Блог Федора Борщева' },
       { property: 'fb:admins', content: '100006565443356' },
       { property: 'article:author', content: 'https://facebook.com/Fedor213' },
