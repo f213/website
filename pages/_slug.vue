@@ -10,7 +10,7 @@
 <script>
 import { mapState } from 'vuex';
 
-import { getMeta } from '~/helpers/seo';
+import { getMeta, getOpenGraph } from '~/helpers/seo';
 
 import AppPage from '~/components/AppPage.vue';
 import AppPost from '~/components/AppPost.vue';
@@ -40,7 +40,7 @@ export default {
     if ([null, undefined].includes(this.post)) {
       return {};
     }
-    const meta = getMeta(this.post);
+    const meta = getMeta(this.post).concat(getOpenGraph(this.post));
     return {
       title: this.post.meta_title || this.post.title,
       meta,
