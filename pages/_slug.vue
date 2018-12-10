@@ -10,7 +10,7 @@
 <script>
 import { mapState } from 'vuex';
 
-import { getMeta, getOpenGraph } from '~/helpers/seo';
+import { getMeta, getOpenGraph, getAbsoluteUrl } from '~/helpers/seo';
 
 import AppPage from '~/components/AppPage.vue';
 import AppPost from '~/components/AppPost.vue';
@@ -44,6 +44,9 @@ export default {
     return {
       title: this.post.meta_title || this.post.title,
       meta,
+      link: [
+        { rel: 'amphtml', href: `https://mercury.postlight.com/amp?url=${getAbsoluteUrl(this.post)}` },
+      ],
     };
   },
 };
