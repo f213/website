@@ -5,7 +5,7 @@
 <script>
 import { mapState } from 'vuex';
 
-import { getMeta } from '~/helpers/seo';
+import { getMeta, getPrevNextLinks } from '~/helpers/seo';
 
 import AppPostList from '~/components/AppPostList.vue';
 
@@ -34,16 +34,24 @@ export default {
     }
   },
 
-  computed: mapState({
-    posts: state => state.posts.posts,
-    tag: state => state.tags.tag,
-  }),
+  computed: {
+    ...mapState({
+      posts: state => state.posts.posts,
+      tag: state => state.tags.tag,
+    }),
+    ...mapState('seo', [
+      'metaPrev',
+      'metaNext',
+    ]),
+  },
 
   head() {
     const meta = getMeta(this.tag);
+    const link = getPrevNextLinks(this.metaPrev, this.metaNext);
     return {
       title: `Заметки с тегом «${this.tag.name}»`,
       meta,
+      link,
     };
   },
 

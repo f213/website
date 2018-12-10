@@ -42,3 +42,14 @@ export const getOpenGraph = (entity) => {
 
   return meta;
 };
+
+export const getPrevNextLinks = (prev, next) => {
+  const links = [];
+  if (prev) {
+    links.push({ rel: 'prev', href: prev });
+  }
+  if (next) {
+    links.push({ rel: 'next', href: next });
+  }
+  return links;
+};

@@ -8,6 +8,9 @@ const mount = (propsData, route) => shallowMount(AppPagination, {
       path: '/tags/test/',
       ...route,
     },
+    $router: {
+      resolve: () => ({ href: null }),
+    },
   },
   computed: {
     pages: () => 10,

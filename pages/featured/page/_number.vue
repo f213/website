@@ -5,6 +5,7 @@
 <script>
 import { mapState } from 'vuex';
 
+import { getPrevNextLinks } from '~/helpers/seo';
 import AppPostList from '~/components/AppPostList.vue';
 
 export default {
@@ -23,14 +24,23 @@ export default {
     }
   },
 
-  computed: mapState('posts', {
-    posts: posts => posts.posts,
-  }),
+  computed: {
+    ...mapState('posts', {
+      posts: posts => posts.posts,
+    }),
+    ...mapState('seo', [
+      'metaPrev',
+      'metaNext',
+    ]),
+  },
 
   head() {
+    const link = getPrevNextLinks(this.metaPrev, this.metaNext);
+
     const { number } = this.$route.params;
     return {
       title: `Важные заметки — страница ${number}`,
+      link,
     };
   },
 };

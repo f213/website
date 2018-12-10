@@ -9,7 +9,7 @@
 
 <script>
 
-import { mapState } from 'vuex';
+import { mapState, mapMutations } from 'vuex';
 
 export default {
   props: {
@@ -64,6 +64,29 @@ export default {
       pages: state => state.pages,
     }),
   },
+  created() {
+    if (!this.display) {
+      return;
+    }
+    const { href } = this.$router.resolve(this.link);
+    if (!href) {
+      return;
+    }
+
+    if (this.destination === 'prev') {
+      this.SET_META_PREV(href);
+    } else {
+      this.SET_META_NEXT(href);
+    }
+  },
+  beforeDestroy() {
+    this.SET_META_PREV(null);
+    this.SET_META_NEXT(null);
+  },
+  methods: mapMutations('seo', [
+    'SET_META_PREV',
+    'SET_META_NEXT',
+  ]),
 };
 </script>
 
