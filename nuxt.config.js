@@ -7,12 +7,15 @@ module.exports = {
   ** Headers of the page
   */
   head: {
+    htmlAttrs: {
+      lang: 'ru',
+    },
     titleTemplate: '%s — Федор Борщев',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'author', content: 'Федор Борщев' },
-      { 'http-equiv': 'X-UA-Compatible', content='IE=Edge' },
+      { 'http-equiv': 'X-UA-Compatible', content: 'IE=Edge' },
       { property: 'og:site_name', content: 'Блог Федора Борщева' },
       { property: 'fb:admins', content: '100006565443356' },
       { property: 'article:author', content: 'https://facebook.com/Fedor213' },
@@ -21,6 +24,10 @@ module.exports = {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Noto+Sans:400,700&amp;subset=cyrillic" rel="stylesheet' },
+    ],
+    __dangerouslyDisableSanitizers: ['script'],
+    script: [
+      { innerHTML: '(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter25756085 = new Ya.Metrika2({ id:25756085, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, ecommerce:"dataLayer" }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/tag.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks2");' },
     ],
   },
 
@@ -46,6 +53,7 @@ module.exports = {
   */
   plugins: [
     '~/plugins/ghost-auth.js',
+    '~/plugins/ya-metrika.js',
   ],
 
   /*
@@ -90,6 +98,7 @@ module.exports = {
     absoluteHost: 'https://borshev.com',
     copyrightYears: '2014–2018',
     email: 'fedor@borshev.com',
+    yaMetrikaCounterId: '25756085',
   },
 
   /*
