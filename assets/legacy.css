@@ -446,7 +446,6 @@ figure.post__blackberry__img {
 
 .book-table {
   border-collapse: collapse;
-  line-height: 20px;
   margin-top: 10px;
 
   th {
@@ -478,10 +477,12 @@ figure.post__blackberry__img {
     position: relative;
     text-align: right;
     white-space: nowrap;
-    &:after {
-      content: ')';
-      position: relative;
-      left: 2px;
+    &--with-counter {
+      &:after {
+        content: ')';
+        position: relative;
+        left: 2px;
+      }
     }
   }
 
