@@ -30,7 +30,7 @@ export default {
   head() {
     const link = getPrevNextLinks(this.metaPrev, this.metaNext);
     return {
-      title: 'Блог CTO про управление проектами, продуктами и командами.',
+      title: 'Блог CTO про управление проектами, продуктами и командами. Раньше назывался «Блог ненужного менеджера»',
       titleTemplate: '%s',
       link,
       meta: [
