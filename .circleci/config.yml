@@ -26,6 +26,12 @@ jobs:
           name: Test
           command: yarn test
 
+  build-docker-image:
+    docker:
+      - image: circleci/node:8
+    steps:
+      - checkout
+
       - setup_remote_docker
 
       - run:
@@ -34,10 +40,19 @@ jobs:
             export D_RELEASE=0.2.2
             wget -O - https://cdn.rawgit.com/f213/d/351d2459/install.sh|sh
             ./d build-image f213/website .
+            ./d push-image f213/website
+
+
 
 workflows:
   version: 2
   continuous-delivery:
     jobs:
       - build
+      - build-docker-image:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
 
