@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/f213
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://f213.in
+  * I am f213 (https://keybase.io/f213) on keybase.
+  * I have a public key ASBkPCEdw0xubK53mpwDDHFHFn5-KO5q5R4gMAAeosViFQo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0120643c211dc34c6e6cae779a9c030c7147167e7e28ee6ae51e2030001ea2c562150a",
+            "host": "keybase.io",
+            "kid": "0120643c211dc34c6e6cae779a9c030c7147167e7e28ee6ae51e2030001ea2c562150a",
+            "uid": "112f01540d9eebea0037c3a832212419",
+            "username": "f213"
+        },
+        "service": {
+            "hostname": "f213.in",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.16"
+    },
+    "ctime": 1471641811,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1471641799,
+        "hash": "3b7b4d93e1d9dba82a46b41b6e02c9781fdcda9eb018b2e82a3458a11dc79a32c024742f3b241ecbb32fd9e3abebd0a4a0de9075850c8192f66b53f2822af2e9",
+        "seqno": 591000
+    },
+    "prev": "c1d0e530c3bda6ca59a0b5490a53436f51a0c70a494cc5feab20a7f5b4d002b3",
+    "seqno": 9,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgZDwhHcNMbmyud5qcAwxxRxZ+fijuauUeIDAAHqLFYhUKp3BheWxvYWTFAut7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwNjQzYzIxMWRjMzRjNmU2Y2FlNzc5YTljMDMwYzcxNDcxNjdlN2UyOGVlNmFlNTFlMjAzMDAwMWVhMmM1NjIxNTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwNjQzYzIxMWRjMzRjNmU2Y2FlNzc5YTljMDMwYzcxNDcxNjdlN2UyOGVlNmFlNTFlMjAzMDAwMWVhMmM1NjIxNTBhIiwidWlkIjoiMTEyZjAxNTQwZDllZWJlYTAwMzdjM2E4MzIyMTI0MTkiLCJ1c2VybmFtZSI6ImYyMTMifSwic2VydmljZSI6eyJob3N0bmFtZSI6ImYyMTMuaW4iLCJwcm90b2NvbCI6Imh0dHBzOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4xNiJ9LCJjdGltZSI6MTQ3MTY0MTgxMSwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNDcxNjQxNzk5LCJoYXNoIjoiM2I3YjRkOTNlMWQ5ZGJhODJhNDZiNDFiNmUwMmM5NzgxZmRjZGE5ZWIwMThiMmU4MmEzNDU4YTExZGM3OWEzMmMwMjQ3NDJmM2IyNDFlY2JiMzJmZDllM2FiZWJkMGE0YTBkZTkwNzU4NTBjODE5MmY2NmI1M2YyODIyYWYyZTkiLCJzZXFubyI6NTkxMDAwfSwicHJldiI6ImMxZDBlNTMwYzNiZGE2Y2E1OWEwYjU0OTBhNTM0MzZmNTFhMGM3MGE0OTRjYzVmZWFiMjBhN2Y1YjRkMDAyYjMiLCJzZXFubyI6OSwidGFnIjoic2lnbmF0dXJlIn2jc2lnxEDSbMjVedjPiu5QeM3nKlzM2uSYYFGf6obqdD9QVd29Lw1JXPwL9CWG3o5hTIldm6z0kcMQuNLUWVXetFmhad4AqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQgzWMqfXxpdYsmYFMRCpVomOpDvoqeRJc/2Ppq/zk1R2CjdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/f213
+
+==================================================================
