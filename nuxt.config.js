@@ -45,6 +45,7 @@ module.exports = {
     '~/assets/vars.css',
     '~/assets/content.css',
     '~/assets/lists.css',
+    '~/assets/books.css',
     'node_modules/ilyabirman-likely/release/likely.css',
   ],
 
