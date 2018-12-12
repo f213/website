@@ -103,7 +103,7 @@
   background: #0068c3 linear-gradient(180deg, #0084f6, #0068c3) repeat-x;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
   border: 1px solid #0068c3;
-  color: #fff;
+  color: #fff !important;
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.3);
   cursor: pointer;
   font-weight: bold;
