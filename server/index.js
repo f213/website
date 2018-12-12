@@ -13,7 +13,7 @@ const BACKEND_URL = process.env.BACKEND_URL ? process.env.BACKEND_URL : 'http://
 
 consola.info('Setting backend proxy to', BACKEND_URL);
 app.use([
-  '/content',
+  '/content/images',
   '/sitemap*.xml$',
   '/ghost',
   '^/rss/$',
