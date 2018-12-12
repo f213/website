@@ -1,13 +1,17 @@
 const express = require('express');
 const consola = require('consola');
 const proxy = require('http-proxy-middleware');
+
 const { Nuxt, Builder } = require('nuxt');
+
+const redirectToTheMainHost = require('./middleware/redirect-to-the-main-host');
 
 const app = express();
 const host = process.env.HOST || '127.0.0.1';
 const port = process.env.PORT || 3000;
 
 app.set('port', port);
+app.use(redirectToTheMainHost);
 
 const BACKEND_URL = process.env.BACKEND_URL ? process.env.BACKEND_URL : 'http://localhost:8000';
 
