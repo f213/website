@@ -1,0 +1,4 @@
+User-Agent: *
+
+Host: https://borshev.com
+Sitemap: https://borshev.com/sitemap.xml
