@@ -24,7 +24,7 @@ export default {
 .app-tags {
   margin-top: 1.5rem;
   &__tag {
-    margin-right: .5rem;
+    margin-right: .7rem;
     border-bottom: 1px solid var(--link-border-color);
     color: #0060a0;
     --webkit-tap-highlight-color: rgba( 0, 0, 0, 0 );
