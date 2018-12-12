@@ -79,6 +79,7 @@ module.exports = {
   ],
   redirect: [
     { from: '/tags/favorites/', to: '/featured/', statusCode: 301 },
+    { from: '/rss/index.xml', to: '/rss/', statusCode: 301 },
   ],
   /*
   ** Axios module configuration
@@ -90,9 +91,6 @@ module.exports = {
   proxy: {
     '/api': `${BACKEND_URL}/ghost/`,
     '/i': `${BACKEND_URL}/content/images/`,
-    '/content': BACKEND_URL,
-    '/sitemap*.xml': BACKEND_URL,
-    '/ghost': BACKEND_URL,
   },
   router: {
     extendRoutes(routes) {
