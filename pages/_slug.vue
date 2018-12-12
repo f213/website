@@ -2,6 +2,7 @@
   <div class="container app-container" v-if="post">
     <template v-if="!post.page">
       <AppPost with-time :post="post" />
+      <AppComments :post="post" />
       <SimilarPosts :posts="similar" />
     </template>
     <AppPage :page="post" v-else />
@@ -12,12 +13,14 @@ import { mapState } from 'vuex';
 
 import { getMeta, getOpenGraph, getAbsoluteUrl } from '~/helpers/seo';
 
+import AppComments from '~/components/AppComments.vue';
 import AppPage from '~/components/AppPage.vue';
 import AppPost from '~/components/AppPost.vue';
 import SimilarPosts from '~/components/SimilarPosts.vue';
 
 export default {
   components: {
+    AppComments,
     AppPage,
     AppPost,
     SimilarPosts,

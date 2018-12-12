@@ -63,6 +63,7 @@ module.exports = {
   */
   plugins: [
     '~/plugins/ghost-auth.js',
+    '~/plugins/disqus.js',
     { src: '~/plugins/ya-metrika.js', ssr: false },
   ],
 
@@ -107,6 +108,7 @@ module.exports = {
     copyrightYears: '2014–2018',
     email: 'fedor@borshev.com',
     yaMetrikaCounterID: '25756085',
+    disqus_shortname: 'f213',
   },
 
   /*
