@@ -22,10 +22,16 @@ export default {
     AppPost,
     SimilarPosts,
   },
-  async fetch({ store, route }) {
+  async fetch({ store, route, error }) {
     const { slug } = route.params;
-    const post = await store.dispatch('posts/GET_POST', { slug });
-    return post;
+    try {
+      await store.dispatch('posts/GET_POST', { slug });
+    } catch (e) {
+      error({
+        statusCode: 404,
+        message: e.message,
+      });
+    }
   },
   computed: {
     slug() {
