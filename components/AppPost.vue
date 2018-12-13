@@ -3,7 +3,7 @@
     <PostTitle class="title is-3 app-post__title" :class="{'is-marginless': withTime}" :post="post" :linked="linked"/>
     <TimeAgo class="app-post__time is-size-7" :date="post.created_at" v-if="withTime" />
     <AppContent :content="post.html"/>
-    <AppTags class="app-post__tags" :tags="post.tags" />
+    <AppTags class="app-post__tags is-hidden-mobile" :tags="post.tags" />
     <AppShare class="app-post__share" :page="post" />
   </article>
 </template>
@@ -13,7 +13,6 @@ import AppShare from '~/components/AppShare.vue';
 import AppTags from '~/components/AppTags.vue';
 import PostTitle from '~/components/PostTitle.vue';
 import TimeAgo from '~/components/TimeAgo.vue';
-
 
 export default {
   components: {
