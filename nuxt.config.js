@@ -1,6 +1,4 @@
 /* eslint-disable object-curly-newline */
-const BACKEND_URL = process.env.BACKEND_URL ? process.env.BACKEND_URL : 'http://localhost:8000';
-
 module.exports = {
   mode: 'universal',
 
@@ -88,10 +86,6 @@ module.exports = {
   axios: {
     prefix: '/api/',
     proxy: true,
-  },
-  proxy: {
-    '/api': `${BACKEND_URL}/ghost/`,
-    '/i': `${BACKEND_URL}/content/images/`,
   },
   router: {
     extendRoutes(routes) {

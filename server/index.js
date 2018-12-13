@@ -9,19 +9,25 @@ const redirectToTheMainHost = require('./middleware/redirect-to-the-main-host');
 const app = express();
 const host = process.env.HOST || '127.0.0.1';
 const port = process.env.PORT || 3000;
+const target = process.env.BACKEND_URL ? process.env.BACKEND_URL : 'https://borshev.com';
+const changeOrigin = Boolean(target.includes('https'));
 
 app.set('port', port);
+
+consola.info('Setting middleware for redirect users to the main host');
 app.use(redirectToTheMainHost);
 
-const BACKEND_URL = process.env.BACKEND_URL ? process.env.BACKEND_URL : 'http://localhost:8000';
 
-consola.info('Setting backend proxy to', BACKEND_URL);
+consola.info('Setting backend proxy to', target);
+app.use('/i/', proxy({ target: `${target}/content/images/`, changeOrigin }));
+app.use('/api/', proxy({ target: `${target}/ghost/`, changeOrigin }));
 app.use([
   '/content/images',
   '/sitemap*.xml$',
   '/ghost',
   '^/rss/$',
-], proxy({ target: BACKEND_URL }));
+], proxy({ target, changeOrigin }));
+
 
 // Import and Set Nuxt.js options
 const config = require('../nuxt.config.js');
