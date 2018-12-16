@@ -1,22 +1,21 @@
 <template>
-  <nav class="section app-nav">
-    <div class="container app-container">
-      <HomePageLink class="app-nav__link is-hidden-mobile" label-class="app-nav__label" active-class="app-nav__link--active" />
-      <nuxt-link v-for="(link, index) in links" :key="index" :to="link.to" class="app-nav__link" active-class="app-nav__link--active">
-        <span class="app-nav__label">{{ link.label }}</span>
-      </nuxt-link>
-      <TgLink class="app-nav__link" label-class="app-nav__label" />
-    </div>
-  </nav>
+  <div class="the-menu">
+    <no-ssr>
+      <TheMenuDesktop :links="links" v-if="width > 768" />
+      <TheMenuMobile :links="links" v-else />
+
+      <TheMenuDesktop :links="links" slot="placeholder" class="is-hidden-mobile" />
+    </no-ssr>
+  </div>
 </template>
 <script>
-import HomePageLink from '~/components/TheMenu/HomePageLink.vue';
-import TgLink from '~/components/TheMenu/TgLink.vue';
+import TheMenuDesktop from '~/components/TheMenu/TheMenuDesktop.vue';
+import TheMenuMobile from '~/components/TheMenu/TheMenuMobile.vue';
 
 export default {
   components: {
-    HomePageLink,
-    TgLink,
+    TheMenuDesktop,
+    TheMenuMobile,
   },
   data() {
     return {
@@ -27,23 +26,29 @@ export default {
       ],
     };
   },
+  beforeMount() {
+    this.width = this.getWidth();
+  },
+  mounted() {
+    if (process.isClient) {
+      window.addEventListener('resize', () => {
+        this.width = this.getWidth();
+      });
+    }
+  },
+  methods: {
+    getWidth() {
+      if (process.isServer) {
+        return 1024;
+      }
+      return window.innerWidth;
+    },
+  },
 };
 </script>
 
 <style>
 .app-nav {
-  @media (min-width: 1024px) {
-    padding-top: 2rem !important;
-    padding-bottom: 2rem !important;
-    margin-bottom: 1.5rem;
-  }
-
-  @media (max-width: 1024px) {
-    padding-top: 1.5rem !important;
-    padding-bottom: 1rem !important;
-    margin-bottom: 1.5rem;
-  }
-
   &__link {
     border-bottom: 0;
     margin-right: 4px;

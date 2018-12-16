@@ -1,0 +1,32 @@
+<template>
+  <nav class="navbar is-fixed-top">
+    <a role="button" class="navbar-burger burger is-hidden-desktop" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" @click.prevent="active = ! active" :class="{'is-active': active}">
+      <span aria-hidden="true" />
+      <span aria-hidden="true" />
+      <span aria-hidden="true" />
+    </a>
+    <div class="navbar-menu" :class="{'is-active': active}">
+      <div class="navbar-start">
+        <nuxt-link v-for="(link, index) in links" :key="index" :to="link.to" class="navbar-item" >{{ link.label }}</nuxt-link>
+        <TgLink class="navbar-item" />
+      </div>
+    </div>
+  </nav>
+</template>
+<script>
+import TgLink from '~/components/TheMenu/TgLink.vue';
+
+export default {
+  components: {
+    TgLink,
+  },
+  props: {
+    links: { type: Array, required: true },
+  },
+  data() {
+    return {
+      active: false,
+    };
+  },
+};
+</script>

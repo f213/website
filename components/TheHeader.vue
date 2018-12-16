@@ -28,6 +28,10 @@ export default {
 .app-header {
   padding-bottom: 0;
 
+  @media(width <= 768px) {
+    margin-bottom: 4rem;
+  }
+
   &__title-link {
     border-bottom: 1px solid rgba(0,0,160,0.15);
     color: var(--text-color);
