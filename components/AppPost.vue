@@ -1,9 +1,9 @@
 <template>
   <article class="app-post">
-    <PostTitle class="title is-3 app-post__title" :class="{'is-marginless': withTime}" :post="post" :linked="linked"/>
-    <TimeAgo class="app-post__time is-size-7" :date="post.created_at" v-if="withTime" />
+    <PostTitle class="title is-3 is-size-4-mobile app-post__title" :class="{'is-marginless': withTime}" :post="post" :linked="linked"/>
+    <TimeAgo class="is-size-7 is-hidden-mobile app-post__time" :date="post.created_at" v-if="withTime" />
     <AppContent :content="post.html"/>
-    <AppTags class="app-post__tags is-hidden-mobile" :tags="post.tags" />
+    <AppTags class="is-hidden-mobile app-post__tags" :tags="post.tags" />
     <AppShare class="app-post__share" :page="post" />
   </article>
 </template>
