@@ -1,5 +1,5 @@
 <template>
-  <nav class="is-fixed-top navbar" :class="{'navbar--visible': !isOnTop}">
+  <nav class="is-fixed-top navbar" :class="{'navbar--visible': !isOnTop || menuHasBeenUsedOnce}">
     <div class="navbar-brand">
       <CurrentPost class="navbar-item" />
       <a role="button" class="navbar-burger burger navbar__burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" @click.prevent="active = ! active" :class="{'is-active': active}">
@@ -10,14 +10,14 @@
     </div>
     <div class="navbar-menu" :class="{'is-active': active}">
       <div class="navbar-start">
-        <nuxt-link v-for="(link, index) in links" :key="index" :to="link.to" class="navbar-item" >{{ link.label }}</nuxt-link>
+        <nuxt-link v-for="(link, index) in links" :key="index" :to="link.to" class="navbar-item navbar__item" @click.native="MARK_MENU_AS_USED">{{ link.label }}</nuxt-link>
         <TgLink class="navbar-item" />
       </div>
     </div>
   </nav>
 </template>
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapMutations } from 'vuex';
 import CurrentPost from '~/components/TheMenu/CurrentPost.vue';
 import TgLink from '~/components/TheMenu/TgLink.vue';
 
@@ -37,6 +37,15 @@ export default {
   computed: mapState('ui', [
     'isOnTop',
     'currentPost',
+    'menuHasBeenUsedOnce',
+  ]),
+  watch: {
+    $route() {
+      this.active = false;
+    },
+  },
+  methods: mapMutations('ui', [
+    'MARK_MENU_AS_USED',
   ]),
 };
 </script>
@@ -47,6 +56,12 @@ export default {
 
   &--visible {
     display: block;
+  }
+
+  &__item {
+    &.nuxt-link-active {
+      font-weight: 600;
+    }
   }
 
 

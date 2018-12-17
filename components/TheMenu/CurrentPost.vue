@@ -1,5 +1,5 @@
 <template>
-  <div class="current-post" v-if="currentPost">
+  <div class="current-post" v-if="currentPost && !isOnTop">
     <a class="title is-4 current-post__title" href="#" @click.prevent="click">{{ currentPost }}</a>
   </div>
 </template>
@@ -10,6 +10,7 @@ import { mapState } from 'vuex';
 export default {
   computed: mapState('ui', [
     'currentPost',
+    'isOnTop',
   ]),
   methods: {
     click() {

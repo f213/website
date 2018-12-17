@@ -3,6 +3,7 @@ export default {
     isOnTop: true,
     currentPost: null,
     lastCurrentPost: null,
+    menuHasBeenUsedOnce: false,
   }),
   mutations: {
     SET_ON_TOP: (state, onTop) => {
@@ -17,6 +18,9 @@ export default {
     RESTORE_LAST_CURRENT_POST: (state) => {
       state.currentPost = state.lastCurrentPost;
       state.lastCurrentPost = null;
+    },
+    MARK_MENU_AS_USED: (state) => {
+      state.menuHasBeenUsedOnce = true;
     },
   },
 };
