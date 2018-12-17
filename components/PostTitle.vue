@@ -1,12 +1,15 @@
 <template>
-  <component :is="tag">
+  <component :is="tag" ref="container">
     <nuxt-link class="post-title" :to="link" v-if="linked">{{ title }}</nuxt-link>
     <template v-else>{{ title }}</template>
   </component>
 </template>
 
 <script>
+import InViewportMixin from '~/mixins/InViewportMixin.vue';
+
 export default {
+  mixins: [InViewportMixin],
   props: {
     linked: { type: Boolean, default: false },
     post: { type: Object, required: true },

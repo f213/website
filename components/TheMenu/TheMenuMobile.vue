@@ -1,10 +1,13 @@
 <template>
   <nav class="is-fixed-top navbar" :class="{'navbar--visible': !isOnTop}">
-    <a role="button" class="navbar-burger burger is-hidden-desktop" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" @click.prevent="active = ! active" :class="{'is-active': active}">
-      <span aria-hidden="true" />
-      <span aria-hidden="true" />
-      <span aria-hidden="true" />
-    </a>
+    <div class="navbar-brand">
+      <CurrentPost class="navbar-item" />
+      <a role="button" class="navbar-burger burger navbar__burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" @click.prevent="active = ! active" :class="{'is-active': active}">
+        <span aria-hidden="true" />
+        <span aria-hidden="true" />
+        <span aria-hidden="true" />
+      </a>
+    </div>
     <div class="navbar-menu" :class="{'is-active': active}">
       <div class="navbar-start">
         <nuxt-link v-for="(link, index) in links" :key="index" :to="link.to" class="navbar-item" >{{ link.label }}</nuxt-link>
@@ -15,11 +18,12 @@
 </template>
 <script>
 import { mapState } from 'vuex';
-
+import CurrentPost from '~/components/TheMenu/CurrentPost.vue';
 import TgLink from '~/components/TheMenu/TgLink.vue';
 
 export default {
   components: {
+    CurrentPost,
     TgLink,
   },
   props: {
@@ -30,9 +34,10 @@ export default {
       active: false,
     };
   },
-  computed: mapState('ui', {
-    isOnTop: ui => ui.isOnTop,
-  }),
+  computed: mapState('ui', [
+    'isOnTop',
+    'currentPost',
+  ]),
 };
 </script>
 
@@ -43,5 +48,7 @@ export default {
   &--visible {
     display: block;
   }
+
+
 }
 </style>
