@@ -19,6 +19,7 @@ export default {
   },
   data() {
     return {
+      width: 1024,
       links: [
         { to: { name: 'featured' }, label: 'Избранное' },
         { to: '/me/', label: 'Обо мне' },
