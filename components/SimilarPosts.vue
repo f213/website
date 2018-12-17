@@ -34,12 +34,14 @@ export default {
   }
 
   &__list {
-    column-count: 2;
-    column-gap: 2rem;
+    @media (width > 768px) {
+      column-count: 2;
+      column-gap: 2rem;
+    }
   }
 
   &__item {
-    margin-bottom: .5rem;
+    margin-bottom: .6rem;
   }
 
   &__link {
