@@ -1,11 +1,11 @@
 <template>
   <div class="current-post" v-if="currentPost && !isOnTop">
-    <a class="title is-4 current-post__title" href="#" @click.prevent="click">{{ currentPost }}</a>
+    <a class="title is-6 has-text-weight-semibold current-post__title" href="#" @click.prevent="click">{{ currentPost }}</a>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapMutations } from 'vuex';
 
 export default {
   computed: mapState('ui', [
@@ -18,7 +18,11 @@ export default {
         top: 0,
         behavior: 'smooth',
       });
+      this.MARK_MENU_AS_USED();
     },
+    ...mapMutations('ui', [
+      'MARK_MENU_AS_USED',
+    ]),
   },
 };
 </script>
@@ -27,7 +31,7 @@ export default {
   padding-left: 1.5rem;
 
   &__title {
-    max-width: 75vw;
+    max-width: 72vw;
     display: block;
     white-space: nowrap;
     overflow: hidden;
