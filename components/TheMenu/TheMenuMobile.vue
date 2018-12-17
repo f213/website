@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar is-fixed-top">
+  <nav class="is-fixed-top navbar" :class="{'navbar--visible': !isOnTop}">
     <a role="button" class="navbar-burger burger is-hidden-desktop" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" @click.prevent="active = ! active" :class="{'is-active': active}">
       <span aria-hidden="true" />
       <span aria-hidden="true" />
@@ -14,6 +14,8 @@
   </nav>
 </template>
 <script>
+import { mapState } from 'vuex';
+
 import TgLink from '~/components/TheMenu/TgLink.vue';
 
 export default {
@@ -28,5 +30,18 @@ export default {
       active: false,
     };
   },
+  computed: mapState('ui', {
+    isOnTop: ui => ui.isOnTop,
+  }),
 };
 </script>
+
+<style scoped>
+.navbar {
+  display: none;
+
+  &--visible {
+    display: block;
+  }
+}
+</style>

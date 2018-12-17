@@ -1,5 +1,5 @@
 <template>
-  <header class="app-header section">
+  <header class="app-header section" ref="container">
     <div class="container app-container">
       <div class="title is-3">
         <template v-if="isHomePage">{{ title }}</template>
@@ -10,7 +10,10 @@
   </header>
 </template>
 <script>
+import InViewportMixin from '~/mixins/InViewportMixin.vue';
+
 export default {
+  mixins: [InViewportMixin],
   data() {
     return {
       title: 'Федор Борщев',

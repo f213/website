@@ -25,6 +25,7 @@
     "express": "^4.16.3",
     "ilyabirman-likely": "^2.3.1",
     "nuxt": "^2.0.0",
+    "scrollmonitor": "^1.2.4",
     "vue-disqus": "^3.0.5",
     "vue-social-sharing": "^2.3.3"
   },
