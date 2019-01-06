@@ -37,7 +37,6 @@ export default {
       'RESTORE_LAST_CURRENT_POST',
     ]),
     exit() {
-      console.log('exiting', this.currentPost);
       if (this.currentPost === null) {
         this.SET_CURRENT_POST(this.post.title);
       }
