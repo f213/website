@@ -15,6 +15,10 @@ export default {
   computed: {
     isAtBlogPage() {
       const { name } = this.$route;
+      if (name.startsWith('featured')) { // disable highlight at the home page
+        return false;
+      }
+
       if (['index', 'page-number', 'tags-slug', 'tags-slug-page-number'].includes(name)) {
         return true;
       }
