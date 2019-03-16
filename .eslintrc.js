@@ -28,6 +28,7 @@ module.exports = {
     'max-len': 'off',
     'import/prefer-default-export': 'off',
     'consistent-return': 'off',
+    'no-irregular-whitespace': 'off',
   },
   settings: {
     'import/resolver': {

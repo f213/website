@@ -5,7 +5,6 @@
         <template v-if="isHomePage">{{ title }}</template>
         <nuxt-link class="app-header__title-link" v-else to="/">{{ title }}</nuxt-link>
       </div>
-      <p class="subtitle is-6 app-header__subtitle">Кручу гайки. Пишу матом. Настраиваю ин-хаус разработку в&nbsp;стартапах.</p>
     </div>
   </header>
 </template>

@@ -1,14 +1,14 @@
 <template>
   <a class="tg-link" href="tg://resolve?domain=pmdaily">
-    <i class="fa fa-telegram tg-link__icon" />
-    <span class="tg-link__label" :class="labelClass">
-      Подписаться на телеграм
-    </span>
+    <i class="fa fa-telegram tg-link__icon" v-if="withIcon" />
+    <span class="tg-link__label" :class="labelClass">{{ label }}</span>
   </a>
 </template>
 <script>
 export default {
   props: {
+    withIcon: { type: Boolean, default: false },
+    label: { type: String, default: 'Подписаться на телеграм' },
     labelClass: { type: String, default: () => '' },
   },
 };

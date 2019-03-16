@@ -9,7 +9,7 @@
     <div class="navbar-menu" :class="{'is-active': active}">
       <div class="navbar-start">
         <nuxt-link v-for="(link, index) in _links" :key="index" :to="link.to" class="navbar-item navbar__item" @click.native="MARK_MENU_AS_USED">{{ link.label }}</nuxt-link>
-        <TgLink class="navbar-item" />
+        <TgLink with-icon class="navbar-item" />
       </div>
     </div>
   </nav>
@@ -17,7 +17,7 @@
 <script>
 import { mapState, mapMutations } from 'vuex';
 import CurrentPost from '~/components/TheMenu/CurrentPost.vue';
-import TgLink from '~/components/TheMenu/TgLink.vue';
+import TgLink from '~/components/TgLink.vue';
 
 export default {
   components: {

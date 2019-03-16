@@ -5,13 +5,13 @@
       <nuxt-link v-for="(link, index) in links" :key="index" :to="link.to" class="app-nav__link" active-class="app-nav__link--active">
         <span class="app-nav__label">{{ link.label }}</span>
       </nuxt-link>
-      <TgLink class="app-nav__link" label-class="app-nav__label" />
+      <TgLink with-icon class="app-nav__link" label-class="app-nav__label" />
     </div>
   </nav>
 </template>
 <script>
 import HomePageLink from '~/components/TheMenu/HomePageLink.vue';
-import TgLink from '~/components/TheMenu/TgLink.vue';
+import TgLink from '~/components/TgLink.vue';
 
 export default {
   components: {
@@ -25,7 +25,7 @@ export default {
 </script>
 <style scoped>
 .app-nav {
-  padding-top: 2rem !important;
+  padding-top: .5rem !important;
   padding-bottom: 2rem !important;
   margin-bottom: 1.5rem;
 }
