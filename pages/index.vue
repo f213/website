@@ -35,14 +35,16 @@ export default {
 
 <style scoped>
 .home-page {
+  max-width: 1400px;
+  margin: 0 auto;
 
   &__container {
     display: grid;
     grid-gap: .5rem;
     grid-template-columns: 100%;
     grid-template-rows: 100px auto auto;
-    padding-top: 1rem;
-    padding-left: .5rem;
+    padding-top: 2rem;
+    padding-left: 1rem;
   }
 
   &__header,
@@ -57,6 +59,8 @@ export default {
 
   &__photo {
     grid-row: 2 / 2;
+    max-width: 400px;
+    padding-right: 1rem;
   }
 
   &__lead {
@@ -68,11 +72,13 @@ export default {
   }
 
 
-  @media(width > 768px) {
+  @media(width > 1020px) {
     padding-top: 3rem;
     padding-left: 3rem;
 
     &__container {
+      padding-top: 1rem;
+      padding-left: .5rem;
       grid-template-columns: 45vw auto;
       grid-template-rows: 130px auto;
     }
@@ -91,6 +97,7 @@ export default {
       grid-row: 1 / 2;
       padding-left: 5rem;
       padding-top: 1rem;
+      max-width: none;
     }
   }
 }
