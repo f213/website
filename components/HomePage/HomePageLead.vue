@@ -1,8 +1,8 @@
 <template functional>
-  <div class="content home-page-lead">
+  <div class="home-page-lead">
     <p class="content home-page-lead__lead">Я строю эффективную инхаус-разработку, в которой каждый спринт приносит деньги, задачи вовремя закрываются, а&nbsp;участники команды получают удовольствие от работы.</p>
-    <section class="content home-page-lead__achievements">
-      <h2>Сделал</h2>
+    <section class="home-page-lead__achievements">
+      <h2 class="title is-3">Сделал</h2>
       <ul class="app-list home-page-lead__achievements-list">
         <li>Всю технологическую часть в <a class="home-page-lead__link" href="https://mtrl.ai" rel="noindex, nofollow">mtrl.ai</a>, маркетплейсе стройматериалов.</li>
         <li>Выступил сооснователем в <a class="home-page-lead__link" href="https://rumetr.com/" rel="noindex, nofollow">Руметре</a>, агрегаторе предложений на рынке недвижимости.</li>

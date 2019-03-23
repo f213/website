@@ -7,27 +7,19 @@
       </div>
       <HomePageLead class="home-page__lead" />
     </div>
-    <section class="home-page__writings content">
-      <h2>Написал</h2>
-      <p>
-        sdf
-        dd
-      </p>
-      <p>
-        sdfsdf
-      </p>
-      <img src="~/assets/images/tg.png" alt="Телеграм">
-    </section>
+    <HomePageWritings class="home-page__writings" />
   </div>
 </template>
 <script>
 import HomePageHeader from '~/components/HomePage/HomePageHeader.vue';
 import HomePageLead from '~/components/HomePage/HomePageLead.vue';
+import HomePageWritings from '~/components/HomePage/HomePageWritings.vue';
 
 export default {
   components: {
     HomePageHeader,
     HomePageLead,
+    HomePageWritings,
   },
   layout: 'empty',
 };
@@ -37,6 +29,7 @@ export default {
 .home-page {
   max-width: 1400px;
   margin: 0 auto;
+  padding-left: 1rem;
 
   &__container {
     display: grid;
@@ -44,7 +37,6 @@ export default {
     grid-template-columns: 100%;
     grid-template-rows: 100px auto auto;
     padding-top: 2rem;
-    padding-left: 1rem;
   }
 
   &__header,
@@ -68,17 +60,16 @@ export default {
   }
 
   &__writings {
-    margin-top: 4rem;
+    margin-top: 6rem;
   }
 
 
   @media(width > 1020px) {
     padding-top: 3rem;
-    padding-left: 3rem;
+    padding-left: 3.5rem;
 
     &__container {
       padding-top: 1rem;
-      padding-left: .5rem;
       grid-template-columns: 45vw auto;
       grid-template-rows: 130px auto;
     }
