@@ -56,6 +56,7 @@ export default {
 
   &__tg-img {
     margin-top: .75rem;
+    width: 800px;
   }
 
   &__vcru-icon {
