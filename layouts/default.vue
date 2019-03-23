@@ -5,7 +5,7 @@
     <section class="section default-section">
       <nuxt/>
     </section>
-    <TheFooter />
+    <TheFooter class="section" text-class="container app-container"/>
   </div>
 </template>
 <script>

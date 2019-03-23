@@ -92,8 +92,6 @@ export default {
 
 <style scoped>
 .app-pagination {
-  position: relative;
-  left: -1rem;
   margin-bottom: 1rem;
 
   &__arrow,

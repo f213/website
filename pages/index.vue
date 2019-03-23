@@ -8,18 +8,25 @@
       <HomePageLead class="home-page__lead" />
     </div>
     <HomePageWritings class="home-page__writings" />
+    <HomePageConsulting class="home-page__consulting" />
+    <TheFooter />
   </div>
 </template>
 <script>
 import HomePageHeader from '~/components/HomePage/HomePageHeader.vue';
 import HomePageLead from '~/components/HomePage/HomePageLead.vue';
 import HomePageWritings from '~/components/HomePage/HomePageWritings.vue';
+import HomePageConsulting from '~/components/HomePage/HomePageConsulting.vue';
+
+import TheFooter from '~/components/TheFooter.vue';
 
 export default {
   components: {
     HomePageHeader,
     HomePageLead,
     HomePageWritings,
+    HomePageConsulting,
+    TheFooter,
   },
   layout: 'empty',
 };
@@ -59,7 +66,8 @@ export default {
     grid-row: 3 / 3;
   }
 
-  &__writings {
+  &__writings,
+  &__consulting {
     margin-top: 6rem;
   }
 

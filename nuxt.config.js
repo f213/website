@@ -102,7 +102,7 @@ module.exports = {
     ghostClientSecret: process.env.GHOST_CLIENT_SECRET || '822c1fe05f96',
     perPage: 10,
     absoluteHost: 'https://borshev.com',
-    copyrightYears: '2014–2018',
+    copyrightYears: '2014–2019',
     email: 'fedor@borshev.com',
     yaMetrikaCounterID: '25756085',
     disqus_shortname: 'f213',

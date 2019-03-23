@@ -1,10 +1,10 @@
 <template>
-  <footer class="app-footer section">
-    <div class="container app-container is-size-6">
+  <footer class="app-footer">
+    <div class="is-size-6" :class="textClass">
       <span>©</span>
       <a class="app-footer__email" :href="email">Федор Борщев</a>
       <span>{{ years }}</span>
-      <TheFooterPoop />
+      <TheFooterPoop class="app-footer__poop"/>
     </div>
   </footer>
 </template>
@@ -15,6 +15,9 @@ import TheFooterPoop from '~/components/TheFooterPoop.vue';
 export default {
   components: {
     TheFooterPoop,
+  },
+  props: {
+    textClass: { type: String, default: '' },
   },
   data() {
     return {
@@ -27,6 +30,11 @@ export default {
 
 <style scoped>
 .app-footer {
+  &__poop {
+    position: relative;
+    left: -.2rem;
+  }
+
   &__email {
     color: #70a0b0;
     border-bottom: 1px solid rgba(85, 102, 119, .4);
