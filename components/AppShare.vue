@@ -8,14 +8,11 @@
 </template>
 
 <script>
-import InViewportMixin from '~/mixins/InViewportMixin.vue';
-
 import likely from 'ilyabirman-likely';
 
 import { getAbsoluteUrl } from '~/helpers/seo';
 
 export default {
-  mixins: [InViewportMixin],
   props: {
     page: { type: Object, required: true },
   },

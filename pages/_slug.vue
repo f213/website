@@ -1,7 +1,7 @@
 <template>
   <div class="container app-container" v-if="post">
     <template v-if="!post.page">
-      <AppPost with-time :post="post" />
+      <AppPost is-detailed :post="post" />
       <AppComments :post="post" />
       <SimilarPosts :posts="similar" />
     </template>

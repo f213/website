@@ -6,10 +6,8 @@
   </header>
 </template>
 <script>
-import InViewportMixin from '~/mixins/InViewportMixin.vue';
 
 export default {
-  mixins: [InViewportMixin],
   data() {
     return {
       title: 'Федор Борщев',
@@ -26,9 +24,10 @@ export default {
 <style scoped>
 .app-header {
   padding-bottom: 0;
+  display: none;
 
-  @media(width <= 768px) {
-    margin-bottom: 4rem;
+  @media(width >= 768px) {
+    display: block;
   }
 }
 </style>

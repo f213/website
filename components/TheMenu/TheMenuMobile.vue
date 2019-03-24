@@ -1,27 +1,27 @@
 <template>
-  <nav class="is-fixed-top navbar" :class="{'navbar--visible': !isOnTop || menuHasBeenUsedOnce}">
-    <div class="navbar-brand">
-      <CurrentPost class="navbar-item" />
+  <nav class="navbar" :class="{'navbar--visible': isScrollingUp || hasNotScrolledYet}">
+    <div class="navbar-brand navbar__brand">
+      <h1 class="navbar-item title is-3 is-marginless navbar__title">Федор Борщев</h1>
+
       <a role="button" class="navbar-burger navbar__burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" @click.prevent="active = ! active" :class="{'is-active': active}">
         &#9776;
       </a>
     </div>
-    <div class="navbar-menu" :class="{'is-active': active}">
+    <div class="navbar-menu" :class="{'is-active': active && isScrollingUp}">
       <div class="navbar-start">
-        <nuxt-link v-for="(link, index) in _links" :key="index" :to="link.to" class="navbar-item navbar__item" @click.native="MARK_MENU_AS_USED">{{ link.label }}</nuxt-link>
+        <nuxt-link v-for="(link, index) in _links" :key="index" :to="link.to" class="navbar-item navbar__item">{{ link.label }}</nuxt-link>
         <TgLink with-icon class="navbar-item" />
       </div>
     </div>
   </nav>
 </template>
 <script>
-import { mapState, mapMutations } from 'vuex';
-import CurrentPost from '~/components/TheMenu/CurrentPost.vue';
 import TgLink from '~/components/TgLink.vue';
+
+import throttle from 'lodash.throttle';
 
 export default {
   components: {
-    CurrentPost,
     TgLink,
   },
   props: {
@@ -30,14 +30,11 @@ export default {
   data() {
     return {
       active: false,
+      isScrollingUp: false,
+      hasNotScrolledYet: true,
     };
   },
   computed: {
-    ...mapState('ui', [
-      'isOnTop',
-      'currentPost',
-      'menuHasBeenUsedOnce',
-    ]),
     _links() {
       return [{ to: '/', label: 'Главная' }].concat(this.links);
     },
@@ -47,18 +44,38 @@ export default {
       this.active = false;
     },
   },
-  methods: mapMutations('ui', [
-    'MARK_MENU_AS_USED',
-  ]),
+  beforeMount() {
+    let previosScrollPosition = window.scrollY;
+
+    window.addEventListener('scroll', throttle(() => {
+      if (window.scrollY < 150) { // no scroll events at the top of the page
+        return;
+      }
+
+      this.hasNotScrolledYet = false;
+      if ((previosScrollPosition <= window.scrollY)) {
+        this.isScrollingUp = false;
+        this.active = false;
+      } else {
+        this.isScrollingUp = true;
+      }
+      previosScrollPosition = window.scrollY;
+    }, 300));
+  },
 };
 </script>
 
 <style scoped>
 .navbar {
-  display: none;
+  left: 0;
+  position: fixed;
+  right: 0;
+  z-index: 30;
+  top: -100px;
+  transition:  top .5s ease-out;
 
   &--visible {
-    display: block;
+    top: 0px;
   }
 
   &__burger {
@@ -73,6 +90,14 @@ export default {
     &.nuxt-link-exact-active {
       font-weight: 600;
     }
+  }
+
+  &__brand {
+    padding-left: 1.5rem;
+  }
+
+  &__title {
+    padding: 0;
   }
 
 }

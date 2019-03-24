@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TheHeader @viewportEnter="SET_ON_TOP(true)" @viewportExit="SET_ON_TOP(false)" />
+    <TheHeader />
     <TheMenu />
     <section class="section default-section">
       <nuxt/>
@@ -9,7 +9,6 @@
   </div>
 </template>
 <script>
-import { mapMutations } from 'vuex';
 
 import TheHeader from '~/components/TheHeader.vue';
 import TheMenu from '~/components/TheMenu.vue';
@@ -21,15 +20,12 @@ export default {
     TheMenu,
     TheFooter,
   },
-  methods: mapMutations('ui', [
-    'SET_ON_TOP',
-  ]),
 };
 </script>
 
 <style scoped>
 .default-section {
-  padding-top: 0;
+  padding-top: 4rem;
   padding-bottom: 0;
 }
 </style>

@@ -1,8 +1,8 @@
 <template>
-  <nav class="section app-nav">
+  <nav class="section is-paddingless app-nav">
     <div class="container app-container">
       <nuxt-link to="/" class="app-nav__link">
-        <span class="app-nav__label">Главная</span>
+        <span class="app-nav__label">Обо мне</span>
       </nuxt-link>
       <BlogLink class="app-nav__link" label-class="app-nav__label" active-class="app-nav__link--active" />
       <nuxt-link v-for="(link, index) in links" :key="index" :to="link.to" class="app-nav__link" active-class="app-nav__link--active">
@@ -28,8 +28,7 @@ export default {
 </script>
 <style scoped>
 .app-nav {
-  padding-top: .5rem !important;
-  padding-bottom: 2rem !important;
+  margin-top: .5rem;
   margin-bottom: 1.5rem;
 }
 </style>
