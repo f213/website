@@ -1,5 +1,5 @@
 <template>
-  <section class="consulting content" id="consulting">
+  <section class="consulting content" id="talk-to-me">
     <h2 class="title is-3 has-text-weight-normal">Делюсь знаниями</h2>
     <p>В режиме один-к-одному делюсь знаниями и отвечаю на вопросы о разработке сложных продуктов. К примеру:</p>
     <ul class="app-list consulting__list">

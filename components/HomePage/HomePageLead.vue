@@ -7,10 +7,10 @@
         <li>Всю технологическую часть в <a class="home-page-lead__link" href="https://mtrl.ai" rel="noindex, nofollow">mtrl.ai</a>, маркетплейсе стройматериалов.</li>
         <li>Выступил сооснователем в <a class="home-page-lead__link" href="https://rumetr.com/" rel="noindex, nofollow">Руметре</a>, агрегаторе предложений на рынке недвижимости.</li>
         <li>Спроектировал и сделал личный кабинет для <a class="home-page-lead__link" href="https://elk.today" rel="noindex, nofollow">elk.today</a> — платформы, которая которая объединяет носителей языка с&nbsp;учениками по всему миру.</li>
-        <li><a class="home-page-lead__link" href="https://www.artlebedev.ru/color/" rel="noindex, nofollow">Колор</a> — нейросеть, которая раскрашивает черно-белые фотографии</li>
+        <li>Участвовал в создании <a class="home-page-lead__link" href="https://www.artlebedev.ru/color/" rel="noindex, nofollow">Колора</a> — нейросети, которая раскрашивает черно-белые фотографии</li>
         <li>Запустил сайт «<a class="home-page-lead__link" href="https://www.zr.ru/" rel="noindex, nofollow">За рулем</a>» — старейшего автомобильного журнала в России.</li>
-        <li>Сайт <a class="home-page-lead__link" href="https://mkb.ru" rel="noindex, nofollow">Московского Кредитного Банка</a>.</li>
-        <li>Много <a class="home-page-lead__link" href="http://github.com/f213" rel="noindex, nofollow">опенсорса</a>, в основном на python и js.</li>
+        <li>Участвовал в создании сайта <a class="home-page-lead__link" href="https://mkb.ru" rel="noindex, nofollow">Московского Кредитного Банка</a>.</li>
+        <li>Выложил много <a class="home-page-lead__link" href="http://github.com/f213" rel="noindex, nofollow">опенсорса</a>, в основном на python и js.</li>
       </ul>
     </section>
   </div>
