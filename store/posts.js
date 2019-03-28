@@ -21,7 +21,6 @@ export default {
       if (['me', 'books'].includes(slug)) { // disable double fetch for known pages
         return dispatch('GET_PAGE', { slug });
       }
-      console.log('slug');
       const params = { include: 'tags' };
       const found = await this.$axios.$get(`posts/slug/${slug}/`, { params });
       if (!found.posts.length) {
