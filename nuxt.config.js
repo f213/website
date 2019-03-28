@@ -98,7 +98,7 @@ module.exports = {
     },
   },
   env: {
-    ghostAPIKey: process.env.GHOST_API_KEY || 'bbf8ca1eeb6fe5465d8ceeab93',
+    ghostAPIKey: process.env.GHOST_API_KEY || '881fcfad416468563d3eec62c1',
     perPage: 10,
     absoluteHost: 'https://borshev.com',
     copyrightYears: '2014–2018',
