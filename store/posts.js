@@ -11,7 +11,7 @@ export default {
       const { perPage } = this.app.context.env;
       const params = { ...filters, limit: perPage, include: 'tags' };
 
-      const response = await this.$axios.$get('v0.1/posts/', { params });
+      const response = await this.$axios.$get('posts/', { params });
       if (!response.posts.length) {
         throw new Error('No posts found');
       }
@@ -19,7 +19,7 @@ export default {
     },
     async GET_POST({ commit, dispatch }, { slug }) {
       const params = { include: 'tags' };
-      const found = await this.$axios.$get(`v0.1/posts/slug/${slug}/`, { params });
+      const found = await this.$axios.$get(`posts/slug/${slug}/`, { params });
       if (!found.posts.length) {
         throw new Error('No posts');
       }
@@ -32,7 +32,7 @@ export default {
       }
     },
     async GET_SIMILAR_POSTS({ commit }, { tag }) {
-      const found = await this.$axios.$get(`v0.1/posts/?filter=tag:${tag}`);
+      const found = await this.$axios.$get(`posts/?filter=tag:${tag}`);
       commit('SET_SIMILAR', found.posts);
     },
   },

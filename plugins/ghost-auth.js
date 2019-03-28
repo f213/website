@@ -6,8 +6,7 @@ export default ({ app, env }) => {
     if (!('params' in request) || [null, undefined].includes(request.params)) {
       request.params = {};
     }
-    request.params.client_id = env.ghostClientId;
-    request.params.client_secret = env.ghostClientSecret;
+    request.params.key = env.ghostAPIKey;
     return request;
   });
 };
