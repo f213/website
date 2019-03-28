@@ -26,10 +26,18 @@ export default {
       const post = found.posts[0];
       commit('SET_POST', post);
 
-      if (!post.page && post.primary_tag) {
+      if (post.primary_tag) {
         const tag = post.primary_tag.slug;
         await dispatch('GET_SIMILAR_POSTS', { tag });
       }
+    },
+    async GET_PAGE({ commit }, { slug }) {
+      const found = await this.$axios.$get(`pages/slug/${slug}/`);
+      if (!found.pages.length) {
+        throw new Error('No posts');
+      }
+      const page = found.pages[0];
+      commit('SET_POST', page);
     },
     async GET_SIMILAR_POSTS({ commit }, { tag }) {
       const found = await this.$axios.$get(`posts/?filter=tag:${tag}`);

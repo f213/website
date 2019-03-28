@@ -29,11 +29,15 @@ export default {
     const { slug } = route.params;
     try {
       await store.dispatch('posts/GET_POST', { slug });
-    } catch (e) {
-      error({
-        statusCode: 404,
-        message: e.message,
-      });
+    } catch (_) {
+      try {
+        await store.dispatch('posts/GET_PAGE', { slug });
+      } catch (e) {
+        error({
+          statusCode: 404,
+          message: e.message,
+        });
+      }
     }
   },
   computed: {
