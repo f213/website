@@ -4,7 +4,7 @@ export default {
   }),
   actions: {
     async GET_TAG({ commit }, { slug }) {
-      const found = await this.$axios.$get(`v0.1/tags/slug/${slug}/`);
+      const found = await this.$axios.$get(`tags/slug/${slug}/`);
       if (!found.tags.length) {
         throw new Error('No tag!');
       }
