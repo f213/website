@@ -39,9 +39,9 @@ module.exports = {
   },
 
   /*
-  ** Customize the progress-bar color
+  ** Completely disable the progress bar
   */
-  loading: { color: '#fff' },
+  loading: false,
 
   /*
   ** Global CSS
@@ -84,7 +84,7 @@ module.exports = {
   ** Axios module configuration
   */
   axios: {
-    prefix: '/api/',
+    prefix: '/api/v2/content',
     proxy: true,
   },
   router: {
@@ -95,8 +95,7 @@ module.exports = {
     },
   },
   env: {
-    ghostClientId: process.env.GHOST_CLIENT_ID || 'ghost-frontend',
-    ghostClientSecret: process.env.GHOST_CLIENT_SECRET || '822c1fe05f96',
+    ghostAPIKey: process.env.GHOST_API_KEY || '881fcfad416468563d3eec62c1',
     perPage: 10,
     absoluteHost: 'https://borshev.com',
     copyrightYears: '2014–2019',
