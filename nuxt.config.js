@@ -98,8 +98,6 @@ module.exports = {
     },
   },
   env: {
-    ghostClientId: process.env.GHOST_CLIENT_ID || 'ghost-frontend',
-    ghostClientSecret: process.env.GHOST_CLIENT_SECRET || '822c1fe05f96',
     ghostAPIKey: process.env.GHOST_API_KEY || 'bbf8ca1eeb6fe5465d8ceeab93',
     perPage: 10,
     absoluteHost: 'https://borshev.com',
