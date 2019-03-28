@@ -1,6 +1,6 @@
 # blog
 
-> My stellar Nuxt.js project
+[![CircleCI](https://circleci.com/gh/f213/website-frontend.svg?style=svg&circle-token=6b34beece0dbf72e0f3848ac0193b6842e270369)](https://circleci.com/gh/f213/website-frontend)
 
 ## Build Setup
 
