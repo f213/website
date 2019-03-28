@@ -27,6 +27,7 @@ export default {
   },
   async fetch({ store, route, error }) {
     const { slug } = route.params;
+    /* Fetch the post first, otherwise -- try to fetch the page */
     try {
       await store.dispatch('posts/GET_POST', { slug });
     } catch (_) {

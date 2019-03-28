@@ -39,9 +39,9 @@ module.exports = {
   },
 
   /*
-  ** Customize the progress-bar color
+  ** Completely disable the progress bar
   */
-  loading: { color: '#fff' },
+  loading: false,
 
   /*
   ** Global CSS
