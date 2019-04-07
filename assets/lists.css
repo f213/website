@@ -5,33 +5,43 @@
 {
   list-style-type: none;
 
+  padding-left: 1rem;
+
   @media (width > 768px) {
     padding-left: 1.5rem;
   }
 
   li {
     line-height: 1.7;
+    margin-bottom: .75rem;
+
+    @media (width > 768px) {
+      margin-bottom: 0;
+    }
+
     &:before {
       margin-left: -1.2rem;
     }
   }
 }
 
-.app-content ul,
-ul.app-list
-{
-  li:before {
-    content: '\2014\a0';
+@media (width > 768px) {
+  .app-content ul,
+  ul.app-list
+  {
+    li:before {
+      content: '\2014\a0';
+    }
   }
-}
 
-.app-content ol,
-ol.app-list
-{
-  counter-reset: ol;
-  li:before {
-    counter-increment: ol;
-    content: counter( ol ) ')\a0';
-    position: absolute;
+  .app-content ol,
+  ol.app-list
+  {
+    counter-reset: ol;
+    li:before {
+      counter-increment: ol;
+      content: counter( ol ) ')\a0';
+      position: absolute;
+    }
   }
 }
