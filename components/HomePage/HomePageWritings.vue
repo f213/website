@@ -54,7 +54,7 @@ export default {
 
   &__link {
     display: block;
-    margin-bottom: .75rem;
+    margin-bottom: .5rem;
   }
 
   &__link,

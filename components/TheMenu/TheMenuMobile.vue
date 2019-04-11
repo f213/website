@@ -48,7 +48,7 @@ export default {
     let previosScrollPosition = window.scrollY;
 
     window.addEventListener('scroll', throttle(() => {
-      if (window.scrollY < 150) { // no scroll events at the top of the page
+      if (window.scrollY < 100) { // no scroll events at the top of the page
         return;
       }
 
@@ -60,7 +60,7 @@ export default {
         this.isScrollingUp = true;
       }
       previosScrollPosition = window.scrollY;
-    }, 300));
+    }, 300, { leading: true }));
   },
 };
 </script>
@@ -71,8 +71,8 @@ export default {
   position: fixed;
   right: 0;
   z-index: 30;
-  top: -100px;
-  transition:  top .5s ease-out;
+  top: -70px;
+  transition:  top .3s ease-out;
 
   &--visible {
     top: 0px;
