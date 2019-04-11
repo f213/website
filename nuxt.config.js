@@ -88,9 +88,6 @@ module.exports = {
     proxy: true,
   },
   router: {
-    middleware: [
-      'reset-current-post',
-    ],
     extendRoutes(routes) {
       routes = routes.map(route => (route.path.endsWith('/') ? route : { ...route, path: `${route.path}/` }));
       routes = routes.map(route => ({ ...route, pathToRegexpOptions: { endsWith: '/', strict: true } }));
@@ -101,7 +98,7 @@ module.exports = {
     ghostAPIKey: process.env.GHOST_API_KEY || '881fcfad416468563d3eec62c1',
     perPage: 10,
     absoluteHost: 'https://borshev.com',
-    copyrightYears: '2014–2018',
+    copyrightYears: '2014–2019',
     email: 'fedor@borshev.com',
     yaMetrikaCounterID: '25756085',
     disqus_shortname: 'f213',

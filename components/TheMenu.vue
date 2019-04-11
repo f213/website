@@ -22,7 +22,6 @@ export default {
       width: 1024,
       links: [
         { to: { name: 'featured' }, label: 'Избранное' },
-        { to: '/me/', label: 'Обо мне' },
         { to: '/books/', label: 'Книги' },
       ],
     };

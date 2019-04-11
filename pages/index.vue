@@ -1,44 +1,103 @@
 <template>
-  <AppPostList :posts="posts" />
+  <div class="home-page">
+    <div class="home-page__container">
+      <HomePageHeader class="home-page__header" />
+      <div class="home-page__photo">
+        <img class="home-page__img" src="~/assets/images/me.jpg" width="600" height="650" alt="Федор Борщев">
+      </div>
+      <HomePageLead class="home-page__lead" />
+    </div>
+    <HomePageWritings class="home-page__writings" />
+    <HomePageConsulting class="home-page__consulting" />
+    <TheFooter />
+  </div>
 </template>
-
 <script>
-import { mapState } from 'vuex';
+import HomePageHeader from '~/components/HomePage/HomePageHeader.vue';
+import HomePageLead from '~/components/HomePage/HomePageLead.vue';
+import HomePageWritings from '~/components/HomePage/HomePageWritings.vue';
+import HomePageConsulting from '~/components/HomePage/HomePageConsulting.vue';
 
-import { getPrevNextLinks } from '~/helpers/seo';
-
-import AppPostList from '~/components/AppPostList.vue';
+import TheFooter from '~/components/TheFooter.vue';
 
 export default {
   components: {
-    AppPostList,
+    HomePageHeader,
+    HomePageLead,
+    HomePageWritings,
+    HomePageConsulting,
+    TheFooter,
   },
-  async fetch({ store }) {
-    await store.dispatch('posts/GET_POSTS');
-  },
-
-  computed: {
-    ...mapState('posts', {
-      posts: posts => posts.posts,
-    }),
-    ...mapState('seo', [
-      'metaPrev',
-      'metaNext',
-    ]),
-  },
-
-  head() {
-    const link = getPrevNextLinks(this.metaPrev, this.metaNext);
-    return {
-      title: 'Блог CTO про управление проектами, продуктами и командами. Раньше назывался «Блог ненужного менеджера»',
-      titleTemplate: '%s',
-      link,
-      meta: [
-        { name: 'keywords', content: 'Федор Борщев, Fedor Borshev, управление проектами, профессиональный блог, CTO, руководитель проектов, блог менеджера, GTD, ГТД, сроки, блог ненужного менеджера, психология, переговоры, электронная почта, инструменты' },
-        { name: 'description', content: 'Личный блог Федора Борщева. Здесь я делюсь профессиональными знаниями. Пишу про управление проектами и продуктами, а так же работу CTO в стартапе' },
-      ],
-    };
-  },
-
+  layout: 'empty',
 };
 </script>
+
+<style scoped>
+.home-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-left: 1rem;
+
+  &__container {
+    display: grid;
+    grid-gap: .5rem;
+    grid-template-columns: 100%;
+    grid-template-rows: 100px auto auto;
+    padding-top: 2rem;
+  }
+
+  &__header,
+  &__lead,
+  &__photo {
+    grid-column: 1;
+  }
+
+  &__header {
+    grid-row: 1 / 1;
+  }
+
+  &__photo {
+    grid-row: 2 / 2;
+    max-width: 400px;
+    padding-right: 1rem;
+  }
+
+  &__lead {
+    grid-row: 3 / 3;
+  }
+
+  &__writings,
+  &__consulting {
+    margin-top: 6rem;
+  }
+
+
+  @media(width > 1020px) {
+    padding-top: 3rem;
+    padding-left: 3.5rem;
+
+    &__container {
+      padding-top: 1rem;
+      grid-template-columns: 45vw auto;
+      grid-template-rows: 130px auto;
+    }
+
+    &__header {
+      grid-column: 1 / 1;
+      grid-row: 1 / 1;
+    }
+    &__lead {
+      grid-column: 1 / 1;
+      grid-row: 2 / 2;
+    }
+
+    &__photo {
+      grid-column: 2;
+      grid-row: 1 / 2;
+      padding-left: 5rem;
+      padding-top: 1rem;
+      max-width: none;
+    }
+  }
+}
+</style>

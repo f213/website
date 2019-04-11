@@ -1,21 +1,42 @@
-.app-content {
-  ul, ol {
-    list-style-type: none;
-    padding-left: 1.5rem;
+.app-content ul,
+.app-content ol,
+.app-list,
+.content .app-list /* override bulma .content ul */
+{
+  list-style-type: none;
 
-    li:before {
+  padding-left: 1rem;
+
+  @media (width > 768px) {
+    padding-left: 1.5rem;
+  }
+
+  li {
+    line-height: 1.7;
+    margin-bottom: .75rem;
+
+    @media (width > 768px) {
+      margin-bottom: 0;
+    }
+
+    &:before {
       margin-left: -1.2rem;
     }
-    li {
-      line-height: 1.7;
+  }
+}
+
+@media (width > 768px) {
+  .app-content ul,
+  ul.app-list
+  {
+    li:before {
+      content: '\2014\a0';
     }
   }
 
-  ul li:before {
-    content: '\2014\a0';
-  }
-
-  ol {
+  .app-content ol,
+  ol.app-list
+  {
     counter-reset: ol;
     li:before {
       counter-increment: ol;

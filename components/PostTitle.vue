@@ -6,10 +6,7 @@
 </template>
 
 <script>
-import InViewportMixin from '~/mixins/InViewportMixin.vue';
-
 export default {
-  mixins: [InViewportMixin],
   props: {
     linked: { type: Boolean, default: false },
     post: { type: Object, required: true },

@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link to="/" active-class="ignored" :class="_activeClass">
+  <nuxt-link to="/blog/" active-class="ignored" :class="_activeClass">
     <span :class="labelClass">Блог</span>
   </nuxt-link>
 </template>
@@ -19,7 +19,7 @@ export default {
         return false;
       }
 
-      if (['index', 'page-number', 'tags-slug', 'tags-slug-page-number'].includes(name)) {
+      if (['blog', 'blog-page-number', 'tags-slug', 'tags-slug-page-number'].includes(name)) {
         return true;
       }
 
