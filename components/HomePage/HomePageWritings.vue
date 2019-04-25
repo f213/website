@@ -10,8 +10,8 @@
         <nuxt-link class="writings__link" to="/small-changes/">Небольшие доработочки (перевод)</nuxt-link>
       </div>
       <div class="column content writings__column">
-        <a class="writings__link" href="https://vc.ru/dev/56022-opyt-ispolzovaniya-circle-ci" rel="noindex,nofollow"><img class="writings__vcru-icon" src="~/assets/images/vcru.png">Опыт построения непрерывной интеграции на CircleCI в небольшой команде</a>
-        <a class="writings__link" href="https://vc.ru/services/60710-github-dlya-nebolshoy-komandy" rel="noindex,nofollow"><img class="writings__vcru-icon" src="~/assets/images/vcru.png">GitHub как единственное средство коллаборации</a>
+        <a class="writings__link" href="https://vc.ru/dev/56022-opyt-ispolzovaniya-circle-ci" rel="noindex,nofollow"><img class="writings__vcru-icon" src="~/assets/images/vcru.png">Опыт построения непрерывной интеграции на CircleCI</a>
+        <a class="writings__link" href="https://vc.ru/services/60710-github-dlya-nebolshoy-komandy" rel="noindex,nofollow"><img class="writings__vcru-icon" src="~/assets/images/vcru.png">GitHub как единственное средство общения</a>
         <nuxt-link class="writings__link" to="/middle-way/">Программистам: три варианта развития мидла</nuxt-link>
         <nuxt-link class="writings__link" to="/50-percent/">Тупое правило про 50 процентов</nuxt-link>
         <nuxt-link class="writings__link" to="/feature-hatred/">Не любить новые фичи</nuxt-link>
