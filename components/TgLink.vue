@@ -1,5 +1,5 @@
 <template>
-  <a class="tg-link" href="tg://resolve?domain=pmdaily">
+  <a class="tg-link" href="tg://resolve?domain=pmdaily" @click="clicked">
     <slot>
       <i class="fa fa-telegram tg-link__icon" v-if="withIcon" />
       <span class="tg-link__label" :class="labelClass">{{ label }}</span>
@@ -7,11 +7,18 @@
   </a>
 </template>
 <script>
+import yaMetrika from '~/helpers/yaMetrika';
+
 export default {
   props: {
     withIcon: { type: Boolean, default: false },
     label: { type: String, default: 'Подписаться на телеграм' },
     labelClass: { type: String, default: () => '' },
+  },
+  methods: {
+    clicked() {
+      yaMetrika.reachGoal('tg-subscribe');
+    },
   },
 };
 </script>
