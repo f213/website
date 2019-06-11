@@ -1,4 +1,5 @@
 User-Agent: *
+Disallow: /tg-ad/
 
 Host: https://borshev.com
 Sitemap: https://borshev.com/sitemap.xml
