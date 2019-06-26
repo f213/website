@@ -1,6 +1,6 @@
 <template>
   <section class="consulting content" id="talk-to-me">
-    <h2 class="title is-3 has-text-weight-normal">Делюсь знаниями</h2>
+    <h2 class="title is-3 has-text-weight-normal consulting__header">Делюсь знаниями</h2>
     <p>В режиме один-к-одному делюсь знаниями и отвечаю на вопросы о разработке сложных продуктов.</p>
     <ul class="app-list consulting__list">
       <li>Как построить разработку нового продукта с нуля? Как построить общение с программистами?</li>
@@ -17,6 +17,10 @@
 
 <style scoped>
 .consulting {
+  &__header {
+    margin-bottom: .1rem;
+  }
+
   &__list {
     padding-left: 0;
     margin-left: 0;
