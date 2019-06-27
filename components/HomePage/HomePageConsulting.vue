@@ -18,7 +18,7 @@
 <style scoped>
 .consulting {
   &__header {
-    margin-bottom: .1rem;
+    margin-bottom: 1rem;
   }
 
   &__list {
