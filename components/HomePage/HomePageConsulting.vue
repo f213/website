@@ -10,7 +10,7 @@
       <li>Как ускорить time2market при помощи devops.</li>
     </ul>
     <p class="consulting__call-to-action">
-      Общение происходит по скайпу или через зум с видео. Руками не работаю. Пишите на <a href="mailto:fedor@borshev.com">почту</a> — договоримся.
+      Общение происходит по скайпу или через зум с видео. Руками не работаю. Пишите на <a href="mailto:fedor@borshev.com">fedor@borshev.com</a> — договоримся.
     </p>
   </section>
 </template>
