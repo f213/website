@@ -15,7 +15,7 @@ export default {
   computed: {
     isAtBlogPage() {
       const { name } = this.$route;
-      if (name.startsWith('featured')) { // disable highlight at the home page
+      if (name && name.startsWith('featured')) { // disable highlight at the home page
         return false;
       }
 
