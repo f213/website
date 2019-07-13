@@ -10,7 +10,7 @@
       <li>Как ускорить time2market при помощи devops.</li>
     </ul>
     <p class="consulting__call-to-action">
-      Общение происходит по скайпу или через зум с видео. Руками не работаю. Пишите на <a href="mailto:fedor@borshev.com">fedor@borshev.com</a> — договоримся.
+      Общение происходит по скайпу или через зум с видео. Руками не работаю. Почитайте <nuxt-link to="/consulting/#testimonials">отзывы</nuxt-link> и напишите на <a class="consulting__link" href="mailto:fedor@borshev.com">fedor@borshev.com</a> — договоримся.
     </p>
   </section>
 </template>
@@ -32,5 +32,15 @@
   &__call-to-action {
     margin-top: 2rem;
   }
+
+  &__link,
+  &__tg-link {
+    color: var(--link-color);
+
+    &:hover, &--hover {
+     color: var(--link-hover);
+    }
+  }
+
 }
 </style>

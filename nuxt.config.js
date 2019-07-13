@@ -40,6 +40,7 @@ module.exports = {
 
   loading: {
     color: '#363636',
+    failedColor: '#363636',
     height: '1px',
   },
 
