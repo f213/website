@@ -23,6 +23,7 @@ export default {
       links: [
         { to: { name: 'featured' }, label: 'Избранное' },
         { to: '/books/', label: 'Книги' },
+        { to: '/consulting/', label: 'Консультации' },
       ],
     };
   },
