@@ -16,9 +16,9 @@
   </nav>
 </template>
 <script>
-import TgLink from '~/components/TgLink.vue';
-
 import throttle from 'lodash.throttle';
+
+import TgLink from '~/components/TgLink.vue';
 
 export default {
   components: {

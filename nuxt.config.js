@@ -38,10 +38,10 @@ module.exports = {
     ],
   },
 
-  /*
-  ** Completely disable the progress bar
-  */
-  loading: false,
+  loading: {
+    color: '#363636',
+    height: '1px',
+  },
 
   /*
   ** Global CSS

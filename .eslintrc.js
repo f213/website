@@ -29,6 +29,7 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'consistent-return': 'off',
     'no-irregular-whitespace': 'off',
+    'no-underscore-dangle': 'off',
   },
   settings: {
     'import/resolver': {
