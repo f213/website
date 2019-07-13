@@ -1,6 +1,6 @@
+import { shallowMount } from '@vue/test-utils';
 import AppContent from '~/components/AppContent.vue';
 
-import { shallowMount } from '@vue/test-utils';
 
 const createWrapper = content => shallowMount(AppContent, { propsData: { content } });
 

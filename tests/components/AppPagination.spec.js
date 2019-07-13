@@ -1,5 +1,5 @@
-import AppPagination from '~/components/AppPagination.vue';
 import { shallowMount } from '@vue/test-utils';
+import AppPagination from '~/components/AppPagination.vue';
 
 const mount = (propsData, route) => shallowMount(AppPagination, {
   propsData,
