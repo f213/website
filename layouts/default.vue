@@ -25,7 +25,11 @@ export default {
 
 <style scoped>
 .default-section {
-  padding-top: 4rem;
+  padding-top: 5rem;
   padding-bottom: 0;
+
+  @media (width > 768px) {
+    padding-top: 2rem;
+  }
 }
 </style>
