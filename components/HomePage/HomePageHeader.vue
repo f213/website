@@ -1,6 +1,6 @@
 <template>
   <div class="home-page-header">
-    <h1 class="title is-size-1-desktop is-marginless home-page-header__title">Федор Борщев</h1>
+    <h1 class="title is-size-1-desktop is-marginless home-page-header__title">Фёдор Борщёв</h1>
     <HomePageMenu class="home-page-header__menu" />
   </div>
 </template>

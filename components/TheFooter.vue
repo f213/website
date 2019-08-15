@@ -2,7 +2,7 @@
   <footer class="app-footer">
     <div class="is-size-6" :class="textClass">
       <span>©</span>
-      <a class="app-footer__email" :href="email">Федор Борщев</a>
+      <a class="app-footer__email" :href="email">Фёдор Борщёв</a>
       <span>{{ years }}</span>
       <TheFooterPoop class="app-footer__poop"/>
     </div>

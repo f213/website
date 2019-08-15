@@ -3,7 +3,7 @@
     <div class="home-page__container">
       <HomePageHeader class="home-page__header" />
       <div class="home-page__photo">
-        <img class="home-page__img" src="~/assets/images/me.jpg" width="600" height="650" alt="Федор Борщев">
+        <img class="home-page__img" src="~/assets/images/me.jpg" width="600" height="650" alt="Фёдор Борщёв">
       </div>
       <HomePageLead class="home-page__lead" />
     </div>
@@ -31,11 +31,11 @@ export default {
   layout: 'empty',
   head() {
     return {
-      title: 'Федор Борщев — главная страница',
+      title: 'Фёдор Борщёв — главная страница',
       titleTemplate: '%s',
       meta: [
-        { name: 'keywords', content: 'Федор Борщев, Fedor Borshev, управление проектами, профессиональный блог, CTO, руководитель проектов, блог менеджера, GTD, ГТД, сроки, блог ненужного менеджера, психология, переговоры, электронная почта, инструменты' },
-        { name: 'description', content: 'Сайт Федора Борщева — CTO и ИТ-консультанта' },
+        { name: 'keywords', content: 'Фёдор Борщёв, Fedor Borshev, управление проектами, профессиональный блог, CTO, руководитель проектов, блог менеджера, GTD, ГТД, сроки, блог ненужного менеджера, психология, переговоры, электронная почта, инструменты' },
+        { name: 'description', content: 'Сайт Фёдора Борщёва — CTO и ИТ-консультанта' },
       ],
     };
   },

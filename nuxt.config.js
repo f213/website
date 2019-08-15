@@ -9,13 +9,13 @@ module.exports = {
     htmlAttrs: {
       lang: 'ru',
     },
-    titleTemplate: '%s — Федор Борщев',
+    titleTemplate: '%s — Фёдор Борщёв',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'author', content: 'Федор Борщев' },
+      { name: 'author', content: 'Фёдор Борщёв' },
       { 'http-equiv': 'X-UA-Compatible', content: 'IE=Edge' },
-      { property: 'og:site_name', content: 'Блог Федора Борщева' },
+      { property: 'og:site_name', content: 'Блог Фёдора Борщёва' },
       { property: 'fb:admins', content: '100006565443356' },
       { property: 'article:author', content: 'https://facebook.com/Fedor213' },
       { property: 'fb:profile_id', content: '100006565443356' },

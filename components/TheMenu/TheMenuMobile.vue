@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar" :class="{'navbar--visible': isScrollingUp || hasNotScrolledYet}">
     <div class="navbar-brand navbar__brand">
-      <h1 class="navbar-item title is-3 is-marginless navbar__title">Федор Борщев</h1>
+      <h1 class="navbar-item title is-3 is-marginless navbar__title">Фёдор Борщёв</h1>
 
       <a role="button" class="navbar-burger navbar__burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" @click.prevent="active = ! active" :class="{'is-active': active}">
         &#9776;
