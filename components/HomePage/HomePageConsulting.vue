@@ -4,13 +4,13 @@
     <p>В режиме один-к-одному делюсь знаниями и отвечаю на вопросы о разработке сложных продуктов.</p>
     <ul class="app-list consulting__list">
       <li>Как построить разработку нового продукта с нуля? Как построить общение с программистами?</li>
-      <li>Как сделать, чтобы разработчики не срывали сроки</li>
+      <li>Как сделать, чтобы разработчики не срывали сроки?</li>
       <li>Какие процессы нужны, когда команда выросла больше 3-х человек?</li>
       <li>Что делать с накопленным техдолгом? Как не создавать новый?</li>
-      <li>Как ускорить time2market при помощи devops.</li>
+      <li>Как ускорить time2market?</li>
     </ul>
     <p class="consulting__call-to-action">
-      Общение происходит по скайпу или через зум с видео. Руками не работаю. Почитайте <nuxt-link class="consulting__link" to="/consulting/#testimonials">отзывы</nuxt-link> и напишите на <a class="consulting__link" href="mailto:fedor@borshev.com">fedor@borshev.com</a> — договоримся.
+      Общаемся по скайпу или через зум с видео. Почитайте <nuxt-link class="consulting__link" to="/consulting/#testimonials">отзывы</nuxt-link> и напишите на <a class="consulting__link" href="mailto:fedor@borshev.com">fedor@borshev.com</a> — договоримся.
     </p>
   </section>
 </template>
