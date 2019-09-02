@@ -22,7 +22,8 @@ export default {
 </script>
 <style scoped>
 .app-tags {
-  margin-top: 1.5rem;
+  margin-top: .5rem;
+
   &__tag {
     margin-right: .7rem;
     border-bottom: 1px solid var(--link-border-color);

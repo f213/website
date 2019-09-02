@@ -29,6 +29,6 @@ export default {
 
 <style scoped>
 .app-share {
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 </style>

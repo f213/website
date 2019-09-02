@@ -1,3 +1,7 @@
+.app-content:not(:last-child) {
+  margin-bottom: 0;
+}
+
 .app-content {
   a { /* default link style */
     border-bottom: 1px solid var(--link-border-color);
