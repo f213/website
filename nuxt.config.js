@@ -97,7 +97,7 @@ module.exports = {
   },
   env: {
     ghostAPIKey: process.env.GHOST_API_KEY || '881fcfad416468563d3eec62c1',
-    perPage: 10,
+    perPage: 5,
     absoluteHost: 'https://borshev.com',
     copyrightYears: '2014–2019',
     email: 'fedor@borshev.com',
