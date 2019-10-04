@@ -1,58 +1,38 @@
 const express = require('express');
 const consola = require('consola');
-const proxy = require('http-proxy-middleware');
 
-const { Nuxt, Builder } = require('nuxt');
+const proxy = require('./proxy');
+const nuxt = require('./nuxt');
+
 
 const redirectToTheMainHost = require('./middleware/redirect-to-the-main-host');
 
 const app = express();
-const host = process.env.HOST || '127.0.0.1';
-const port = process.env.PORT || 3000;
-const target = process.env.BACKEND_URL ? process.env.BACKEND_URL : 'https://borshev.com';
-const changeOrigin = Boolean(target.includes('https'));
 
-app.set('port', port);
 
-consola.info('Setting middleware for redirect users to the main host');
 app.use(redirectToTheMainHost);
 
+/* Proxy to the ghost backend */
+proxy({
+  app,
+  target: process.env.BACKEND_URL ? process.env.BACKEND_URL : 'https://borshev.com',
+});
 
-consola.info('Setting backend proxy to', target);
-app.use('/i/', proxy({ target: `${target}/content/images/`, changeOrigin }));
-app.use('/api/', proxy({ target: `${target}/ghost/`, changeOrigin }));
-app.use([
-  '/content/images',
-  '/sitemap*.xml$',
-  '/ghost',
-  '^/rss/$',
-], proxy({ target, changeOrigin }));
+/* Non-nuxt views */
+app.get('/tdd-landing/', (req, res) => res.redirect(302, 'https://tdd.timepad.ru/event/1074439/'));
 
 
-// Import and Set Nuxt.js options
-const config = require('../nuxt.config.js');
+/* nuxt init */
+(async () => nuxt({ app }))();
 
-config.dev = !(process.env.NODE_ENV === 'production');
 
-async function start() {
-  // Init Nuxt.js
-  const nuxt = new Nuxt(config);
-  await nuxt.ready();
+/* Run express */
+const host = process.env.HOST || '127.0.0.1';
+const port = process.env.PORT || 3000;
+app.set('port', port);
+app.listen(port, host);
 
-  // Build only in dev mode
-  if (config.dev) {
-    const builder = new Builder(nuxt);
-    await builder.build();
-  }
-
-  // Give nuxt middleware to express
-  app.use(nuxt.render);
-
-  // Listen the server
-  app.listen(port, host);
-  consola.ready({
-    message: `Server listening on http://${host}:${port}`,
-    badge: true,
-  });
-}
-start();
+consola.ready({
+  message: `Server listening on http://${host}:${port}`,
+  badge: true,
+});
