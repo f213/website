@@ -3,23 +3,33 @@ const consola = require('consola');
 
 const proxy = require('./proxy');
 const nuxt = require('./nuxt');
+const getPreviewPost = require('./getPreviewPost');
 
 
 const redirectToTheMainHost = require('./middleware/redirect-to-the-main-host');
 
 const app = express();
 
+const backendURL = process.env.BACKEND_URL ? process.env.BACKEND_URL : 'https://borshev.com';
 
 app.use(redirectToTheMainHost);
+
+/* Non-nuxt views */
+app.get('/tdd-landing/', (req, res) => res.redirect(302, 'https://tdd.timepad.ru/event/1074439/'));
+
+app.get('/api/v8/preview-posts/:uuid', async (req, res) => {
+  try {
+    res.send(await getPreviewPost({ uuid: req.params.uuid, host: backendURL }));
+  } catch (_) {
+    res.status(404).send({ error: 'Post not found' });
+  }
+});
 
 /* Proxy to the ghost backend */
 proxy({
   app,
-  target: process.env.BACKEND_URL ? process.env.BACKEND_URL : 'https://borshev.com',
+  target: backendURL,
 });
-
-/* Non-nuxt views */
-app.get('/tdd-landing/', (req, res) => res.redirect(302, 'https://tdd.timepad.ru/event/1074439/'));
 
 
 /* nuxt init */

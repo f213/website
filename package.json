@@ -24,6 +24,7 @@
     "cross-env": "^5.2.0",
     "express": "^4.16.3",
     "ilyabirman-likely": "^2.3.1",
+    "jsonwebtoken": "^8.5.1",
     "nuxt": "^2.8.1",
     "vue-disqus": "^3.0.5",
     "vue-social-sharing": "^2.3.3"
