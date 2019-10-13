@@ -28,7 +28,7 @@ module.exports = async ({ uuid, host }) => {
   const { posts } = response.data;
 
   if (!posts.length) {
-    throw new Error('No posts found');
+    return {};
   }
 
   return posts[0];

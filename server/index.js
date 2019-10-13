@@ -20,8 +20,8 @@ app.get('/tdd-landing/', (req, res) => res.redirect(302, 'https://tdd.timepad.ru
 app.get('/api/v8/preview-posts/:uuid', async (req, res) => {
   try {
     res.send(await getPreviewPost({ uuid: req.params.uuid, host: backendURL }));
-  } catch (_) {
-    res.status(404).send({ error: 'Post not found' });
+  } catch (error) {
+    res.status(404).send({ error });
   }
 });
 
