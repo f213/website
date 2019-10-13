@@ -17,7 +17,7 @@ function getToken() {
 }
 
 module.exports = async ({ uuid, host }) => {
-  const url = `${host}/api/v2/admin/posts/`;
+  const url = `${host}/ghost/api/v2/admin/posts/`;
   const headers = { Authorization: `Ghost ${getToken()}` };
   const params = {
     filter: `uuid:${uuid}`,

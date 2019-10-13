@@ -21,7 +21,7 @@ app.get('/api/v8/preview-posts/:uuid', async (req, res) => {
   try {
     res.send(await getPreviewPost({ uuid: req.params.uuid, host: backendURL }));
   } catch (error) {
-    res.status(404).send({ error });
+    res.status(404).send({ error: '404' });
   }
 });
 
