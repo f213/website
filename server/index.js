@@ -15,7 +15,7 @@ const backendURL = process.env.BACKEND_URL ? process.env.BACKEND_URL : 'https://
 app.use(redirectToTheMainHost);
 
 /* Non-nuxt views */
-app.get('/tdd-landing/', (req, res) => res.redirect(302, 'https://tdd.timepad.ru/event/1074439/'));
+app.get('/courses/cto-growth/', (req, res) => res.redirect(302, 'https://pmdaily.ru/courses/cto-growth/'));
 
 app.get('/api/v8/preview-posts/:uuid', async (req, res) => {
   try {
