@@ -52,7 +52,7 @@ export default {
     display: grid;
     grid-gap: .5rem;
     grid-template-columns: 100%;
-    grid-template-rows: 100px auto auto;
+    grid-template-rows: auto auto auto;
     padding-top: 2rem;
   }
 
