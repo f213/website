@@ -42,7 +42,7 @@ export default {
 
   &__title {
     margin-bottom: .8rem;
-    line-height: 1.5;
+    line-height: 1.7;
   }
 
 
