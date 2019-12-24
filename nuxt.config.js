@@ -72,6 +72,7 @@ module.exports = {
     '@nuxtjs/axios',
     '@nuxtjs/font-awesome',
     '@nuxtjs/redirect-module',
+    '@nuxtjs/sentry',
   ],
   serverMiddleware: [
     '~/middleware/redirect-to-trailing-slash',
@@ -80,6 +81,9 @@ module.exports = {
     { from: '/tags/favorites/', to: '/featured/', statusCode: 301 },
     { from: '/rss/index.xml', to: '/rss/', statusCode: 301 },
   ],
+  sentry: {
+    dsn: 'https://563a1267525f4438bc73cccebd671a15@sentry.io/1865868',
+  },
   /*
   ** Axios module configuration
   */
