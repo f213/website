@@ -1,4 +1,4 @@
-FROM gdml/nuxt-base:1.0.0
+FROM gdml/nuxt-base:2.0.0
 
 ADD . /srv
 RUN yarn build

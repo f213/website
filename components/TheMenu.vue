@@ -1,11 +1,11 @@
 <template>
   <div class="the-menu">
-    <no-ssr>
+    <client-only>
       <TheMenuDesktop :links="links" v-if="width > 768" />
       <TheMenuMobile :links="links" v-else />
 
       <TheMenuDesktop :links="links" slot="placeholder" class="is-hidden-mobile" />
-    </no-ssr>
+    </client-only>
   </div>
 </template>
 <script>
