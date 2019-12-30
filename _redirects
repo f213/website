@@ -1,0 +1,5 @@
+/api/* https://borshev.com/api/:splat 200
+/i/* https://borshev.com/i/:splat 200
+/content/* https://borshev.com/content/:splat 200
+/ghost/* https://borshev.com/ghost/:splat 200
+
