@@ -76,6 +76,7 @@ module.exports = {
     ['@nuxtjs/google-analytics', {
       id: '155215393-1',
     }],
+    'nuxt-purgecss',
   ],
   serverMiddleware: [
     '~/middleware/redirect-to-trailing-slash',
@@ -108,6 +109,9 @@ module.exports = {
     copyrightYears: '2014–2019',
     email: 'fedor@borshev.com',
     yaMetrikaCounterID: '25756085',
+  },
+  purgeCSS: {
+    mode: 'postcss',
   },
 
   /*
