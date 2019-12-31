@@ -110,14 +110,12 @@ module.exports = {
     email: 'fedor@borshev.com',
     yaMetrikaCounterID: '25756085',
   },
-  purgeCSS: {
-    mode: 'postcss',
-  },
 
   /*
   ** Build configuration
   */
   build: {
+    extractCSS: true,
     postcss: {
       preset: {
         stage: 1,
