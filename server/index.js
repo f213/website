@@ -1,6 +1,8 @@
 const express = require('express');
 const consola = require('consola');
 
+require('dotenv').config();
+
 const proxy = require('./proxy');
 const nuxt = require('./nuxt');
 const getPreviewPost = require('./getPreviewPost');
