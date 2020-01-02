@@ -4,29 +4,22 @@ const consola = require('consola');
 require('dotenv').config();
 
 const apiController = require('./controllers/api');
-
-const proxy = require('./proxy');
+const ghostController = require('./controllers/ghost');
 const nuxt = require('./nuxt');
 
 
-const redirectToTheMainHost = require('./middleware/redirect-to-the-main-host');
+const redirectToTheMainHostMiddleware = require('./middleware/redirectToMainHostMiddleware');
 
 const app = express();
 
-app.use(redirectToTheMainHost);
+app.use(redirectToTheMainHostMiddleware);
+app.use('/', ghostController);
 
 /* V8 is our custom API, not to mess with ghost api, available (proxied) at /api/v2 */
 app.use('/api/v8', apiController);
 
 /* Non-nuxt views */
 app.get('/courses/cto-growth/', (req, res) => res.redirect(302, 'https://pmdaily.ru/courses/cto-growth/'));
-
-
-/* Proxy to the ghost backend */
-proxy({
-  app,
-  target: process.env.BACKEND_URL || 'https://borshev.com',
-});
 
 
 /* nuxt init */
