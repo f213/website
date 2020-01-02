@@ -1,4 +1,4 @@
-const { fetchAMPPost } = require('../../lib/ghost');
+const { fetchAMPPost } = require('../lib/ghost');
 
 module.exports = async (req, res) => {
   let html;
@@ -9,5 +9,5 @@ module.exports = async (req, res) => {
     res.status(404).send({ error: 'Post not found' });
   }
 
-  res.send({ html });
+  res.send(html);
 };
