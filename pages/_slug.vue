@@ -56,7 +56,7 @@ export default {
       title: this.post.meta_title || this.post.title,
       meta,
       link: [
-        { rel: 'amphtml', href: `https://mercury.postlight.com/amp?url=${getAbsoluteUrl(this.post)}` },
+        { rel: 'amphtml', href: `${process.env.absoluteHost}/amp/${this.post.slug}/` },
         { rel: 'canonical', href: getAbsoluteUrl(this.post) },
       ],
     };
