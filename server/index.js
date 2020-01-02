@@ -23,7 +23,12 @@ app.get('/courses/cto-growth/', (req, res) => res.redirect(302, 'https://pmdaily
 
 
 /* nuxt init */
-(async () => nuxt({ app }))();
+if (!process.env.SERVER_ONLY) {
+  consola.info('Running nuxt.js');
+  nuxt({ app });
+} else {
+  consola.warn('Not running nuxt.js because cuz SERVER_ONLY env variable is set');
+}
 
 
 /* Run express */
