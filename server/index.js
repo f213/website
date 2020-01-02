@@ -14,10 +14,11 @@ const app = express();
 app.use(redirectToTheMainHostMiddleware);
 
 app.use('/', ghostController);
-app.use('/', nuxtController);
 
 /* V8 is our custom API, not to mess with ghost api, available (proxied) at /api/v2 */
 app.use('/api/v8', apiController);
+
+app.use('/', nuxtController);
 
 /* Run express */
 const host = process.env.HOST || '127.0.0.1';
