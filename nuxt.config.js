@@ -114,7 +114,6 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    extractCSS: true,
     postcss: {
       preset: {
         stage: 1,
