@@ -1,8 +1,8 @@
 <template>
   <article class="app-post">
-    <PostTitle class="title is-3 is-size-4-mobile app-post__title" :class="{'is-marginless': isDetailed}" :post="post" :linked="linked"/>
+    <PostTitle class="title is-3 is-size-4-mobile app-post__title" :class="{'is-marginless': isDetailed}" :post="post" :linked="linked" />
     <TimeAgo class="is-size-7 app-post__time" :date="post.published_at" v-if="isDetailed && post.published_at" />
-    <AppContent :content="post.html"/>
+    <AppContent :content="post.html" />
     <AppTags class="is-hidden-mobile app-post__tags" :tags="post.tags" />
     <AppShare class="app-post__share" :page="post" />
   </article>
