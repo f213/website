@@ -1,5 +1,14 @@
+/*
+ *
+ * Custom ghost helpers which are not covered by the stock API
+ * */
+
 const jwt = require('jsonwebtoken');
 const axios = require('axios');
+
+axios.defaults.headers.common['X-Forwared-Proto'] = 'https'; // to fix ghost redirect
+
+const backendURL = process.env.BACKEND_URL || 'https://borshev.com';
 
 function getToken() {
   const key = process.env.ADMIN_API_KEY;
@@ -16,7 +25,6 @@ function getToken() {
 
 module.exports = {
   async fetchPostAsAdmin({ uuid }) {
-    const backendURL = process.env.BACKEND_URL || 'https://borshev.com';
     const url = `${backendURL}/ghost/api/v2/admin/posts/`;
 
     const response = await axios.get(url, {
@@ -29,5 +37,12 @@ module.exports = {
       },
     });
     return response.data.posts[0];
+  },
+
+  async fetchAMPPost(slug) {
+    const url = `${backendURL}/${slug}/amp`;
+    const response = await axios.get(url);
+
+    return response.data;
   },
 };
