@@ -40,7 +40,7 @@ module.exports = {
   },
 
   async fetchAMPPost(slug) {
-    const url = `${backendURL}/${slug}/amp`;
+    const url = `${backendURL}/${slug}/amp/`;
     const response = await axios.get(url);
 
     return response.data;
