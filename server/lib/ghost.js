@@ -6,6 +6,8 @@
 const jwt = require('jsonwebtoken');
 const axios = require('axios');
 
+axios.defaults.headers.common['X-Forwared-Proto'] = 'https'; // to fix ghost redirect
+
 const backendURL = process.env.BACKEND_URL || 'https://borshev.com';
 
 function getToken() {
@@ -36,10 +38,11 @@ module.exports = {
     });
     return response.data.posts[0];
   },
+
   async fetchAMPPost(slug) {
     const url = `${backendURL}/${slug}/amp`;
-    console.log('fetching', url);
     const response = await axios.get(url);
+
     return response.data;
   },
 };
