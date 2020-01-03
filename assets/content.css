@@ -1,3 +1,4 @@
+/* purgecss start ignore */
 .app-content:not(:last-child) {
   margin-bottom: 0;
 }
@@ -60,3 +61,5 @@
     padding-top: .2rem;
   }
 }
+
+/* purgecss end ignore */

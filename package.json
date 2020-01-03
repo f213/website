@@ -28,7 +28,8 @@
     "express": "^4.17.1",
     "ilyabirman-likely": "^2.4.0",
     "jsonwebtoken": "^8.5.1",
-    "nuxt": "^2.10.0"
+    "nuxt": "^2.10.0",
+    "nuxt-purgecss": "^0.2.1"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
