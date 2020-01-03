@@ -6,7 +6,7 @@
 const jwt = require('jsonwebtoken');
 const axios = require('axios');
 
-axios.defaults.headers.common['X-Forwared-Proto'] = 'https'; // to fix ghost redirect
+axios.defaults.headers.common['X-Forwarded-Proto'] = 'https'; // to fix ghost redirect
 
 const backendURL = process.env.BACKEND_URL || 'https://borshev.com';
 
