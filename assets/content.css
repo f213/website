@@ -59,4 +59,19 @@
     padding-left: .5rem;
     padding-top: .2rem;
   }
+
+  
+  .kg-gallery-image {
+    display: flex;
+
+    img {
+      display: none;
+      margin: auto;
+      cursor: pointer;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
 }
