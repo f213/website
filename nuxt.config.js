@@ -31,6 +31,7 @@ module.exports = {
       { name: 'theme-color', content: '#ffffff' },
 
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Noto+Sans:400,700&amp;subset=cyrillic" rel="stylesheet' },
+      { rel: 'stylesheet', href: '/css/legacy.css' },
     ],
     __dangerouslyDisableSanitizers: ['script'],
     script: [
@@ -49,7 +50,6 @@ module.exports = {
   */
   css: [
     '~/assets/bulma.scss',
-    '~/assets/legacy.css',
     '~/assets/vars.css',
     '~/assets/content.css',
     '~/assets/lists.css',
@@ -118,6 +118,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    extractCSS: true,
     postcss: {
       preset: {
         stage: 1,
