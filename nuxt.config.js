@@ -32,9 +32,11 @@ module.exports = {
 
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Noto+Sans:400,700&amp;subset=cyrillic" rel="stylesheet' },
       { rel: 'stylesheet', href: '/css/legacy.css' },
+      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/ilyabirman-likely/2.4.0/likely.css' },
     ],
     __dangerouslyDisableSanitizers: ['script'],
     script: [
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/ilyabirman-likely/2.4.0/likely.js' },
       { innerHTML: '(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(25756085, "init", { id:25756085, accurateTrackBounce:true, trackHash:true });' },
     ],
   },
@@ -74,9 +76,6 @@ module.exports = {
     '@nuxtjs/sentry',
     ['@nuxtjs/google-analytics', {
       id: '155215393-1',
-    }],
-    ['nuxt-purgecss', {
-      enabled: true,
     }],
   ],
   serverMiddleware: [
