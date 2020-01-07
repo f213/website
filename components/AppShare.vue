@@ -8,8 +8,6 @@
 </template>
 
 <script>
-import likely from 'ilyabirman-likely';
-
 import { getAbsoluteUrl } from '~/helpers/seo';
 
 export default {
@@ -22,7 +20,20 @@ export default {
     },
   },
   mounted() {
-    likely.initiate();
+    // try to init likely for 5 times
+
+    let attempts = 0;
+
+    function init() {
+      if ('likely' in window) {
+        window.likely.initiate();
+      } else if (attempts < 5) {
+        window.setTimeout(init, 1000);
+        attempts += 1;
+      }
+    }
+
+    init();
   },
 };
 </script>

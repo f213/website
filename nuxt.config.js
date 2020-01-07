@@ -54,7 +54,6 @@ module.exports = {
     '~/assets/content.css',
     '~/assets/lists.css',
     '~/assets/books.css',
-    'node_modules/ilyabirman-likely/release/likely.css',
   ],
 
   /*
@@ -77,7 +76,6 @@ module.exports = {
       id: '155215393-1',
     }],
     ['nuxt-purgecss', {
-      mode: 'postcss',
       enabled: true,
     }],
   ],

@@ -5730,11 +5730,6 @@ ignore@^5.1.4:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.1.4.tgz#84b7b3dbe64552b6ef0eca99f6743dbec6d97adf"
   integrity sha512-MzbUSahkTW1u7JpKKjY7LCARd1fU5W2rLdxlM4kdkayuCwZImjkpluF9CM1aLewYJguPDqewLam18Y6AU69A8A==
 
-ilyabirman-likely@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/ilyabirman-likely/-/ilyabirman-likely-2.4.0.tgz#1906a377b8d6bd586dad4237c071c0906e972c9d"
-  integrity sha512-4YiwnTwyNPwRbdnzYJYIaLzDtDANhu/coEUnfjdVEfwTxNcoACLI4xPvLEFC+1tmVMNNbI72pOnb4HJ1508zlA==
-
 import-cwd@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/import-cwd/-/import-cwd-2.1.0.tgz#aa6cf36e722761285cb371ec6519f53e2435b0a9"

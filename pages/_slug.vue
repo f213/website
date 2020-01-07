@@ -58,6 +58,10 @@ export default {
       link: [
         { rel: 'amphtml', href: `${process.env.absoluteHost}/amp/${this.post.slug}/` },
         { rel: 'canonical', href: getAbsoluteUrl(this.post) },
+        { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/ilyabirman-likely/2.4.0/likely.css' },
+      ],
+      script: [
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/ilyabirman-likely/2.4.0/likely.js' },
       ],
     };
   },
