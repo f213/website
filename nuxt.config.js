@@ -31,6 +31,7 @@ module.exports = {
       { name: 'theme-color', content: '#ffffff' },
 
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Noto+Sans:400,700&amp;subset=cyrillic" rel="stylesheet' },
+      { rel: 'stylesheet', href: '/css/legacy.css' },
     ],
     __dangerouslyDisableSanitizers: ['script'],
     script: [
@@ -49,12 +50,10 @@ module.exports = {
   */
   css: [
     '~/assets/bulma.scss',
-    '~/assets/legacy.css',
     '~/assets/vars.css',
     '~/assets/content.css',
     '~/assets/lists.css',
     '~/assets/books.css',
-    'node_modules/ilyabirman-likely/release/likely.css',
   ],
 
   /*
@@ -77,7 +76,6 @@ module.exports = {
       id: '155215393-1',
     }],
     ['nuxt-purgecss', {
-      mode: 'postcss',
       enabled: true,
     }],
   ],
@@ -118,6 +116,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    extractCSS: true,
     postcss: {
       preset: {
         stage: 1,
