@@ -34,7 +34,7 @@
     }
 
     &:not(:hover) {
-      transition: color .5s ease
+      transition: color .5s ease;
     }
   }
 

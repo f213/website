@@ -1,8 +1,9 @@
 <template>
-  <div class="container app-container" v-if="post">
+  <div class="container app-container app-slug" v-if="post">
     <template v-if="!post.page">
       <AppPost is-detailed :post="post" />
-      <SimilarPosts :posts="similar" />
+      <SubscribeBar class="app-slug__subscribe-bar" />
+      <SimilarPosts class="app-slug__similar-posts" :posts="similar" />
     </template>
     <AppPage :page="post" v-else />
   </div>
@@ -15,12 +16,14 @@ import { getMeta, getOpenGraph, getAbsoluteUrl } from '~/helpers/seo';
 import AppPage from '~/components/AppPage.vue';
 import AppPost from '~/components/AppPost.vue';
 import SimilarPosts from '~/components/SimilarPosts.vue';
+import SubscribeBar from '~/components/SubscribeBar.vue';
 
 export default {
   components: {
     AppPage,
     AppPost,
     SimilarPosts,
+    SubscribeBar,
   },
   async fetch({ store, route, error }) {
     const { slug } = route.params;
@@ -66,3 +69,14 @@ export default {
   },
 };
 </script>
+<style scoped>
+.app-slug {
+  &__subscribe-bar {
+    margin-top: 4rem;
+  }
+
+  &__similar-posts {
+    margin-top: 4rem;
+  }
+}
+</style>

@@ -40,8 +40,6 @@ export default {
 
 <style scoped>
 .app-post {
-  margin-bottom: 4rem;
-
   &__time {
     display: block;
     margin-bottom: 1rem;
