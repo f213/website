@@ -89,6 +89,7 @@
       margin: 0 4px;
       border-radius: 50%;
       background-color: var(--bullet-color);
+      cursor: pointer;
       transition: background-color 0.5s ease;
 
       @media (width > 768px) {
@@ -99,6 +100,7 @@
 
       &::before {
         content: '';
+        margin: 0;
       }
 
       &.active {
