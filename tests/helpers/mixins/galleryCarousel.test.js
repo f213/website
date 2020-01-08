@@ -14,10 +14,10 @@ const testContent = `
   </div>
 `;
 
-describe('galleryCarousel mixin', () => {
+describe('gallery slides', () => {
   it('After content rendering one slide should be active', () => {
     document.body.innerHTML = testContent;
-    galleryCarousel.methods.addClickHandlersToGalleries();
+    galleryCarousel.methods.addCarouseles();
 
     expect(document.body.querySelectorAll('.kg-gallery-container .kg-gallery-image img.active').length).toBe(1);
 
@@ -26,7 +26,7 @@ describe('galleryCarousel mixin', () => {
 
   it('On gallery clicks one slide should remain active', () => {
     document.body.innerHTML = testContent;
-    galleryCarousel.methods.addClickHandlersToGalleries();
+    galleryCarousel.methods.addCarouseles();
 
     const gallery = document.querySelector('.kg-gallery-container');
     const slides = document.querySelectorAll('.kg-gallery-image');
@@ -43,7 +43,7 @@ describe('galleryCarousel mixin', () => {
 
   it('On gallery clicks an active slide should change cyclically', () => {
     document.body.innerHTML = testContent;
-    galleryCarousel.methods.addClickHandlersToGalleries();
+    galleryCarousel.methods.addCarouseles();
 
     const gallery = document.querySelector('.kg-gallery-container');
     const slides = document.querySelectorAll('.kg-gallery-image');
@@ -59,5 +59,14 @@ describe('galleryCarousel mixin', () => {
     expect(slides[count].querySelector('img').classList.contains('active')).toBe(true);
 
     document.body.innerHTML = '';
+  });
+});
+
+
+describe('gallery bullets', () => {
+  it('Rendered bullets blocks', () => {
+    document.body.innerHTML = testContent;
+    galleryCarousel.methods.addCarouseles();
+    expect(document.body.querySelectorAll('.bullets').length).toBeGreaterThan(0);
   });
 });
