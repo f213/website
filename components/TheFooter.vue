@@ -4,7 +4,7 @@
       <span>©</span>
       <a class="app-footer__email" :href="email">Фёдор Борщёв</a>
       <span>{{ years }}</span>
-      <TheFooterPoop class="app-footer__poop"/>
+      <TheFooterPoop class="app-footer__poop" />
     </div>
   </footer>
 </template>
