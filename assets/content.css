@@ -60,45 +60,6 @@
     padding-left: .5rem;
     padding-top: .2rem;
   }
-
-  
-  .kg-gallery-image {
-    display: flex;
-
-    img {
-      display: none;
-      margin: auto;
-      cursor: pointer;
-
-      &.active {
-        display: block;
-      }
-    }
-  }
-
-  .bullets {
-    display: flex;
-    justify-content: center;
-    margin: 1rem auto;
-    padding: 0;
-
-    .bullets-item {
-      width: 14px;
-      height: 14px;
-      margin: 0 6px;
-      border-radius: 50%;
-      background-color: var(--bullet-color);
-      transition: background-color 0.5s ease;
-
-      &::before {
-        content: '';
-      }
-
-      &.active {
-        background-color: var(--navigation-color);
-      }
-    }
-  }
 }
 
 /* purgecss end ignore */

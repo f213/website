@@ -3,9 +3,9 @@
     <TheHeader />
     <TheMenu />
     <section class="section default-section">
-      <nuxt />
+      <nuxt/>
     </section>
-    <TheFooter class="section" text-class="container app-container" />
+    <TheFooter class="section" text-class="container app-container"/>
   </div>
 </template>
 <script>
