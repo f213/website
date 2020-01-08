@@ -79,16 +79,23 @@
   .bullets {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 1rem auto;
     padding: 0;
 
     .bullets-item {
-      width: 14px;
-      height: 14px;
-      margin: 0 6px;
+      width: 8px;
+      height: 8px;
+      margin: 0 4px;
       border-radius: 50%;
       background-color: var(--bullet-color);
       transition: background-color 0.5s ease;
+
+      @media (width > 768px) {
+        width: 14px;
+        height: 14px;
+        margin: 0 6px;
+      }
 
       &::before {
         content: '';
