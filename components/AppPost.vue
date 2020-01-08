@@ -5,7 +5,7 @@
     <HtmlComment v-if="noIndex" text="noindex" />
 
     <TimeAgo class="is-size-7 app-post__time" :date="post.published_at" v-if="isDetailed && post.published_at" />
-    <AppContent :content="post.html" />
+    <AppContent :content="post.html"/>
     <AppTags class="is-hidden-mobile app-post__tags" :tags="post.tags" />
     <AppShare class="app-post__share" :page="post" />
 

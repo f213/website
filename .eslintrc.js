@@ -30,8 +30,6 @@ module.exports = {
     'consistent-return': 'off',
     'no-irregular-whitespace': 'off',
     'no-underscore-dangle': 'off',
-    'vue/no-v-html': 'off',
-    'vue/singleline-html-element-content-newline': 'off',
   },
   settings: {
     'import/resolver': {
