@@ -1,6 +1,6 @@
 <template>
   <article class="app-post">
-    <PostTitle class="title is-3 is-size-4-mobile app-post__title" :class="{'is-marginless': isDetailed}" :post="post" :linked="linked"/>
+    <PostTitle class="title is-3 is-size-4-mobile app-post__title" :class="{'is-marginless': isDetailed}" :post="post" :linked="linked" />
 
     <HtmlComment v-if="noIndex" text="noindex" />
 
