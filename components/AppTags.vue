@@ -23,6 +23,7 @@ export default {
 <style scoped>
 .app-tags {
   margin-top: .5rem;
+  font-size: 13px;
 
   &__tag {
     margin-right: .7rem;
