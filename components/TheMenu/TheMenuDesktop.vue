@@ -4,7 +4,7 @@
       <nuxt-link to="/" class="app-nav__link">
         <span class="app-nav__label">Обо мне</span>
       </nuxt-link>
-      <BlogLink class="app-nav__link" label-class="app-nav__label" active-class="app-nav__link--active" />
+      <BlogLink class="app-nav__link" label-class="app-nav__label" active-class="app-nav__link--active-blog" />
       <nuxt-link v-for="(link, index) in links" :key="index" :to="link.to" class="app-nav__link" active-class="app-nav__link--active">
         <span class="app-nav__label">{{ link.label }}</span>
       </nuxt-link>

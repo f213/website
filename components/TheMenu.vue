@@ -60,13 +60,16 @@ export default {
       margin-left: 3px;
     }
 
-    &--active {
-      pointer-events: none;
+    &--active,
+    &--active-blog {
       .app-nav__label {
           color: var(--text-color);
           opacity: .8;
           border-bottom: 0;
       }
+    }
+    &--active {
+      pointer-events: none;
     }
   }
 
