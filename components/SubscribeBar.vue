@@ -5,7 +5,7 @@
     </div>
     <HtmlComment text="noindex" />
     <div class="subscribe-bar__text">
-      <p>Меня зовут Федя Борщёв. Пишу для программистов в <a class="subscribe-bar__link" :href="telegram"><i class="subscribe-bar__telegram-icon fa fa-paper-plane-o" /> телеграме</a> — 3 поста в неделю об управлении сложными проектами, хорошем коде и профессиональном развитии. А ещё я в прямом эфире пишу код на <a class="subscribe-bar__link" :href="youtube"><i class="subscribe-bar__youtube-icon fa fa-youtube-play" /> ютубе</a> и выкладываю сторьки в <a class="subscribe-bar__link" :href="instagram"><i class="fa fa-instagram" /> инстаграм</a>. Подписывайтесь!
+      <p>Меня зовут Федя Борщёв. Пишу для программистов в <a class="subscribe-bar__link" v-metrika="'subscribe-telegram'" :href="telegram"><i class="subscribe-bar__telegram-icon fa fa-paper-plane-o" /> телеграме</a> — 3 поста в неделю об управлении сложными проектами, хорошем коде и профессиональном развитии. А ещё я в прямом эфире пишу код на <a class="subscribe-bar__link" v-metrika="'subscribe-youtube'" :href="youtube"><i class="subscribe-bar__youtube-icon fa fa-youtube-play" /> ютубе</a> и выкладываю сторьки в <a class="subscribe-bar__link" v-metrika="'subscribe-instagram'" :href="instagram"><i class="fa fa-instagram" /> инстаграм</a>. Подписывайтесь!
       </p>
     </div>
     <HtmlComment text="/noindex" />
