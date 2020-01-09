@@ -42,6 +42,7 @@ export default {
   watch: {
     $route() {
       this.active = false;
+      this.hasNotScrolledYet = true;
     },
   },
   beforeMount() {
