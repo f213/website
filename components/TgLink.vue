@@ -1,7 +1,7 @@
 <template>
   <a class="tg-link" href="tg://resolve?domain=pmdaily" v-metrika="'subscribe-telegram'">
     <slot>
-      <i class="fa fa-telegram tg-link__icon" v-if="withIcon" />
+      <i class="fa fa-paper-plane-o tg-link__icon" v-if="withIcon" />
       <span class="tg-link__label" :class="labelClass">{{ label }}</span>
     </slot>
   </a>
@@ -21,11 +21,14 @@ export default {
   white-space: nowrap;
 
   &__icon {
-    color: var(--navigation-color);
+    opacity: .9;
+    color: var(--link-color);
   }
 
-  &:hover &__icon {
-     color: var(--navigation-hover);
+  @media (width > 768px) {
+    &:hover, &:hover &__icon {
+      color: var(--link-hover);
+    }
   }
 
   &:not(:hover) &__icon {

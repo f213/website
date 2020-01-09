@@ -74,14 +74,14 @@ export default {
   }
 
   &__label {
-    border-bottom: 1px solid var(--navigation-border-color);
-    color: var(--navigation-color);
+    border-bottom: 1px solid var(--link-border-color);
+    color: #0050a0;
     white-space: nowrap;
     line-height: 2rem;
 
     &:hover {
-        color: var(--navigation-hover);
-        border-color: var(--navigation-border-hover);
+        color: var(--link-hover);
+        border-color: var(--link-border-hover);
     }
     &:not(:hover) {
       transition: color .5s ease
