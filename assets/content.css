@@ -105,6 +105,7 @@
 
       &.active {
         background-color: var(--navigation-color);
+        cursor: default;
       }
     }
   }
