@@ -61,6 +61,9 @@
     padding-top: .2rem;
   }
 
+  .kg-gallery-container {
+    position: relative;
+  }
   
   .kg-gallery-image {
     display: flex;
@@ -77,16 +80,25 @@
   }
 
   .bullets {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1rem auto;
+    margin: auto;
     padding: 0;
+
+    @media (width > 768px) {
+      bottom: 1.2rem;
+    }
 
     .bullets-item {
       width: 8px;
       height: 8px;
       margin: 0 4px;
+      border: 1px solid var(--bullet-border-color);
       border-radius: 50%;
       background-color: var(--bullet-color);
       cursor: pointer;
