@@ -116,7 +116,7 @@
       }
 
       &.active {
-        background-color: var(--navigation-color);
+        background-color: var(--link-color);
         cursor: default;
       }
     }
