@@ -14,38 +14,36 @@ const testContent = `
   </div>
 `;
 
+beforeEach(() => {
+  document.body.innerHTML = testContent;
+  galleryCarousel.init();
+});
+
+afterEach(() => {
+  document.body.innerHTML = '';
+});
+
 describe('gallery slides', () => {
   it('After content rendering one slide should be active', () => {
-    document.body.innerHTML = testContent;
-    galleryCarousel.init();
+    const activeSlideElement = document.body.querySelector('.kg-gallery-container .kg-gallery-image img.active');
 
-    const activeSlide = document.body.querySelector('.kg-gallery-container .kg-gallery-image img.active');
-
-    expect(activeSlide).not.toBeNull();
-
-    document.body.innerHTML = '';
+    expect(activeSlideElement).not.toBeNull();
   });
 
   it('On gallery clicks one slide should remain active', () => {
-    document.body.innerHTML = testContent;
-    galleryCarousel.init();
-
     const gallery = document.querySelector('.kg-gallery-container');
     gallery.click();
 
-    const activeSlide = document.body.querySelector('.kg-gallery-container .kg-gallery-image img.active');
+    const activeSlideElement = document.body.querySelector('.kg-gallery-container .kg-gallery-image img.active');
 
-    expect(activeSlide).not.toBeNull();
-
-    document.body.innerHTML = '';
+    expect(activeSlideElement).not.toBeNull();
   });
 });
 
 
 describe('gallery bullets', () => {
   it('Rendered bullets blocks', () => {
-    document.body.innerHTML = testContent;
-    galleryCarousel.init();
-    expect(document.body.querySelectorAll('.bullets').length).toBeGreaterThan(0);
+    const bulletsElement = document.body.querySelectorAll('.bullets');
+    expect(bulletsElement.length).toBeGreaterThan(0);
   });
 });
