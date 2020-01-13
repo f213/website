@@ -23,11 +23,12 @@ export default {
 <style scoped>
 .app-tags {
   margin-top: .5rem;
+  font-size: 13px;
 
   &__tag {
     margin-right: .7rem;
     border-bottom: 1px solid var(--link-border-color);
-    color: #0060a0;
+    color: #0050a0;
     --webkit-tap-highlight-color: rgba( 0, 0, 0, 0 );
 
     &:hover {
