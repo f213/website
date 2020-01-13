@@ -1,13 +1,13 @@
 <template>
   <nav class="navbar" :class="{'navbar--visible': isScrollingUp || hasNotScrolledYet}">
-    <div class="navbar-brand navbar__brand">
-      <h1 class="navbar-item title is-3 is-marginless navbar__title">Фёдор Борщёв</h1>
+    <div class="navbar__brand navbar-brand">
+      <h1 class="navbar__title navbar-item title is-3 is-marginless" @click="active = ! active">Фёдор Борщёв</h1>
 
-      <a role="button" class="navbar-burger navbar__burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" @click.prevent="active = ! active" :class="{'is-active': active}">
+      <a role="button" class="navbar__burger navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" @click.prevent="active = ! active" :class="{'is-active': active}">
         &#9776;
       </a>
     </div>
-    <div class="navbar-menu" :class="{'is-active': active && isScrollingUp}">
+    <div class="navbar-menu" :class="{'is-active': active }">
       <div class="navbar-start">
         <nuxt-link v-for="(link, index) in _links" :key="index" :to="link.to" class="navbar-item navbar__item">{{ link.label }}</nuxt-link>
         <TgLink with-icon class="navbar-item" />
@@ -42,6 +42,7 @@ export default {
   watch: {
     $route() {
       this.active = false;
+      this.hasNotScrolledYet = true;
     },
   },
   beforeMount() {
@@ -84,6 +85,9 @@ export default {
     justify-content: center;
     font-size: 1.5rem;
     padding-top: .3rem;
+    &:hover {
+      background-color: unset;
+    }
   }
 
   &__item {

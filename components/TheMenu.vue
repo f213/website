@@ -60,25 +60,28 @@ export default {
       margin-left: 3px;
     }
 
-    &--active {
-      pointer-events: none;
+    &--active,
+    &--active-blog {
       .app-nav__label {
           color: var(--text-color);
           opacity: .8;
           border-bottom: 0;
       }
     }
+    &--active {
+      pointer-events: none;
+    }
   }
 
   &__label {
-    border-bottom: 1px solid var(--navigation-border-color);
-    color: var(--navigation-color);
+    border-bottom: 1px solid var(--link-border-color);
+    color: #0050a0;
     white-space: nowrap;
     line-height: 2rem;
 
     &:hover {
-        color: var(--navigation-hover);
-        border-color: var(--navigation-border-hover);
+        color: var(--link-hover);
+        border-color: var(--link-border-hover);
     }
     &:not(:hover) {
       transition: color .5s ease
