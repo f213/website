@@ -6,4 +6,7 @@
   --link-border-color: rgba(0, 138, 206, .5);
   --link-hover: #cc0000;
   --link-border-hover: #cc0000;
+
+  --bullet-color: #cdcdcd;
+  --bullet-border-color: #555555;
 }
