@@ -18,7 +18,7 @@
       </div>
     </div>
     <div class="writings__tg">
-      <p>Еще больше — в <TgLink label="телеграме" class="writings__tg-link" :class="{'writings__tg-link--hover': isTgLinkHovered}"/></p>
+      <p>Еще больше — в <TgLink label="телеграме" class="writings__tg-link" :class="{'writings__tg-link--hover': isTgLinkHovered}" /></p>
       <TgLink @mouseover.native="isTgLinkHovered=true" @mouseout.native="isTgLinkHovered=false">
         <img class="writings__tg-img" src="~/assets/images/tg.png" alt="Телеграм">
       </TgLink>

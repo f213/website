@@ -3,7 +3,7 @@
     <h4 class="title is-5 similar-posts__title">Почитать ещё</h4>
     <ul class="similar-posts__list">
       <li class="similar-posts__item" v-for="post in posts" :key="post.id">
-        <nuxt-link class="similar-posts__link" :to="link(post)" >{{ post.title }}</nuxt-link>
+        <nuxt-link class="similar-posts__link" :to="link(post)">{{ post.title }}</nuxt-link>
       </li>
     </ul>
   </div>
@@ -30,7 +30,7 @@ export default {
 <style scoped>
 .similar-posts {
   &__title {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
 
   &__list {
@@ -41,21 +41,21 @@ export default {
   }
 
   &__item {
-    margin-bottom: .6rem;
+    margin-bottom: 0.6rem;
   }
 
   &__link {
     border-bottom: 1px solid var(--link-border-color);
     color: var(--link-color);
-    --webkit-tap-highlight-color: rgba( 0, 0, 0, 0 );
+    --webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
     &:hover {
-        color: var(--link-hover);
-        border-color: var(--link-border-hover);
+      color: var(--link-hover);
+      border-color: var(--link-border-hover);
     }
 
     &:not(:hover) {
-      transition: color .5s ease, border-color .5s ease;
+      transition: color 0.5s ease, border-color 0.5s ease;
     }
   }
 }

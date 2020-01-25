@@ -60,6 +60,67 @@
     padding-left: .5rem;
     padding-top: .2rem;
   }
+
+  .kg-gallery-container {
+    position: relative;
+  }
+  
+  .kg-gallery-image {
+    display: flex;
+
+    img {
+      display: none;
+      margin: auto;
+      cursor: pointer;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+
+  .bullets {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 0;
+
+    @media (width > 768px) {
+      bottom: 1.2rem;
+    }
+
+    .bullets-item {
+      width: 8px;
+      height: 8px;
+      margin: 0 4px;
+      border: 1px solid var(--bullet-border-color);
+      border-radius: 50%;
+      background-color: var(--bullet-color);
+      cursor: pointer;
+      transition: background-color 0.5s ease;
+
+      @media (width > 768px) {
+        width: 14px;
+        height: 14px;
+        margin: 0 6px;
+      }
+
+      &::before {
+        content: '';
+        margin: 0;
+      }
+
+      &.active {
+        background-color: var(--link-color);
+        cursor: default;
+      }
+    }
+  }
 }
 
 /* purgecss end ignore */
