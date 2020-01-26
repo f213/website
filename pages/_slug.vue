@@ -68,6 +68,9 @@ export default {
     };
   },
   jsonld() {
+    if (this.post.page) {
+      return null;
+    }
     return {
       '@context': 'http://schema.org',
       '@type': 'Article',
