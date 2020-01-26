@@ -67,6 +67,12 @@ export default {
       ],
     };
   },
+  jsonld() {
+    return {
+      '@context': 'http://schema.org',
+      '@type': 'Article',
+    };
+  },
 };
 </script>
 <style scoped>
