@@ -5,30 +5,32 @@ import PostPage from '~/pages/_slug.vue';
 const localVue = createLocalVue();
 localVue.use(Vuex);
 
-const createWrapper = (isPage = false) => shallowMount(PostPage, {
-  mocks: {
-    $store: {
-      state: {
-        posts: {
-          post: {
-            page: isPage,
-            title: 'test post title',
-            tags: [
-              { name: 'tagName1' },
-              { name: 'tagName2' },
-            ],
+const createJsonldFunc = (isPage = false) => {
+  const wrapper = shallowMount(PostPage, {
+    mocks: {
+      $store: {
+        state: {
+          posts: {
+            post: {
+              page: isPage,
+              title: 'test post title',
+              tags: [
+                { name: 'tagName1' },
+                { name: 'tagName2' },
+              ],
+            },
           },
         },
       },
     },
-  },
-  localVue,
-});
+    localVue,
+  });
+  return wrapper.vm.$options.jsonld.bind(wrapper.vm);
+};
 
 describe('Jsonld function', () => {
   describe('Not post page', () => {
-    const wrapper = createWrapper(true);
-    const jsonld = wrapper.vm.$options.jsonld.bind(wrapper.vm);
+    const jsonld = createJsonldFunc(true);
 
     it('Jsonld function return null for a not post page', () => {
       expect(jsonld()).toBeNull();
@@ -36,8 +38,7 @@ describe('Jsonld function', () => {
   });
 
   describe('Post page', () => {
-    const wrapper = createWrapper();
-    const jsonld = wrapper.vm.$options.jsonld.bind(wrapper.vm);
+    const jsonld = createJsonldFunc();
 
     it('Jsonld function return a correct post headline for a post page', () => {
       const { headline } = jsonld();
