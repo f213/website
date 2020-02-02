@@ -13,6 +13,9 @@ const wrapper = shallowMount(PostPage, {
           post: {
             page: false,
             html: '<div class="test">test post</div>',
+            tags: [
+              { name: '' },
+            ],
           },
         },
       },
