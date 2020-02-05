@@ -67,6 +67,51 @@ export default {
       ],
     };
   },
+  jsonld() {
+    if (this.post.page) {
+      return null;
+    }
+    return {
+      '@context': 'http://schema.org',
+      '@type': 'Article',
+      publisher: {
+        '@type': 'Organization',
+        name: 'Блог Фёдора Борщёва',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://borshev.com/favicon.ico',
+          width: 32,
+          height: 32,
+        },
+      },
+      author: {
+        '@type': 'Person',
+        name: 'Fedor Borshev',
+        image: {
+          '@type': 'ImageObject',
+          url: '//www.gravatar.com/avatar/5ffb60d95e13e0974bbbe313e04ad719?s=250&d=mm&r=x',
+          width: 250,
+          height: 250,
+        },
+        url: 'https://borshev.com/404/',
+        sameAs: [],
+      },
+      headline: this.post.title,
+      url: this.post.url,
+      datePublished: this.post.created_at,
+      dateModified: this.post.updated_at,
+      image: {
+        '@type': 'ImageObject',
+        url: this.post.feature_image,
+      },
+      keywords: this.post.tags.map(item => item.name).join(', '),
+      description: this.post.excerpt,
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': 'https://borshev.com/',
+      },
+    };
+  },
 };
 </script>
 <style scoped>

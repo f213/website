@@ -64,6 +64,7 @@ module.exports = {
   plugins: [
     '~/plugins/ghost-auth.js',
     { src: '~/plugins/ya-metrika.js', ssr: false },
+    '~/plugins/jsonld',
   ],
 
   /*
