@@ -9,6 +9,7 @@ export const getMeta = (entity) => {
       name: 'description',
       content: entity.meta_description,
     });
+    return meta;
   }
   if (entity.og_description) {
     meta.push({
@@ -16,6 +17,7 @@ export const getMeta = (entity) => {
       name: 'description',
       content: entity.og_description,
     });
+    return meta;
   }
   if (entity.twiiter_description) {
     meta.push({
@@ -23,6 +25,7 @@ export const getMeta = (entity) => {
       name: 'description',
       content: entity.twiiter_description,
     });
+    return meta;
   }
   if (entity.excerpt) {
     meta.push({
@@ -30,9 +33,8 @@ export const getMeta = (entity) => {
       name: 'description',
       content: entity.excerpt,
     });
+    return meta;
   }
-
-  // console.log('meta -->', meta);
   return meta;
 };
 
