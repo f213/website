@@ -55,6 +55,7 @@ export default {
       return {};
     }
     const meta = getMeta(this.post).concat(getOpenGraph(this.post));
+    // console.log('meta -->', meta);
     return {
       title: this.post.meta_title || this.post.title,
       meta,
@@ -66,6 +67,9 @@ export default {
         { src: 'https://cdnjs.cloudflare.com/ajax/libs/ilyabirman-likely/2.4.0/likely.js' },
       ],
     };
+  },
+  created() {
+    // console.log('post -->', this.post);
   },
   jsonld() {
     if (this.post.page) {

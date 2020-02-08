@@ -10,6 +10,29 @@ export const getMeta = (entity) => {
       content: entity.meta_description,
     });
   }
+  if (entity.og_description) {
+    meta.push({
+      hid: 'description',
+      name: 'description',
+      content: entity.og_description,
+    });
+  }
+  if (entity.twiiter_description) {
+    meta.push({
+      hid: 'description',
+      name: 'description',
+      content: entity.twiiter_description,
+    });
+  }
+  if (entity.excerpt) {
+    meta.push({
+      hid: 'description',
+      name: 'description',
+      content: entity.excerpt,
+    });
+  }
+
+  // console.log('meta -->', meta);
   return meta;
 };
 

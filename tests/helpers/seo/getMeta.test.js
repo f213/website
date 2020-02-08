@@ -5,8 +5,32 @@ describe('getMeta helper', () => {
     const post = { meta_description: null };
     expect(getMeta(post)).toEqual([]);
   });
-  it('Returns description when it is present', () => {
+  it('Returns description when is present meta_description', () => {
     const post = { meta_description: 'Грузите апельсины бочками' };
+    expect(getMeta(post)[0]).toEqual({
+      hid: 'description',
+      name: 'description',
+      content: 'Грузите апельсины бочками',
+    });
+  });
+  it('Returns description when is present og_description', () => {
+    const post = { og_description: 'Грузите апельсины бочками' };
+    expect(getMeta(post)[0]).toEqual({
+      hid: 'description',
+      name: 'description',
+      content: 'Грузите апельсины бочками',
+    });
+  });
+  it('Returns description when is present twiiter_description', () => {
+    const post = { twiiter_description: 'Грузите апельсины бочками' };
+    expect(getMeta(post)[0]).toEqual({
+      hid: 'description',
+      name: 'description',
+      content: 'Грузите апельсины бочками',
+    });
+  });
+  it('Returns description when is present excerpt', () => {
+    const post = { excerpt: 'Грузите апельсины бочками' };
     expect(getMeta(post)[0]).toEqual({
       hid: 'description',
       name: 'description',
