@@ -1,39 +1,27 @@
 export const getMeta = (entity) => {
+  const DESC_FIELDS = [
+    'meta_description',
+    'og_description',
+    'twiiter_description',
+    'excerpt',
+  ];
+
   const meta = [];
   if ([null, undefined].includes(entity)) {
     return meta;
   }
-  if (entity.meta_description) {
-    meta.push({
-      hid: 'description',
-      name: 'description',
-      content: entity.meta_description,
-    });
-    return meta;
-  }
-  if (entity.og_description) {
-    meta.push({
-      hid: 'description',
-      name: 'description',
-      content: entity.og_description,
-    });
-    return meta;
-  }
-  if (entity.twiiter_description) {
-    meta.push({
-      hid: 'description',
-      name: 'description',
-      content: entity.twiiter_description,
-    });
-    return meta;
-  }
-  if (entity.excerpt) {
-    meta.push({
-      hid: 'description',
-      name: 'description',
-      content: entity.excerpt,
-    });
-    return meta;
+
+  for (let index = 0; index < DESC_FIELDS.length; index += 1) {
+    const field = DESC_FIELDS[index];
+
+    if (entity[field]) {
+      meta.push({
+        hid: 'description',
+        name: 'description',
+        content: entity[field],
+      });
+      return meta;
+    }
   }
   return meta;
 };
