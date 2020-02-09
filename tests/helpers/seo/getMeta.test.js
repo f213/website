@@ -46,6 +46,19 @@ describe('getMeta helper', () => {
     };
     expect(getMeta(post).length).toEqual(1);
   });
+  it('Returns the most important description when is present multiple description fields in post', () => {
+    const post = {
+      meta_description: 'Грузите апельсины бочками',
+      og_description: 'Узнаю брата Колю',
+      excerpt: 'Пилите, Шура, пилите, они золотые',
+      twiiter_description: 'Пиво отпускается только членам профсоюза',
+    };
+    expect(getMeta(post)[0]).toEqual({
+      hid: 'description',
+      name: 'description',
+      content: 'Грузите апельсины бочками',
+    });
+  });
   it('Is javascript-proof', () => {
     const post = null;
     expect(getMeta(post)).toEqual([]);
