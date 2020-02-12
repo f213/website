@@ -107,7 +107,7 @@ module.exports = {
     ghostAPIKey: process.env.GHOST_API_KEY || '881fcfad416468563d3eec62c1',
     perPage: 5,
     absoluteHost: 'https://borshev.com',
-    instagram: 'https://www.instagram.com/fedor_borshev/',
+    facebook: 'https://facebook.com/Fedor213',
     youtube: 'https://www.youtube.com/channel/UCO8aN1B8ncJM09rohGvOiCQ',
     telegram: 'https://tgclick.ru/pmdaily/722',
     copyrightYears: '2014–2020',
