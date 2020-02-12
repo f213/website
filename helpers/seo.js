@@ -11,18 +11,16 @@ export const getMeta = (entity) => {
     return meta;
   }
 
-  for (let index = 0; index < DESC_FIELDS.length; index += 1) {
-    const field = DESC_FIELDS[index];
+  const description = DESC_FIELDS.find(field => entity[field]);
 
-    if (entity[field]) {
-      meta.push({
-        hid: 'description',
-        name: 'description',
-        content: entity[field],
-      });
-      return meta;
-    }
+  if (description) {
+    meta.push({
+      hid: 'description',
+      name: 'description',
+      content: entity[description],
+    });
   }
+
   return meta;
 };
 
