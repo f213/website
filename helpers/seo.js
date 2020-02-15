@@ -1,15 +1,26 @@
 export const getMeta = (entity) => {
+  const DESC_FIELDS = [
+    'meta_description',
+    'og_description',
+    'twiiter_description',
+    'excerpt',
+  ];
+
   const meta = [];
   if ([null, undefined].includes(entity)) {
     return meta;
   }
-  if (entity.meta_description) {
+
+  const description = DESC_FIELDS.find(field => entity[field]);
+
+  if (description) {
     meta.push({
       hid: 'description',
       name: 'description',
-      content: entity.meta_description,
+      content: entity[description],
     });
   }
+
   return meta;
 };
 
