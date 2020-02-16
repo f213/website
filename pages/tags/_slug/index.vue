@@ -1,5 +1,5 @@
 <template>
-  <AppPostList :posts="posts" no-index />
+  <AppPostList :posts="posts" :tag="tag" no-index />
 </template>
 
 <script>
