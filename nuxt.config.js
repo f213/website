@@ -85,6 +85,7 @@ module.exports = {
   redirect: [
     { from: '/tags/favorites/', to: '/featured/', statusCode: 301 },
     { from: '/rss/index.xml', to: '/rss/', statusCode: 301 },
+    { from: '/book', to: 'https://calendly.com/f213/30min', statusCode: 302 },
   ],
   sentry: {
     dsn: 'https://563a1267525f4438bc73cccebd671a15@sentry.io/1865868',
