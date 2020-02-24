@@ -17,7 +17,6 @@ export default {
   },
   props: {
     posts: { type: Array, required: true },
-    tag: { type: Object, default: () => ({ name: '', description: '' }) },
     noIndex: { type: Boolean, default: false },
   },
 };
