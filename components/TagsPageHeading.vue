@@ -1,5 +1,5 @@
 <template>
-  <div class="tags-page-heading">
+  <div class="tags-page-heading container app-container">
     <h1 class="tags-page-heading__title title is-2">Заметки с тегом «{{ tag.name }}»</h1>
 
     <HtmlComment v-if="noIndex" text="noindex" />
