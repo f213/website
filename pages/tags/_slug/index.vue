@@ -1,5 +1,8 @@
 <template>
-  <AppPostList :posts="posts" no-index />
+  <div>
+    <TagsPageHeading :tag="tag" />
+    <AppPostList :posts="posts" :tag="tag" no-index />
+  </div>
 </template>
 
 <script>
@@ -7,11 +10,13 @@ import { mapState } from 'vuex';
 
 import { getMeta, getPrevNextLinks } from '~/helpers/seo';
 
+import TagsPageHeading from '~/components/TagsPageHeading.vue';
 import AppPostList from '~/components/AppPostList.vue';
 
 export default {
   components: {
     AppPostList,
+    TagsPageHeading,
   },
   async fetch({ store, route, error }) {
     const { slug } = route.params;
