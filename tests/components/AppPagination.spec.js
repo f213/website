@@ -19,7 +19,7 @@ const mount = (propsData, route) => shallowMount(AppPagination, {
 
 describe('AppPagination', () => {
   describe('Next page link [tag page]', () => {
-    const createWrapper = params => mount({ destination: 'next' }, { params, name: 'tags-tag-page-number' });
+    const createWrapper = (params) => mount({ destination: 'next' }, { params, name: 'tags-tag-page-number' });
 
     it('Should be 2 when page is 1', () => {
       const wrapper = createWrapper({ });
@@ -40,7 +40,7 @@ describe('AppPagination', () => {
   });
 
   describe('Prev page link [tag page]', () => {
-    const createWrapper = params => mount({ destination: 'prev' }, { params, name: 'tags-tag-page-number' });
+    const createWrapper = (params) => mount({ destination: 'prev' }, { params, name: 'tags-tag-page-number' });
     it('Should be 2 when page is 3', () => {
       const wrapper = createWrapper({ number: 3 });
       expect(wrapper.vm.link).toEqual({ name: 'tags-tag-page-number', params: { number: 2 } });
@@ -70,7 +70,7 @@ describe('AppPagination', () => {
   });
 
   describe('Next page link [index page]', () => {
-    const createWrapper = params => mount({ destination: 'next' }, { params, name: 'page-number' });
+    const createWrapper = (params) => mount({ destination: 'next' }, { params, name: 'page-number' });
 
     it('Should be 2 when page is 1', () => {
       const wrapper = createWrapper({ });
@@ -90,7 +90,7 @@ describe('AppPagination', () => {
   });
 
   describe('Prev page link [index page]', () => {
-    const createWrapper = params => mount({ destination: 'prev' }, { params, name: 'page-number' });
+    const createWrapper = (params) => mount({ destination: 'prev' }, { params, name: 'page-number' });
 
     it('Should be 2 when page is 3', () => {
       const wrapper = createWrapper({ number: 3 });

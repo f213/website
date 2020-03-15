@@ -11,7 +11,7 @@ export const getMeta = (entity) => {
     return meta;
   }
 
-  const description = DESC_FIELDS.find(field => entity[field]);
+  const description = DESC_FIELDS.find((field) => entity[field]);
 
   if (description) {
     meta.push({
@@ -24,7 +24,7 @@ export const getMeta = (entity) => {
   return meta;
 };
 
-export const getAbsoluteUrl = page => (!(page.url.includes('://')) ? process.env.absoluteHost + page.url : page.url);
+export const getAbsoluteUrl = (page) => (!(page.url.includes('://')) ? process.env.absoluteHost + page.url : page.url);
 
 function og(property, content) {
   return { property: `og:${property}`, content };
@@ -40,9 +40,9 @@ export const getOpenGraph = (entity) => {
     meta.push(og('type', 'article'));
   }
   meta.push(og('url', getAbsoluteUrl(entity)));
-  meta.push(og('title', [entity.og_title, entity.meta_title, entity.title].find(i => Boolean(i))));
+  meta.push(og('title', [entity.og_title, entity.meta_title, entity.title].find((i) => Boolean(i))));
 
-  const description = [entity.og_description, entity.meta_description].find(i => Boolean(i));
+  const description = [entity.og_description, entity.meta_description].find((i) => Boolean(i));
   if (description) {
     meta.push(og('description', description));
   }

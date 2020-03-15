@@ -33,7 +33,7 @@ export default {
   },
   computed: {
     ...mapState({
-      post: state => state.preview.post,
+      post: (state) => state.preview.post,
     }),
   },
   head() {

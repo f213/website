@@ -1,6 +1,8 @@
 <template>
   <div v-if="display" class="app-pagination">
-    <aside class="app-pagination__arrow">{{ arrow }}</aside>
+    <aside class="app-pagination__arrow">
+      {{ arrow }}
+    </aside>
     <nuxt-link :to="link" class="app-pagination__link">
       {{ text }}
     </nuxt-link>
@@ -61,7 +63,7 @@ export default {
       return 1;
     },
     ...mapState('posts', {
-      pages: state => state.pages,
+      pages: (state) => state.pages,
     }),
   },
   created() {

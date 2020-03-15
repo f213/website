@@ -28,8 +28,8 @@ function call(stuff, ...args) {
 }
 
 const yaMetrika = {
-  reachGoal: goal => call('reachGoal', goal),
-  hit: target => call('hit', target),
+  reachGoal: (goal) => call('reachGoal', goal),
+  hit: (target) => call('hit', target),
 };
 
 export default yaMetrika;

@@ -1,6 +1,8 @@
 <template>
   <div class="app-tags" v-if="tags.length">
-    <nuxt-link class="app-tags__tag is-lowercase" v-for="tag in tags" :key="tag.id" :to="link(tag)">{{ tag.name }}</nuxt-link>
+    <nuxt-link class="app-tags__tag is-lowercase" v-for="tag in tags" :key="tag.id" :to="link(tag)">
+      {{ tag.name }}
+    </nuxt-link>
   </div>
 </template>
 <script>

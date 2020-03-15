@@ -100,8 +100,8 @@ module.exports = {
   },
   router: {
     extendRoutes(routes) {
-      routes = routes.map(route => (route.path.endsWith('/') ? route : { ...route, path: `${route.path}/` }));
-      routes = routes.map(route => ({ ...route, pathToRegexpOptions: { endsWith: '/', strict: true } }));
+      routes = routes.map((route) => (route.path.endsWith('/') ? route : { ...route, path: `${route.path}/` }));
+      routes = routes.map((route) => ({ ...route, pathToRegexpOptions: { endsWith: '/', strict: true } }));
       return routes;
     },
   },

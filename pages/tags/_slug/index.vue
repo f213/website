@@ -41,8 +41,8 @@ export default {
 
   computed: {
     ...mapState({
-      posts: state => state.posts.posts,
-      tag: state => state.tags.tag,
+      posts: (state) => state.posts.posts,
+      tag: (state) => state.tags.tag,
     }),
     ...mapState('seo', [
       'metaPrev',

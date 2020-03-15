@@ -1,8 +1,14 @@
 <template>
   <div class="likely app-share" :data-url="link" ref="container">
-    <div class="facebook">Расшарить</div>
-    <div class="vkontakte">ВК</div>
-    <div class="telegram">Телеграм</div>
+    <div class="facebook">
+      Расшарить
+    </div>
+    <div class="vkontakte">
+      ВК
+    </div>
+    <div class="telegram">
+      Телеграм
+    </div>
   </div>
 </template>
 

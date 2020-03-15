@@ -1,6 +1,8 @@
 <template>
   <div class="app-poop is-size-5">
-    <div class="app-poop__poop" :class="{'app-poop__poop--rotating': isRotating}" @click="rotate">💩</div>
+    <div class="app-poop__poop" :class="{'app-poop__poop--rotating': isRotating}" @click="rotate">
+      💩
+    </div>
   </div>
 </template>
 <script>

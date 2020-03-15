@@ -33,7 +33,7 @@ export default {
       return this.isAtBlogPage ? this.activeClass : '';
     },
     ...mapState({
-      post: state => state.posts.post,
+      post: (state) => state.posts.post,
     }),
   },
 };

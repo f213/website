@@ -1,9 +1,13 @@
 <template>
   <div class="similar-posts" v-if="posts.length">
-    <h4 class="title is-5 similar-posts__title">Почитать ещё</h4>
+    <h4 class="title is-5 similar-posts__title">
+      Почитать ещё
+    </h4>
     <ul class="similar-posts__list">
       <li class="similar-posts__item" v-for="post in posts" :key="post.id">
-        <nuxt-link class="similar-posts__link" :to="link(post)">{{ post.title }}</nuxt-link>
+        <nuxt-link class="similar-posts__link" :to="link(post)">
+          {{ post.title }}
+        </nuxt-link>
       </li>
     </ul>
   </div>

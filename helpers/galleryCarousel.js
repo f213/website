@@ -57,7 +57,7 @@ const galleryCarousel = {
 
   highlightActiveBullet(gallery, index) {
     const bullets = gallery.querySelectorAll('.bullets-item');
-    bullets.forEach(item => item.classList.remove('active'));
+    bullets.forEach((item) => item.classList.remove('active'));
     bullets[index].classList.add('active');
   },
 };
