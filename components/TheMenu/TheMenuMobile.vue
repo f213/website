@@ -1,7 +1,9 @@
 <template>
   <nav class="navbar" :class="{'navbar--visible': isScrollingUp || hasNotScrolledYet}">
     <div class="navbar__brand navbar-brand">
-      <h1 class="navbar__title navbar-item title is-3 is-marginless" @click="active = ! active">Фёдор Борщёв</h1>
+      <h1 class="navbar__title navbar-item title is-3 is-marginless" @click="active = ! active">
+        Фёдор Борщёв
+      </h1>
 
       <a role="button" class="navbar__burger navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" @click.prevent="active = ! active" :class="{'is-active': active}">
         &#9776;
@@ -9,7 +11,9 @@
     </div>
     <div class="navbar-menu" :class="{'is-active': active }">
       <div class="navbar-start">
-        <nuxt-link v-for="(link, index) in _links" :key="index" :to="link.to" class="navbar-item navbar__item">{{ link.label }}</nuxt-link>
+        <nuxt-link v-for="(link, index) in _links" :key="index" :to="link.to" class="navbar-item navbar__item">
+          {{ link.label }}
+        </nuxt-link>
         <TgLink with-icon class="navbar-item" />
       </div>
     </div>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TagsPageHeading :tag="tag" no-index/>
+    <TagsPageHeading :tag="tag" no-index />
     <AppPostList :posts="posts" no-index />
   </div>
 </template>
@@ -41,8 +41,8 @@ export default {
 
   computed: {
     ...mapState({
-      posts: state => state.posts.posts,
-      tag: state => state.tags.tag,
+      posts: (state) => state.posts.posts,
+      tag: (state) => state.tags.tag,
     }),
     ...mapState('seo', [
       'metaPrev',

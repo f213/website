@@ -1,7 +1,11 @@
 <template>
   <component :is="tag" ref="container">
-    <nuxt-link class="post-title" :to="link" v-if="linked">{{ title }}</nuxt-link>
-    <template v-else>{{ title }}</template>
+    <nuxt-link class="post-title" :to="link" v-if="linked">
+      {{ title }}
+    </nuxt-link>
+    <template v-else>
+      {{ title }}
+    </template>
   </component>
 </template>
 

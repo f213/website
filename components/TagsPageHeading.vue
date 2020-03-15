@@ -1,10 +1,12 @@
 <template>
   <div class="tags-page-heading container app-container">
-    <h1 class="tags-page-heading__title title is-2">Заметки с тегом «{{ tag.name }}»</h1>
+    <h1 class="tags-page-heading__title title is-2">
+      Заметки с тегом «{{ tag.name }}»
+    </h1>
 
     <HtmlComment v-if="noIndex" text="noindex" />
 
-    <div class="tags-page-heading__desc app-content" v-html="tag.description"/>
+    <div class="tags-page-heading__desc app-content" v-html="tag.description" />
 
     <HtmlComment v-if="noIndex" text="/noindex" />
   </div>

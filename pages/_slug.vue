@@ -46,8 +46,8 @@ export default {
       return this.$route.params.slug;
     },
     ...mapState({
-      post: state => state.posts.post,
-      similar: state => state.posts.similar,
+      post: (state) => state.posts.post,
+      similar: (state) => state.posts.similar,
     }),
   },
   head() {
@@ -104,7 +104,7 @@ export default {
         '@type': 'ImageObject',
         url: this.post.feature_image,
       },
-      keywords: this.post.tags.map(item => item.name).join(', '),
+      keywords: this.post.tags.map((item) => item.name).join(', '),
       description: this.post.excerpt,
       mainEntityOfPage: {
         '@type': 'WebPage',

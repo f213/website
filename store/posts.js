@@ -58,7 +58,7 @@ export default {
       state.post = post;
     },
     SET_SIMILAR: (state, similar) => {
-      state.similar = similar.filter(similarPost => similarPost.id !== state.post.id);
+      state.similar = similar.filter((similarPost) => similarPost.id !== state.post.id);
     },
   },
 };

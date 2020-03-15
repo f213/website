@@ -25,6 +25,7 @@ module.exports = {
     'no-param-reassign': 'off',
     'vue/max-attributes-per-line': 'off',
     'vue/attributes-order': 'off',
+    'vue/no-v-html': 'off',
     'max-len': 'off',
     'import/prefer-default-export': 'off',
     'consistent-return': 'off',
