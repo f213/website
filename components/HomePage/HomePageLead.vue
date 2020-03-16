@@ -8,7 +8,7 @@
         Сделал
       </h2>
       <ul class="app-list home-page-lead__achievements-list">
-        <li>Всю технологическую часть в <a class="home-page-lead__link" href="https://mtrl.ai" rel="noindex, nofollow">mtrl.ai</a>, маркетплейсе стройматериалов.</li>
+        <li>Всю технологическую часть в <a class="home-page-lead__link" href="https://mtrl.pro" rel="noindex, nofollow">ГдеМатериале</a>: бекенд для маркетплейса, приложения партнёров и клиентов, интерфейсы для менеджеров и логистов.</li>
         <li>Выступил сооснователем в <a class="home-page-lead__link" href="https://rumetr.com/" rel="noindex, nofollow">Руметре</a>, агрегаторе предложений на рынке недвижимости.</li>
         <li>Спроектировал и сделал личный кабинет для <a class="home-page-lead__link" href="https://elk.today" rel="noindex, nofollow">elk.today</a> — платформы, которая объединяет носителей языка с&nbsp;учениками по всему миру.</li>
         <li>Участвовал в создании <a class="home-page-lead__link" href="https://www.artlebedev.ru/color/" rel="noindex, nofollow">Колора</a> — нейросети, которая раскрашивает черно-белые фотографии</li>
