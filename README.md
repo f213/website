@@ -1,6 +1,11 @@
-# blog
+# Сайт borshev.com
 
 [![CircleCI](https://circleci.com/gh/f213/website-frontend.svg?style=svg&circle-token=6b34beece0dbf72e0f3848ac0193b6842e270369)](https://circleci.com/gh/f213/website-frontend)
+
+Это фронтенд для сайта borshev.com. В качестве бекенда используется [ghost](https://ghost.org). Технологии:
+* nuxt.js, express.js в качестве кастомного сервера
+* PostCSS и [bulma](https://bulma.io)
+* Тесты пишем на jest
 
 ## Build Setup
 
