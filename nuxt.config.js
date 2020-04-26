@@ -75,10 +75,13 @@ module.exports = {
     '@nuxtjs/font-awesome',
     '@nuxtjs/redirect-module',
     '@nuxtjs/sentry',
-    ['@nuxtjs/google-analytics', {
-      id: '155215393-1',
-    }],
   ],
+  buildModules: [
+    '@nuxtjs/google-analytics',
+  ],
+  googleAnalytics: {
+    id: 'UA-155215393-1',
+  },
   serverMiddleware: [
     '~/middleware/redirect-to-trailing-slash',
   ],
