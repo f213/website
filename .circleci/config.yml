@@ -37,8 +37,8 @@ jobs:
       - run:
           name: Build docker image
           command: |
-            export D_RELEASE=0.2.2
-            wget -O - https://cdn.rawgit.com/f213/d/351d2459/install.sh|sh
+            export D_RELEASE=0.5.1
+            wget -O - https://raw.githubusercontent.com/f213/d/master/install.sh|sh
             ./d build-image f213/website .
             ./d push-image f213/website
 
@@ -52,8 +52,8 @@ jobs:
       - run:
           name: Install deploy tooling
           command: |
-            export D_RELEASE=0.2.5
-            wget -O - https://cdn.rawgit.com/f213/d/351d2459/install.sh|sh
+            export D_RELEASE=0.5.1
+            wget -O - https://raw.githubusercontent.com/f213/d/master/install.sh|sh
       - run:
           name: Update image
           command: |
