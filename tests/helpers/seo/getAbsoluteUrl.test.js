@@ -1,6 +1,5 @@
 import { getAbsoluteUrl } from '~/helpers/seo';
 
-
 describe('getAbsoluteUrl helper', () => {
   let page;
 

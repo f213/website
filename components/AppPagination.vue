@@ -101,7 +101,6 @@ export default {
     display: inline;
   }
 
-
   &__link {
     border-bottom: 1px solid var(--link-border-color);
     color: var(--link-color);

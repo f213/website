@@ -40,7 +40,6 @@ describe('gallery slides', () => {
   });
 });
 
-
 describe('gallery bullets', () => {
   it('Rendered bullets blocks', () => {
     const bulletsElement = document.body.querySelectorAll('.bullets');

@@ -1,6 +1,5 @@
 const { fetchPostAsAdmin } = require('../../lib/ghost');
 
-
 module.exports = async (req, res) => {
   const { uuid } = req.params;
   const { backendURL } = req.app.locals;

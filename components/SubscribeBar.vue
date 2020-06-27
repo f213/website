@@ -59,7 +59,6 @@ export default {
     opacity: .8;
   }
 
-
   &__link {
     color: var(--link-color);
 

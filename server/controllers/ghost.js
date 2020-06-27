@@ -19,5 +19,4 @@ router.use([
   '^/rss/$',
 ], proxy({ target, changeOrigin }));
 
-
 module.exports = router;

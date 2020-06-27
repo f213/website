@@ -81,7 +81,6 @@ export default {
     margin-top: 6rem;
   }
 
-
   @media(width > 1020px) {
     padding-top: 3rem;
     padding-left: 3.5rem;

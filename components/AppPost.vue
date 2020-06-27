@@ -51,6 +51,5 @@ export default {
     line-height: 1.7;
   }
 
-
 }
 </style>
