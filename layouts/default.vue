@@ -5,7 +5,7 @@
     <section class="section default-section">
       <nuxt />
     </section>
-    <TheFooter class="section" text-class="container app-container" />
+    <TheFooter class="section" text-class="container is-max-desktop" />
   </div>
 </template>
 <script>

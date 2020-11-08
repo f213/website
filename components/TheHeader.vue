@@ -1,6 +1,6 @@
 <template>
   <header class="app-header section" ref="container">
-    <div class="container app-container">
+    <div class="container is-max-desktop">
       <div class="title is-3">
         {{ title }}
       </div>

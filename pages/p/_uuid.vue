@@ -1,5 +1,5 @@
 <template>
-  <div class="container app-container" v-if="post">
+  <div class="container is-max-desktop" v-if="post">
     <AppPost is-detailed :post="post" />
   </div>
 </template>
@@ -31,11 +31,6 @@ export default {
       });
     }
   },
-  computed: {
-    ...mapState({
-      post: (state) => state.preview.post,
-    }),
-  },
   head() {
     return {
       title: this.post.meta_title || this.post.title,
@@ -44,6 +39,11 @@ export default {
         content: 'noindex,nofollow',
       }],
     };
+  },
+  computed: {
+    ...mapState({
+      post: (state) => state.preview.post,
+    }),
   },
 };
 </script>

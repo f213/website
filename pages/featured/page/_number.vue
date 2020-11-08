@@ -24,6 +24,16 @@ export default {
     }
   },
 
+  head() {
+    const link = getPrevNextLinks(this.metaPrev, this.metaNext);
+
+    const { number } = this.$route.params;
+    return {
+      title: `Важные заметки — страница ${number}`,
+      link,
+    };
+  },
+
   computed: {
     ...mapState('posts', {
       posts: (posts) => posts.posts,
@@ -34,14 +44,5 @@ export default {
     ]),
   },
 
-  head() {
-    const link = getPrevNextLinks(this.metaPrev, this.metaNext);
-
-    const { number } = this.$route.params;
-    return {
-      title: `Важные заметки — страница ${number}`,
-      link,
-    };
-  },
 };
 </script>

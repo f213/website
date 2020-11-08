@@ -39,6 +39,16 @@ export default {
     }
   },
 
+  head() {
+    const meta = getMeta(this.tag);
+    const link = getPrevNextLinks(this.metaPrev, this.metaNext);
+    return {
+      title: `Заметки с тегом «${this.tag.name}»`,
+      meta,
+      link,
+    };
+  },
+
   computed: {
     ...mapState({
       posts: (state) => state.posts.posts,
@@ -48,16 +58,6 @@ export default {
       'metaPrev',
       'metaNext',
     ]),
-  },
-
-  head() {
-    const meta = getMeta(this.tag);
-    const link = getPrevNextLinks(this.metaPrev, this.metaNext);
-    return {
-      title: `Заметки с тегом «${this.tag.name}»`,
-      meta,
-      link,
-    };
   },
 
 };

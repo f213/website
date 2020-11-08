@@ -39,17 +39,6 @@ export default {
     }
   },
 
-  computed: {
-    ...mapState({
-      posts: (state) => state.posts.posts,
-      tag: (state) => state.tags.tag,
-    }),
-    ...mapState('seo', [
-      'metaPrev',
-      'metaNext',
-    ]),
-  },
-
   head() {
     const meta = getMeta(this.tag);
     const link = getPrevNextLinks(this.metaPrev, this.metaNext);
@@ -60,6 +49,17 @@ export default {
       meta,
       link,
     };
+  },
+
+  computed: {
+    ...mapState({
+      posts: (state) => state.posts.posts,
+      tag: (state) => state.tags.tag,
+    }),
+    ...mapState('seo', [
+      'metaPrev',
+      'metaNext',
+    ]),
   },
 
 };

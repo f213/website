@@ -1,7 +1,7 @@
 <template>
   <section class="hero app-error">
     <div class="hero-body">
-      <div class="container app-container">
+      <div class="container is-max-desktop">
         <h1 class="title">
           Что-то сломалось
         </h1>
@@ -19,15 +19,15 @@ export default {
   props: {
     error: { type: Object, required: true },
   },
-  computed: {
-    link() {
-      return `mailto:fedor@borshev.com?subject=У тебя сайт упал (${this.$route.path} ${this.error.statusCode}: ${this.error.message})`;
-    },
-  },
   head() {
     return {
       title: `Ошибка ${this.error.statusCode}`,
     };
+  },
+  computed: {
+    link() {
+      return `mailto:fedor@borshev.com?subject=У тебя сайт упал (${this.$route.path} ${this.error.statusCode}: ${this.error.message})`;
+    },
   },
 };
 </script>

@@ -24,15 +24,6 @@ export default {
     }
   },
 
-  computed: {
-    ...mapState('posts', {
-      posts: (posts) => posts.posts,
-    }),
-    ...mapState('seo', [
-      'metaPrev',
-      'metaNext',
-    ]),
-  },
   head() {
     const { number } = this.$route.params;
     const link = getPrevNextLinks(this.metaPrev, this.metaNext);
@@ -41,6 +32,16 @@ export default {
       titleTemplate: '%s',
       link,
     };
+  },
+
+  computed: {
+    ...mapState('posts', {
+      posts: (posts) => posts.posts,
+    }),
+    ...mapState('seo', [
+      'metaPrev',
+      'metaNext',
+    ]),
   },
 
 };

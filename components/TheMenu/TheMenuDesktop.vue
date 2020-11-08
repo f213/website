@@ -1,6 +1,6 @@
 <template>
   <nav class="section is-paddingless app-nav">
-    <div class="container app-container">
+    <div class="container is-max-desktop">
       <nuxt-link to="/" class="app-nav__link">
         <span class="app-nav__label">Обо мне</span>
       </nuxt-link>
