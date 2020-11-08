@@ -1,5 +1,5 @@
 <template>
-  <div class="container app-container app-slug" v-if="post">
+  <div class="container is-max-desktop app-slug" v-if="post">
     <template v-if="!post.page">
       <AppPost is-detailed :post="post" />
       <SubscribeBar class="app-slug__subscribe-bar" />

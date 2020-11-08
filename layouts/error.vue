@@ -1,7 +1,7 @@
 <template>
   <section class="hero app-error">
     <div class="hero-body">
-      <div class="container app-container">
+      <div class="container is-max-desktop">
         <h1 class="title">
           Что-то сломалось
         </h1>

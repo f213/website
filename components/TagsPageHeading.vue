@@ -1,5 +1,5 @@
 <template>
-  <div class="tags-page-heading container app-container">
+  <div class="tags-page-heading container is-max-desktop">
     <h1 class="tags-page-heading__title title is-2">
       Заметки с тегом «{{ tag.name }}»
     </h1>

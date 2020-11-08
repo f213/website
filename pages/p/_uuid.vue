@@ -1,5 +1,5 @@
 <template>
-  <div class="container app-container" v-if="post">
+  <div class="container is-max-desktop" v-if="post">
     <AppPost is-detailed :post="post" />
   </div>
 </template>
