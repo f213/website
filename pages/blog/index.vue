@@ -16,17 +16,6 @@ export default {
   async fetch({ store }) {
     await store.dispatch('posts/GET_POSTS');
   },
-
-  computed: {
-    ...mapState('posts', {
-      posts: (posts) => posts.posts,
-    }),
-    ...mapState('seo', [
-      'metaPrev',
-      'metaNext',
-    ]),
-  },
-
   head() {
     const link = getPrevNextLinks(this.metaPrev, this.metaNext);
     return {
@@ -39,6 +28,14 @@ export default {
       ],
     };
   },
-
+  computed: {
+    ...mapState('posts', {
+      posts: (posts) => posts.posts,
+    }),
+    ...mapState('seo', [
+      'metaPrev',
+      'metaNext',
+    ]),
+  },
 };
 </script>

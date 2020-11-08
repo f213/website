@@ -3,10 +3,10 @@ module.exports = {
   env: {
     browser: true,
     node: true,
-    'jest/globals': true
+    'jest/globals': true,
   },
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: 'babel-eslint',
   },
   extends: [
     'plugin:vue/recommended',
@@ -15,7 +15,7 @@ module.exports = {
   // required to lint *.vue files
   plugins: [
     'vue',
-    'jest'
+    'jest',
   ],
   // add your custom rules here
   rules: {
@@ -26,6 +26,7 @@ module.exports = {
     'vue/max-attributes-per-line': 'off',
     'vue/attributes-order': 'off',
     'vue/no-v-html': 'off',
+    'vue/one-component-per-file': 'off',
     'max-len': 'off',
     'import/prefer-default-export': 'off',
     'consistent-return': 'off',
@@ -41,9 +42,9 @@ module.exports = {
               '~': __dirname,
               '@': __dirname,
             },
-          }
-        }
-      }
-    }
+          },
+        },
+      },
+    },
   },
 };

@@ -41,15 +41,6 @@ export default {
       }
     }
   },
-  computed: {
-    slug() {
-      return this.$route.params.slug;
-    },
-    ...mapState({
-      post: (state) => state.posts.post,
-      similar: (state) => state.posts.similar,
-    }),
-  },
   head() {
     if ([null, undefined].includes(this.post)) {
       return {};
@@ -66,6 +57,15 @@ export default {
         { src: 'https://cdnjs.cloudflare.com/ajax/libs/ilyabirman-likely/2.4.0/likely.js' },
       ],
     };
+  },
+  computed: {
+    slug() {
+      return this.$route.params.slug;
+    },
+    ...mapState({
+      post: (state) => state.posts.post,
+      similar: (state) => state.posts.similar,
+    }),
   },
   jsonld() {
     if (this.post.page) {

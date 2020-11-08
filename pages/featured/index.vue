@@ -16,6 +16,15 @@ export default {
     await store.dispatch('posts/GET_POSTS', { filter: 'featured:true' });
   },
 
+  head() {
+    const link = getPrevNextLinks(this.metaPrev, this.metaNext);
+
+    return {
+      title: 'Избранное',
+      link,
+    };
+  },
+
   computed: {
     ...mapState('posts', {
       posts: (posts) => posts.posts,
@@ -24,14 +33,6 @@ export default {
       'metaPrev',
       'metaNext',
     ]),
-  },
-  head() {
-    const link = getPrevNextLinks(this.metaPrev, this.metaNext);
-
-    return {
-      title: 'Избранное',
-      link,
-    };
   },
 };
 </script>
