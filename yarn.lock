@@ -1482,14 +1482,6 @@
   dependencies:
     vue-analytics "^5.22.1"
 
-"@nuxtjs/proxy@^1.3.3":
-  version "1.3.3"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/proxy/-/proxy-1.3.3.tgz#3de3d9f073e8e57167168100940be2a824a220e0"
-  integrity sha512-ykpCUdOqPOH79mQG30QfWZmbRD8yjTD+TTSBbwow5GkROUQEtXw+HE+q6i+YFpuChvgJNbwVrXdZ3YmfXbZtTw==
-  dependencies:
-    consola "^2.5.6"
-    http-proxy-middleware "^0.19.1"
-
 "@nuxtjs/proxy@^2.0.1":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@nuxtjs/proxy/-/proxy-2.0.1.tgz#2469b6e316311aa8c60d348502a54bfe6d5536aa"
@@ -1503,16 +1495,16 @@
   resolved "https://registry.yarnpkg.com/@nuxtjs/redirect-module/-/redirect-module-0.3.1.tgz#90a6986882337401cb0576cdf9479d4e3b552cce"
   integrity sha512-yL2unrYfUSqs+4cUtkQvEQMsuTeCOlQd+Y5sTqMZzWBadF8h01tCVDG95zmOTNIiCupb+sQho2Tixwl1f826aw==
 
-"@nuxtjs/sentry@^3.3.1":
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/sentry/-/sentry-3.3.1.tgz#b3f21851103d5194b9da314a5eec7b154ed50cbe"
-  integrity sha512-o7aGlI7OvaRDT0SsV73Ye1r5sfylKwRGG8EyRClOrhi6dpMIuqcmzgILHIIcHpFkrm61D3sORc7d7rhlHtY6DA==
+"@nuxtjs/sentry@^4.4.0":
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/sentry/-/sentry-4.4.0.tgz#24e04411e9e8e6d1050ffb4892c6d4ece17f51cf"
+  integrity sha512-P/acF9D3nO9Wer0bR/0iDEHclSkVmD/46GQ6rZkFdJFta9YX9ECtPXHvuswi13qdq/IA3TlWe+Fm5pf3LmKw8w==
   dependencies:
-    "@sentry/browser" "^5.13.2"
-    "@sentry/integrations" "^5.13.2"
-    "@sentry/node" "^5.13.2"
-    "@sentry/webpack-plugin" "^1.10.0"
-    consola "^2.11.3"
+    "@sentry/browser" "^5.27.2"
+    "@sentry/integrations" "^5.27.2"
+    "@sentry/node" "^5.27.2"
+    "@sentry/webpack-plugin" "^1.13.0"
+    consola "^2.15.0"
     deepmerge "^4.2.2"
 
 "@nuxtjs/youch@^4.2.3":
@@ -1524,7 +1516,7 @@
     mustache "^2.3.0"
     stack-trace "0.0.10"
 
-"@sentry/browser@^5.13.2":
+"@sentry/browser@^5.27.2":
   version "5.27.3"
   resolved "https://registry.yarnpkg.com/@sentry/browser/-/browser-5.27.3.tgz#02e78a4502ee99988d3cbb0075a11ec44b503871"
   integrity sha512-vczS+XTW4Nk2A7TIpAw8IVFHpp+NK6mV9euBG2I61Bs2QbQY9yKLfbjiln/yH2Q8X4THX6MKa0GuiPoCEeq3uw==
@@ -1565,7 +1557,7 @@
     "@sentry/utils" "5.27.3"
     tslib "^1.9.3"
 
-"@sentry/integrations@^5.13.2":
+"@sentry/integrations@^5.27.2":
   version "5.27.3"
   resolved "https://registry.yarnpkg.com/@sentry/integrations/-/integrations-5.27.3.tgz#d9a8f898c9414e9dc287fcd00d28321f54f4701e"
   integrity sha512-lmkYH3g1ZW9I8g3SXQNYIfNc9gaNoqJUxgTI9d0AQph+mSB8Y3lx50NYMAfK74XgiC3VJ9j8kWstdQCMbgfXpQ==
@@ -1584,7 +1576,7 @@
     "@sentry/types" "5.27.3"
     tslib "^1.9.3"
 
-"@sentry/node@^5.13.2":
+"@sentry/node@^5.27.2":
   version "5.27.3"
   resolved "https://registry.yarnpkg.com/@sentry/node/-/node-5.27.3.tgz#174b81fbca8cadac12afe49910cbe9cc25b23f87"
   integrity sha512-IZ/TkYRY+P/E5C+RF6Rcb6tpY59fyk0040Q3akzbDjb/hrw5TRKnK8fJ6/0gXCAOvlDPIlpRHFJgJ1p2QgWy+g==
@@ -1623,7 +1615,7 @@
     "@sentry/types" "5.27.3"
     tslib "^1.9.3"
 
-"@sentry/webpack-plugin@^1.10.0":
+"@sentry/webpack-plugin@^1.13.0":
   version "1.13.0"
   resolved "https://registry.yarnpkg.com/@sentry/webpack-plugin/-/webpack-plugin-1.13.0.tgz#98c1b75cf0cfdb0d2b39240ecc4ffe9e6c28dbd4"
   integrity sha512-XQhmWwHY9sgL9OZQVD+SMn9Wa3E+6odsTGucRRo0GyCgkhHsPEGho7JiQtHu7MFoX7kbeva+metnypMn91NqXg==
@@ -3609,7 +3601,7 @@ connect@^3.7.0:
     parseurl "~1.3.3"
     utils-merge "1.0.1"
 
-consola@^2.10.0, consola@^2.11.3, consola@^2.14.0, consola@^2.15.0, consola@^2.5.6, consola@^2.6.0, consola@^2.9.0:
+consola@^2.10.0, consola@^2.11.3, consola@^2.14.0, consola@^2.15.0, consola@^2.6.0, consola@^2.9.0:
   version "2.15.0"
   resolved "https://registry.yarnpkg.com/consola/-/consola-2.15.0.tgz#40fc4eefa4d2f8ef2e2806147f056ea207fcc0e9"
   integrity sha512-vlcSGgdYS26mPf7qNi+dCisbhiyDnrN1zaRbw3CSuc2wGOMEGGPsp46PdRG5gqXwgtJfjxDkxRNAgRPr1B77vQ==
@@ -5877,16 +5869,6 @@ http-errors@~1.7.2:
     statuses ">= 1.5.0 < 2"
     toidentifier "1.0.0"
 
-http-proxy-middleware@^0.19.1:
-  version "0.19.2"
-  resolved "https://registry.yarnpkg.com/http-proxy-middleware/-/http-proxy-middleware-0.19.2.tgz#ee73dcc8348165afefe8de2ff717751d181608ee"
-  integrity sha512-aYk1rTKqLTus23X3L96LGNCGNgWpG4cG0XoZIT1GUPhhulEHX/QalnO6Vbo+WmKWi4AL2IidjuC0wZtbpg0yhQ==
-  dependencies:
-    http-proxy "^1.18.1"
-    is-glob "^4.0.0"
-    lodash "^4.17.11"
-    micromatch "^3.1.10"
-
 http-proxy-middleware@^1.0.4:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/http-proxy-middleware/-/http-proxy-middleware-1.0.6.tgz#0618557722f450375d3796d701a8ac5407b3b94e"
@@ -7437,7 +7419,7 @@ lodash.uniq@^4.5.0:
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
-lodash@^4.0.0, lodash@^4.15.0, lodash@^4.17.11, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.4, lodash@^4.17.5, lodash@~4.17.10:
+lodash@^4.0.0, lodash@^4.15.0, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.4, lodash@^4.17.5, lodash@~4.17.10:
   version "4.17.20"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
   integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
