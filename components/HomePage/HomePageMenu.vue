@@ -7,16 +7,16 @@
     <a href="https://education.borshev.com" class="app-nav__link" target="_blank">
       <span class="app-nav__label">Курсы</span>
     </a>
-    <nuxt-link to="/consulting/" class="app-nav__link">
-      <span class="app-nav__label">Консультации</span>
-    </nuxt-link>
+    <FandsLink class="app-nav__link" label-class="app-nav__label" />
   </nav>
 </template>
 <script>
+import FandsLink from '~/components/TheMenu/FandsLink.vue';
 import TgLink from '~/components/TgLink.vue';
 
 export default {
   components: {
+    FandsLink,
     TgLink,
   },
 };
