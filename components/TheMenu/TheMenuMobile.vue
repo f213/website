@@ -14,6 +14,7 @@
         <nuxt-link v-for="(link, index) in _links" :key="index" :to="link.to" class="navbar-item navbar__item">
           {{ link.label }}
         </nuxt-link>
+        <FandsLink class="navbar-item" />
         <TgLink with-icon class="navbar-item" />
       </div>
     </div>
@@ -22,10 +23,12 @@
 <script>
 import throttle from 'lodash.throttle';
 
+import FandsLink from '~/components/TheMenu/FandsLink.vue';
 import TgLink from '~/components/TgLink.vue';
 
 export default {
   components: {
+    FandsLink,
     TgLink,
   },
   props: {

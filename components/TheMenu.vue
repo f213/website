@@ -3,7 +3,6 @@
     <client-only>
       <TheMenuDesktop :links="links" v-if="width > 768" />
       <TheMenuMobile :links="links" v-else />
-
       <TheMenuDesktop :links="links" slot="placeholder" class="is-hidden-mobile" />
     </client-only>
   </div>
@@ -23,7 +22,6 @@ export default {
       links: [
         { to: { name: 'featured' }, label: 'Избранное' },
         { to: '/books/', label: 'Книги' },
-        { to: '/consulting/', label: 'Консультации' },
       ],
     };
   },

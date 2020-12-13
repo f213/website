@@ -8,17 +8,20 @@
       <nuxt-link v-for="(link, index) in links" :key="index" :to="link.to" class="app-nav__link" active-class="app-nav__link--active">
         <span class="app-nav__label">{{ link.label }}</span>
       </nuxt-link>
+      <FandsLink class="app-nav__link" label-class="app-nav__label" />
       <TgLink with-icon class="app-nav__link" label-class="app-nav__label" />
     </div>
   </nav>
 </template>
 <script>
 import BlogLink from '~/components/TheMenu/BlogLink.vue';
+import FandsLink from '~/components/TheMenu/FandsLink.vue';
 import TgLink from '~/components/TgLink.vue';
 
 export default {
   components: {
     BlogLink,
+    FandsLink,
     TgLink,
   },
   props: {
