@@ -6511,10 +6511,10 @@ istanbul-reports@^3.0.2:
     html-escaper "^2.0.0"
     istanbul-lib-report "^3.0.0"
 
-javascript-time-ago@^2.0.8:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/javascript-time-ago/-/javascript-time-ago-2.3.2.tgz#322f377e9b4fbab1a010127da5dd31641cad1a95"
-  integrity sha512-69YD9fwgmOydFkvvmEQPy3oVQCQJy06KeEbxDXJSVY1gQl94p499QIRTlnRki0puboH+dlkKiPIbuWi4uVqPmA==
+javascript-time-ago@^2.3.3:
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/javascript-time-ago/-/javascript-time-ago-2.3.3.tgz#eb438bf159cc919b4123881241314fc962aae3f7"
+  integrity sha512-T4aOCWRQPWv5wsOBiiktKxu1Zd0deIHK2ymKg8XO+MEFZKnZklBOHCXrKbEWPD2Qk2V+ekfmX976r+W1+3dWsw==
   dependencies:
     relative-time-format "^1.0.5"
 
