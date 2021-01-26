@@ -58,7 +58,7 @@ jobs:
           name: Update image
           command: |
             ./d add-host-key --force
-            ./d update-image circle@borshev.com blog  f213/website:${CIRCLE_SHA1}
+            ./d update-image circle@92.53.67.149 blog  f213/website:${CIRCLE_SHA1}
 
 workflows:
   version: 2
