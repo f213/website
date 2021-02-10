@@ -115,7 +115,7 @@ module.exports = {
     facebook: 'https://facebook.com/Fedor213',
     youtube: 'https://www.youtube.com/channel/UCO8aN1B8ncJM09rohGvOiCQ',
     telegram: 'https://tgclick.ru/pmdaily/722',
-    copyrightYears: '2014–2020',
+    copyrightYears: '2014–2021',
     email: 'fedor@borshev.com',
     yaMetrikaCounterID: '25756085',
   },
