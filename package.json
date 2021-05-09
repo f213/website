@@ -23,7 +23,7 @@
     "@nuxtjs/sentry": "^4.4.0",
     "@vue/test-utils": "^1.0.0-beta.32",
     "bulma": "^0.9.1",
-    "cross-env": "^7.0.2",
+    "cross-env": "^7.0.3",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
