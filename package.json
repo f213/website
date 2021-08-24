@@ -54,6 +54,7 @@
     "vue-jest": "^3.0.0"
   },
   "jest": {
+    "testEnvironment": "jsdom",
     "moduleFileExtensions": [
       "js",
       "json",
