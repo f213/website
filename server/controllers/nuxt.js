@@ -3,7 +3,7 @@ const express = require('express');
 
 const router = express.Router();
 
-const config = require('../../nuxt.config.js');
+const config = require('../../nuxt.config');
 
 // Init Nuxt.js
 const nuxt = new Nuxt(config);
