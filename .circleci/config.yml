@@ -1,4 +1,6 @@
-version: 2
+version: 2.1
+orbs:
+  docker: circleci/docker@1.7.0
 jobs:
   build:
     docker:
@@ -26,23 +28,6 @@ jobs:
           name: Test
           command: yarn test
 
-  build-docker-image:
-    docker:
-      - image: cimg/python:3.9.6
-    steps:
-      - checkout
-
-      - setup_remote_docker
-
-      - run:
-          name: Build docker image
-          command: |
-            export D_RELEASE=0.5.1
-            wget -O - https://raw.githubusercontent.com/f213/d/master/install.sh|sh
-            ./d build-image f213/website .
-            ./d push-image f213/website
-
-
   deploy:
     docker:
       - image: cimg/python:3.9.6
@@ -65,13 +50,17 @@ workflows:
   continuous-delivery:
     jobs:
       - build
-      - build-docker-image:
+      - docker/publish:
           requires:
             - build
           filters:
             branches:
               only: master
+          image: f213/website
+          cache_from: f213/website
+          tag: 'latest,${CIRCLE_SHA1}'
+          extra_build_args: "--build-arg RELEASE=${CIRCLE_SHA1}"
 
       - deploy:
           requires:
-            - build-docker-image
+            - docker/publish

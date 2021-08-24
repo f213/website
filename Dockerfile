@@ -16,6 +16,10 @@ ADD . /srv
 RUN yarn build
 
 ENV NODE_ENV production
+
+ARG RELEASE
+ENV SENTRY_RELEASE ${RELEASE}
+
 HEALTHCHECK CMD yarn healthcheck
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]
 CMD yarn start
