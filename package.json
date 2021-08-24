@@ -28,7 +28,8 @@
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "nuxt": "^2.15.8",
-    "nuxt-jsonld": "^1.5.2"
+    "nuxt-jsonld": "^1.5.2",
+    "sass": "^1.38.0"
   },
   "devDependencies": {
     "@babel/core": "^7.10.0",
@@ -46,11 +47,10 @@
     "javascript-time-ago": "^2.3.8",
     "jest": "^27.0.0",
     "lodash.throttle": "^4.1.1",
-    "node-sass": "^6.0.1",
     "nodemon": "^2.0.12",
     "postcss-nested": "^4.1.0",
     "prettier": "^2.3.2",
-    "sass-loader": "^12.1.0",
+    "sass-loader": "^10.1.1",
     "vue-jest": "^3.0.0"
   },
   "jest": {
