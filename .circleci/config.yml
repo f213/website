@@ -2,19 +2,19 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:12
+      - image: cimg/node:16.7.0
 
     steps:
       - checkout
       - restore_cache:
-          key: deps-v2-{{ checksum "yarn.lock" }}
+          key: deps-v3-{{ checksum "yarn.lock" }}
 
       - run:
           name: Install deps
           command: yarn install
 
       - save_cache:
-          key: deps-v2-{{ checksum "yarn.lock" }}
+          key: deps-v3-{{ checksum "yarn.lock" }}
           paths:
             - "node_modules"
 
@@ -28,7 +28,7 @@ jobs:
 
   build-docker-image:
     docker:
-      - image: circleci/node:8
+      - image: cimg/node:16.7.0
     steps:
       - checkout
 
@@ -45,7 +45,7 @@ jobs:
 
   deploy:
     docker:
-      - image: circleci/node:8
+      - image: cimg/node:16.7.0
 
     steps:
       - checkout
