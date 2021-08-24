@@ -9,7 +9,7 @@ WORKDIR /srv
 
 COPY healthcheck.js /
 
-ADD package.json yarn.lock /srv
+ADD package.json yarn.lock /srv/
 RUN yarn
 
 ADD . /srv
