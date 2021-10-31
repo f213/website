@@ -24,7 +24,7 @@ export const getMeta = (entity) => {
   return meta;
 };
 
-export const getAbsoluteUrl = (page) => (!(page.url.includes('://')) ? process.env.absoluteHost + page.url : page.url);
+export const getAbsoluteUrl = (page) => (`${process.env.absoluteHost}/${page.slug}/`);
 
 function og(property, content) {
   return { property: `og:${property}`, content };
