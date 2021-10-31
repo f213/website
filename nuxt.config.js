@@ -25,7 +25,6 @@ module.exports = {
       { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
       { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
       { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
-      { rel: 'manifest', href: '/site.webmanifest' },
       { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#5bbad5' },
       { name: 'msapplication-TileColor', content: '#da532c' },
       { name: 'theme-color', content: '#ffffff' },
@@ -34,7 +33,6 @@ module.exports = {
       { rel: 'stylesheet', href: '/css/legacy.css' },
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/ilyabirman-likely/2.4.0/likely.css' },
     ],
-    __dangerouslyDisableSanitizers: ['script'],
     script: [
       { src: 'https://cdnjs.cloudflare.com/ajax/libs/ilyabirman-likely/2.4.0/likely.js' },
     ],
@@ -74,6 +72,9 @@ module.exports = {
     '@nuxtjs/redirect-module',
     '@nuxtjs/sentry',
   ],
+  buildModules: [
+    '@nuxtjs/ackee',
+  ],
   serverMiddleware: [
     '~/middleware/redirect-to-trailing-slash',
   ],
@@ -99,9 +100,6 @@ module.exports = {
       return routes;
     },
   },
-  buildModules: [
-    '@nuxtjs/ackee',
-  ],
   ackee: {
     server: 'https://a.tough-dev.school',
     domainId: 'eb04fcd4-aa2c-48e9-9b6e-c86a69c74148',
