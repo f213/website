@@ -108,7 +108,7 @@ module.exports = {
     },
   },
   env: {
-    ghostAPIKey: process.env.GHOST_API_KEY || '881fcfad416468563d3eec62c1',
+    ghostAPIKey: process.env.GHOST_API_KEY || '4d0d76b7ac558434eb0e35f55e',
     perPage: 5,
     absoluteHost: 'https://borshev.com',
     facebook: 'https://facebook.com/Fedor213',
