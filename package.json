@@ -4,6 +4,9 @@
   "description": "borshev.com website",
   "author": "Fedor Borshev",
   "private": true,
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
     "build": "nuxt build",
