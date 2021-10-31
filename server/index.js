@@ -8,11 +8,7 @@ const ampController = require('./controllers/amp');
 const ghostController = require('./controllers/ghost');
 const nuxtController = require('./controllers/nuxt');
 
-const redirectToTheMainHostMiddleware = require('./middleware/redirectToMainHostMiddleware');
-
 const app = express();
-
-app.use(redirectToTheMainHostMiddleware);
 
 /* Ghost proxy */
 app.use('/', ghostController);
