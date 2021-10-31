@@ -21,6 +21,7 @@
     "@nuxtjs/ackee": "^3.0.2",
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/font-awesome": "^1.0.3",
+    "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/proxy": "^2.0.1",
     "@nuxtjs/redirect-module": "^0.3.1",
     "@nuxtjs/sentry": "^5.1.2",
@@ -29,11 +30,11 @@
     "cross-env": "^7.0.2",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "javascript-time-ago": "^2.3.8",
     "jsonwebtoken": "^8.5.1",
+    "lodash.throttle": "^4.1.1",
     "nuxt": "^2.15.8",
     "nuxt-jsonld": "^1.5.2",
-    "lodash.throttle": "^4.1.1",
-    "javascript-time-ago": "^2.3.8",
     "sass": "^1.38.0"
   },
   "devDependencies": {
