@@ -99,6 +99,13 @@ module.exports = {
       return routes;
     },
   },
+  buildModules: [
+    '@nuxtjs/ackee',
+  ],
+  ackee: {
+    server: 'https://a.tough-dev.school',
+    domainId: 'eb04fcd4-aa2c-48e9-9b6e-c86a69c74148',
+  },
   env: {
     ghostAPIKey: process.env.GHOST_API_KEY || '4d0d76b7ac558434eb0e35f55e',
     perPage: 5,
