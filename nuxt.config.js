@@ -37,7 +37,6 @@ module.exports = {
     __dangerouslyDisableSanitizers: ['script'],
     script: [
       { src: 'https://cdnjs.cloudflare.com/ajax/libs/ilyabirman-likely/2.4.0/likely.js' },
-      { innerHTML: '(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(25756085, "init", { id:25756085, accurateTrackBounce:true, trackHash:true });' },
     ],
   },
 
@@ -63,7 +62,6 @@ module.exports = {
   */
   plugins: [
     '~/plugins/ghost-auth.js',
-    { src: '~/plugins/ya-metrika.js', ssr: false },
     '~/plugins/jsonld',
   ],
 
@@ -76,12 +74,6 @@ module.exports = {
     '@nuxtjs/redirect-module',
     '@nuxtjs/sentry',
   ],
-  buildModules: [
-    '@nuxtjs/google-analytics',
-  ],
-  googleAnalytics: {
-    id: 'UA-155215393-1',
-  },
   serverMiddleware: [
     '~/middleware/redirect-to-trailing-slash',
   ],
@@ -116,7 +108,6 @@ module.exports = {
     telegram: 'https://tgclick.ru/pmdaily/722',
     copyrightYears: '2014–2021',
     email: 'fedor@borshev.com',
-    yaMetrikaCounterID: '25756085',
   },
 
   /*

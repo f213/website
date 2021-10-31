@@ -1,5 +1,5 @@
 <template>
-  <a class="tg-link" href="tg://resolve?domain=pmdaily" v-metrika="'subscribe-telegram'">
+  <a class="tg-link" href="tg://resolve?domain=pmdaily">
     <slot>
       <i class="fa fa-paper-plane-o tg-link__icon" v-if="withIcon" />
       <span class="tg-link__label" :class="labelClass">{{ label }}</span>
