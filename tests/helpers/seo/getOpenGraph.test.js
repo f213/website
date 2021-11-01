@@ -6,7 +6,7 @@ describe('getOpenGraph helper', () => {
   beforeEach(() => {
     process.env.absoluteHost = 'https://test.com';
     page = {
-      url: '/slug/',
+      slug: 'slug',
       title: 'Грузите апельсины бочками',
     };
   });
