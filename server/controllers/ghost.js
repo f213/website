@@ -10,7 +10,7 @@ const changeOrigin = Boolean(target.includes('https'));
 
 consola.info('Setting backend proxy to', target);
 router.use('/i/', createProxyMiddleware({ target: `${target}/content/images/`, changeOrigin }));
-router.use('/api/v2/', createProxyMiddleware({ target: `${target}/ghost/`, changeOrigin }));
+router.use(['/api/v2/', '/api/v3'], createProxyMiddleware({ target: `${target}/ghost/`, changeOrigin }));
 
 router.use([
   '/content/images',
