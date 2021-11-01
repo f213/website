@@ -94,7 +94,7 @@ export default {
         sameAs: [],
       },
       headline: this.post.title,
-      url: this.post.url,
+      url: getAbsoluteUrl(this.post),
       datePublished: this.post.created_at,
       dateModified: this.post.updated_at,
       image: {
