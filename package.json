@@ -32,7 +32,7 @@
     "sass": "^1.38.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.0",
+    "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.10.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
