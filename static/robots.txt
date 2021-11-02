@@ -1,4 +1,8 @@
-# To edit production robots.txt file, use robots.production.txt
-
 User-Agent: *
-Disallow: /
+Disallow: /p/
+
+User-agent: Yandex
+Disallow: /amp
+
+Host: https://borshev.com
+Sitemap: https://borshev.com/sitemap.xml
