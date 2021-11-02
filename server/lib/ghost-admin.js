@@ -11,7 +11,7 @@ axios.defaults.headers.common['X-Forwarded-Proto'] = 'https'; // to fix ghost re
 const backendURL = process.env.BACKEND_URL || 'https://borshev.com';
 
 function getToken() {
-  const key = process.env.ADMIN_API_KEY;
+  const key = process.env.GHOST_ADMIN_API_KEY;
   const [id, secret] = key.split(':');
 
   // https://ghost.org/docs/api/v2/admin/#token-authentication
