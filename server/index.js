@@ -13,6 +13,7 @@ const nuxtController = require('./controllers/nuxt');
 const app = express();
 
 /* Logging */
+app.set('trust proxy', true);
 app.use(morgan('combined'));
 
 /* Ghost proxy */
