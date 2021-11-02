@@ -1,5 +1,3 @@
-import Vue from 'vue';
-
 import yaMetrika from '~/helpers/yaMetrika';
 
 export default ({ app }) => {
@@ -7,12 +5,5 @@ export default ({ app }) => {
   app.router.beforeEach((to, _, next) => {
     yaMetrika.hit(to.fullPath);
     next();
-  });
-
-  /* v-metrika directive */
-  Vue.directive('metrika', {
-    bind(el, identifier) {
-      el.addEventListener('click', () => yaMetrika.reachGoal(identifier.value));
-    },
   });
 };

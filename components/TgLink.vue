@@ -1,5 +1,5 @@
 <template>
-  <a class="tg-link" href="tg://resolve?domain=pmdaily" v-metrika="'subscribe-telegram'">
+  <a class="tg-link" href="tg://resolve?domain=pmdaily" @click="sendAnalytics">
     <slot>
       <i class="fa fa-paper-plane-o tg-link__icon" v-if="withIcon" />
       <span class="tg-link__label" :class="labelClass">{{ label }}</span>
@@ -12,6 +12,17 @@ export default {
     withIcon: { type: Boolean, default: false },
     label: { type: String, default: 'Подписаться на телеграм' },
     labelClass: { type: String, default: () => '' },
+  },
+  methods: {
+    sendAnalytics() {
+      this.$ackee.action(
+        '9521c12d-48a4-420e-b03a-a03ba63d473e',
+        {
+          key: 'Subscribe to telegram',
+          value: 1,
+        },
+      );
+    },
   },
 };
 </script>

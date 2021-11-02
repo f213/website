@@ -6,16 +6,16 @@ require('dotenv').config();
 const apiController = require('./controllers/api');
 const ampController = require('./controllers/amp');
 const ghostController = require('./controllers/ghost');
+const rssController = require('./controllers/rss');
 const nuxtController = require('./controllers/nuxt');
-
-const redirectToTheMainHostMiddleware = require('./middleware/redirectToMainHostMiddleware');
 
 const app = express();
 
-app.use(redirectToTheMainHostMiddleware);
-
 /* Ghost proxy */
 app.use('/', ghostController);
+
+/* Handling RSS via custom Ghost proxy */
+app.use('/', rssController);
 
 /* Fetching AMP from the ghost installation */
 app.use('/amp/:slug', ampController);

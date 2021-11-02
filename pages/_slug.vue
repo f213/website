@@ -53,9 +53,6 @@ export default {
         { rel: 'amphtml', href: `${process.env.absoluteHost}/amp/${this.post.slug}/` },
         { rel: 'canonical', href: getAbsoluteUrl(this.post) },
       ],
-      script: [
-        { src: 'https://cdnjs.cloudflare.com/ajax/libs/ilyabirman-likely/2.4.0/likely.js' },
-      ],
     };
   },
   computed: {
@@ -97,7 +94,7 @@ export default {
         sameAs: [],
       },
       headline: this.post.title,
-      url: this.post.url,
+      url: getAbsoluteUrl(this.post),
       datePublished: this.post.created_at,
       dateModified: this.post.updated_at,
       image: {

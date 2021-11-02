@@ -25,18 +25,15 @@ module.exports = {
       { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
       { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
       { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
-      { rel: 'manifest', href: '/site.webmanifest' },
       { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#5bbad5' },
       { name: 'msapplication-TileColor', content: '#da532c' },
       { name: 'theme-color', content: '#ffffff' },
 
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Noto+Sans:400,700&amp;subset=cyrillic" rel="stylesheet' },
       { rel: 'stylesheet', href: '/css/legacy.css' },
-      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/ilyabirman-likely/2.4.0/likely.css' },
     ],
     __dangerouslyDisableSanitizers: ['script'],
     script: [
-      { src: 'https://cdnjs.cloudflare.com/ajax/libs/ilyabirman-likely/2.4.0/likely.js' },
       { innerHTML: '(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(25756085, "init", { id:25756085, accurateTrackBounce:true, trackHash:true });' },
     ],
   },
@@ -77,10 +74,15 @@ module.exports = {
     '@nuxtjs/sentry',
   ],
   buildModules: [
+    '@nuxtjs/ackee',
     '@nuxtjs/google-analytics',
   ],
   googleAnalytics: {
     id: 'UA-155215393-1',
+  },
+  ackee: {
+    server: 'https://a.tough-dev.school',
+    domainId: 'eb04fcd4-aa2c-48e9-9b6e-c86a69c74148',
   },
   serverMiddleware: [
     '~/middleware/redirect-to-trailing-slash',
@@ -108,9 +110,9 @@ module.exports = {
     },
   },
   env: {
-    ghostAPIKey: process.env.GHOST_API_KEY || '881fcfad416468563d3eec62c1',
+    ghostAPIKey: process.env.GHOST_API_KEY || '4d0d76b7ac558434eb0e35f55e',
     perPage: 5,
-    absoluteHost: 'https://borshev.com',
+    absoluteHost: process.env.ABSOLUTE_HOST || 'https://borshev.com',
     facebook: 'https://facebook.com/Fedor213',
     youtube: 'https://www.youtube.com/channel/UCO8aN1B8ncJM09rohGvOiCQ',
     telegram: 'https://tgclick.ru/pmdaily/722',

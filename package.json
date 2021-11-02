@@ -4,9 +4,12 @@
   "description": "borshev.com website",
   "author": "Fedor Borshev",
   "private": true,
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
-    "build": "nuxt build",
+    "build": "nuxt build --modern",
     "start": "cross-env NODE_ENV=production node server/index.js",
     "generate": "nuxt generate",
     "lint": "eslint --max-warnings 0 --ext .js,.vue --ignore-path .gitignore .",
@@ -15,18 +18,22 @@
     "healthcheck": "node /healthcheck.js borshev.com 3000 / 200"
   },
   "dependencies": {
+    "@nuxtjs/ackee": "^3.0.2",
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/font-awesome": "^1.0.3",
-    "@nuxtjs/google-analytics": "^2.2.3",
+    "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/proxy": "^2.0.1",
     "@nuxtjs/redirect-module": "^0.3.1",
     "@nuxtjs/sentry": "^5.1.2",
     "@vue/test-utils": "^1.2.2",
     "bulma": "^0.9.3",
+    "cheerio": "^1.0.0-rc.10",
     "cross-env": "^7.0.2",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "javascript-time-ago": "^2.3.8",
     "jsonwebtoken": "^8.5.1",
+    "lodash.throttle": "^4.1.1",
     "nuxt": "^2.15.8",
     "nuxt-jsonld": "^1.5.2",
     "sass": "^1.38.0"
@@ -44,9 +51,7 @@
     "eslint-plugin-import": "^2.24.1",
     "eslint-plugin-jest": "^24.4.0",
     "eslint-plugin-vue": "^7.16.0",
-    "javascript-time-ago": "^2.3.8",
     "jest": "^27.0.0",
-    "lodash.throttle": "^4.1.1",
     "nodemon": "^2.0.12",
     "postcss-nested": "^4.1.0",
     "prettier": "^2.3.2",
