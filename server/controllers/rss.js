@@ -1,5 +1,5 @@
 const express = require('express');
-const proxy = require('../lib/proxy');
+const proxy = require('../lib/ghost-proxy');
 
 const router = express.Router();
 

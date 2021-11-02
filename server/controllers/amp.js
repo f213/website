@@ -1,4 +1,4 @@
-const { fetchAMPPost } = require('../lib/ghost');
+const { fetchAMPPost } = require('../lib/ghost-admin');
 
 module.exports = async (req, res) => {
   let html;

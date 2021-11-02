@@ -1,4 +1,4 @@
-const { fetchPostAsAdmin } = require('../../lib/ghost');
+const { fetchPostAsAdmin } = require('../../lib/ghost-admin');
 
 module.exports = async (req, res) => {
   const { uuid } = req.params;
