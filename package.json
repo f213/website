@@ -34,6 +34,7 @@
     "javascript-time-ago": "^2.3.8",
     "jsonwebtoken": "^8.5.1",
     "lodash.throttle": "^4.1.1",
+    "morgan": "^1.10.0",
     "nuxt": "^2.15.8",
     "nuxt-jsonld": "^1.5.2",
     "sass": "^1.38.0"

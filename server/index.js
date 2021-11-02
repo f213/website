@@ -1,5 +1,6 @@
 const express = require('express');
 const consola = require('consola');
+const morgan = require('morgan');
 
 require('dotenv').config();
 
@@ -10,6 +11,9 @@ const rssController = require('./controllers/rss');
 const nuxtController = require('./controllers/nuxt');
 
 const app = express();
+
+/* Logging */
+app.use(morgan('combined'));
 
 /* Ghost proxy */
 app.use('/', ghostController);
