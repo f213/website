@@ -1,6 +1,6 @@
 # Сайт borshev.com
 
-[![CircleCI](https://circleci.com/gh/f213/website-frontend.svg?style=svg&circle-token=6b34beece0dbf72e0f3848ac0193b6842e270369)](https://circleci.com/gh/f213/website-frontend)
+![CI](https://github.com/f213/website/actions/workflows/ci.yml/badge.svg) ![heroku](https://heroku-badge.herokuapp.com/?app=f213-frontend&svg=1)
 
 Это фронтенд для сайта borshev.com. В качестве бекенда используется [ghost](https://ghost.org).
 
