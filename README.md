@@ -5,7 +5,8 @@
 Это фронтенд для сайта borshev.com. В качестве бекенда используется [ghost](https://ghost.org).
 
 Технологии:
-* nuxt.js, express.js в качестве кастомного сервера
+* nuxt.js
+* express.js как обёртка для серверного рендеринга и BFF
 * PostCSS и [bulma](https://bulma.io)
 * Тесты пишем на jest
 
@@ -13,10 +14,10 @@
 
 ``` bash
 # install dependencies
-$ yarn install
+$ npm ci
 
 # serve with hot reload at localhost:3000
-$ yarn run dev
+$ npm run dev
 ```
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
