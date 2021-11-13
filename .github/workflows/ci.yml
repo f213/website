@@ -17,15 +17,15 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '16'
-          cache: 'yarn'
+          cache: 'npm'
 
-      - run: yarn install --frozen-lockfile
+      - run: npm ci --no-audit
 
       - name: Run the linter
-        run: yarn run lint
+        run: npm run lint
 
       - name: Run tests
-        run: yarn run test
+        run: npm run test
 
       - name: Run build
-        run: yarn run build
+        run: npm run build
