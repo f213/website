@@ -86,6 +86,7 @@ module.exports = {
   },
   serverMiddleware: [
     '~/middleware/redirect-to-trailing-slash',
+    '~/middleware/redirect-to-borshev-com',
   ],
   redirect: [
     { from: '/tags/favorites/', to: '/featured/', statusCode: 301 },
