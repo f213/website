@@ -3,7 +3,8 @@
 </template>
 <script>
 import galleryCarousel from '~/helpers/galleryCarousel';
-import { rewrite } from '~/helpers/rewriteLegacyImagePath';
+import rewriteLegacyImagePath from '~/helpers/rewriteLegacyImagePath';
+import rewriteHost from '~/helpers/rewriteHost';
 
 export default {
   props: {
@@ -11,7 +12,13 @@ export default {
   },
   computed: {
     html() {
-      return rewrite(this.content);
+      return rewriteLegacyImagePath(
+        rewriteHost({
+          html: this.content,
+          from: process.env.backendUrl,
+          to: process.env.absoluteHost,
+        })
+      );
     },
   },
   mounted() {

@@ -136,6 +136,7 @@ module.exports = {
     ghostAPIKey: process.env.GHOST_API_KEY || '4d0d76b7ac558434eb0e35f55e',
     perPage: 5,
     absoluteHost: process.env.ABSOLUTE_HOST || 'https://borshev.com',
+    backendUrl: process.env.BACKEND_URL,
     facebook: 'https://facebook.com/Fedor213',
     youtube: 'https://www.youtube.com/channel/UCO8aN1B8ncJM09rohGvOiCQ',
     telegram: 'https://tgclick.ru/pmdaily/722',
