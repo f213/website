@@ -1,3 +1,4 @@
+/* eslint-disable radar/no-duplicate-string */
 import { getOpenGraph } from '~/helpers/seo';
 
 describe('getOpenGraph helper', () => {

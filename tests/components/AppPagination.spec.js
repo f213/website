@@ -10,7 +10,7 @@ const mount = (propertiesData, route) =>
         ...route,
       },
       $router: {
-        resolve: () => ({ href: null }),
+        resolve: () => ({ href: undefined }),
       },
     },
     computed: {

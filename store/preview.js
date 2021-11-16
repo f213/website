@@ -1,6 +1,6 @@
 export default {
   state: () => ({
-    post: null,
+    post: undefined,
   }),
   actions: {
     async GET_POST({ commit }, { uuid }) {

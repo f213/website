@@ -1,6 +1,6 @@
 export default {
   state: () => ({
-    tag: null,
+    tag: undefined,
   }),
   actions: {
     async GET_TAG({ commit }, { slug }) {

@@ -1,3 +1,4 @@
+/* eslint-disable radar/no-duplicate-string, unicorn/no-null */
 import * as cheerio from 'cheerio';
 
 export function rewrite(html) {

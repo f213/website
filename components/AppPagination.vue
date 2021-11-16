@@ -24,8 +24,8 @@ export default {
       return this.destination === 'prev' ? 'Предыдущие' : 'Еще';
     },
     link() {
-      const { nextPage } = this;
-      let { name, params } = this.$route;
+      const { nextPage, $route } = this;
+      let { name, params } = $route;
       params = { ...params }; // fuck
 
       if (nextPage === 1) {
@@ -83,8 +83,8 @@ export default {
     }
   },
   beforeDestroy() {
-    this.SET_META_PREV(null);
-    this.SET_META_NEXT(null);
+    this.SET_META_PREV();
+    this.SET_META_NEXT();
   },
   methods: mapMutations('seo', ['SET_META_PREV', 'SET_META_NEXT']),
 };

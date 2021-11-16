@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/no-null, unicorn/prevent-abbreviations, unicorn/no-array-push-push */
 export const getMeta = (entity) => {
   const DESC_FIELDS = [
     'meta_description',

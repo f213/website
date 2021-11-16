@@ -160,19 +160,5 @@ module.exports = {
         'postcss-nested': {},
       },
     },
-    /*
-     ** You can extend webpack config here
-     */
-    extend(config, context) {
-      // Run ESLint on save
-      if (context.isDev && context.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/,
-        });
-      }
-    },
   },
 };

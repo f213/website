@@ -62,7 +62,7 @@ export default {
   },
   computed: {
     _links() {
-      return [{ to: '/', label: 'Главная' }].concat(this.links);
+      return [{ to: '/', label: 'Главная' }, ...this.links];
     },
   },
   watch: {

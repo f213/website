@@ -1,9 +1,9 @@
 export default {
   state: () => ({
     posts: [],
-    post_count: null,
-    pages: null,
-    post: null,
+    post_count: undefined,
+    pages: undefined,
+    post: undefined,
     similar: [],
   }),
   actions: {

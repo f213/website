@@ -1,8 +1,9 @@
+/* eslint-disable radar/no-duplicate-string */
 import { getMeta } from '~/helpers/seo';
 
 describe('getMeta helper', () => {
   it('Returns none when there is no meta', () => {
-    const post = { meta_description: null };
+    const post = { meta_description: undefined };
     expect(getMeta(post)).toEqual([]);
   });
   it('Returns description when is present meta_description', () => {
@@ -51,7 +52,7 @@ describe('getMeta helper', () => {
     });
   });
   it('Is javascript-proof', () => {
-    const post = null;
+    const post = undefined;
     expect(getMeta(post)).toEqual([]);
   });
 });

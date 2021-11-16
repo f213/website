@@ -1,7 +1,7 @@
 export default {
   state: () => ({
-    metaPrev: null,
-    metaNext: null,
+    metaPrev: undefined,
+    metaNext: undefined,
   }),
   mutations: {
     SET_META_PREV: (state, previous) => {

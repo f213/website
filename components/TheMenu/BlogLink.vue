@@ -31,11 +31,7 @@ export default {
         return true;
       }
 
-      if (
-        ![null, undefined, {}].includes(this.post) &&
-        'id' in this.post &&
-        !this.post.page
-      ) {
+      if (this.post && 'id' in this.post && !this.post.page) {
         return true;
       }
 

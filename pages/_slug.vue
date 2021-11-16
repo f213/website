@@ -42,10 +42,10 @@ export default {
     }
   },
   head() {
-    if ([null, undefined].includes(this.post)) {
+    if ([undefined, undefined].includes(this.post)) {
       return {};
     }
-    const meta = getMeta(this.post).concat(getOpenGraph(this.post));
+    const meta = [...getMeta(this.post), ...getOpenGraph(this.post)];
     return {
       title: this.post.meta_title || this.post.title,
       meta,
@@ -69,7 +69,7 @@ export default {
   },
   jsonld() {
     if (this.post.page) {
-      return null;
+      return;
     }
     return {
       '@context': 'http://schema.org',

@@ -34,6 +34,18 @@ module.exports = {
     'consistent-return': 'off',
     'no-irregular-whitespace': 'off',
     'no-underscore-dangle': 'off',
+    'radar/no-duplicate-string': 'off',
+    'nuxt/no-cjs-in-config': 'off',
+    'unicorn/filename-case': 'off',
+    'unicorn/consistent-function-scoping': 'off',
+    'unicorn/prevent-abbreviations': [
+      'error',
+      {
+        replacements: {
+          res: false,
+        },
+      },
+    ],
   },
   settings: {
     'import/resolver': {

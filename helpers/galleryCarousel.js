@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax, no-loop-func */
 const galleryCarousel = {
   init() {
     const galleries = document.querySelectorAll('.kg-gallery-container');
