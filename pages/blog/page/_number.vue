@@ -16,10 +16,10 @@ export default {
     const { number } = params;
     try {
       await store.dispatch('posts/GET_POSTS', { page: number });
-    } catch (e) {
+    } catch (error_) {
       error({
         statusCode: 404,
-        message: e.message,
+        message: error_.message,
       });
     }
   },
@@ -38,11 +38,7 @@ export default {
     ...mapState('posts', {
       posts: (posts) => posts.posts,
     }),
-    ...mapState('seo', [
-      'metaPrev',
-      'metaNext',
-    ]),
+    ...mapState('seo', ['metaPrev', 'metaNext']),
   },
-
 };
 </script>

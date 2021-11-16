@@ -1,10 +1,19 @@
 <template>
   <article class="app-post">
-    <PostTitle class="title is-3 is-size-4-mobile app-post__title" :class="{'is-marginless': isDetailed}" :post="post" :linked="linked" />
+    <PostTitle
+      class="title is-3 is-size-4-mobile app-post__title"
+      :class="{ 'is-marginless': isDetailed }"
+      :post="post"
+      :linked="linked"
+    />
 
     <HtmlComment v-if="noIndex" text="noindex" />
 
-    <TimeAgo class="is-size-7 app-post__time" :date="post.published_at" v-if="isDetailed && post.published_at" />
+    <TimeAgo
+      class="is-size-7 app-post__time"
+      :date="post.published_at"
+      v-if="isDetailed && post.published_at"
+    />
     <AppContent :content="post.html" />
     <AppTags class="is-hidden-mobile app-post__tags" :tags="post.tags" />
 
@@ -40,13 +49,12 @@ export default {
   &__time {
     display: block;
     margin-bottom: 1rem;
-    opacity: .5;
+    opacity: 0.5;
   }
 
   &__title {
-    margin-bottom: .8rem;
+    margin-bottom: 0.8rem;
     line-height: 1.7;
   }
-
 }
 </style>

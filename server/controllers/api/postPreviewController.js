@@ -1,14 +1,14 @@
 const { fetchPostAsAdmin } = require('../../lib/ghost-admin');
 
-module.exports = async (req, res) => {
-  const { uuid } = req.params;
-  const { backendURL } = req.app.locals;
+module.exports = async (request, res) => {
+  const { uuid } = request.params;
+  const { backendURL } = request.app.locals;
 
   let post;
 
   try {
     post = await fetchPostAsAdmin({ backendURL, uuid });
-  } catch (_) {
+  } catch {
     res.status(502).send({ error: 'Post fetching error' });
   }
 

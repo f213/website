@@ -9,21 +9,24 @@ export default {
   actions: {
     async GET_POSTS({ commit }, filters) {
       const { perPage } = this.app.context.env;
-      const params = { ...filters, limit: perPage, include: 'tags' };
+      const parameters = { ...filters, limit: perPage, include: 'tags' };
 
-      const response = await this.$axios.$get('posts/', { params });
-      if (!response.posts.length) {
+      const response = await this.$axios.$get('posts/', { params: parameters });
+      if (response.posts.length === 0) {
         throw new Error('No posts found');
       }
       commit('SET_POSTS', response);
     },
     async GET_POST({ commit, dispatch }, { slug }) {
-      if (['me', 'books'].includes(slug)) { // disable double fetch for known pages
+      if (['me', 'books'].includes(slug)) {
+        // disable double fetch for known pages
         return dispatch('GET_PAGE', { slug });
       }
-      const params = { include: 'tags' };
-      const found = await this.$axios.$get(`posts/slug/${slug}/`, { params });
-      if (!found.posts.length) {
+      const parameters = { include: 'tags' };
+      const found = await this.$axios.$get(`posts/slug/${slug}/`, {
+        params: parameters,
+      });
+      if (found.posts.length === 0) {
         throw new Error('No posts');
       }
       const post = found.posts[0];
@@ -36,7 +39,7 @@ export default {
     },
     async GET_PAGE({ commit }, { slug }) {
       const found = await this.$axios.$get(`pages/slug/${slug}/`);
-      if (!found.pages.length) {
+      if (found.pages.length === 0) {
         throw new Error('No posts');
       }
       const page = found.pages[0];
@@ -58,7 +61,9 @@ export default {
       state.post = post;
     },
     SET_SIMILAR: (state, similar) => {
-      state.similar = similar.filter((similarPost) => similarPost.id !== state.post.id);
+      state.similar = similar.filter(
+        (similarPost) => similarPost.id !== state.post.id
+      );
     },
   },
 };

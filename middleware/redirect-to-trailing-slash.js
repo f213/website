@@ -1,9 +1,9 @@
-const redirectableMethods = ['GET', 'HEAD'];
+const redirectableMethods = new Set(['GET', 'HEAD']);
 
-function redirectUrl(req) {
-  if (!redirectableMethods.includes(req.method)) return;
+function redirectUrl(request) {
+  if (!redirectableMethods.has(request.method)) return;
 
-  const url = (req.originalUrl || req.url);
+  const url = request.originalUrl || request.url;
 
   if (url.includes('/page/1/')) {
     return url.replace('/page/1/', '/');
@@ -13,13 +13,18 @@ function redirectUrl(req) {
     return url.slice(0, -1);
   }
 
-  if (url !== '/' && !url.endsWith('/') && !url.includes('?') && !url.includes('.')) {
+  if (
+    url !== '/' &&
+    !url.endsWith('/') &&
+    !url.includes('?') &&
+    !url.includes('.')
+  ) {
     return `${url}/`;
   }
 }
 
-export default (req, res, next) => {
-  const redirectTo = redirectUrl(req);
+export default (request, res, next) => {
+  const redirectTo = redirectUrl(request);
 
   if (redirectTo) {
     res.writeHead(301, { location: redirectTo });

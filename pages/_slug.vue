@@ -30,13 +30,13 @@ export default {
     /* Fetch the post first, otherwise -- try to fetch the page */
     try {
       await store.dispatch('posts/GET_POST', { slug });
-    } catch (_) {
+    } catch {
       try {
         await store.dispatch('posts/GET_PAGE', { slug });
-      } catch (e) {
+      } catch (error_) {
         error({
           statusCode: 404,
-          message: e.message,
+          message: error_.message,
         });
       }
     }
@@ -50,7 +50,10 @@ export default {
       title: this.post.meta_title || this.post.title,
       meta,
       link: [
-        { rel: 'amphtml', href: `${process.env.absoluteHost}/amp/${this.post.slug}/` },
+        {
+          rel: 'amphtml',
+          href: `${process.env.absoluteHost}/amp/${this.post.slug}/`,
+        },
         { rel: 'canonical', href: getAbsoluteUrl(this.post) },
       ],
     };

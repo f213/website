@@ -4,7 +4,8 @@ export default {
   }),
   actions: {
     async GET_POST({ commit }, { uuid }) {
-      const response = await this.$axios({ // ignore axios config and make direct request to absolute host
+      const response = await this.$axios({
+        // ignore axios config and make direct request to absolute host
         url: `/api/v8/preview-posts/${uuid}/`,
         baseURL: process.env.absoluteHost,
       });

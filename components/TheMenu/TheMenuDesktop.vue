@@ -4,8 +4,18 @@
       <nuxt-link to="/" class="app-nav__link">
         <span class="app-nav__label">Обо мне</span>
       </nuxt-link>
-      <BlogLink class="app-nav__link" label-class="app-nav__label" active-class="app-nav__link--active-blog" />
-      <nuxt-link v-for="(link, index) in links" :key="index" :to="link.to" class="app-nav__link" active-class="app-nav__link--active">
+      <BlogLink
+        class="app-nav__link"
+        label-class="app-nav__label"
+        active-class="app-nav__link--active-blog"
+      />
+      <nuxt-link
+        v-for="(link, index) in links"
+        :key="index"
+        :to="link.to"
+        class="app-nav__link"
+        active-class="app-nav__link--active"
+      >
         <span class="app-nav__label">{{ link.label }}</span>
       </nuxt-link>
       <FandsLink class="app-nav__link" label-class="app-nav__label" />
@@ -31,7 +41,7 @@ export default {
 </script>
 <style scoped>
 .app-nav {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   margin-bottom: 1.5rem;
 }
 </style>

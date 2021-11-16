@@ -29,10 +29,7 @@ export default {
     ...mapState('posts', {
       posts: (posts) => posts.posts,
     }),
-    ...mapState('seo', [
-      'metaPrev',
-      'metaNext',
-    ]),
+    ...mapState('seo', ['metaPrev', 'metaNext']),
   },
 };
 </script>

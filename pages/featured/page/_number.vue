@@ -15,11 +15,14 @@ export default {
   async fetch({ store, params, error }) {
     const { number } = params;
     try {
-      await store.dispatch('posts/GET_POSTS', { page: number, filter: 'featured:true' });
-    } catch (e) {
+      await store.dispatch('posts/GET_POSTS', {
+        page: number,
+        filter: 'featured:true',
+      });
+    } catch (error_) {
       error({
         statusCode: 404,
-        message: e.message,
+        message: error_.message,
       });
     }
   },
@@ -38,11 +41,7 @@ export default {
     ...mapState('posts', {
       posts: (posts) => posts.posts,
     }),
-    ...mapState('seo', [
-      'metaPrev',
-      'metaNext',
-    ]),
+    ...mapState('seo', ['metaPrev', 'metaNext']),
   },
-
 };
 </script>

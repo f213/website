@@ -3,7 +3,11 @@
     <client-only>
       <TheMenuDesktop :links="links" v-if="width > 768" />
       <TheMenuMobile :links="links" v-else />
-      <TheMenuDesktop :links="links" slot="placeholder" class="is-hidden-mobile" />
+      <TheMenuDesktop
+        :links="links"
+        slot="placeholder"
+        class="is-hidden-mobile"
+      />
     </client-only>
   </div>
 </template>
@@ -61,9 +65,9 @@ export default {
     &--active,
     &--active-blog {
       .app-nav__label {
-          color: var(--text-color);
-          opacity: .8;
-          border-bottom: 0;
+        color: var(--text-color);
+        opacity: 0.8;
+        border-bottom: 0;
       }
     }
     &--active {
@@ -78,11 +82,11 @@ export default {
     line-height: 2rem;
 
     &:hover {
-        color: var(--link-hover);
-        border-color: var(--link-border-hover);
+      color: var(--link-hover);
+      border-color: var(--link-border-hover);
     }
     &:not(:hover) {
-      transition: color .5s ease
+      transition: color 0.5s ease;
     }
   }
 }

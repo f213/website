@@ -3,8 +3,8 @@ module.exports = {
   telemetry: false,
 
   /*
-  ** Headers of the page
-  */
+   ** Headers of the page
+   */
   head: {
     htmlAttrs: {
       lang: 'ru',
@@ -22,19 +22,39 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico?v=2' },
-      { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
-      { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
-      { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '32x32',
+        href: '/favicon-32x32.png',
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '16x16',
+        href: '/favicon-16x16.png',
+      },
+      {
+        rel: 'apple-touch-icon',
+        sizes: '180x180',
+        href: '/apple-touch-icon.png',
+      },
       { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#5bbad5' },
       { name: 'msapplication-TileColor', content: '#da532c' },
       { name: 'theme-color', content: '#ffffff' },
 
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Noto+Sans:400,700&amp;subset=cyrillic" rel="stylesheet' },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Noto+Sans:400,700&amp;subset=cyrillic" rel="stylesheet',
+      },
       { rel: 'stylesheet', href: '/css/legacy.css' },
     ],
     __dangerouslyDisableSanitizers: ['script'],
     script: [
-      { innerHTML: '(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(25756085, "init", { id:25756085, accurateTrackBounce:true, trackHash:true });' },
+      {
+        innerHTML:
+          '(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(25756085, "init", { id:25756085, accurateTrackBounce:true, trackHash:true });',
+      },
     ],
   },
 
@@ -45,8 +65,8 @@ module.exports = {
   },
 
   /*
-  ** Global CSS
-  */
+   ** Global CSS
+   */
   css: [
     '~/assets/bulma.scss',
     '~/assets/vars.css',
@@ -56,8 +76,8 @@ module.exports = {
   ],
 
   /*
-  ** Plugins to load before mounting the App
-  */
+   ** Plugins to load before mounting the App
+   */
   plugins: [
     '~/plugins/ghost-auth.js',
     { src: '~/plugins/ya-metrika.js', ssr: false },
@@ -65,18 +85,15 @@ module.exports = {
   ],
 
   /*
-  ** Nuxt.js modules
-  */
+   ** Nuxt.js modules
+   */
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/font-awesome',
     '@nuxtjs/redirect-module',
     '@nuxtjs/sentry',
   ],
-  buildModules: [
-    '@nuxtjs/ackee',
-    '@nuxtjs/google-analytics',
-  ],
+  buildModules: ['@nuxtjs/ackee', '@nuxtjs/google-analytics'],
   googleAnalytics: {
     id: 'UA-155215393-1',
   },
@@ -97,16 +114,21 @@ module.exports = {
     dsn: 'https://563a1267525f4438bc73cccebd671a15@sentry.io/1865868',
   },
   /*
-  ** Axios module configuration
-  */
+   ** Axios module configuration
+   */
   axios: {
     prefix: '/api/v2/content',
     proxy: true,
   },
   router: {
     extendRoutes(routes) {
-      routes = routes.map((route) => (route.path.endsWith('/') ? route : { ...route, path: `${route.path}/` }));
-      routes = routes.map((route) => ({ ...route, pathToRegexpOptions: { endsWith: '/', strict: true } }));
+      routes = routes.map((route) =>
+        route.path.endsWith('/') ? route : { ...route, path: `${route.path}/` }
+      );
+      routes = routes.map((route) => ({
+        ...route,
+        pathToRegexpOptions: { endsWith: '/', strict: true },
+      }));
       return routes;
     },
   },
@@ -123,8 +145,8 @@ module.exports = {
   },
 
   /*
-  ** Build configuration
-  */
+   ** Build configuration
+   */
   build: {
     extractCSS: true,
     postcss: {
@@ -139,11 +161,11 @@ module.exports = {
       },
     },
     /*
-    ** You can extend webpack config here
-    */
-    extend(config, ctx) {
+     ** You can extend webpack config here
+     */
+    extend(config, context) {
       // Run ESLint on save
-      if (ctx.isDev && ctx.isClient) {
+      if (context.isDev && context.isClient) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,

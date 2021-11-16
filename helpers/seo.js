@@ -24,7 +24,8 @@ export const getMeta = (entity) => {
   return meta;
 };
 
-export const getAbsoluteUrl = (page) => (`${process.env.absoluteHost}/${page.slug}/`);
+export const getAbsoluteUrl = (page) =>
+  `${process.env.absoluteHost}/${page.slug}/`;
 
 function og(property, content) {
   return { property: `og:${property}`, content };
@@ -40,9 +41,18 @@ export const getOpenGraph = (entity) => {
     meta.push(og('type', 'article'));
   }
   meta.push(og('url', getAbsoluteUrl(entity)));
-  meta.push(og('title', [entity.og_title, entity.meta_title, entity.title].find((i) => Boolean(i))));
+  meta.push(
+    og(
+      'title',
+      [entity.og_title, entity.meta_title, entity.title].find((index) =>
+        Boolean(index)
+      )
+    )
+  );
 
-  const description = [entity.og_description, entity.meta_description].find((i) => Boolean(i));
+  const description = [entity.og_description, entity.meta_description].find(
+    (index) => Boolean(index)
+  );
   if (description) {
     meta.push(og('description', description));
   }
@@ -54,10 +64,10 @@ export const getOpenGraph = (entity) => {
   return meta;
 };
 
-export const getPrevNextLinks = (prev, next) => {
+export const getPrevNextLinks = (previous, next) => {
   const links = [];
-  if (prev) {
-    links.push({ rel: 'prev', href: prev });
+  if (previous) {
+    links.push({ rel: 'prev', href: previous });
   }
   if (next) {
     links.push({ rel: 'next', href: next });

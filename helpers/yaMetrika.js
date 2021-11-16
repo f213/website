@@ -1,22 +1,26 @@
 function getCounter() {
   const counter = window[`yaCounter${process.env.yaMetrikaCounterID}`];
 
-  if (counter === undefined || typeof counter === 'undefined' || !counter.reachGoal) {
+  if (
+    counter === undefined ||
+    typeof counter === 'undefined' ||
+    !counter.reachGoal
+  ) {
     return;
   }
 
   return counter;
 }
 
-function isProd() {
+function isProduction() {
   if (!process.client || process.env.environment !== 'production') {
     return false;
   }
   return true;
 }
 
-function call(stuff, ...args) {
-  if (!isProd()) {
+function call(stuff, ...arguments_) {
+  if (!isProduction()) {
     return;
   }
 
@@ -24,7 +28,7 @@ function call(stuff, ...args) {
   if (!counter) {
     return;
   }
-  counter[stuff](...args);
+  counter[stuff](...arguments_);
 }
 
 const yaMetrika = {
