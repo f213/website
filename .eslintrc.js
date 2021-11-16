@@ -3,19 +3,23 @@ module.exports = {
   env: {
     browser: true,
     node: true,
-    'jest/globals': true,
   },
   parserOptions: {
     parser: 'babel-eslint',
   },
   extends: [
+    '@nuxtjs',
+    'plugin:nuxt/recommended',
     'plugin:vue/recommended',
+    'plugin:radar/recommended',
+    'plugin:unicorn/recommended',
+    'plugin:prettier-vue/recommended',
     'airbnb-base',
+    'prettier',
   ],
   // required to lint *.vue files
   plugins: [
     'vue',
-    'jest',
   ],
   // add your custom rules here
   rules: {
