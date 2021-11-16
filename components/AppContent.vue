@@ -3,7 +3,7 @@
 </template>
 <script>
 import galleryCarousel from '~/helpers/galleryCarousel';
-import { rewrite } from '~/helpers/rewriteLegacyImagePath';
+import rewriteLegacyImagePath from '~/helpers/rewriteLegacyImagePath';
 
 export default {
   props: {
@@ -11,7 +11,7 @@ export default {
   },
   computed: {
     html() {
-      return rewrite(this.content);
+      return rewriteLegacyImagePath(this.content);
     },
   },
   mounted() {

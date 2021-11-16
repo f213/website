@@ -1,4 +1,4 @@
-import { rewrite } from '~/helpers/rewriteLegacyImagePath';
+import rewriteLegacyImagePath from '~/helpers/rewriteLegacyImagePath';
 
 describe('Legacy Image Rewriter', () => {
   test.each([
@@ -30,6 +30,6 @@ describe('Legacy Image Rewriter', () => {
     ],
     ['<h1>test</h1>', '<h1>test</h1>'],
   ])('Handles %s', (html, out) => {
-    expect(rewrite(html)).toEqual(out);
+    expect(rewriteLegacyImagePath(html)).toEqual(out);
   });
 });

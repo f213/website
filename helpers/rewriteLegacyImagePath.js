@@ -1,7 +1,7 @@
 /* eslint-disable radar/no-duplicate-string, unicorn/no-null */
 import * as cheerio from 'cheerio';
 
-export function rewrite(html) {
+export default (html) => {
   const $ = cheerio.load(html, null, false);
   $('img').each(function doRewriting() {
     const source = $(this).attr('src');
@@ -11,4 +11,4 @@ export function rewrite(html) {
     }
   });
   return $.html();
-}
+};
