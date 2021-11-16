@@ -24,20 +24,22 @@ export default {
 
     try {
       await store.dispatch('preview/GET_POST', { uuid });
-    } catch (e) {
+    } catch (error_) {
       error({
         statusCode: 404,
-        message: e.message,
+        message: error_.message,
       });
     }
   },
   head() {
     return {
       title: this.post.meta_title || this.post.title,
-      meta: [{
-        name: 'robots',
-        content: 'noindex,nofollow',
-      }],
+      meta: [
+        {
+          name: 'robots',
+          content: 'noindex,nofollow',
+        },
+      ],
     };
   },
   computed: {

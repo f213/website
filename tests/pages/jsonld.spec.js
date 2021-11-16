@@ -5,7 +5,7 @@ import PostPage from '~/pages/_slug.vue';
 const localVue = createLocalVue();
 localVue.use(Vuex);
 
-const createJsonldFunc = (isPage = false) => {
+const createJsonldFunction = (isPage = false) => {
   const wrapper = shallowMount(PostPage, {
     mocks: {
       $store: {
@@ -14,10 +14,7 @@ const createJsonldFunc = (isPage = false) => {
             post: {
               page: isPage,
               title: 'test post title',
-              tags: [
-                { name: 'tagName1' },
-                { name: 'tagName2' },
-              ],
+              tags: [{ name: 'tagName1' }, { name: 'tagName2' }],
             },
           },
         },
@@ -30,15 +27,15 @@ const createJsonldFunc = (isPage = false) => {
 
 describe('Jsonld function', () => {
   describe('Not post page', () => {
-    const jsonld = createJsonldFunc(true);
+    const jsonld = createJsonldFunction(true);
 
     it('Jsonld function return null for a not post page', () => {
-      expect(jsonld()).toBeNull();
+      expect(jsonld()).toBeUndefined();
     });
   });
 
   describe('Post page', () => {
-    const jsonld = createJsonldFunc();
+    const jsonld = createJsonldFunction();
 
     it('Jsonld function return a correct post headline for a post page', () => {
       const { headline } = jsonld();

@@ -1,11 +1,11 @@
 const { fetchAMPPost } = require('../lib/ghost-admin');
 
-module.exports = async (req, res) => {
+module.exports = async (request, res) => {
   let html;
 
   try {
-    html = await fetchAMPPost(req.params.slug);
-  } catch (_) {
+    html = await fetchAMPPost(request.params.slug);
+  } catch {
     res.status(404).send({ error: 'Post not found' });
   }
 

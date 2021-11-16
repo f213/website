@@ -22,19 +22,19 @@ export default {
     const { slug } = route.params;
     try {
       await store.dispatch('tags/GET_TAG', { slug });
-    } catch (e) {
+    } catch (error_) {
       error({
         statusCode: 404,
-        message: e.message,
+        message: error_.message,
       });
     }
 
     try {
       await store.dispatch('posts/GET_POSTS', { filter: `tag:${slug}` });
-    } catch (e) {
+    } catch (error_) {
       error({
         statusCode: 404,
-        message: e.message,
+        message: error_.message,
       });
     }
   },
@@ -54,11 +54,7 @@ export default {
       posts: (state) => state.posts.posts,
       tag: (state) => state.tags.tag,
     }),
-    ...mapState('seo', [
-      'metaPrev',
-      'metaNext',
-    ]),
+    ...mapState('seo', ['metaPrev', 'metaNext']),
   },
-
 };
 </script>

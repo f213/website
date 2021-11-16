@@ -1,17 +1,36 @@
 <template>
-  <nav class="navbar" :class="{'navbar--visible': isScrollingUp || hasNotScrolledYet}">
+  <nav
+    class="navbar"
+    :class="{ 'navbar--visible': isScrollingUp || hasNotScrolledYet }"
+  >
     <div class="navbar__brand navbar-brand">
-      <h1 class="navbar__title navbar-item title is-3 is-marginless" @click="active = ! active">
+      <h1
+        class="navbar__title navbar-item title is-3 is-marginless"
+        @click="active = !active"
+      >
         Фёдор Борщёв
       </h1>
 
-      <a role="button" class="navbar__burger navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" @click.prevent="active = ! active" :class="{'is-active': active}">
+      <a
+        role="button"
+        class="navbar__burger navbar-burger"
+        aria-label="menu"
+        aria-expanded="false"
+        data-target="navbarBasicExample"
+        @click.prevent="active = !active"
+        :class="{ 'is-active': active }"
+      >
         &#9776;
       </a>
     </div>
-    <div class="navbar-menu" :class="{'is-active': active }">
+    <div class="navbar-menu" :class="{ 'is-active': active }">
       <div class="navbar-start">
-        <nuxt-link v-for="(link, index) in _links" :key="index" :to="link.to" class="navbar-item navbar__item">
+        <nuxt-link
+          v-for="(link, index) in _links"
+          :key="index"
+          :to="link.to"
+          class="navbar-item navbar__item"
+        >
           {{ link.label }}
         </nuxt-link>
         <FandsLink class="navbar-item" />
@@ -43,7 +62,7 @@ export default {
   },
   computed: {
     _links() {
-      return [{ to: '/', label: 'Главная' }].concat(this.links);
+      return [{ to: '/', label: 'Главная' }, ...this.links];
     },
   },
   watch: {
@@ -55,20 +74,28 @@ export default {
   beforeMount() {
     let previosScrollPosition = window.scrollY;
 
-    window.addEventListener('scroll', throttle(() => {
-      if (window.scrollY < 100) { // no scroll events at the top of the page
-        return;
-      }
+    window.addEventListener(
+      'scroll',
+      throttle(
+        () => {
+          if (window.scrollY < 100) {
+            // no scroll events at the top of the page
+            return;
+          }
 
-      this.hasNotScrolledYet = false;
-      if ((previosScrollPosition <= window.scrollY)) {
-        this.isScrollingUp = false;
-        this.active = false;
-      } else {
-        this.isScrollingUp = true;
-      }
-      previosScrollPosition = window.scrollY;
-    }, 300, { leading: true }));
+          this.hasNotScrolledYet = false;
+          if (previosScrollPosition <= window.scrollY) {
+            this.isScrollingUp = false;
+            this.active = false;
+          } else {
+            this.isScrollingUp = true;
+          }
+          previosScrollPosition = window.scrollY;
+        },
+        300,
+        { leading: true }
+      )
+    );
   },
 };
 </script>
@@ -80,7 +107,7 @@ export default {
   right: 0;
   z-index: 30;
   top: -70px;
-  transition:  top .3s ease-out;
+  transition: top 0.3s ease-out;
 
   &--visible {
     top: 0px;
@@ -91,7 +118,7 @@ export default {
     align-content: center;
     justify-content: center;
     font-size: 1.5rem;
-    padding-top: .3rem;
+    padding-top: 0.3rem;
     &:hover {
       background-color: unset;
     }
@@ -110,6 +137,5 @@ export default {
   &__title {
     padding: 0;
   }
-
 }
 </style>

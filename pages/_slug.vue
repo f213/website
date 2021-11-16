@@ -30,27 +30,30 @@ export default {
     /* Fetch the post first, otherwise -- try to fetch the page */
     try {
       await store.dispatch('posts/GET_POST', { slug });
-    } catch (_) {
+    } catch {
       try {
         await store.dispatch('posts/GET_PAGE', { slug });
-      } catch (e) {
+      } catch (error_) {
         error({
           statusCode: 404,
-          message: e.message,
+          message: error_.message,
         });
       }
     }
   },
   head() {
-    if ([null, undefined].includes(this.post)) {
+    if ([undefined, undefined].includes(this.post)) {
       return {};
     }
-    const meta = getMeta(this.post).concat(getOpenGraph(this.post));
+    const meta = [...getMeta(this.post), ...getOpenGraph(this.post)];
     return {
       title: this.post.meta_title || this.post.title,
       meta,
       link: [
-        { rel: 'amphtml', href: `${process.env.absoluteHost}/amp/${this.post.slug}/` },
+        {
+          rel: 'amphtml',
+          href: `${process.env.absoluteHost}/amp/${this.post.slug}/`,
+        },
         { rel: 'canonical', href: getAbsoluteUrl(this.post) },
       ],
     };
@@ -66,7 +69,7 @@ export default {
   },
   jsonld() {
     if (this.post.page) {
-      return null;
+      return;
     }
     return {
       '@context': 'http://schema.org',

@@ -32,12 +32,12 @@ export default {
 .app-footer {
   &__poop {
     position: relative;
-    left: -.2rem;
+    left: -0.2rem;
   }
 
   &__email {
     color: #70a0b0;
-    border-bottom: 1px solid rgba(85, 102, 119, .4);
+    border-bottom: 1px solid rgba(85, 102, 119, 0.4);
 
     &:hover {
       color: var(--link-hover);
@@ -45,7 +45,7 @@ export default {
     }
 
     &:not(:hover) {
-      transition: color .5s ease, border-color .5s ease;
+      transition: color 0.5s ease, border-color 0.5s ease;
     }
   }
 }

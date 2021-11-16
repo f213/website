@@ -1,7 +1,8 @@
 import { shallowMount } from '@vue/test-utils';
 import AppContent from '~/components/AppContent.vue';
 
-const createWrapper = (content) => shallowMount(AppContent, { propsData: { content } });
+const createWrapper = (content) =>
+  shallowMount(AppContent, { propsData: { content } });
 
 describe('AppContent', () => {
   it('Actual renderes HTML', () => {

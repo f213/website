@@ -34,7 +34,7 @@ export default {
   margin-bottom: 5rem;
 
   &__title {
-    margin-bottom: .8rem;
+    margin-bottom: 0.8rem;
     line-height: 1.7;
   }
 }

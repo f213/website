@@ -1,127 +1,181 @@
 import { shallowMount } from '@vue/test-utils';
 import AppPagination from '~/components/AppPagination.vue';
 
-const mount = (propsData, route) => shallowMount(AppPagination, {
-  propsData,
-  mocks: {
-    $route: {
-      path: '/tags/test/',
-      ...route,
+const mount = (propertiesData, route) =>
+  shallowMount(AppPagination, {
+    propsData: propertiesData,
+    mocks: {
+      $route: {
+        path: '/tags/test/',
+        ...route,
+      },
+      $router: {
+        resolve: () => ({ href: undefined }),
+      },
     },
-    $router: {
-      resolve: () => ({ href: null }),
+    computed: {
+      pages: () => 10,
     },
-  },
-  computed: {
-    pages: () => 10,
-  },
-});
+  });
 
 describe('AppPagination', () => {
   describe('Next page link [tag page]', () => {
-    const createWrapper = (params) => mount({ destination: 'next' }, { params, name: 'tags-tag-page-number' });
+    const createWrapper = (parameters) =>
+      mount(
+        { destination: 'next' },
+        { params: parameters, name: 'tags-tag-page-number' }
+      );
 
     it('Should be 2 when page is 1', () => {
-      const wrapper = createWrapper({ });
+      const wrapper = createWrapper({});
       wrapper.vm.$route.name = 'tags-tag';
-      expect(wrapper.vm.link).toEqual({ name: 'tags-tag-page-number', params: { number: 2 } });
+      expect(wrapper.vm.link).toEqual({
+        name: 'tags-tag-page-number',
+        params: { number: 2 },
+      });
     });
 
     it('Should be 3 when page is 2 with correct current route name', () => {
       const wrapper = createWrapper({ number: 2 });
-      expect(wrapper.vm.link).toEqual({ name: 'tags-tag-page-number', params: { number: 3 } });
+      expect(wrapper.vm.link).toEqual({
+        name: 'tags-tag-page-number',
+        params: { number: 3 },
+      });
     });
 
     it('Should be 3 when page is 2 with incorrect current route name', () => {
       const wrapper = createWrapper({ number: 2 });
       wrapper.vm.$route.name = 'tags-tag';
-      expect(wrapper.vm.link).toEqual({ name: 'tags-tag-page-number', params: { number: 3 } });
+      expect(wrapper.vm.link).toEqual({
+        name: 'tags-tag-page-number',
+        params: { number: 3 },
+      });
     });
   });
 
   describe('Prev page link [tag page]', () => {
-    const createWrapper = (params) => mount({ destination: 'prev' }, { params, name: 'tags-tag-page-number' });
+    const createWrapper = (parameters) =>
+      mount(
+        { destination: 'prev' },
+        { params: parameters, name: 'tags-tag-page-number' }
+      );
     it('Should be 2 when page is 3', () => {
       const wrapper = createWrapper({ number: 3 });
-      expect(wrapper.vm.link).toEqual({ name: 'tags-tag-page-number', params: { number: 2 } });
+      expect(wrapper.vm.link).toEqual({
+        name: 'tags-tag-page-number',
+        params: { number: 2 },
+      });
     });
 
     it('Should be 1 when page is 2', () => {
       const wrapper = createWrapper({ number: 2 });
-      expect(wrapper.vm.link).toEqual({ name: 'tags-tag', params: { } });
+      expect(wrapper.vm.link).toEqual({ name: 'tags-tag', params: {} });
     });
 
     it('Should preserve other route params when deleting the page param', () => {
       const wrapper = createWrapper({ number: 2, tag: 'test' });
-      expect(wrapper.vm.link).toEqual({ name: 'tags-tag', params: { tag: 'test' } });
+      expect(wrapper.vm.link).toEqual({
+        name: 'tags-tag',
+        params: { tag: 'test' },
+      });
     });
 
     it('Should be 2 when page is 3 [incorrect current route name]', () => {
       const wrapper = createWrapper({ number: 3 });
       wrapper.vm.$route.name = 'tags-tag';
-      expect(wrapper.vm.link).toEqual({ name: 'tags-tag-page-number', params: { number: 2 } });
+      expect(wrapper.vm.link).toEqual({
+        name: 'tags-tag-page-number',
+        params: { number: 2 },
+      });
     });
 
     it('Should be 1 when page is 2 [incorrect route name]', () => {
       const wrapper = createWrapper({ number: 2 });
       wrapper.vm.$route.name = 'tags-tag';
-      expect(wrapper.vm.link).toEqual({ name: 'tags-tag', params: { } });
+      expect(wrapper.vm.link).toEqual({ name: 'tags-tag', params: {} });
     });
   });
 
   describe('Next page link [index page]', () => {
-    const createWrapper = (params) => mount({ destination: 'next' }, { params, name: 'page-number' });
+    const createWrapper = (parameters) =>
+      mount(
+        { destination: 'next' },
+        { params: parameters, name: 'page-number' }
+      );
 
     it('Should be 2 when page is 1', () => {
-      const wrapper = createWrapper({ });
-      expect(wrapper.vm.link).toEqual({ name: 'page-number', params: { number: 2 } });
+      const wrapper = createWrapper({});
+      expect(wrapper.vm.link).toEqual({
+        name: 'page-number',
+        params: { number: 2 },
+      });
     });
 
     it('Should be 3 when page is 2 with correct current route name', () => {
       const wrapper = createWrapper({ number: 2 });
-      expect(wrapper.vm.link).toEqual({ name: 'page-number', params: { number: 3 } });
+      expect(wrapper.vm.link).toEqual({
+        name: 'page-number',
+        params: { number: 3 },
+      });
     });
 
     it('Should be 3 when page is 2 with incorrect current route name', () => {
       const wrapper = createWrapper({ number: 2 });
       wrapper.vm.$route.name = 'page-number';
-      expect(wrapper.vm.link).toEqual({ name: 'page-number', params: { number: 3 } });
+      expect(wrapper.vm.link).toEqual({
+        name: 'page-number',
+        params: { number: 3 },
+      });
     });
   });
 
   describe('Prev page link [index page]', () => {
-    const createWrapper = (params) => mount({ destination: 'prev' }, { params, name: 'page-number' });
+    const createWrapper = (parameters) =>
+      mount(
+        { destination: 'prev' },
+        { params: parameters, name: 'page-number' }
+      );
 
     it('Should be 2 when page is 3', () => {
       const wrapper = createWrapper({ number: 3 });
-      expect(wrapper.vm.link).toEqual({ name: 'page-number', params: { number: 2 } });
+      expect(wrapper.vm.link).toEqual({
+        name: 'page-number',
+        params: { number: 2 },
+      });
     });
 
     it('Should be 1 when page is 2', () => {
       const wrapper = createWrapper({ number: 2 });
-      expect(wrapper.vm.link).toEqual({ name: 'index', params: { } });
+      expect(wrapper.vm.link).toEqual({ name: 'index', params: {} });
     });
 
     it('Should preserve other route params when deleting the page param', () => {
       const wrapper = createWrapper({ number: 2, tag: 'test' });
-      expect(wrapper.vm.link).toEqual({ name: 'index', params: { tag: 'test' } });
+      expect(wrapper.vm.link).toEqual({
+        name: 'index',
+        params: { tag: 'test' },
+      });
     });
 
     it('Should be 2 when page is 3 [incorrect current route name]', () => {
       const wrapper = createWrapper({ number: 3 });
       wrapper.vm.$route.name = 'index';
-      expect(wrapper.vm.link).toEqual({ name: 'page-number', params: { number: 2 } });
+      expect(wrapper.vm.link).toEqual({
+        name: 'page-number',
+        params: { number: 2 },
+      });
     });
 
     it('Should be 1 when page is 2 [incorrect route name]', () => {
       const wrapper = createWrapper({ number: 2 });
       wrapper.vm.$route.name = 'index';
-      expect(wrapper.vm.link).toEqual({ name: 'index', params: { } });
+      expect(wrapper.vm.link).toEqual({ name: 'index', params: {} });
     });
   });
 
   describe('Hiding pagintion', () => {
-    const createWrapper = (destination, params) => mount({ destination }, { params, name: 'page-number' });
+    const createWrapper = (destination, parameters) =>
+      mount({ destination }, { params: parameters, name: 'page-number' });
 
     it('Next page should be hidden on 10-th page', () => {
       const wrapper = createWrapper('next', { number: 10 });

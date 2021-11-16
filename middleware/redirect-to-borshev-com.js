@@ -1,14 +1,14 @@
-function redirectUrl(req) {
-  const url = (req.originalUrl || req.url);
-  const { hostname } = req;
+function redirectUrl(request) {
+  const url = request.originalUrl || request.url;
+  const { hostname } = request;
 
   if (!hostname.includes('borshev.com')) {
     return `https://borshev.com${url}`;
   }
 }
 
-module.exports = (req, res, next) => {
-  const redirectTo = redirectUrl(req);
+module.exports = (request, res, next) => {
+  const redirectTo = redirectUrl(request);
 
   if (process.env.NODE_ENV === 'production' && redirectTo) {
     res.writeHead(301, { location: redirectTo });

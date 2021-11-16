@@ -8,7 +8,6 @@
   </header>
 </template>
 <script>
-
 export default {
   data() {
     return {
@@ -28,7 +27,7 @@ export default {
   padding-bottom: 0;
   display: none;
 
-  @media(width >= 768px) {
+  @media (width >= 768px) {
     display: block;
   }
 }

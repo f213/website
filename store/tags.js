@@ -1,11 +1,11 @@
 export default {
   state: () => ({
-    tag: null,
+    tag: undefined,
   }),
   actions: {
     async GET_TAG({ commit }, { slug }) {
       const found = await this.$axios.$get(`tags/slug/${slug}/`);
-      if (!found.tags.length) {
+      if (found.tags.length === 0) {
         throw new Error('No tag!');
       }
       const tag = found.tags[0];

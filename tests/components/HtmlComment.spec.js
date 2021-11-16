@@ -8,9 +8,7 @@ describe('Component for rendering HTML comments', () => {
     const Root = Vue.extend({
       components: { HtmlComment },
       render(h) {
-        return h('div', [
-          h('HtmlComment', { props: { text } }),
-        ]);
+        return h('div', [h('HtmlComment', { props: { text } })]);
       },
     });
     const root = mount(Root);
@@ -20,9 +18,7 @@ describe('Component for rendering HTML comments', () => {
     const Root = Vue.extend({
       components: { HtmlComment },
       render(h) {
-        return h('div', [
-          h('HtmlComment'),
-        ]);
+        return h('div', [h('HtmlComment')]);
       },
     });
     const root = mount(Root);

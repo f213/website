@@ -3,7 +3,13 @@
     <div class="home-page__container">
       <HomePageHeader class="home-page__header" />
       <div class="home-page__photo">
-        <img class="home-page__img" src="~/assets/images/me.jpg" width="600" height="650" alt="Фёдор Борщёв">
+        <img
+          class="home-page__img"
+          src="~/assets/images/me.jpg"
+          width="600"
+          height="650"
+          alt="Фёдор Борщёв"
+        />
       </div>
       <HomePageLead class="home-page__lead" />
     </div>
@@ -31,8 +37,15 @@ export default {
       title: 'Фёдор Борщёв — главная страница',
       titleTemplate: '%s',
       meta: [
-        { name: 'keywords', content: 'Фёдор Борщёв, Fedor Borshev, управление проектами, профессиональный блог, CTO, руководитель проектов, блог менеджера, GTD, ГТД, сроки, блог ненужного менеджера, психология, переговоры, электронная почта, инструменты' },
-        { name: 'description', content: 'Сайт Фёдора Борщёва — CTO и ИТ-консультанта' },
+        {
+          name: 'keywords',
+          content:
+            'Фёдор Борщёв, Fedor Borshev, управление проектами, профессиональный блог, CTO, руководитель проектов, блог менеджера, GTD, ГТД, сроки, блог ненужного менеджера, психология, переговоры, электронная почта, инструменты',
+        },
+        {
+          name: 'description',
+          content: 'Сайт Фёдора Борщёва — CTO и ИТ-консультанта',
+        },
       ],
     };
   },
@@ -47,7 +60,7 @@ export default {
 
   &__container {
     display: grid;
-    grid-gap: .5rem;
+    grid-gap: 0.5rem;
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto;
     padding-top: 2rem;
@@ -81,7 +94,7 @@ export default {
     margin-top: 3rem;
   }
 
-  @media(width > 1020px) {
+  @media (width > 1020px) {
     padding-top: 3rem;
     padding-left: 3.5rem;
 

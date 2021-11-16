@@ -15,15 +15,23 @@ export default {
   computed: {
     isAtBlogPage() {
       const { name } = this.$route;
-      if (name && name.startsWith('featured')) { // disable highlight at the home page
+      if (name && name.startsWith('featured')) {
+        // disable highlight at the home page
         return false;
       }
 
-      if (['blog', 'blog-page-number', 'tags-slug', 'tags-slug-page-number'].includes(name)) {
+      if (
+        [
+          'blog',
+          'blog-page-number',
+          'tags-slug',
+          'tags-slug-page-number',
+        ].includes(name)
+      ) {
         return true;
       }
 
-      if (![null, undefined, {}].includes(this.post) && 'id' in this.post && !this.post.page) {
+      if (this.post && 'id' in this.post && !this.post.page) {
         return true;
       }
 

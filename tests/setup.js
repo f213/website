@@ -6,7 +6,7 @@ Vue.config.ignoredElements.push(
   'client-only',
   'VLazyImage',
   'Icon',
-  'AppModal',
+  'AppModal'
 );
 
 Vue.config.productionTip = false;

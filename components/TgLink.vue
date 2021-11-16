@@ -15,13 +15,10 @@ export default {
   },
   methods: {
     sendAnalytics() {
-      this.$ackee.action(
-        '9521c12d-48a4-420e-b03a-a03ba63d473e',
-        {
-          key: 'Subscribe to telegram',
-          value: 1,
-        },
-      );
+      this.$ackee.action('9521c12d-48a4-420e-b03a-a03ba63d473e', {
+        key: 'Subscribe to telegram',
+        value: 1,
+      });
     },
   },
 };
@@ -32,18 +29,19 @@ export default {
   white-space: nowrap;
 
   &__icon {
-    opacity: .9;
+    opacity: 0.9;
     color: var(--link-color);
   }
 
   @media (width > 768px) {
-    &:hover, &:hover &__icon {
+    &:hover,
+    &:hover &__icon {
       color: var(--link-hover);
     }
   }
 
   &:not(:hover) &__icon {
-    transition: color .5s ease
+    transition: color 0.5s ease;
   }
 
   &__label {

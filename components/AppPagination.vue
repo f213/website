@@ -10,7 +10,6 @@
 </template>
 
 <script>
-
 import { mapState, mapMutations } from 'vuex';
 
 export default {
@@ -25,8 +24,8 @@ export default {
       return this.destination === 'prev' ? 'Предыдущие' : 'Еще';
     },
     link() {
-      const { nextPage } = this;
-      let { name, params } = this.$route;
+      const { nextPage, $route } = this;
+      let { name, params } = $route;
       params = { ...params }; // fuck
 
       if (nextPage === 1) {
@@ -34,7 +33,9 @@ export default {
         name = name || 'index';
         delete params.number;
       } else {
-        name = name.includes('page-number') ? name : `${name}-page-number`.replace('index-', '');
+        name = name.includes('page-number')
+          ? name
+          : `${name}-page-number`.replace('index-', '');
         params.number = nextPage;
       }
       return { name, params };
@@ -58,7 +59,7 @@ export default {
     },
     page() {
       if ('number' in this.$route.params) {
-        return parseInt(this.$route.params.number, 10);
+        return Number.parseInt(this.$route.params.number, 10);
       }
       return 1;
     },
@@ -82,13 +83,10 @@ export default {
     }
   },
   beforeDestroy() {
-    this.SET_META_PREV(null);
-    this.SET_META_NEXT(null);
+    this.SET_META_PREV();
+    this.SET_META_NEXT();
   },
-  methods: mapMutations('seo', [
-    'SET_META_PREV',
-    'SET_META_NEXT',
-  ]),
+  methods: mapMutations('seo', ['SET_META_PREV', 'SET_META_NEXT']),
 };
 </script>
 
@@ -104,15 +102,15 @@ export default {
   &__link {
     border-bottom: 1px solid var(--link-border-color);
     color: var(--link-color);
-    --webkit-tap-highlight-color: rgba( 0, 0, 0, 0 );
+    --webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
     &:hover {
-        color: var(--link-hover);
-        border-color: var(--link-border-hover);
+      color: var(--link-hover);
+      border-color: var(--link-border-hover);
     }
 
     &:not(:hover) {
-      transition: color .5s ease, border-color .5s ease;
+      transition: color 0.5s ease, border-color 0.5s ease;
     }
   }
 }

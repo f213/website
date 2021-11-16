@@ -20,10 +20,10 @@ export default {
 .home-page-header {
   &__title {
     position: relative;
-    left: -.25rem;
+    left: -0.25rem;
   }
   &__menu {
-    margin-top: .5rem;
+    margin-top: 0.5rem;
   }
 }
 </style>
