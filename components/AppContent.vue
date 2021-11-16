@@ -4,6 +4,7 @@
 <script>
 import galleryCarousel from '~/helpers/galleryCarousel';
 import rewriteLegacyImagePath from '~/helpers/rewriteLegacyImagePath';
+import rewriteHost from '~/helpers/rewriteHost';
 
 export default {
   props: {
@@ -11,7 +12,13 @@ export default {
   },
   computed: {
     html() {
-      return rewriteLegacyImagePath(this.content);
+      return rewriteLegacyImagePath(
+        rewriteHost({
+          html: this.content,
+          from: process.env.backendUrl,
+          to: process.env.absoluteHost,
+        })
+      );
     },
   },
   mounted() {

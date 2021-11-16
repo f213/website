@@ -6,7 +6,11 @@ export default (html) => {
   $('img').each(function doRewriting() {
     const source = $(this).attr('src');
 
-    if (source.includes('/i/') && !source.includes('/content/images/i/')) {
+    if (
+      source &&
+      source.includes('/i/') &&
+      !source.includes('/content/images/i/')
+    ) {
       $(this).attr('src', source.replaceAll('/i/', '/content/images/i/'));
     }
   });
