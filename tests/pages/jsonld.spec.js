@@ -30,7 +30,7 @@ describe('Jsonld function', () => {
     const jsonld = createJsonldFunction(true);
 
     it('Jsonld function return null for a not post page', () => {
-      expect(jsonld()).toBeNull();
+      expect(jsonld()).toBeUndefined();
     });
   });
 
