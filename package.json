@@ -58,7 +58,7 @@
     "eslint-plugin-vue": "^7.16.0",
     "jest": "^27.0.0",
     "nodemon": "^2.0.12",
-    "postcss-nested": "^4.1.0",
+    "postcss-nested": "^5.0.6",
     "prettier": "^2.3.2",
     "sass-loader": "^10.1.1",
     "vue-jest": "^3.0.0"
