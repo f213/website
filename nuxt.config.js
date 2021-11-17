@@ -72,7 +72,6 @@ module.exports = {
     '~/assets/vars.css',
     '~/assets/content.css',
     '~/assets/lists.css',
-    '~/assets/books.css',
   ],
 
   /*
@@ -160,6 +159,11 @@ module.exports = {
       plugins: {
         'postcss-nested': {},
       },
+    },
+    extend(config, { isClient }) {
+      if (isClient) {
+        config.devtool = 'source-map';
+      }
     },
   },
 };
