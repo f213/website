@@ -18,6 +18,7 @@
       >
         <span class="app-nav__label">{{ link.label }}</span>
       </nuxt-link>
+      <SchoolLink class="app-nav__link" label-class="app-nav__label" />
       <FandsLink class="app-nav__link" label-class="app-nav__label" />
       <TgLink with-icon class="app-nav__link" label-class="app-nav__label" />
     </div>
@@ -26,12 +27,14 @@
 <script>
 import BlogLink from '~/components/TheMenu/BlogLink.vue';
 import FandsLink from '~/components/TheMenu/FandsLink.vue';
+import SchoolLink from '~/components/TheMenu/SchoolLink.vue';
 import TgLink from '~/components/TgLink.vue';
 
 export default {
   components: {
     BlogLink,
     FandsLink,
+    SchoolLink,
     TgLink,
   },
   props: {

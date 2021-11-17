@@ -18,7 +18,7 @@ export default {
       commit('SET_POSTS', response);
     },
     async GET_POST({ commit, dispatch }, { slug }) {
-      if (['me', 'books'].includes(slug)) {
+      if (['me'].includes(slug)) {
         // disable double fetch for known pages
         return dispatch('GET_PAGE', { slug });
       }

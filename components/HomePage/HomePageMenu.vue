@@ -8,23 +8,19 @@
       label-class="app-nav__label"
       label="Телеграм"
     />
-    <a
-      href="https://education.borshev.com"
-      class="app-nav__link"
-      target="_blank"
-    >
-      <span class="app-nav__label">Курсы</span>
-    </a>
+    <SchoolLink class="app-nav__link" label-class="app-nav__label" />
     <FandsLink class="app-nav__link" label-class="app-nav__label" />
   </nav>
 </template>
 <script>
 import FandsLink from '~/components/TheMenu/FandsLink.vue';
+import SchoolLink from '~/components/TheMenu/SchoolLink.vue';
 import TgLink from '~/components/TgLink.vue';
 
 export default {
   components: {
     FandsLink,
+    SchoolLink,
     TgLink,
   },
 };

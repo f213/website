@@ -23,10 +23,7 @@ export default {
   data() {
     return {
       width: 1024,
-      links: [
-        { to: { name: 'featured' }, label: 'Избранное' },
-        { to: '/books/', label: 'Книги' },
-      ],
+      links: [{ to: { name: 'featured' }, label: 'Избранное' }],
     };
   },
   beforeMount() {

@@ -33,6 +33,7 @@
         >
           {{ link.label }}
         </nuxt-link>
+        <SchoolLink class="navbar-item" />
         <FandsLink class="navbar-item" />
         <TgLink with-icon class="navbar-item" />
       </div>
@@ -43,11 +44,13 @@
 import throttle from 'lodash.throttle';
 
 import FandsLink from '~/components/TheMenu/FandsLink.vue';
+import SchoolLink from '~/components/TheMenu/SchoolLink.vue';
 import TgLink from '~/components/TgLink.vue';
 
 export default {
   components: {
     FandsLink,
+    SchoolLink,
     TgLink,
   },
   props: {
