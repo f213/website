@@ -161,5 +161,10 @@ module.exports = {
         'postcss-nested': {},
       },
     },
+    extend(config, { isClient }) {
+      if (isClient) {
+        config.devtool = 'source-map';
+      }
+    },
   },
 };
