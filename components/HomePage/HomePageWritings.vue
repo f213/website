@@ -44,8 +44,8 @@
         <nuxt-link class="writings__link" to="/50-percent/">
           Тупое правило про 50 процентов
         </nuxt-link>
-        <nuxt-link class="writings__link" to="/feature-hatred/">
-          Не любить новые фичи
+        <nuxt-link class="writings__link" to="/jumpstart/">
+          Как выучить любой язык программирования
         </nuxt-link>
       </div>
     </div>
