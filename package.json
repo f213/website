@@ -37,7 +37,7 @@
     "morgan": "^1.10.0",
     "nuxt": "^2.15.8",
     "nuxt-jsonld": "^1.5.2",
-    "sass": "^1.38.0"
+    "sass": "^1.45.1"
   },
   "devDependencies": {
     "@babel/core": "^7.10.0",
