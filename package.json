@@ -30,7 +30,7 @@
     "cheerio": "^1.0.0-rc.10",
     "cross-env": "^7.0.2",
     "dotenv": "^10.0.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "javascript-time-ago": "^2.3.8",
     "jsonwebtoken": "^8.5.1",
     "lodash.throttle": "^4.1.1",
