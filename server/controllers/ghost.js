@@ -8,8 +8,7 @@ const router = express.Router();
 const target = process.env.BACKEND_URL;
 
 consola.info('Setting ghost proxy to', target);
-router.use('/i/', proxy({ target: `${target}/content/images/` }));
 router.use(['/api/v2/', '/api/v3'], proxy({ target: `${target}/ghost/` }));
-router.use(['/ghost', '^/rss/$'], proxy({ target }));
+router.use(['/content/images', '/ghost', '^/rss/$'], proxy({ target }));
 
 module.exports = router;
