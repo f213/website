@@ -4,7 +4,7 @@
  *  node /healthcheck.js HOST PORT PATH CODE
  *
  * e.g.
- *  node /healthcheck.js testhost.my.compoany 3000 / 200
+ *  node /healthcheck.js testhost.my.company 3000 / 200
  *
  * Connection always goes to localhost
  *
