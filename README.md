@@ -1,6 +1,6 @@
 # Сайт borshev.com
 
-![CI](https://github.com/f213/website/actions/workflows/ci.yml/badge.svg) ![heroku](https://heroku-badge.herokuapp.com/?app=f213-frontend&svg=1)
+![CI](https://github.com/f213/website/actions/workflows/ci.yml/badge.svg)
 
 Это фронтенд для сайта borshev.com. В качестве бекенда используется [ghost](https://ghost.org).
 
