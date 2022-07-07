@@ -104,7 +104,9 @@ export default {
         '@type': 'ImageObject',
         url: this.post.feature_image,
       },
-      keywords: this.post.tags.map((item) => item.name).join(', '),
+      keywords: this.post.tags
+        ? this.post.tags.map((item) => item.name).join(', ')
+        : [],
       description: this.post.excerpt,
       mainEntityOfPage: {
         '@type': 'WebPage',
