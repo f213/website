@@ -38,7 +38,7 @@
     "nuxt": "^2.15.8",
     "nuxt-jsonld": "^1.5.2",
     "postcss": "7.0.32",
-    "sass": "^1.38.0"
+    "sass": "^1.54.2"
   },
   "devDependencies": {
     "@babel/core": "^7.10.0",
