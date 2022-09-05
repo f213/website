@@ -36,7 +36,7 @@
     "lodash.throttle": "^4.1.1",
     "morgan": "^1.10.0",
     "nuxt": "^2.15.8",
-    "nuxt-jsonld": "^1.5.2",
+    "nuxt-jsonld": "^2.0.5",
     "postcss": "7.0.32",
     "sass": "^1.38.0"
   },
