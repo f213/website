@@ -92,10 +92,7 @@ module.exports = {
     '@nuxtjs/redirect-module',
     '@nuxtjs/sentry',
   ],
-  buildModules: ['@nuxtjs/ackee', '@nuxtjs/google-analytics'],
-  googleAnalytics: {
-    id: 'UA-155215393-1',
-  },
+  buildModules: ['@nuxtjs/ackee'],
   ackee: {
     server: 'https://a.tough-dev.school',
     domainId: 'eb04fcd4-aa2c-48e9-9b6e-c86a69c74148',
