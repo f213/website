@@ -19,7 +19,7 @@
         <!-- prettier-ignore -->
         <li>Всю технологическую часть в <a
             class="home-page-lead__link"
-            href="https://mtrl.pro"
+            href="https://gdematerial.ru/"
             rel="noindex, nofollow"
             >ГдеМатериале</a
           >: бекенд для маркетплейса, приложения партнёров и клиентов,
