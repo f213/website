@@ -49,13 +49,6 @@ module.exports = {
       },
       { rel: 'stylesheet', href: '/css/legacy.css' },
     ],
-    __dangerouslyDisableSanitizers: ['script'],
-    script: [
-      {
-        innerHTML:
-          '(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(25756085, "init", { id:25756085, accurateTrackBounce:true, trackHash:true });',
-      },
-    ],
   },
 
   loading: {
@@ -79,7 +72,6 @@ module.exports = {
    */
   plugins: [
     '~/plugins/ghost-auth.js',
-    { src: '~/plugins/ya-metrika.js', ssr: false },
     '~/plugins/jsonld',
   ],
 
@@ -96,6 +88,7 @@ module.exports = {
   ackee: {
     server: 'https://a.tough-dev.school',
     domainId: 'eb04fcd4-aa2c-48e9-9b6e-c86a69c74148',
+    detailed: true,
   },
   serverMiddleware: [
     '~/middleware/redirect-to-trailing-slash',
