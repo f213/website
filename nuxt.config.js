@@ -70,10 +70,7 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [
-    '~/plugins/ghost-auth.js',
-    '~/plugins/jsonld',
-  ],
+  plugins: ['~/plugins/ghost-auth.js', '~/plugins/jsonld'],
 
   /*
    ** Nuxt.js modules
