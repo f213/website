@@ -1,7 +1,7 @@
 <template>
   <a class="tg-link" href="tg://resolve?domain=pmdaily" @click="sendAnalytics">
     <slot>
-      <i class="fa fa-paper-plane-o tg-link__icon" v-if="withIcon" />
+      <i class="fa-brands fa-telegram tg-link__icon" v-if="withIcon" />
       <span class="tg-link__label" :class="labelClass">{{ label }}</span>
     </slot>
   </a>
@@ -15,7 +15,7 @@ export default {
   },
   methods: {
     sendAnalytics() {
-      this.$ackee.action('9521c12d-48a4-420e-b03a-a03ba63d473e', {
+      this.$ackee.action('ad28f09c-3956-4884-aaed-37f5edb23ef2', {
         key: 'Subscribe to telegram',
         value: 1,
       });
@@ -24,7 +24,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .tg-link {
   white-space: nowrap;
 

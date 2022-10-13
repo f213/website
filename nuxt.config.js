@@ -44,10 +44,20 @@ module.exports = {
       { name: 'theme-color', content: '#ffffff' },
 
       {
-        rel: 'stylesheet',
+        rel: 'stylesheet prefetch',
+        as: 'style',
         href: 'https://fonts.googleapis.com/css?family=Noto+Sans:400,700&amp;subset=cyrillic" rel="stylesheet',
+        type: 'text/css',
+        crossorigin: 'anonymoous',
       },
-      { rel: 'stylesheet', href: '/css/legacy.css' },
+      {
+        rel: 'stylesheet prefetch',
+        as: 'style',
+        type: 'text/css',
+        href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css',
+        crossorigin: 'anonymoous',
+      },
+      { rel: 'prefetch', as: 'style', href: '/css/legacy.css' },
     ],
   },
 
@@ -75,12 +85,7 @@ module.exports = {
   /*
    ** Nuxt.js modules
    */
-  modules: [
-    '@nuxtjs/axios',
-    '@nuxtjs/font-awesome',
-    '@nuxtjs/redirect-module',
-    '@nuxtjs/sentry',
-  ],
+  modules: ['@nuxtjs/axios', '@nuxtjs/redirect-module', '@nuxtjs/sentry'],
   buildModules: ['@nuxtjs/ackee'],
   ackee: {
     server: 'https://a.tough-dev.school',
@@ -123,12 +128,8 @@ module.exports = {
     perPage: 5,
     absoluteHost: process.env.ABSOLUTE_HOST || 'https://borshev.com',
     backendUrl: process.env.BACKEND_URL || 'https://borshev.com',
-    facebook: 'https://facebook.com/Fedor213',
-    youtube: 'https://www.youtube.com/channel/UCO8aN1B8ncJM09rohGvOiCQ',
-    telegram: 'https://tgclick.ru/pmdaily/722',
     copyrightYears: '2014–2022',
     email: 'fedor@borshev.com',
-    yaMetrikaCounterID: '25756085',
   },
 
   /*
