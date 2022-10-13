@@ -15,7 +15,7 @@ export default {
   },
   methods: {
     sendAnalytics() {
-      this.$ackee.action('9521c12d-48a4-420e-b03a-a03ba63d473e', {
+      this.$ackee.action('ad28f09c-3956-4884-aaed-37f5edb23ef2', {
         key: 'Subscribe to telegram',
         value: 1,
       });
@@ -24,7 +24,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .tg-link {
   white-space: nowrap;
 

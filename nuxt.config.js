@@ -123,12 +123,8 @@ module.exports = {
     perPage: 5,
     absoluteHost: process.env.ABSOLUTE_HOST || 'https://borshev.com',
     backendUrl: process.env.BACKEND_URL || 'https://borshev.com',
-    facebook: 'https://facebook.com/Fedor213',
-    youtube: 'https://www.youtube.com/channel/UCO8aN1B8ncJM09rohGvOiCQ',
-    telegram: 'https://tgclick.ru/pmdaily/722',
     copyrightYears: '2014–2022',
     email: 'fedor@borshev.com',
-    yaMetrikaCounterID: '25756085',
   },
 
   /*

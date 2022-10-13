@@ -7,66 +7,36 @@
         alt="Фёдор Борщёв"
       />
     </div>
-    <HtmlComment text="noindex" />
     <div class="subscribe-bar__text">
       <p>
-        Меня зовут Федя Борщёв. Пишу для программистов в <TgLink
+        Меня зовут Федя Борщёв. Пишу для программистов в&nbsp;<TgLink
           label="телеграме"
           with-icon
-        /> — 3 поста в неделю об управлении сложными проектами, хорошем коде
-        и профессиональном развитии. А ещё я в прямом эфире пишу код на <a
-          class="subscribe-bar__link"
-          :href="youtube"
-          @click="sendYoutubeAction"
-          ><i class="subscribe-bar__youtube-icon fa fa-youtube-play" /> ютубе</a
-        >
-        и выкладываю всякое в <a class="subscribe-bar__link" :href="facebook"
-          ><i
-            class="subscribe-bar__facebook-icon fa fa-facebook"
-            @click="sendFbAction"
-          />
-          фейсбук</a
-        >. Подписывайтесь!
+        /> — 2 поста в&nbsp;неделю об&nbsp;управлении сложными проектами,
+        хорошем коде и&nbsp;профессиональном развитии. А&nbsp;ещё
+        я&nbsp;руковожу&nbsp;<TDSLink
+          label="Школой Сильных Программистов"
+          with-icon
+        />,<br class="is-hidden-desktop" />
+        где мы делаем синьёров, архитекторов и&nbsp;тимлидов. Приходите учиться!
       </p>
     </div>
-    <HtmlComment text="/noindex" />
   </div>
 </template>
 
 <script>
-import HtmlComment from '~/components/HtmlComment.vue';
+import TDSLink from '~/components/TDSLink.vue';
 import TgLink from '~/components/TgLink.vue';
 
 export default {
   components: {
-    HtmlComment,
+    TDSLink,
     TgLink,
-  },
-  data() {
-    return {
-      telegram: process.env.telegram,
-      facebook: process.env.facebook,
-      youtube: process.env.youtube,
-    };
-  },
-  methods: {
-    sendYoutubeAction() {
-      this.$ackee.action('880617d1-82de-4540-9ced-ebd039bc67f0', {
-        key: 'Subscribe to youtube',
-        value: 1,
-      });
-    },
-    sendFbAction() {
-      this.$ackee.action('f6f3afdd-cf42-4de7-8b79-8260e647b2c4', {
-        key: 'Subscribe to fb',
-        value: 1,
-      });
-    },
   },
 };
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .subscribe-bar {
   min-height: 140px;
 
@@ -84,13 +54,12 @@ export default {
 
   &__text {
     @media (width > 768px) {
-      padding-top: 0.8rem;
+      padding-top: 0.5rem;
     }
   }
 
-  &__youtube-icon,
-  &__facebook-icon {
-    opacity: 0.8;
+  &__tds {
+    width: 24px;
   }
 
   &__link {
