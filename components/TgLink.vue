@@ -1,7 +1,7 @@
 <template>
   <a class="tg-link" href="tg://resolve?domain=pmdaily" @click="sendAnalytics">
     <slot>
-      <i class="fa fa-paper-plane-o tg-link__icon" v-if="withIcon" />
+      <i class="fa-brands fa-telegram tg-link__icon" v-if="withIcon" />
       <span class="tg-link__label" :class="labelClass">{{ label }}</span>
     </slot>
   </a>
