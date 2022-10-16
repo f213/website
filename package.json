@@ -24,7 +24,7 @@
     "@nuxtjs/font-awesome": "^1.0.3",
     "@nuxtjs/proxy": "^2.0.1",
     "@nuxtjs/redirect-module": "^0.3.1",
-    "@nuxtjs/sentry": "^5.1.2",
+    "@nuxtjs/sentry": "^6.0.1",
     "@vue/test-utils": "^1.2.2",
     "bulma": "^0.9.3",
     "cheerio": "<1.0.0-rc.11",
