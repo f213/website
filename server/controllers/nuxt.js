@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/prefer-top-level-await */
 const { Nuxt, Builder } = require('nuxt');
 const express = require('express');
 

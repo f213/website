@@ -11,7 +11,7 @@ module.exports = {
     },
     titleTemplate: '%s — Фёдор Борщёв',
     meta: [
-      { charset: 'utf-8' },
+      { charset: 'utf8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'author', content: 'Фёдор Борщёв' },
       { 'http-equiv': 'X-UA-Compatible', content: 'IE=Edge' },
