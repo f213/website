@@ -1,4 +1,3 @@
-/* eslint-disable radar/no-duplicate-string */
 import { getMeta } from '~/helpers/seo';
 
 describe('getMeta helper', () => {

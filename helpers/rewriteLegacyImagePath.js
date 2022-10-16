@@ -1,4 +1,4 @@
-/* eslint-disable radar/no-duplicate-string, unicorn/no-null */
+/* eslint-disable unicorn/no-null */
 import * as cheerio from 'cheerio';
 
 export default (html) => {

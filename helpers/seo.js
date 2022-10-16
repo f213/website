@@ -45,14 +45,12 @@ export const getOpenGraph = (entity) => {
   meta.push(
     og(
       'title',
-      [entity.og_title, entity.meta_title, entity.title].find((index) =>
-        Boolean(index)
-      )
+      [entity.og_title, entity.meta_title, entity.title].find(Boolean)
     )
   );
 
   const description = [entity.og_description, entity.meta_description].find(
-    (index) => Boolean(index)
+    Boolean
   );
   if (description) {
     meta.push(og('description', description));

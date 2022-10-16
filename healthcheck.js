@@ -10,7 +10,7 @@
  *
  */
 /* eslint-disable import/no-extraneous-dependencies, unicorn/no-process-exit, eqeqeq, no-console */
-const http = require('http');
+const http = require('node:http');
 
 const [host, port, path, code] = process.argv.slice(2);
 

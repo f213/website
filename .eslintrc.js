@@ -3,22 +3,21 @@ module.exports = {
   env: {
     browser: true,
     node: true,
+    'jest/globals': true,
   },
   parserOptions: {
-    parser: 'babel-eslint',
+    parser: '@babel/eslint-parser',
   },
   extends: [
     '@nuxtjs',
-    'plugin:nuxt/recommended',
     'plugin:vue/recommended',
-    'plugin:radar/recommended',
     'plugin:unicorn/recommended',
     'plugin:prettier-vue/recommended',
     'airbnb-base',
     'prettier',
   ],
   // required to lint *.vue files
-  plugins: ['vue'],
+  plugins: ['vue', 'jest'],
   // add your custom rules here
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
@@ -28,16 +27,16 @@ module.exports = {
     'vue/max-attributes-per-line': 'off',
     'vue/attributes-order': 'off',
     'vue/no-v-html': 'off',
-    'vue/one-component-per-file': 'off',
+    'vue/multi-word-component-names': 'off',
     'max-len': 'off',
     'import/prefer-default-export': 'off',
     'consistent-return': 'off',
     'no-irregular-whitespace': 'off',
     'no-underscore-dangle': 'off',
-    'radar/no-duplicate-string': 'off',
-    'nuxt/no-cjs-in-config': 'off',
     'unicorn/filename-case': 'off',
+    'unicorn/explicit-length-check': 'off',
     'unicorn/consistent-function-scoping': 'off',
+    'unicorn/prefer-module': 'off',
     'unicorn/prevent-abbreviations': [
       'error',
       {
