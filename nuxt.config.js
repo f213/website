@@ -124,7 +124,7 @@ module.exports = {
     },
   },
   env: {
-    ghostAPIKey: process.env.GHOST_API_KEY || '37db29d2dcf7b609ec273e8b6d',
+    ghostAPIKey: process.env.GHOST_API_KEY || 'd625ca2d60e5eaf0b1a6f861e8',
     perPage: 5,
     absoluteHost: process.env.ABSOLUTE_HOST || 'https://borshev.com',
     backendUrl: process.env.BACKEND_URL || 'https://borshev.com',
