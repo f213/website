@@ -128,7 +128,7 @@ module.exports = {
     perPage: 5,
     absoluteHost: process.env.ABSOLUTE_HOST || 'https://borshev.com',
     backendUrl: process.env.BACKEND_URL || 'https://borshev.com',
-    copyrightYears: '2014–2022',
+    copyrightYears: '2014–2023',
     email: 'fedor@borshev.com',
   },
 
