@@ -1,4 +1,4 @@
-FROM node:16.13.0-buster
+FROM node:18.4.2-bullseye
 
 ENV HOST 0.0.0.0
 ENV PORT 3000
