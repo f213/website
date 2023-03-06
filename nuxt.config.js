@@ -141,11 +141,13 @@ module.exports = {
       preset: {
         stage: 1,
         features: {
-          customProperties: true,
+          'custom-properties': true,
         },
       },
-      plugins: {
-        'postcss-nested': {},
+      postcssOptions: {
+        plugins: {
+          'postcss-nested': {},
+        },
       },
     },
     extend(config, { isClient }) {
