@@ -9,7 +9,7 @@
  * Connection always goes to localhost
  *
  */
-/* eslint-disable import/no-extraneous-dependencies, unicorn/no-process-exit, eqeqeq, no-console */
+/* eslint-disable unicorn/no-process-exit, eqeqeq */
 const http = require('node:http');
 
 const [host, port, path, code] = process.argv.slice(2);
