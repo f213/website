@@ -1,4 +1,4 @@
-FROM node:18.4.2-bullseye
+FROM node:18.14.2-bullseye
 
 ENV HOST 0.0.0.0
 ENV PORT 3000
