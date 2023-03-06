@@ -1,4 +1,3 @@
-/* eslint-disable object-curly-newline */
 module.exports = {
   telemetry: false,
 
