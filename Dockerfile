@@ -18,6 +18,8 @@ RUN npm run build && find .nuxt  -type f -name '*.js.map' -delete
 ARG RELEASE
 ENV SENTRY_RELEASE ${RELEASE}
 
+RUN mkdir /nonexistent && chown nobody /nonexistent
+
 HEALTHCHECK CMD node /healthcheck.js localhost 3000 / 301
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]
 USER nobody
