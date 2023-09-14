@@ -113,7 +113,7 @@ module.exports = {
   router: {
     extendRoutes(routes) {
       routes = routes.map((route) =>
-        route.path.endsWith('/') ? route : { ...route, path: `${route.path}/` }
+        route.path.endsWith('/') ? route : { ...route, path: `${route.path}/` },
       );
       routes = routes.map((route) => ({
         ...route,

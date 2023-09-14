@@ -62,7 +62,7 @@ export default {
     },
     SET_SIMILAR: (state, similar) => {
       state.similar = similar.filter(
-        (similarPost) => similarPost.id !== state.post.id
+        (similarPost) => similarPost.id !== state.post.id,
       );
     },
   },

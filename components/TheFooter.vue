@@ -45,7 +45,9 @@ export default {
     }
 
     &:not(:hover) {
-      transition: color 0.5s ease, border-color 0.5s ease;
+      transition:
+        color 0.5s ease,
+        border-color 0.5s ease;
     }
   }
 }

@@ -17,7 +17,7 @@ export default {
           html: this.content,
           from: process.env.backendUrl,
           to: process.env.absoluteHost,
-        })
+        }),
       );
     },
   },

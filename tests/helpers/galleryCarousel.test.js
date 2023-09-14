@@ -26,7 +26,7 @@ afterEach(() => {
 describe('gallery slides', () => {
   it('After content rendering one slide should be active', () => {
     const activeSlideElement = document.body.querySelector(
-      '.kg-gallery-container .kg-gallery-image img.active'
+      '.kg-gallery-container .kg-gallery-image img.active',
     );
 
     expect(activeSlideElement).not.toBeNull();
@@ -37,7 +37,7 @@ describe('gallery slides', () => {
     gallery.click();
 
     const activeSlideElement = document.body.querySelector(
-      '.kg-gallery-container .kg-gallery-image img.active'
+      '.kg-gallery-container .kg-gallery-image img.active',
     );
 
     expect(activeSlideElement).not.toBeNull();
