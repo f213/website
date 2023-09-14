@@ -96,8 +96,8 @@ export default {
           previosScrollPosition = window.scrollY;
         },
         300,
-        { leading: true }
-      )
+        { leading: true },
+      ),
     );
   },
 };

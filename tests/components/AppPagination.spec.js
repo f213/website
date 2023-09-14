@@ -23,7 +23,7 @@ describe('AppPagination', () => {
     const createWrapper = (parameters) =>
       mount(
         { destination: 'next' },
-        { params: parameters, name: 'tags-tag-page-number' }
+        { params: parameters, name: 'tags-tag-page-number' },
       );
 
     it('Should be 2 when page is 1', () => {
@@ -57,7 +57,7 @@ describe('AppPagination', () => {
     const createWrapper = (parameters) =>
       mount(
         { destination: 'prev' },
-        { params: parameters, name: 'tags-tag-page-number' }
+        { params: parameters, name: 'tags-tag-page-number' },
       );
     it('Should be 2 when page is 3', () => {
       const wrapper = createWrapper({ number: 3 });
@@ -100,7 +100,7 @@ describe('AppPagination', () => {
     const createWrapper = (parameters) =>
       mount(
         { destination: 'next' },
-        { params: parameters, name: 'page-number' }
+        { params: parameters, name: 'page-number' },
       );
 
     it('Should be 2 when page is 1', () => {
@@ -133,7 +133,7 @@ describe('AppPagination', () => {
     const createWrapper = (parameters) =>
       mount(
         { destination: 'prev' },
-        { params: parameters, name: 'page-number' }
+        { params: parameters, name: 'page-number' },
       );
 
     it('Should be 2 when page is 3', () => {

@@ -11,11 +11,11 @@ if (process.env.GHOST_RSS_PRIVATE_KEY) {
     proxy({
       target: `${target}/${process.env.GHOST_RSS_PRIVATE_KEY}/`,
       rewriteHost: true,
-    })
+    }),
   );
   router.use(
     `/${process.env.GHOST_RSS_PRIVATE_KEY}/rss/`,
-    proxy({ target, rewriteHost: true })
+    proxy({ target, rewriteHost: true }),
   );
 }
 
