@@ -35,7 +35,7 @@
     "jsonwebtoken": "^9.0.0",
     "lodash.throttle": "^4.1.1",
     "morgan": "^1.10.0",
-    "nuxt": "^2.16.2",
+    "nuxt": "^3.7.3",
     "nuxt-jsonld": "^1.5.2",
     "postcss": "^8.4.21",
     "sass": "^1.58.3"
