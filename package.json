@@ -37,7 +37,7 @@
     "morgan": "^1.10.0",
     "nuxt": "^2.16.2",
     "nuxt-jsonld": "^1.5.2",
-    "postcss": "^8.4.21",
+    "postcss": "^8.4.30",
     "sass": "^1.58.3"
   },
   "devDependencies": {
