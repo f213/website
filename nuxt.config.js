@@ -98,7 +98,7 @@ module.exports = {
   redirect: [
     { from: '/tags/favorites/', to: '/featured/', statusCode: 301 },
     { from: '/rss/index.xml', to: '/rss/', statusCode: 301 },
-    { from: '/book/', to: 'http://savvycal.com/f213/chat', statusCode: 302 },
+    { from: '/tough-dev-school-lms/', to: '/tough-dev-lms/', statusCode: 301 },
   ],
   sentry: {
     dsn: 'https://563a1267525f4438bc73cccebd671a15@sentry.io/1865868',
