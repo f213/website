@@ -93,48 +93,6 @@
   margin-left: 0 !important;
 }
 
-.telegram-subscribe {
-  text-align: center;
-  margin-top: 20px;
-}
-.telegram-subscribe__button {
-  font-size: 18px;
-  padding: 14px 30px;
-  border-radius: 4px;
-  background: #0084f6;
-  background: #0068c3 linear-gradient(180deg, #0084f6, #0068c3) repeat-x;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-  border: 1px solid #0068c3;
-  color: #fff !important;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
-  cursor: pointer;
-  font-weight: bold;
-  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
-  line-height: 1em;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  -webkit-touch-callout: none;
-  user-select: none;
-}
-.telegram-subscribe__button:hover,
-.telegram-subscribe__button:focus {
-  background-position: 0 -14px;
-  color: #f7f7f7;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-}
-.telegram-subscribe__button:active {
-  box-shadow: inset 0 1px 6.923076923076922px rgba(0, 87, 163, 0.6);
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
-  border-color: #005fb2;
-}
-.telegram-subscribe__icon {
-  font-size: 25px;
-}
-.telegram-subscribe__caption {
-  position: relative;
-  top: -2px;
-}
 
 @media screen and (min-width: 641px) {
   .post__time-and-money__wild {
@@ -185,32 +143,6 @@
   .post__small-changes__twitter img {
     max-width: 100%;
   }
-}
-
-/*
- * Form support is based on Axis (http://axis.netlify.com/#forms)
- *
- */
-.me-social {
-  margin-top: 30px;
-}
-.me-social__list {
-  margin-top: 15px;
-  padding: 0;
-  list-style-type: none;
-  position: relative;
-  left: -12px;
-}
-.me-social__list li {
-  display: inline;
-  margin-right: 5px;
-}
-.me-social__link {
-  border-bottom: 0;
-  font-size: 32px;
-}
-.me-social__link .icon-telegram {
-  font-size: 30px;
 }
 
 @media screen and (min-width: 641px) {
@@ -314,17 +246,6 @@ figure.post__blackberry__img {
   border: none;
   max-height: 166px;
   width: 100%;
-}
-
-.post__last-limo__video {
-  margin: 5px 0 20px;
-  position: relative;
-  padding-bottom: 56.25%;
-}
-.post__last-limo__video iframe {
-  position: absolute;
-  width: 100%;
-  height: 100%;
 }
 
 .post__phase-of-moon__unlucky-caption {
@@ -444,14 +365,6 @@ figure.post__blackberry__img {
   .app-content .great p {
     padding-top: 5px;
     padding-bottom: 5px;
-  }
-}
-
-.book-list {
-  @media screen and (max-width: 640px) {
-    max-width: $length-overall;
-    overflow-x: scroll;
-    -webkit-overflow-scrolling: touch;
   }
 }
 
