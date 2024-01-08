@@ -12,30 +12,24 @@
     <section class="home-page-lead__achievements">
       <h2 class="title is-3">Сделал</h2>
       <ul class="app-list home-page-lead__achievements-list">
+        <li>Сайт и LMS «<a
+            class="home-page-lead__link"
+            href="https://webium.ru"
+            rel="noindex, nofollow"
+            >Вебиума</a>»,
+          крупнейшей онлайн-школы для подготовки к ЕГЭ.
         <li>
-          <a class="home-page-lead__link" href="/snob-blogs/">Блоги на Снобе</a>
-          — движок для UGC на одном из известнейших Российских медиа.
+          <a class="home-page-lead__link" href="/snob-blogs/">Блоги на «Снобе»</a>
+          — движок для UGC на одном из известнейших российских медиа.
         </li>
-        <!-- prettier-ignore -->
-        <li>Всю технологическую часть в <a
+        <li>Всю технологическую часть в «<a
             class="home-page-lead__link"
             href="https://gdematerial.ru/"
             rel="noindex, nofollow"
             >ГдеМатериале</a
-          >: бекенд для маркетплейса, приложения партнёров и клиентов,
+          >»: бекенд для маркетплейса, приложения партнёров и клиентов,
           интерфейсы для менеджеров и логистов.
         </li>
-        <!-- prettier-ignore -->
-        <li>Участвовал в создании
-          <a
-            class="home-page-lead__link"
-            href="https://www.artlebedev.ru/color/"
-            rel="noindex, nofollow"
-            >Колора</a
-          >
-          — нейросети, которая раскрашивает черно-белые фотографии.
-        </li>
-        <!-- prettier-ignore -->
         <li>Запустил сайт «<a
             class="home-page-lead__link"
             href="https://www.zr.ru/"
@@ -43,21 +37,15 @@
             >За рулём</a
           >» — старейшего автомобильного журнала в России.
         </li>
-        <!-- prettier-ignore -->
-        <li>Участвовал в создании сайта
-          <a
+        <li>Выступил на <a
             class="home-page-lead__link"
-            href="https://mkb.ru"
-            rel="noindex, nofollow"
-            >Московского Кредитного Банка</a
-          >.
+            href="/tags/talks/"
+          >десятке отраслевых конференций</a>.
         </li>
-        <!-- prettier-ignore -->
         <li>Выложил много
           <a
             class="home-page-lead__link"
-            href="http://github.com/f213"
-            rel="noindex, nofollow"
+            href="/opensource-projects/"
             >опенсорса</a
           >, в основном на python и js.
         </li>

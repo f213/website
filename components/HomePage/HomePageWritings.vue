@@ -20,15 +20,9 @@
         </nuxt-link>
       </div>
       <div class="column content writings__column">
-        <a
-          class="writings__link"
-          href="https://vc.ru/dev/56022-opyt-ispolzovaniya-circle-ci"
-          rel="noindex,nofollow"
-          ><img
-            class="writings__vcru-icon"
-            src="~/assets/images/vcru.png"
-          />Опыт построения непрерывной интеграции на CircleCI</a
-        >
+        <nuxt-link class="writings__link" to="/hypothesis/">
+          90% фич вылетает в трубу
+        </nuxt-link>
         <a
           class="writings__link"
           href="https://vc.ru/services/60710-github-dlya-nebolshoy-komandy"
