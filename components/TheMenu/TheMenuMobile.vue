@@ -5,7 +5,7 @@
   >
     <div class="navbar__brand navbar-brand">
       <h1
-        class="navbar__title navbar-item title is-3 is-marginless"
+        class="navbar__title navbar-item title is-3"
         @click="active = !active"
       >
         Фёдор Борщёв
@@ -139,6 +139,7 @@ export default {
 
   &__title {
     padding: 0;
+    maring: 0;
   }
 }
 </style>

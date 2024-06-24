@@ -1,5 +1,5 @@
 <template functional>
-  <div class="home-page-lead">
+  <div class="home-page-lead app-content">
     <p class="content home-page-lead__lead">
       Руковожу
       <a href="http://tough-dev.school">Школой Сильных Программистов</a>, где
@@ -62,18 +62,6 @@
 
   &__achievements {
     margin-top: 3rem;
-  }
-
-  &__link {
-    color: var(--link-color);
-
-    &:hover {
-      color: var(--link-hover);
-    }
-
-    &:not(:hover) {
-      transition: color 0.5s ease;
-    }
   }
 
   &__achievements-list {
