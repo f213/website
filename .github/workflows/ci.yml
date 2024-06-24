@@ -33,7 +33,6 @@ jobs:
   build-docker-image:
     needs: build
     runs-on: ubuntu-latest
-    if: ${{ github.ref == 'refs/heads/master' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -62,7 +61,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: .
-          push: true
+          push: ${{ github.ref == 'refs/heads/master' }}
           tags: |
             ghcr.io/${{ steps.image.outputs.lowercase }}:latest
             ghcr.io/${{ steps.image.outputs.lowercase }}:${{ github.sha }}
@@ -73,6 +72,7 @@ jobs:
 
   deploy:
     needs: build-docker-image
+    if: ${{ github.ref == 'refs/heads/master' }}
     runs-on: ubuntu-latest
     steps:
       - name: Read image identifiers
