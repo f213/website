@@ -37,8 +37,7 @@
     "morgan": "^1.10.0",
     "nuxt": "^2.17.4",
     "nuxt-jsonld": "^1.5.8",
-    "postcss": "^8.4.21",
-    "sass": "^1.58.3"
+    "postcss": "^8.4.21"
   },
   "devDependencies": {
     "@babel/core": "^7.10.0",
@@ -59,7 +58,6 @@
     "nodemon": "^3.0.0",
     "postcss-nested": "^6.0.1",
     "prettier": "^3.0.0",
-    "sass-loader": "^10.1.1",
     "vue-jest": "^3.0.0"
   },
   "jest": {
