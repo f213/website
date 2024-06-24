@@ -2,7 +2,7 @@
   <article class="app-post">
     <PostTitle
       class="title is-3 is-size-4-mobile app-post__title"
-      :class="{ 'is-marginless': isDetailed }"
+      :class="{ 'app-post__title--detailed': isDetailed }"
       :post="post"
       :linked="linked"
     />
@@ -55,6 +55,10 @@ export default {
   &__title {
     margin-bottom: 0.8rem;
     line-height: 1.7;
+
+    &--detailed {
+      margin: 0;
+    }
   }
 }
 </style>

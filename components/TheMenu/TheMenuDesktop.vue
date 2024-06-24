@@ -1,5 +1,5 @@
 <template>
-  <nav class="section is-paddingless app-nav">
+  <nav class="section app-nav">
     <div class="container is-max-desktop">
       <nuxt-link to="/" class="app-nav__link">
         <span class="app-nav__label">Обо мне</span>
@@ -46,5 +46,6 @@ export default {
 .app-nav {
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
+  padding: 0;
 }
 </style>
