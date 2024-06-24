@@ -121,6 +121,7 @@ export default {
     align-content: center;
     justify-content: center;
     font-size: 1.5rem;
+    color: var(--text-color);
     padding-top: 0.3rem;
     &:hover {
       background-color: unset;
@@ -139,7 +140,7 @@ export default {
 
   &__title {
     padding: 0;
-    maring: 0;
+    margin: 0;
   }
 }
 </style>

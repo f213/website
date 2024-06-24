@@ -1,5 +1,5 @@
 <template>
-  <div class="home-page">
+  <div class="home-page" data-theme="light">
     <div class="home-page__container">
       <HomePageHeader class="home-page__header" />
       <div class="home-page__photo">
