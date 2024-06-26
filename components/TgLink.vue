@@ -1,7 +1,13 @@
 <template>
   <a class="tg-link" href="tg://resolve?domain=pmdaily" @click="sendAnalytics">
     <slot>
-      <i class="fa-brands fa-telegram tg-link__icon" v-if="withIcon" />
+      <img
+        class="tg-link__icon"
+        src="~assets/icons/telegram.svg"
+        height="15"
+        width="15"
+        v-if="withIcon"
+      />
       <span class="tg-link__label" :class="labelClass">{{ label }}</span>
     </slot>
   </a>
@@ -29,8 +35,8 @@ export default {
   white-space: nowrap;
 
   &__icon {
-    opacity: 0.9;
-    color: var(--link-color);
+    position: relative;
+    top: 2px;
   }
 
   @media (width > 768px) {

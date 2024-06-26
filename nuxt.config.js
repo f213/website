@@ -57,19 +57,6 @@ module.exports = {
         type: 'text/css',
         crossorigin: 'anonymoous',
       },
-      {
-        rel: 'stylesheet prefetch',
-        as: 'style',
-        type: 'text/css',
-        href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css',
-        crossorigin: 'anonymoous',
-      },
-      {
-        rel: 'stylesheet prefetch',
-        as: 'style',
-        type: 'text/css',
-        href: '/css/legacy.css',
-      },
     ],
   },
 
@@ -82,7 +69,13 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: ['~/assets/vars.css', '~/assets/content.css', '~/assets/lists.css'],
+  css: [
+    'bulma/css/versions/bulma-no-dark-mode.min.css',
+    '~/assets/vars.css',
+    '~/assets/content.css',
+    '~/assets/lists.css',
+    '~/assets/legacy.css',
+  ],
 
   /*
    ** Plugins to load before mounting the App
