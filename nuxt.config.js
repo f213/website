@@ -46,13 +46,6 @@ module.exports = {
       {
         rel: 'stylesheet prefetch',
         as: 'style',
-        href: 'https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.1/css/bulma.min.css',
-        type: 'text/css',
-        crossorigin: 'anonymoous',
-      },
-      {
-        rel: 'stylesheet prefetch',
-        as: 'style',
         href: 'https://fonts.googleapis.com/css?family=Noto+Sans:400,700&amp;subset=cyrillic&display=fallback" rel="stylesheet',
         type: 'text/css',
         crossorigin: 'anonymoous',
