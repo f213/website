@@ -24,7 +24,7 @@
     "@nuxtjs/proxy": "^2.0.1",
     "@nuxtjs/redirect-module": "^0.3.1",
     "@nuxtjs/sentry": "^8.0.0",
-    "@vue/test-utils": "^1.2.2",
+    "@vue/test-utils": "^2.4.6",
     "bulma": "^1.0.1",
     "cheerio": "<1.0.0-rc.11",
     "cross-env": "^7.0.2",
