@@ -53,7 +53,7 @@ module.exports = {
       {
         rel: 'stylesheet prefetch',
         as: 'style',
-        href: 'https://fonts.googleapis.com/css?family=Noto+Sans:400,700&amp;subset=cyrillic" rel="stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Noto+Sans:400,700&amp;subset=cyrillic&display=fallback" rel="stylesheet',
         type: 'text/css',
         crossorigin: 'anonymoous',
       },
