@@ -7,6 +7,7 @@ module.exports = {
   head: {
     htmlAttrs: {
       lang: 'ru',
+      'data-theme': 'light',
     },
     titleTemplate: '%s — Фёдор Борщёв',
     meta: [
