@@ -46,29 +46,9 @@ module.exports = {
       {
         rel: 'stylesheet prefetch',
         as: 'style',
-        href: 'https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.1/css/bulma.min.css',
-        type: 'text/css',
-        crossorigin: 'anonymoous',
-      },
-      {
-        rel: 'stylesheet prefetch',
-        as: 'style',
         href: 'https://fonts.googleapis.com/css?family=Noto+Sans:400,700&amp;subset=cyrillic&display=fallback" rel="stylesheet',
         type: 'text/css',
         crossorigin: 'anonymoous',
-      },
-      {
-        rel: 'stylesheet prefetch',
-        as: 'style',
-        type: 'text/css',
-        href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css',
-        crossorigin: 'anonymoous',
-      },
-      {
-        rel: 'stylesheet prefetch',
-        as: 'style',
-        type: 'text/css',
-        href: '/css/legacy.css',
       },
     ],
   },
@@ -82,7 +62,13 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: ['~/assets/vars.css', '~/assets/content.css', '~/assets/lists.css'],
+  css: [
+    'bulma/css/versions/bulma-no-dark-mode.min.css',
+    '~/assets/vars.css',
+    '~/assets/content.css',
+    '~/assets/lists.css',
+    '~/assets/legacy.css',
+  ],
 
   /*
    ** Plugins to load before mounting the App
