@@ -1,5 +1,5 @@
 <template>
-  <div data-theme="light">
+  <div>
     <TheHeader />
     <TheMenu />
     <section class="section default-section">
