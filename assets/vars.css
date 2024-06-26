@@ -29,3 +29,7 @@
 .navbar {
   --bulma-navbar-background-color: var(--background);
 }
+
+.table {
+  --bulma-table-background-color: var(--background);
+}
