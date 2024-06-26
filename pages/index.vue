@@ -5,7 +5,7 @@
       <div class="home-page__photo">
         <img
           class="home-page__img"
-          src="~/assets/images/me.jpg"
+          src="~/assets/images/me.webp"
           width="600"
           height="650"
           alt="Фёдор Борщёв"

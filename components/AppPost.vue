@@ -46,6 +46,9 @@ export default {
 
 <style scoped>
 .app-post {
+  max-width: 100%;
+  overflow: scroll;
+
   &__time {
     display: block;
     margin-bottom: 1rem;

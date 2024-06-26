@@ -58,7 +58,7 @@
       >
         <img
           class="writings__tg-img"
-          src="~/assets/images/tg.png"
+          src="~/assets/images/tg.webp"
           alt="Телеграм"
         />
       </TgLink>

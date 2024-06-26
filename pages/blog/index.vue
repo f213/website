@@ -19,8 +19,7 @@ export default {
   head() {
     const link = getPrevNextLinks(this.metaPrev, this.metaNext);
     return {
-      title:
-        'Блог CTO про управление программистами',
+      title: 'Блог CTO про управление программистами',
       titleTemplate: '%s',
       link,
       meta: [
