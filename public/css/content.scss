@@ -1,0 +1,144 @@
+.app-content:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.app-content {
+  a {
+    /* default link style */
+    border-bottom: 1px solid var(--link-border-color);
+    color: var(--link-color);
+    --webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    &:hover {
+      color: var(--link-hover);
+      border-color: var(--link-border-hover);
+    }
+
+    &:not(:hover) {
+      transition: color 0.5s ease, border-color 0.5s ease;
+    }
+  }
+
+  p:not(:first-child),
+  .table,
+  blockquote,
+  figure {
+    margin-top: 0.8rem;
+  }
+
+  p img,
+  figure {
+    margin-bottom: 1rem;
+  }
+
+  h3,
+  h4 {
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  figure {
+    margin-left: 0;
+    margin-right: 0.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+
+    figcaption {
+      opacity: 0.8;
+      font-size: 0.6em;
+      @media (width > 768px) {
+        font-size: 1em;
+      }
+    }
+    &.kg-embed-card {
+      position: relative;
+      padding-top: 25px;
+      padding-bottom: 56.25%;
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  blockquote {
+    margin-left: 1rem;
+    border-left: solid 1px grey;
+    padding-left: 0.5rem;
+    padding-top: 0.2rem;
+  }
+
+  .kg-gallery-container {
+    position: relative;
+  }
+
+  .kg-gallery-image {
+    display: flex;
+
+    img {
+      display: none;
+      margin: auto;
+      cursor: pointer;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+
+  .bullets {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 0;
+
+    @media (width > 768px) {
+      bottom: 1.2rem;
+    }
+
+    .bullets-item {
+      width: 8px;
+      height: 8px;
+      margin: 0 4px;
+      border: 1px solid var(--bullet-border-color);
+      border-radius: 50%;
+      background-color: var(--bullet-color);
+      cursor: pointer;
+      transition: background-color 0.5s ease;
+
+      @media (width > 768px) {
+        width: 14px;
+        height: 14px;
+        margin: 0 6px;
+      }
+
+      &::before {
+        content: "";
+        margin: 0;
+      }
+
+      &.active {
+        background-color: var(--link-color);
+        cursor: default;
+      }
+    }
+  }
+}

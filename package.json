@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node app.js",
-    "dev": "cross-env NODE_ENV=development nodemon app.js --watch routes --watch public --watch views --watch lib --watch app.js",
+    "dev": "cross-env NODE_ENV=development nodemon app.js --watch routes --watch views --watch lib --watch app.js & npx sass --load-path=node_modules --watch public/css",
+    "build": "npx sass --load-path=node_modules public/css",
     "lint": "npx prettier . --check",
     "fmt": "npx prettier . --write"
   },
@@ -19,9 +20,11 @@
     "nunjucks": "^3.2.4"
   },
   "devDependencies": {
+    "bulma": "^1.0.1",
     "cross-env": "^7.0.3",
     "dotenv": "^16.4.5",
     "nodemon": "^3.1.4",
-    "prettier": "^3.3.2"
+    "prettier": "^3.3.2",
+    "sass": "^1.77.6"
   }
 }

@@ -1,0 +1,43 @@
+@use "bulma/sass/utilities";
+@forward "bulma/sass/base";
+@forward "bulma/sass/elements/content";
+@forward "bulma/sass/elements/table";
+@forward "bulma/sass/grid";
+@forward "bulma/sass/layout";
+@forward "bulma/sass/themes/light";
+
+:root {
+  --text-color: #111;
+  --background: #fffff8;
+  --link-color: #008ace;
+  --link-hover: #cc0000;
+  --link-border-hover: #cc0000;
+  --bullet-color: #cdcdcd;
+  --bullet-border-color: #555555;
+  --link-border-color: rgba(0, 138, 206, .5);
+
+  --bulma-family-primary: 'Noto Sans', sans-serif;
+  --bulma-text: var(--text-color);
+  --bulma-background: var(--background);
+  --bulma-body-background-color: var(--background);
+  --bulma-table-background-color: var(--background);
+  --bulma-link-text: var(--link-color);
+  --bulma-link-text-hover: var(--link-hover);
+  --bulma-body-line-height: 1.9;
+  --bulma-hr-margin: 1.5rem 0 3rem 0;
+  --bulma-weight-extrabold: 400;
+}
+
+/* fuck safari */
+
+.title, .subtitle {
+  --bulma-title-weight: 400;
+}
+
+.navbar {
+  --bulma-navbar-background-color: var(--background);
+}
+
+.table {
+  --bulma-table-background-color: var(--background);
+}

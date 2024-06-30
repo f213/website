@@ -1,0 +1,90 @@
+@use "bulma";
+@use "blog";
+@use "content";
+@use "lists";
+@use "legacy";
+
+
+.app-nav {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  padding: 0;
+}
+
+
+.app-header {
+  padding-bottom: 0;
+  display: none;
+
+  @media (width >= 768px) {
+    display: block;
+  }
+}
+
+.app-footer {
+  &__poop {
+    position: relative;
+    left: -0.2rem;
+  }
+
+  &__email {
+    color: #70a0b0;
+    border-bottom: 1px solid rgba(85, 102, 119, 0.4);
+
+    &:hover {
+      color: var(--link-hover);
+      border-color: var(--link-border-hover);
+    }
+
+    &:not(:hover) {
+      transition:
+        color 0.5s ease,
+        border-color 0.5s ease;
+    }
+  }
+}
+.tds-link {
+  white-space: nowrap;
+
+  &__img {
+    height: 18px;
+    width: 18px;
+
+    position: relative;
+    top: 2px;
+
+    opacity: 0.9;
+  }
+
+  &:hover &__img {
+    opacity: 1;
+  }
+
+  &__label {
+    white-space: nowrap;
+  }
+}
+
+.tg-link {
+  white-space: nowrap;
+
+  &__icon {
+    position: relative;
+    top: 2px;
+  }
+
+  @media (width > 768px) {
+    &:hover,
+    &:hover &__icon {
+      color: var(--link-hover);
+    }
+  }
+
+  &:not(:hover) &__icon {
+    transition: color 0.5s ease;
+  }
+
+  &__label {
+    white-space: nowrap;
+  }
+}
