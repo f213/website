@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Фёдор Борщёв" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta property="og:site_name" content="Блог Фёдора Борщёва" />
+    <meta property="fb:admins" content="100006565443356" />
+    <meta property="fb:profile_id" content="100006565443356" />
+    <meta property="article:author" content="https://facebook.com/Fedor213" />
+    <meta
+      name="description"
+      content="Сайт Фёдора Борщёва — CTO и ИТ-консультанта"
+    />
+    <title>Фёдор Борщёв — главная страница</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <link name="msapplication-TileColor" content="#da532c" />
+    <link name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    {% block body %}
+    <header class="app-header section">
+      <div class="container is-max-desktop">
+        <div class="title is-3">Фёдор Борщёв</div>
+      </div>
+    </header>
+    <nav class="section app-nav">
+      <div class="container is-max-desktop">
+        <a href="/" class="app-nav__link">
+          <span class="app-nav__label">Обо мне</span>
+        </a>
+        <a href="/blog/" class="app-nav__link app-nav__link--active-blog">
+          <span class="app-nav__label">Блог</span>
+        </a>
+        <a href="/featured/" class="app-nav__link">
+          <span class="app-nav__label">Избранное</span>
+        </a>
+        <a
+          target="_blank"
+          href="https://tough-dev.school/"
+          class="app-nav__link"
+        >
+          <span class="app-nav__label">Школа</span></a
+        >
+        <a
+          target="_blank"
+          href="http://fedorandsamat.com/"
+          class="app-nav__link"
+        >
+          <span class="app-nav__label">Нанять меня</span></a
+        >
+        <a href="tg://resolve?domain=pmdaily" class="tg-link app-nav__link">
+          <img
+            src="/_nuxt/img/telegram.b39684d.svg"
+            height="15"
+            width="15"
+            class="tg-link__icon"
+          />
+          <span class="tg-link__label app-nav__label"
+            >Подписаться на телеграм</span
+          >
+        </a>
+      </div>
+    </nav>
+    <section class="section default-section">
+      <div class="container is-max-desktop app-slug">
+        <article class="app-post">
+          <h1
+            class="title is-3 is-size-4-mobile app-post__title app-post__title--detailed"
+          >
+            {{ post.title }}
+          </h1>
+          <time
+            datetime="2024-06-25T10:41:04.000+03:00"
+            class="is-size-7 app-post__time"
+            >5 дней назад</time
+          >
+          <div class="content app-content">
+            <p>
+              Мы с клиентом запустили стартап. Он помогает малым локальным
+              бизнесам — кофейням, барбершопили оставьте заявку&nbsp;<a
+                href="https://fedorandsamat.com/?ref=borshev.com"
+                >на нашем сайте</a
+              >.
+            </p>
+            <h3 id="%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0">Команда</h3>
+            <p>
+              Андрей Бацунов, фронтенд-разработчик,<br />Алексей Богословский,
+              ведущий бэкенд-разработчик,<br />Артур Даценко-Боос,
+              фронтенд-разработчик,<br />Полина Никитина,
+              бэкенд-разработчица,<br />Иван Седов, фронтенд-разработчик,<br />Инна
+              Сидорова, руководитель проекта.
+            </p>
+          </div>
+          <div class="app-tags is-hidden-mobile app-post__tags">
+            <a href="/tags/our-projects/" class="app-tags__tag is-lowercase"
+              >Анонсы</a
+            >
+            <a href="/tags/programming/" class="app-tags__tag is-lowercase"
+              >Программирование</a
+            >
+            <a href="/tags/projects/" class="app-tags__tag is-lowercase"
+              >Проекты</a
+            >
+            <a href="/tags/apple/" class="app-tags__tag is-lowercase">Apple</a>
+          </div>
+        </article>
+
+        <div class="subscribe-bar app-slug__subscribe-bar">
+          <div class="subscribe-bar__image image is-96x96">
+            <img
+              src="/_nuxt/img/me-small.b674903.jpg"
+              alt="Фёдор Борщёв"
+              class="is-rounded"
+            />
+          </div>
+          <div class="subscribe-bar__text">
+            <p>
+              где мы делаем синьёров, архитекторов и&nbsp;тимлидов. Приходите
+              учиться!
+            </p>
+          </div>
+        </div>
+
+        <div class="similar-posts app-slug__similar-posts">
+          <h4 class="title is-5 similar-posts__title">Почитать ещё</h4>
+          <ul class="similar-posts__list">
+            <li class="similar-posts__item">
+              <a href="/wiren-board/" class="similar-posts__link"
+                >Облачная платформа для Wiren Board</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

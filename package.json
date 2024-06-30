@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node app.js",
-    "dev": "cross-env NODE_ENV=development nodemon app.js --watch routes --watch public --watch views --watch bin --watch app.js",
+    "dev": "cross-env NODE_ENV=development nodemon app.js --watch routes --watch public --watch views --watch lib --watch app.js",
     "lint": "npx prettier . --check",
     "fmt": "npx prettier . --write"
   },
@@ -13,10 +13,10 @@
     "consola": "^3.2.3",
     "debug": "~2.6.9",
     "express": "^5.0.0-beta.3",
-    "hbs": "~4.0.4",
     "http-errors": "~1.6.3",
     "http-proxy-middleware": "^3.0.0",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "nunjucks": "^3.2.4"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
