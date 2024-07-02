@@ -1,1 +1,38 @@
-{% extends "layout.html" %}
+{% extends "layout.html" %} {% block body %} {% include
+"partial/blog_header.html" %}
+<section class="section default-section">
+  <div class="container is-max-desktop app-slug">
+    <article class="app-post">
+      <h1
+        class="title is-3 is-size-4-mobile app-post__title app-post__title--detailed"
+      >
+        {{ post.title }}
+      </h1>
+      <time datetime="{{ post.created_at }}" class="is-size-7 app-post__time"
+        >{{ post.time_ago }}</time
+      >
+      <div class="content app-content">{{ post.html | safe }}</div>
+      <div class="app-tags is-hidden-mobile app-post__tags">
+        {% for tag in post.tags %}
+        <a class="app-tags__tag is-lowercase" href="/tags/{{ tag.slug }}/"
+          >{{ tag.name }}</a
+        >
+        {% endfor %}
+      </div>
+    </article>
+
+    {% include "partial/subscribe_bar.html" %}
+
+    <div class="similar-posts app-slug__similar-posts">
+      <h4 class="title is-5 similar-posts__title">Почитать ещё</h4>
+      <ul class="similar-posts__list">
+        <li class="similar-posts__item">
+          <a href="/wiren-board/" class="similar-posts__link"
+            >Облачная платформа для Wiren Board</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+{% endblock %}

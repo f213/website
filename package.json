@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node app.js",
-    "dev": "cross-env NODE_ENV=development nodemon app.js --watch routes --watch views --watch lib --watch app.js & npx sass --load-path=node_modules --watch public/css",
+    "dev": "npx sass --load-path=node_modules --watch public/css & cross-env NODE_ENV=development nodemon app.js --watch routes --watch views --watch lib --watch app.js",
     "build": "npx sass --load-path=node_modules public/css",
     "lint": "npx prettier . --check",
     "fmt": "npx prettier . --write"
@@ -17,10 +17,12 @@
     "http-errors": "~1.6.3",
     "http-proxy-middleware": "^3.0.0",
     "morgan": "~1.9.1",
-    "nunjucks": "^3.2.4"
+    "nunjucks": "^3.2.4",
+    "timeago.js": "^4.0.2"
   },
   "devDependencies": {
     "bulma": "^1.0.1",
+    "chokidar": "^3.6.0",
     "cross-env": "^7.0.3",
     "dotenv": "^16.4.5",
     "nodemon": "^3.1.4",

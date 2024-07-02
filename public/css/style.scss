@@ -9,6 +9,44 @@
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
   padding: 0;
+
+  &__link {
+    border-bottom: 0;
+    margin-right: 4px;
+    line-height: 2.5;
+
+    &:not(:first-child):before {
+      content: '·\a0\a0';
+      margin-left: 3px;
+    }
+
+    &--active,
+    &--active-blog {
+      .app-nav__label {
+        color: var(--text-color);
+        opacity: 0.8;
+        border-bottom: 0;
+      }
+    }
+    &--active {
+      pointer-events: none;
+    }
+  }
+
+  &__label {
+    border-bottom: 1px solid var(--link-border-color);
+    color: #0050a0;
+    white-space: nowrap;
+    line-height: 2rem;
+
+    &:hover {
+      color: var(--link-hover);
+      border-color: var(--link-border-hover);
+    }
+    &:not(:hover) {
+      transition: color 0.5s ease;
+    }
+  }
 }
 
 
@@ -43,6 +81,7 @@
     }
   }
 }
+
 .tds-link {
   white-space: nowrap;
 

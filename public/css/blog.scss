@@ -105,12 +105,60 @@
   }
 }
 
-.tags-page-heading {
-  margin-bottom: 5rem;
+.app-tags {
+  margin-top: 0.5rem;
+  font-size: 13px;
 
-  &__title {
-    margin-bottom: 0.8rem;
-    line-height: 1.7;
+  &__tag {
+    margin-right: 0.7rem;
+    border-bottom: 1px solid var(--link-border-color);
+    color: #0050a0;
+    --webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    &:hover {
+      color: var(--link-hover);
+      border-color: var(--link-border-hover);
+    }
+
+    &:not(:hover) {
+      transition:
+        color 0.5s ease,
+        border-color 0.5s ease;
+    }
   }
 }
 
+.subscribe-bar {
+  margin-top: 4rem;
+
+  &__image {
+    margin-right: 1rem;
+
+    @media (width > 768px) {
+      width: 128px;
+      height: 128px;
+    }
+  }
+
+  &__text {
+    @media (width > 768px) {
+      padding-top: 0.5rem;
+    }
+  }
+
+  &__tds {
+    width: 24px;
+  }
+
+  &__link {
+    color: var(--link-color);
+
+    &:hover {
+      color: var(--link-hover);
+    }
+
+    &:not(:hover) {
+      transition: color 0.5s ease;
+    }
+  }
+}
