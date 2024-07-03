@@ -11,6 +11,7 @@ router.get("/:slug", async (req, res, next) => {
     await ghost.get({
       url: `/api/v2/content/posts/?tag=${post.primary_tag.slug}&limit=10`,
       req,
+      cache: true,
     })
   ).posts;
 

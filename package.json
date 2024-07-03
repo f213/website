@@ -16,6 +16,7 @@
     "http-errors": "~1.6.3",
     "http-proxy-middleware": "^3.0.0",
     "morgan": "~1.9.1",
+    "node-cache": "^5.1.2",
     "nunjucks": "^3.2.4",
     "timeago.js": "^4.0.2"
   },
