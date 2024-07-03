@@ -1,5 +1,5 @@
 @use "bulma/sass/utilities" with (
-  $family-primary: "'Noto Sans', sans-serif",
+  $family-primary: "'Noto Sans', sans-serif"
 );
 @forward "bulma/sass/base";
 @forward "bulma/sass/helpers";
@@ -17,7 +17,7 @@
   --link-border-hover: #cc0000;
   --bullet-color: #cdcdcd;
   --bullet-border-color: #555555;
-  --link-border-color: rgba(0, 138, 206, .5);
+  --link-border-color: rgba(0, 138, 206, 0.5);
 
   --bulma-text: var(--text-color);
   --bulma-background: var(--background);
@@ -30,7 +30,8 @@
   --bulma-weight-extrabold: 400;
 }
 
-.title, .subtitle {
+.title,
+.subtitle {
   --bulma-title-weight: 400;
   --bulma-title-line-height: 1.7;
 }

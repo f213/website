@@ -4,23 +4,18 @@
 @use "lists";
 @use "legacy";
 
-
 .app-nav {
-  margin-top: 0.5rem;
-  margin-bottom: 1.5rem;
-
   &__link {
     border-bottom: 0;
     margin-right: 4px;
     line-height: 2.5;
 
     &:not(:first-child):before {
-      content: '·\a0\a0';
+      content: "·\a0\a0";
       margin-left: 3px;
     }
 
-    &--active,
-    &--active-blog {
+    &--active {
       .app-nav__label {
         color: var(--text-color);
         opacity: 0.8;
@@ -47,7 +42,6 @@
     }
   }
 }
-
 
 .app-footer {
   &__poop {

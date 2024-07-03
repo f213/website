@@ -27,6 +27,7 @@
     "dotenv": "^16.4.5",
     "nodemon": "^3.1.4",
     "prettier": "^3.3.2",
+    "prettier-plugin-jinja-template": "^1.4.1",
     "sass": "^1.77.6"
   },
   "nodemonConfig": {

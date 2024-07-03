@@ -1,11 +1,10 @@
 .app-content ul,
 .app-content ol,
 .app-list,
-.content .app-list /* override bulma .content ul */
-{
+.content .app-list /* override bulma .content ul */ {
   list-style-type: none !important;
 
-  padding-left: .5rem;
+  padding-left: 0.5rem;
 
   @media (width > 768px) {
     padding-left: 1.5rem;
@@ -13,7 +12,7 @@
 
   li {
     line-height: 1.7;
-    margin-bottom: .75rem;
+    margin-bottom: 0.75rem;
 
     @media (width > 768px) {
       margin-bottom: 0;
@@ -27,20 +26,18 @@
 
 @media (width > 768px) {
   .app-content ul,
-  ul.app-list
-  {
+  ul.app-list {
     li:before {
-      content: '\2014\a0';
+      content: "\2014\a0";
     }
   }
 
   .app-content ol,
-  ol.app-list
-  {
+  ol.app-list {
     counter-reset: ol;
     li:before {
       counter-increment: ol;
-      content: counter( ol ) ')\a0';
+      content: counter(ol) ")\a0";
       position: absolute;
     }
   }
