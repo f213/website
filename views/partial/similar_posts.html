@@ -1,0 +1,10 @@
+<div class="similar-posts mt-6">
+  <h4 class="title is-5 mb-3">Почитать ещё</h4>
+  <ul class="similar-posts__list">
+    {% for post in similar %}
+      <li class="similar-posts__item mb-3">
+        <a href="/{{ post.slug }}/" class="similar-posts__link">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

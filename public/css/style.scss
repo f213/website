@@ -91,11 +91,6 @@
 .tg-link {
   white-space: nowrap;
 
-  &__icon {
-    position: relative;
-    top: 2px;
-  }
-
   @media (width > 768px) {
     &:hover,
     &:hover &__icon {
@@ -110,4 +105,10 @@
   &__label {
     white-space: nowrap;
   }
+}
+
+.tg-icon,
+.tds-icon {
+  position: relative;
+  top: 2px;
 }

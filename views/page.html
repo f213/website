@@ -18,15 +18,7 @@
       </article>
 
       {% include "partial/subscribe_bar.html" %}
-
-      <div class="similar-posts app-slug__similar-posts">
-        <h4 class="title is-5 similar-posts__title">Почитать ещё</h4>
-        <ul class="similar-posts__list">
-          <li class="similar-posts__item">
-            <a href="/wiren-board/" class="similar-posts__link">Облачная платформа для Wiren Board</a>
-          </li>
-        </ul>
-      </div>
+      {% include "partial/similar_posts.html" %}
     </div>
   </section>
 {% endblock %}
