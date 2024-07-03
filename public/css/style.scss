@@ -4,7 +4,7 @@
 @use "lists";
 @use "legacy";
 
-.app-nav {
+.nav {
   &__link {
     border-bottom: 0;
     margin-right: 4px;
@@ -16,7 +16,7 @@
     }
 
     &--active {
-      .app-nav__label {
+      .nav__label {
         color: var(--text-color);
         opacity: 0.8;
         border-bottom: 0;
