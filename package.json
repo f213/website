@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node app.js",
-    "dev": "npx sass --load-path=node_modules --watch public/css & cross-env NODE_ENV=development nodemon app.js --watch routes --watch views --watch lib --watch app.js",
+    "dev": "npx sass --load-path=node_modules --watch public/css & cross-env NODE_ENV=development nodemon app.js",
     "build": "npx sass --load-path=node_modules public/css",
     "lint": "npx prettier . --check",
     "fmt": "npx prettier . --write"
@@ -28,5 +28,13 @@
     "nodemon": "^3.1.4",
     "prettier": "^3.3.2",
     "sass": "^1.77.6"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "routes",
+      "views",
+      "lib"
+    ],
+    "ext": "js,json,html"
   }
 }

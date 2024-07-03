@@ -69,12 +69,11 @@
 
 .subscribe-bar {
   min-height: 140px;
+  margin-top: 4rem;
 
   &__image {
     float: left;
     margin-right: 1rem;
-    position: relative;
-    top: 0.2rem;
 
     @media (width > 768px) {
       width: 128px;
@@ -82,26 +81,25 @@
     }
   }
 
-  &__text {
-    @media (width > 768px) {
-      padding-top: 0.5rem;
-    }
-  }
-
-  &__tds {
-    width: 24px;
-  }
-
   &__link {
+    /* default link style */
+    border-bottom: 1px solid var(--link-border-color);
     color: var(--link-color);
+    --webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
     &:hover {
       color: var(--link-hover);
+      border-color: var(--link-border-hover);
     }
 
     &:not(:hover) {
-      transition: color 0.5s ease;
+      transition: color 0.5s ease, border-color 0.5s ease;
     }
+  }
+
+  &__tg-icon {
+    position: relative;
+    top: 2px;
   }
 }
 
@@ -128,37 +126,3 @@
   }
 }
 
-.subscribe-bar {
-  margin-top: 4rem;
-
-  &__image {
-    margin-right: 1rem;
-
-    @media (width > 768px) {
-      width: 128px;
-      height: 128px;
-    }
-  }
-
-  &__text {
-    @media (width > 768px) {
-      padding-top: 0.5rem;
-    }
-  }
-
-  &__tds {
-    width: 24px;
-  }
-
-  &__link {
-    color: var(--link-color);
-
-    &:hover {
-      color: var(--link-hover);
-    }
-
-    &:not(:hover) {
-      transition: color 0.5s ease;
-    }
-  }
-}

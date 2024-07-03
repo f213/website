@@ -12,7 +12,7 @@
         >{{ post.time_ago }}</time
       >
       <div class="content app-content">{{ post.html | safe }}</div>
-      <div class="app-tags is-hidden-mobile app-post__tags">
+      <div class="app-tags app-post__tags">
         {% for tag in post.tags %}
         <a class="app-tags__tag is-lowercase" href="/tags/{{ tag.slug }}/"
           >{{ tag.name }}</a

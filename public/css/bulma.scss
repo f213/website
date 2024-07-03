@@ -1,10 +1,13 @@
-@use "bulma/sass/utilities";
+@use "bulma/sass/utilities" with (
+  $family-primary: "'Noto Sans', sans-serif",
+);
 @forward "bulma/sass/base";
 @forward "bulma/sass/helpers";
 @forward "bulma/sass/elements";
 @forward "bulma/sass/grid";
 @forward "bulma/sass/layout";
-@forward "bulma/sass/themes/light";
+
+@forward "bulma/sass/themes";
 
 :root {
   --text-color: #111;
@@ -16,7 +19,6 @@
   --bullet-border-color: #555555;
   --link-border-color: rgba(0, 138, 206, .5);
 
-  --bulma-family-primary: 'Noto Sans', sans-serif;
   --bulma-text: var(--text-color);
   --bulma-background: var(--background);
   --bulma-body-background-color: var(--background);
