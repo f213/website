@@ -1,14 +1,14 @@
 {% extends "layout.html" %} {% block body %} {% include
 "partial/blog_header.html" %}
 <section class="section default-section">
-  <div class="container is-max-desktop app-slug">
+  <div class="container is-max-desktop">
     <article class="app-post">
       <h1
-        class="title is-3 is-size-4-mobile app-post__title app-post__title--detailed"
+        class="title is-size-3 is-size-4-mobile mb-3 app-post__title"
       >
         {{ post.title }}
       </h1>
-      <time datetime="{{ post.created_at }}" class="is-size-7 app-post__time"
+      <time datetime="{{ post.created_at }}" class="is-block mb-5 is-size-7 has-text-grey"
         >{{ post.time_ago }}</time
       >
       <div class="content app-content">{{ post.html | safe }}</div>

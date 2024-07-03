@@ -8,7 +8,6 @@
 .app-nav {
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
-  padding: 0;
 
   &__link {
     border-bottom: 0;
@@ -49,15 +48,6 @@
   }
 }
 
-
-.app-header {
-  padding-bottom: 0;
-  display: none;
-
-  @media (width >= 768px) {
-    display: block;
-  }
-}
 
 .app-footer {
   &__poop {

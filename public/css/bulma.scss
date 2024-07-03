@@ -23,17 +23,16 @@
   --bulma-background: var(--background);
   --bulma-body-background-color: var(--background);
   --bulma-table-background-color: var(--background);
+  --bulma-body-line-height: 1.9;
   --bulma-link-text: var(--link-color);
   --bulma-link-text-hover: var(--link-hover);
-  --bulma-body-line-height: 1.9;
   --bulma-hr-margin: 1.5rem 0 3rem 0;
   --bulma-weight-extrabold: 400;
 }
 
-/* fuck safari */
-
 .title, .subtitle {
   --bulma-title-weight: 400;
+  --bulma-title-line-height: 1.7;
 }
 
 .navbar {
