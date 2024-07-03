@@ -8,7 +8,7 @@
   color: var(--text-color);
   &:hover {
     color: var(--link-hover);
-    border-color: var(--link-border-hover);
+    border-color: var(--link-hover);
   }
 
   &:not(:hover) {
@@ -47,7 +47,7 @@
 
   &:hover {
     color: var(--link-hover);
-    border-color: var(--link-border-hover);
+    border-color: var(--link-hover);
   }
 
   &:not(:hover) {
@@ -63,13 +63,13 @@
 
   &__tag {
     margin-right: 0.7rem;
-    border-bottom: 1px solid var(--link-border-color);
-    color: #0050a0;
+    border-bottom: 1px solid var(--link-border-color-nav);
+    color: var(--link-color-nav);
     --webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
     &:hover {
       color: var(--link-hover);
-      border-color: var(--link-border-hover);
+      border-color: var(--link-hover);
     }
 
     &:not(:hover) {

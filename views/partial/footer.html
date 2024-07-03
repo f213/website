@@ -1,0 +1,17 @@
+<footer class="footer">
+  <div class="container is-max-desktop is-size-6">
+    <p>© <a class="footer__email" href="mailto:fedor@borshev.com">Фёдор Борщёв</a></p>
+    <div id="poop" class="footer__poop is-size-4">
+      <p>💩</p>
+    </div>
+  </div>
+  <script type="text/javascript">
+    const poop = document.getElementById("poop");
+    poop.addEventListener("click", () => {
+      poop.classList.add("footer__poop--spinning");
+      window.setTimeout(() => {
+        poop.classList.remove("footer__poop--spinning");
+      }, 1000);
+    });
+  </script>
+</footer>

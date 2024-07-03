@@ -28,14 +28,14 @@
   }
 
   &__label {
-    border-bottom: 1px solid var(--link-border-color);
-    color: #0050a0;
+    border-bottom: 1px solid var(--link-border-color-nav);
+    color: var(--link-color-nav);
     white-space: nowrap;
     line-height: 2rem;
 
     &:hover {
       color: var(--link-hover);
-      border-color: var(--link-border-hover);
+      border-color: var(--link-hover);
     }
     &:not(:hover) {
       transition: color 0.5s ease;
@@ -43,19 +43,28 @@
   }
 }
 
-.app-footer {
+.footer {
   &__poop {
+    display: inline-block;
+    cursor: pointer;
     position: relative;
     left: -0.2rem;
+    &--spinning {
+      animation: spin 1s 1 ease-out;
+    }
+    p {
+      position: relative;
+      top: -0.2rem;
+    }
   }
 
   &__email {
-    color: #70a0b0;
-    border-bottom: 1px solid rgba(85, 102, 119, 0.4);
+    color: var(--link-color-nav);
+    border-bottom: 1px solid var(--link-border-color-nav);
 
     &:hover {
       color: var(--link-hover);
-      border-color: var(--link-border-hover);
+      border-color: var(--link-hover);
     }
 
     &:not(:hover) {
@@ -63,28 +72,17 @@
         color 0.5s ease,
         border-color 0.5s ease;
     }
-  }
-}
-
-.tds-link {
-  white-space: nowrap;
-
-  &__img {
-    height: 18px;
-    width: 18px;
 
     position: relative;
-    top: 2px;
-
-    opacity: 0.9;
+    top: -0.1rem;
   }
-
-  &:hover &__img {
-    opacity: 1;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
-
-  &__label {
-    white-space: nowrap;
+  100% {
+    transform: rotate(360deg);
   }
 }
 

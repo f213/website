@@ -13,16 +13,16 @@
   --text-color: #111;
   --background: #fffff8;
   --link-color: #008ace;
+  --link-color-nav: #0050a0;
+  --link-border-color: rgba(0, 138, 206, 0.5);
+  --link-border-color-nav: rgba(0, 80, 160, 0.5);
   --link-hover: #cc0000;
-  --link-border-hover: #cc0000;
   --bullet-color: #cdcdcd;
   --bullet-border-color: #555555;
-  --link-border-color: rgba(0, 138, 206, 0.5);
 
   --bulma-text: var(--text-color);
   --bulma-background: var(--background);
   --bulma-body-background-color: var(--background);
-  --bulma-table-background-color: var(--background);
   --bulma-body-line-height: 1.9;
   --bulma-link-text: var(--link-color);
   --bulma-link-text-hover: var(--link-hover);
@@ -34,6 +34,10 @@
 .subtitle {
   --bulma-title-weight: 400;
   --bulma-title-line-height: 1.7;
+}
+
+.footer {
+  --bulma-footer-background-color: var(--background);
 }
 
 .navbar {

@@ -11,7 +11,7 @@
 
     &:hover {
       color: var(--link-hover);
-      border-color: var(--link-border-hover);
+      border-color: var(--link-hover);
     }
 
     &:not(:hover) {
