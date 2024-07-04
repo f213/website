@@ -22,8 +22,8 @@ nunjucks.express(app); // init nunjucks, https://mozilla.github.io/nunjucks/api.
 
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/blog", require("./routes/blog"));
 app.use("/featured", require("./routes/featured"));
+app.use("/blog", require("./routes/blog"));
 app.use("/", require("./routes/ghost"));
 app.use("/", require("./routes/index"));
 app.use("/", require("./routes/page"));

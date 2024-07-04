@@ -1,5 +1,5 @@
-.app-content ul,
-.app-content ol,
+.content ul,
+.content ol,
 .app-list,
 .content .app-list /* override bulma .content ul */ {
   list-style-type: none !important;
@@ -25,14 +25,14 @@
 }
 
 @media (width > 768px) {
-  .app-content ul,
+  .content ul,
   ul.app-list {
     li:before {
       content: "\2014\a0";
     }
   }
 
-  .app-content ol,
+  .content ol,
   ol.app-list {
     counter-reset: ol;
     li:before {

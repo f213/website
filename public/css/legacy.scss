@@ -313,7 +313,7 @@ figure.post__blackberry__img {
   }
 }
 
-.app-content {
+.content {
   img.cover,
   img[src*="cover@2x.jpg"],
   img[src*="cover@2x.png"],
@@ -335,13 +335,13 @@ figure.post__blackberry__img {
   }
 }
 
-.app-content .great {
+.content .great {
   margin-top: 1rem;
   margin-bottom: 1rem;
   padding-left: 150px;
 }
 
-.app-content .great p {
+.content .great p {
   font-size: 22px;
   line-height: 35px;
   max-width: 500px;
@@ -353,11 +353,11 @@ figure.post__blackberry__img {
 }
 
 @media screen and (max-width: 1190px) {
-  .app-content .great {
+  .content .great {
     padding-left: 0;
     padding-right: 10px;
   }
-  .app-content .great p {
+  .content .great p {
     padding-top: 5px;
     padding-bottom: 5px;
   }

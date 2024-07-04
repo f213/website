@@ -1,13 +1,18 @@
 const express = require("express");
 const ghost = require("../lib/ghost");
+const format = require("../lib/format");
 
 const router = express.Router();
 
 router.get("/", async (req, res, next) => {
   const url = `/api/v2/content/posts/?include=tags&limit=5`;
-  const posts = await ghost.get({ url, req, next });
+  const { posts, meta } = await ghost.get({ url, req });
 
-  res.status(200).send(posts);
+  res.status(200).render("blog", {
+    route: "blog",
+    posts: posts.map(format),
+    ...meta,
+  });
 });
 
 router.get("/page/:page", async (req, res, next) => {
@@ -18,13 +23,17 @@ router.get("/page/:page", async (req, res, next) => {
   }
 
   const url = `/api/v2/content/posts/?include=tags&page=${page}&limit=5`;
-  const posts = await ghost.get({ url, req, next });
+  const { posts, meta } = await ghost.get({ url, req });
 
-  if (!posts.posts.length) {
+  if (!posts.length) {
     return await next();
   }
 
-  res.status(200).send(posts);
+  res.status(200).render("blog", {
+    route: "blog",
+    posts: posts.map(format),
+    ...meta,
+  });
 });
 
 module.exports = router;

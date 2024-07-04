@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block body %}
+  {% include "partial/blog_header.html" %}
+  {% if pagination.prev %}
+    <section class="section mt-6 py-0">
+      <div class="container is-max-desktop pagination">
+        <aside class="pagination__arrow">↑</aside>
+        <a class="pagination__link" href="/blog/page/{{ pagination.prev }}/">Новее</a>
+      </div>
+    </section>
+  {% endif %}
+  <section class="section default-section {% if pagination.prev %}mt-4{% else %}mt-6{% endif %} pt-0">
+    <div class="container is-max-desktop">
+      {% for post in posts %}
+        {% include "partial/blog_post_list.html" %}
+      {% endfor %}
+    </div>
+  </section>
+  {% if pagination.next %}
+    <section class="section py-0">
+      <div class="container is-max-desktop pagination">
+        <aside class="pagination__arrow">↓</aside>
+        <a class="pagination__link" href="/blog/page/{{ pagination.next }}/">Старее</a>
+      </div>
+    </section>
+  {% endif %}
+  {% include "partial/footer.html" %}
+{% endblock %}
