@@ -1,4 +1,3 @@
-const createError = require("http-errors");
 const express = require("express");
 const consola = require("consola");
 const path = require("path");
@@ -30,9 +29,9 @@ app.use("/", require("./routes/index"));
 app.use("/", require("./routes/page"));
 
 // catch 404 and forward to error handler
-app.use(function (req, res, next) {
-  next(createError(404));
-});
+//app.use(function (req, res, next) {
+  //next(createError(404));
+//});
 
 // error handler
 //app.use(function (err, req, res, next) {
