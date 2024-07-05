@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block body %}
+  {% include "partial/blog_header.html" %}
+  <section class="section default-section">
+    <div class="container is-max-desktop">
+      <h1 class="title is-3 my-0">Заметки с тегом «{{ tag.name }}»</h1>
+      {% if tag.description %}<div class="content">{{ tag.description | safe }}</div>{% endif %}
+    </div>
+    <section>
+      {% if pagination.prev %}
+        <section class="section mt-6 py-0">
+          <div class="container is-max-desktop pagination">
+            <aside class="pagination__arrow">↑</aside>
+            <a class="pagination__link" href="/tags/{{ tag.slug }}/page/{{ pagination.prev }}/">Новее</a>
+          </div>
+        </section>
+      {% endif %}
+      <section class="section default-section {% if pagination.prev %}mt-4{% else %}mt-6{% endif %} pt-0">
+        <div class="container is-max-desktop">
+          {% for post in posts %}
+            {% include "partial/blog_post_list.html" %}
+          {% endfor %}
+        </div>
+      </section>
+      {% if pagination.next %}
+        <section class="section py-0">
+          <div class="container is-max-desktop pagination">
+            <aside class="pagination__arrow">↓</aside>
+            <a class="pagination__link" href="/tags/{{ tag.slug }}/page/{{ pagination.next }}/">Старее</a>
+          </div>
+        </section>
+      {% endif %}
+      {% include "partial/footer.html" %}
+    </section>
+  </section>
+{% endblock %}

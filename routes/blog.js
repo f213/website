@@ -26,7 +26,7 @@ router.get("/page/:page", async (req, res, next) => {
   const { posts, meta } = await ghost.get({ url, req });
 
   if (!posts.length) {
-    return await next();
+    return res.send(404);
   }
 
   res.status(200).render("blog", {
