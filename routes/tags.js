@@ -34,6 +34,8 @@ router.get("/:slug", async (req, res, next) => {
   });
 });
 
+router.get("/:slug/page/1", (req, res) => res.redirect(301, `/tags/${req.params.slug}/`));
+
 router.get("/:slug/page/:page", async (req, res, next) => {
   const page = parseInt(req.params.page, 10);
   if (!page) {

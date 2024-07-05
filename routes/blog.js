@@ -14,6 +14,8 @@ router.get("/", async (req, res, next) => {
   });
 });
 
+router.get("/page/1", (req, res) => res.redirect(301, "/blog/"));
+
 router.get("/page/:page", async (req, res, next) => {
   const page = parseInt(req.params.page, 10);
 
