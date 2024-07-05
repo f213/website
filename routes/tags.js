@@ -20,7 +20,7 @@ router.get("/:slug", async (req, res, next) => {
     return res.status(404);
   }
 
-  const { posts, meta } = await getPosts({ req, tag });
+  const { posts, meta } = await getPosts({ req, filter: `tag:${tag.slug}` });
 
   if (!posts.length) {
     return res.send(404);
@@ -48,7 +48,7 @@ router.get("/:slug/page/:page", async (req, res, next) => {
     return res.status(404);
   }
 
-  const { posts, meta } = await getPosts({ req, tag, page });
+  const { posts, meta } = await getPosts({ req, page, filter: `tag:${tag.slug}` });
   if (!posts.length) {
     return res.send(404);
   }
