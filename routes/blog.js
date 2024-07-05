@@ -1,12 +1,11 @@
 const express = require("express");
 const ghost = require("../lib/ghost");
-const format = require("../lib/format");
+const { fetch: getPosts, format } = require("../lib/posts");
 
 const router = express.Router();
 
 router.get("/", async (req, res, next) => {
-  const url = `/api/v2/content/posts/?include=tags&limit=5`;
-  const { posts, meta } = await ghost.get({ url, req });
+  const { posts, meta } = await getPosts({ req });
 
   res.status(200).render("blog", {
     route: "blog",
@@ -22,8 +21,7 @@ router.get("/page/:page", async (req, res, next) => {
     return await next();
   }
 
-  const url = `/api/v2/content/posts/?include=tags&page=${page}&limit=5`;
-  const { posts, meta } = await ghost.get({ url, req });
+  const { posts, meta } = await getPosts({ req, page });
 
   if (!posts.length) {
     return res.send(404);

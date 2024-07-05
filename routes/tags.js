@@ -1,6 +1,6 @@
 const express = require("express");
 const ghost = require("../lib/ghost");
-const format = require("../lib/format");
+const { fetch: getPosts, format } = require("../lib/posts");
 
 const router = express.Router();
 
@@ -11,16 +11,6 @@ async function getTag(req) {
   const tag = (await ghost.get({ url, req, cache: true })).tags[0];
 
   return tag;
-}
-
-async function getPosts({ req, tag, page }) {
-  page = page ? page : 1;
-
-  const url = `/api/v2/content/posts/?filter=tag:${tag.slug}&page=${page}&include=tags&limit=5`;
-
-  const { posts, meta } = await ghost.get({ url, req, cache: true });
-
-  return { posts, meta };
 }
 
 router.get("/:slug", async (req, res, next) => {
@@ -55,8 +45,6 @@ router.get("/:slug/page/:page", async (req, res, next) => {
   if (!tag) {
     return res.status(404);
   }
-
-  console.log(tag);
 
   const { posts, meta } = await getPosts({ req, tag, page });
   if (!posts.length) {
