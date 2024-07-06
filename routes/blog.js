@@ -1,12 +1,13 @@
 const express = require("express");
 const ghost = require("../lib/ghost");
-const { fetch: getPosts, format } = require("../lib/posts");
+const { fetch: getPosts, format, latestDate } = require("../lib/posts");
 
 const router = express.Router();
 
 router.get("/", async (req, res, next) => {
   const { posts, meta } = await getPosts({ req });
 
+  res.append("Last-Modified", latestDate(posts).toUTCString());
   res.status(200).render("blog", {
     route: "blog",
     posts: posts.map(format),
@@ -29,6 +30,7 @@ router.get("/page/:page", async (req, res, next) => {
     return res.send(404);
   }
 
+  res.append("Last-Modified", latestDate(posts).toUTCString());
   res.status(200).render("blog", {
     route: "blog",
     posts: posts.map(format),

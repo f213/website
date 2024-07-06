@@ -16,6 +16,7 @@ router.get("/:slug", async (req, res, next) => {
     })
   ).posts;
 
+  res.append("Last-Modified", new Date(post.updated_at).toUTCString());
   res.status(200).render("page", {
     route: "blog",
     post: format(post),
