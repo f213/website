@@ -13,6 +13,7 @@ const app = express();
 
 // logging
 app.set("trust proxy", true);
+app.disable("x-powered-by");
 app.use(morgan("combined"));
 
 // view engine setup
@@ -20,13 +21,14 @@ app.set("view engine", "html");
 nunjucks.express(app); // init nunjucks, https://mozilla.github.io/nunjucks/api.html#express
 
 app.use(express.static(path.join(__dirname, "public")));
+app.use(require("./middleware/fancy_urls"));
 
 app.use("/featured", require("./routes/featured"));
 app.use("/blog", require("./routes/blog"));
 app.use("/tags", require("./routes/tags"));
-app.use("/", require("./routes/ghost"));
-app.use("/", require("./routes/index"));
-app.use("/", require("./routes/page"));
+app.use(require("./routes/ghost"));
+app.use(require("./routes/index"));
+app.use(require("./routes/page"));
 
 // catch 404 and forward to error handler
 //app.use(function (req, res, next) {
@@ -45,7 +47,7 @@ app.use("/", require("./routes/page"));
 //});
 
 /* Run express */
-const host = process.env.HOST || "127.0.0.1";
+const host = process.env.HOST || "0.0.0.0";
 const port = process.env.PORT || 3000;
 app.set("port", port);
 app.listen(port, host);
