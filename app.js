@@ -22,6 +22,7 @@ nunjucks.express(app); // init nunjucks, https://mozilla.github.io/nunjucks/api.
 
 app.use(express.static(path.join(__dirname, "public")));
 app.use(require("./middleware/fancy_urls"));
+app.use(require("./middleware/redirects"));
 
 app.use("/featured", require("./routes/featured"));
 app.use("/blog", require("./routes/blog"));
