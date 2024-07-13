@@ -101,6 +101,16 @@
   line-height: 2;
 }
 
+.home-page__title {
+  position: relative;
+  left: -0.3rem;
+}
+
+.vcru-link {
+  position: relative;
+  top: 0.5rem;
+}
+
 .blog-post {
   max-width: 100%;
   overflow: scroll;
@@ -203,7 +213,6 @@
     transform: rotate(360deg);
   }
 }
-
 
 /* post content */
 .content {
@@ -349,12 +358,10 @@
   }
 }
 
-
 /* Lists */
 
 .content ul,
 .content ol,
-.app-list,
 .content .app-list /* override bulma .content ul */ {
   list-style-type: none !important;
 
@@ -398,6 +405,22 @@ ol.app-list {
   }
 }
 
+.home-page__list {
+  list-style-type: none !important;
+  li {
+    margin-bottom: 1rem;
+  }
+  @media (width > 768px) {
+    li:before {
+      content: "\2014\a0";
+      position: absolute;
+      left: -0.6rem;
+    }
+    li {
+      margin-bottom: 0.3rem;
+    }
+  }
+}
 
 /* LEGACY */
 

@@ -17,7 +17,6 @@ app.set("trust proxy", true);
 app.disable("x-powered-by");
 app.use(morgan("combined"));
 
-
 // view engine setup
 app.set("view engine", "html");
 nunjucks.express(app); // init nunjucks, https://mozilla.github.io/nunjucks/api.html#express

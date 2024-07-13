@@ -1,7 +1,7 @@
 <article class="blog-post">
   {% block title %}<h1 class="title is-size-3 is-size-4-mobile mb-1">{{ post.title }}</h1>{% endblock %}
   <time datetime="{{ post.created_at }}" class="is-block mb-5 is-size-7 has-text-grey">{{ post.time_ago }}</time>
-  <div class="content mb-1">{{ post.html | safe }}</div>
+  <div class="content mb-5">{{ post.html | safe }}</div>
   <nav class="blog-tags">
     {% for tag in post.tags %}
       <a class="mr-3 is-lowercase blog-tag__link" href="/tags/{{ tag.slug }}/">{{ tag.name }}</a>
