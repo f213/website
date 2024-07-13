@@ -1,0 +1,131 @@
+{% extends "layout.html" %}
+
+{% block body %}
+  <div class="container home-page">
+    <header class="columns pt-6 m-auto">
+      <div class="column is-three-fifths pt-0 pr-6">
+        <h1 class="title is-size-1-desktop mb-0">Фёдор Борщёв</h1>
+        <nav class="mb-6">
+          <a href="/blog/" class="nav__link"><span class="nav__label">Блог</span></a>
+          <a href="tg://resolve?domain=pmdaily" class="tg-link nav__link"> <span class="nav__label">Телеграм</span></a>
+          <a target="_blank" href="https://tough-dev.school/" class="nav__link">
+            <span class="nav__label">Школа</span>
+          </a>
+          <a target="_blank" href="http://fedorandsamat.com/" class="nav__link">
+            <span class="nav__label">Нанять меня</span>
+          </a>
+        </nav>
+        <p class="home-page__lead">
+          Руковожу <a class="home-page__link" href="http://tough-dev.school">Школой Сильных Программистов</a>, где
+          мы&nbsp;делаем синьёров, тимлидов и&nbsp;архитекторов из&nbsp;ребят мидл-уровня. А&nbsp;ещё&nbsp;у&nbsp;меня
+          есть <a class="home-page__link" href="http://fedorandsamat.com">бутиковый аутсорс</a>, в&nbsp;котором внедрено
+          больше инженерных практик, чем в&nbsp;средней продуктовой компании.
+        </p>
+        <h2 class="title is-3 mt-6 mb-1">Сделал</h2>
+        <ul class="mx-0">
+          <li>
+            Сайт и LMS «<a
+              class="home-page__link"
+              href="https://webium.ru"
+              rel="noindex, nofollow"
+              class="home-page__link"
+              >Вебиума</a
+            >», крупнейшей онлайн-школы для подготовки к ЕГЭ.
+          </li>
+          <li>
+            <a class="home-page__link" href="/snob-blogs/" class="home-page__link">Блоги на «Снобе»</a>
+            — движок для UGC на одном из известнейших российских медиа.
+          </li>
+          <li>
+            Всю технологическую часть в&nbsp;<a
+              href="https://gdematerial.ru/"
+              rel="noindex, nofollow"
+              class="home-page__link"
+              >Маркетплейсе стройматериалов</a
+            >
+          </li>
+          <li>
+            Запустил сайт «<a
+              class="home-page__link"
+              href="https://www.zr.ru/"
+              rel="noindex, nofollow"
+              class="home-page__link"
+              >За&nbsp;рулём</a
+            >» —&nbsp;старейшего автомобильного журнала в&nbsp;России.
+          </li>
+          <li>
+            Выступил на
+            <a class="home-page__link" href="/tags/talks/" class="home-page__link">десятке отраслевых конференций</a>.
+          </li>
+          <li>
+            Выложил много <a class="home-page__link" href="/opensource-projects/" class="home-page__link">опенсорса</a>,
+            в основном на python и&nbsp;js.
+          </li>
+        </ul>
+      </div>
+      <div class="column is-hidden-mobile pt-5">
+        <img src="/i/me.webp" width="600" />
+      </div>
+    </header>
+    <section class="columns m-auto">
+      <div class="column">
+        <h2 class="title is-3">Написал</h2>
+        <div class="fixed-grid has-1-cols-mobile">
+          <div class="grid">
+            <div class="cell">
+              <a class="home-page__link" href="/slack-productivity/">Как корпоративный чат убивает продуктивность</a>
+            </div>
+            <div class="cell"><a class="home-page__link" href="/bro-said/">Почему важно выполнять обещания</a></div>
+            <div class="cell">
+              <a class="home-page__link" href="/production-vs-consumption/">Производство и потребление</a>
+            </div>
+            <div class="cell"><a class="home-page__link" href="/time-and-money/">Время &gt; Деньги</a></div>
+            <div class="cell">
+              <a class="home-page__link" href="/small-changes/">Небольшие доработочки (перевод)</a>
+            </div>
+            <div class="cell"><a class="home-page__link" href="/hypothesis/">90% фич вылетает в трубу</a></div>
+            <div class="cell">
+              <a
+                class="home-page__link"
+                href="https://vc.ru/services/60710-github-dlya-nebolshoy-komandy"
+                rel="noindex,nofollow"
+              >
+                <img class="image is-24x24 is-pulled-left mr-1" src="/i/vcru.png" />GitHub как единственное средство
+                общения
+              </a>
+            </div>
+            <div class="cell">
+              <a class="home-page__link" href="/middle-way/">Программистам: три варианта развития мидла</a>
+            </div>
+            <div class="cell"><a class="home-page__link" href="/50-percent/">Тупое правило про 50 процентов</a></div>
+            <div class="cell">
+              <a class="home-page__link" href="/jumpstart/">Как выучить любой язык программирования</a>
+            </div>
+          </div>
+        </div>
+        <p class="mt-6 mb-1">
+          Еще больше — в <a class="home-page__link" href="tg://resolve?domain=pmdaily">телеграме:</a>
+        </p>
+        <a href="tg://resolve?domain=pmdaily"
+          ><img src="/i/tg.webp" alt="Телеграм" width="800" />
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© <a class="footer__email" href="mailto:fedor@borshev.com">Фёдор Борщёв</a></p>
+      <div id="poop" class="footer__poop is-size-4">
+        <p>💩</p>
+      </div>
+      <script type="text/javascript">
+        const poop = document.getElementById("poop");
+        poop.addEventListener("click", () => {
+          poop.classList.add("footer__poop--spinning");
+          window.setTimeout(() => {
+            poop.classList.remove("footer__poop--spinning");
+          }, 1000);
+        });
+      </script>
+    </footer>
+  </div>
+{% endblock %}
