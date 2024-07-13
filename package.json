@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node app.js",
-    "dev": "cross-env NODE_ENV=development nodemon app.js",
+    "start": "node server.js",
+    "dev": "cross-env NODE_ENV=development nodemon server.js",
     "lint": "npx prettier . --check",
+    "test": "cross-env BACKEND_URL=http://localhost:2368 node --test",
     "fmt": "npx prettier . --write"
   },
   "dependencies": {
@@ -26,7 +27,8 @@
     "dotenv": "^16.4.5",
     "nodemon": "^3.1.4",
     "prettier": "^3.3.2",
-    "prettier-plugin-jinja-template": "^1.4.1"
+    "prettier-plugin-jinja-template": "^1.4.1",
+    "supertest": "^7.0.0"
   },
   "nodemonConfig": {
     "watch": [

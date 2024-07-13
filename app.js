@@ -1,6 +1,5 @@
 const express = require("express");
 const compression = require("compression");
-const consola = require("consola");
 const path = require("path");
 const morgan = require("morgan");
 
@@ -52,13 +51,4 @@ app.use("/", (req, res) => res.render("home_page"));
 //res.render("error");
 //});
 
-/* Run express */
-const host = process.env.HOST || "0.0.0.0";
-const port = process.env.PORT || 3000;
-app.set("port", port);
-app.listen(port, host);
-
-consola.ready({
-  message: `Server listening on http://${host}:${port}`,
-  badge: true,
-});
+module.exports = app;
