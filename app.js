@@ -1,4 +1,5 @@
 const express = require("express");
+const compression = require("compression");
 const consola = require("consola");
 const path = require("path");
 const morgan = require("morgan");
@@ -16,11 +17,16 @@ app.set("trust proxy", true);
 app.disable("x-powered-by");
 app.use(morgan("combined"));
 
+
 // view engine setup
 app.set("view engine", "html");
 nunjucks.express(app); // init nunjucks, https://mozilla.github.io/nunjucks/api.html#express
 
+app.use(compression());
 app.use(express.static(path.join(__dirname, "public")));
+app.use("/bulma-bundled.css", (req, res) =>
+  res.sendFile(__dirname + "/node_modules/bulma/css/versions/bulma-no-dark-mode.min.css"),
+);
 app.use(require("./middleware/fancy_urls"));
 app.use(require("./middleware/redirects"));
 
