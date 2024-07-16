@@ -1,7 +1,9 @@
 {% extends "layout.html" %}
 {% block head %}
-  {% include "partial/seo/opengraph.html" %}
-  {% include "partial/seo/jsonld.html" %}
+  {% if not post.is_page %}
+    {% include "partial/seo/opengraph.html" %}
+    {% include "partial/seo/jsonld.html" %}
+  {% endif %}
 {% endblock %}
 {% block body %}
   {% include "partial/blog_header.html" %}
