@@ -1,0 +1,24 @@
+<meta property="og:type" content="article" />
+<meta property="og:url" content="{{ origin }}/{{ post.slug }}/" />
+
+{% if post.og_title %}
+  <meta property="og:title" content="{{ post.og_title }}" />
+{% else %}
+  <meta property="og:title" content="{{ post.title }}" />
+{% endif %}
+
+{% if post.og_image %}
+  <meta property="og:description" content="{{ post.og_image }}" />
+{% elif post.og_feature_image %}
+  <meta property="og:description" content="{{ post.feature_image }}" />
+{% endif %}
+
+{% if post.og_description %}
+  <meta property="og:description" content="{{ post.og_description }}" />
+{% elif post.excerpt %}
+  <meta property="og:description" content="{{ post.excerpt }}" />
+{% endif %}
+
+<meta property="article:author" content="Фёдор Борщёв" />
+<meta propetry="article:published_time" content="{{ post.created_at }}" />
+<meta propetry="article:modified_time" content="{{ post.updated_at }}" />
