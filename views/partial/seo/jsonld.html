@@ -1,0 +1,24 @@
+<!-- prettier-ignore-start -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "url": "{{ origin }}/{{ post.slug }}/",
+  {% if post.og_image %}
+    "image": "{{ post.og_image }}",
+  {% elif post.og_feature_image %}
+    "image": "{{ post.feature_image }}",
+  {% endif %}
+  "dateCreated": "{{ post.created_at }}",
+  "datePublished": "{{ post.published_at }},
+  "dateModified": "{{ post.updated_at }}",
+  "inLanguage": "ru-RU",
+  "author": {
+    "@type": "Person",
+    "name": "Фёдор Борщёв",
+    "url": "https://borshev.com",
+  },
+  "articleBody": {{ post.plaintext }}"
+}
+</script>
+<!-- prettier-ignore-end -->
