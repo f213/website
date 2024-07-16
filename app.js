@@ -3,8 +3,6 @@ const compression = require("compression");
 const path = require("path");
 const morgan = require("morgan");
 
-const nunjucks = require("./lib/nunjucks");
-
 if (process.env.NODE_ENV == "development") {
   require("dotenv").config();
 }
@@ -18,7 +16,7 @@ app.use(morgan("combined"));
 
 // view engine setup
 app.set("view engine", "html");
-nunjucks.express(app); // init nunjucks, https://mozilla.github.io/nunjucks/api.html#express
+app.engine("html", require("./lib/nunjucks"));
 
 app.use(compression());
 app.use(express.static(path.join(__dirname, "public")));
