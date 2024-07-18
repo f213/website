@@ -87,5 +87,5 @@ jobs:
           host: ${{ secrets.DEPLOY_HOST }}
           username: circle
           key: ${{ secrets.DEPLOY_KEY }}
-          script: docker service update website_frontend --image ghcr.io/${{ steps.image.outputs.lowercase }}:${{ github.sha }} --with-registry-auth
+          script: docker service update borshev_frontend --image ghcr.io/${{ steps.image.outputs.lowercase }}:${{ github.sha }} --with-registry-auth
 
