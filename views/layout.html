@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Фёдор Борщёв" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta
-      name="description"
-      content="{% block description %}Сайт Фёдора Борщёва — CTO и ИТ-консультанта"{% endblock %}"
-    />
-    <title>{% block title %}Фёдор Борщёв{% endblock %}</title>
+    {% block title %}<title>Фёдор Борщёв</title>{% endblock %}
+    {% block description %}
+    {% endblock %}
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />

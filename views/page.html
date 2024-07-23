@@ -1,4 +1,12 @@
 {% extends "layout.html" %}
+{% block title %}
+  <title>{{ post.meta_title if post.meta_title else post.title }}</title>
+{% endblock %}
+{% block description %}
+  {% if post.meta_description %}
+    <meta name="description" content="{{ post.meta_description }}" />
+  {% endif %}
+{% endblock %}
 {% block head %}
   {% if not post.is_page %}
     {% include "partial/seo/opengraph.html" %}

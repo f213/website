@@ -1,4 +1,12 @@
 {% extends "layout.html" %}
+{% block title %}
+  <title>Заметки с тегом «{{ tag.name }}» — блог Фёдора Борщёва</title>
+{% endblock %}
+{% block description %}
+  {% if tag.description %}
+    <meta name="description" content="{{ tag.description }}" />
+  {% endif %}
+{% endblock %}
 {% block body %}
   {% include "partial/blog_header.html" %}
   <section class="section default-section">
