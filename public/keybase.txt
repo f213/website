@@ -1,0 +1,76 @@
+==================================================================
+https://keybase.io/f213
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://borshev.com
+  * I am f213 (https://keybase.io/f213) on keybase.
+  * I have a public key with fingerprint 90C9 8CE7 6DD4 1436 6833  3779 5124 25AF 26C9 5485
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120643c211dc34c6e6cae779a9c030c7147167e7e28ee6ae51e2030001ea2c562150a",
+      "fingerprint": "90c98ce76dd4143668333779512425af26c95485",
+      "host": "keybase.io",
+      "key_id": "512425af26c95485",
+      "kid": "01018ebb9167f01558dc816e628c00152fbedfcae80de047fdcd168cf3163ba1d33f0a",
+      "uid": "112f01540d9eebea0037c3a832212419",
+      "username": "f213"
+    },
+    "service": {
+      "hostname": "borshev.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1617442067,
+  "expire_in": 157680000,
+  "prev": "59dcfd456af54273474c92a91846ea6025d51b1e0feef0fedc8b39231734165d",
+  "seqno": 22,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.13
+Comment: https://keybase.io/crypto
+
+yMNvAnicbZJ9UFRVGMYXV2IgyxVygIlgvAKrA8I99/tujtkM4owMIATDAE7r/Th3
+2QH2wu7ysSEoNUmQOHzIkJNDDURQqeggX5EkjZpNiqQlFQ0UwTaOSEqJsgp0LqP/
+9c+5c877PM/9ve85F1/Q6/y8UsIjuiK/S3vX6/vhxiLd/hw6oAwTVdmFmcqwXLj6
+gXkydDjNuVYZM2E4IHCGIiUCAFkiKYmBjCRAluUFXsJJXGIBxQKGhSwkOAgZAdIA
+EqiA4wAKhEQzBKBxAYvGFKvNAu0FdqvNiWJ5XOI5CbKMLFOAIhmGI0kSpdKAoAha
+UAhG4mmKo5ExR3VoDgQnCg4YY1XRGdqYV/H+R/+MGwccFEUewSk4oGlOljiA6AlO
+Qmw0oYhQVlArHC5DnGIVWZIBw0kKCRhSFIBMksoqd9FqHACElkLhMg+hCAUcJ1mJ
+FDiSIBAB4DWhA9ptQj5EaoUAJFYejaGTYqsEtaFqXTytiqrdkQOLYyQ1H9kK7KpT
+ldQ8VMhxOgscJs3odBVoyhIomp9mmEWrTUYjRI5iaHdYVRtmAkgpOa1aKGAAS1Ho
+qthoDJYWWO3QbNUUNMtw6C5w7T+wWBsYL0uKTNGMoNAUwZIUS0k8IfCAoxgoMDhB
+yzQQAcQVCBW0oKmJJE+QAEkBQ8uY1lWhTcVMBIE4BQvKdFgtNsFZZIdY+TfD+9bq
+vPx0z3mv0d6Wzs/X8OzF4X4GXStz269jY4Nj6MjyRBbjO+kIbPnQfwKv+nRQ3Tu8
+uy+IOxnQFjEQXrUtyjxbsaHh1o6V2Apnxo8PepJbTiWdctXbl2/31B99MtQ0Pm+c
+7D5niSgbT7R0+P/9UkKJvrW67+riPUPVXJcr35Ttu3BneeWt1EZP7wavzV7uVwsj
+1615/41/qh9PN959k/IZ0QcvnvC5lHm9so3cJcd/HRnkiV24epKr3YPNnZ2e/2Nn
+ysvbe78N/Wjl9aZr7gDz1OFxNt0z/+CAvn1dSfy45x3lUU2Ank1r3TbbXNmz5VBi
+aOmFjfruMPb+B1LSjfKEUl/vbCnUQd3cH9If9OLAT59vuth5Pja68+Zof3tW7ntx
+hVsqljoHU28sBWeae9ovjPxwMCGtEWZdHv1sRxzwMz5/Vu/2iLmJ6d5G57GJV2rW
+Ggvz1h/erGzn/GuvJz3kt4b3GP88lxx/uvp8btHjipqmvVPDhl2Zo8XXKu99eWdq
+aFZ3Zn1cckr8TGLm261z/OLWE4a6KK639PfAnZ6l7If5f5V9seeWd8QncRbbvvY+
+NSPYZbzic/z+2MGqA80zakudD7epdqA7OnY6YsQN3KcTqKpHIcf/HRuMei2wrq3/
+Utisq0P35MwvqV81+MQcqg4wdI2F/Ro1Wl0/EPex2/PbkSvzAxmXj002360yuqP9
+56cs6cLCz9X40ZCZ/wDYP7rN
+=zAjn
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/f213
+
+==================================================================
+
