@@ -1,7 +1,6 @@
 const express = require("express");
 const ghost = require("../lib/ghost");
-
-const { format } = require("../lib/posts");
+const format = require("../lib/format");
 
 const router = express.Router();
 

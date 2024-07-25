@@ -1,6 +1,7 @@
 const express = require("express");
 const ghost = require("../lib/ghost");
-const { fetch: getPosts, format } = require("../lib/posts");
+const format = require("../lib/format");
+const { getPosts } = require("../lib/posts");
 
 const router = express.Router();
 
