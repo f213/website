@@ -7,7 +7,7 @@ const router = express.Router();
 const target = process.env.BACKEND_URL || "https://borshev.com";
 
 consola.info("Setting ghost proxy to", target);
-["/content/images", "/ghost", "^/rss/$"].forEach((path) =>
+["/content/images", "/ghost", "/rss"].forEach((path) =>
   router.use(
     path,
     createProxyMiddleware({
