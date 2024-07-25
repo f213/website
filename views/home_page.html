@@ -74,8 +74,9 @@
           </li>
           <li>
             Выложил много <a class="home-page__link" href="/opensource-projects/" class="home-page__link">опенсорса</a>,
-            включая <a class="home-page__link" href="/selfmailbot/">@selfmailbot</a>, <a class="home-page__link" href="https://github.com/tough-dev-school/">весь код Школы</a> и
-            даже <a class="home-page__link" href="https://github.com/f213/website">этот сайт</a>.
+            включая <a class="home-page__link" href="/selfmailbot/">@selfmailbot</a>,
+            <a class="home-page__link" href="https://github.com/tough-dev-school/">весь код Школы</a> и даже
+            <a class="home-page__link" href="https://github.com/f213/website">этот сайт</a>.
           </li>
         </ul>
       </div>
@@ -88,11 +89,11 @@
         <h2 class="title is-3 mb-1 mt-6">Написал</h2>
         <div class="fixed-grid has-1-cols-mobile">
           <div class="grid">
-          {% for post in posts %}
-            <div class="cell">
-              <a class="home-page__link" href="/{{ post.slug }}/">{{ post.title }}</a>
-            </div>
-          {% endfor %}
+            {% for post in posts %}
+              <div class="cell">
+                <a class="home-page__link" href="/{{ post.slug }}/">{{ post.title }}</a>
+              </div>
+            {% endfor %}
             <div class="cell">
               <a class="home-page__link" href="/slack-productivity/">Как корпоративный чат убивает продуктивность</a>
             </div>

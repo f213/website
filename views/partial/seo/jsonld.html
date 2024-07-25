@@ -10,7 +10,9 @@
     "image": "{{ post.feature_image }}",
   {% endif %}
   "dateCreated": "{{ post.created_at }}",
-  "datePublished": "{{ post.published_at }},
+  {% if post.published_at %}
+    "datePublished": "{{ post.published_at }},
+  {% endif %}
   "dateModified": "{{ post.updated_at }}",
   "inLanguage": "ru-RU",
   "author": {

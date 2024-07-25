@@ -29,9 +29,10 @@ app.use(require("./middleware/redirects"));
 app.use("/featured", require("./routes/featured"));
 app.use("/blog", require("./routes/blog"));
 app.use("/tags", require("./routes/tags"));
-app.use(require("./routes/ghost"));
-app.use(require("./routes/page"));
-app.use(require("./routes/home_page"));
+app.use("/p", require("./routes/preview"));
+app.use(require("./routes/ghost")); // ghost admin
+app.use(require("./routes/page")); // blog page
+app.use(require("./routes/home_page")); // home page
 
 // catch 404 and forward to error handler
 //app.use(function (req, res, next) {

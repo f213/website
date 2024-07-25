@@ -1,0 +1,9 @@
+User-Agent: *
+
+Disallow: /ghost/
+Disallow: /p/
+
+User-agent: Yandex
+Disallow: /amp
+
+Host: https://borshev.com
