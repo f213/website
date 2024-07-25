@@ -12,17 +12,26 @@
   <div class="container home-page">
     <header class="columns pt-6 m-auto">
       <div class="column is-three-fifths pt-0 pr-6">
-        <h1 class="title is-size-1-desktop mb-0 home-page__title">Фёдор Борщёв</h1>
-        <nav class="mb-6">
-          <a href="/blog/" class="nav__link"><span class="nav__label">Блог</span></a>
-          <a href="tg://resolve?domain=pmdaily" class="tg-link nav__link"> <span class="nav__label">Телеграм</span></a>
-          <a target="_blank" href="https://tough-dev.school/" class="nav__link">
-            <span class="nav__label">Школа</span>
-          </a>
-          <a target="_blank" href="http://fedorandsamat.com/" class="nav__link">
-            <span class="nav__label">Нанять меня</span>
-          </a>
-        </nav>
+        <div class="columns is-mobile">
+          <figure class="column is-one-quarter image is-128x128 pt-2 is-hidden-tablet">
+            <img class="is-rounded" src="/i/me-home-page.webp" alt="Фёдор Борщёв" />
+          </figure>
+          <div class="column">
+            <h1 class="title is-size-1-desktop mb-0 home-page__title">Фёдор Борщёв</h1>
+            <nav class="mb-6 is-hidden-mobile">
+              <a href="/blog/" class="nav__link"><span class="nav__label">Блог</span></a>
+              <a href="tg://resolve?domain=pmdaily" class="tg-link nav__link">
+                <span class="nav__label">Телеграм</span></a
+              >
+              <a target="_blank" href="https://tough-dev.school/" class="nav__link">
+                <span class="nav__label">Школа</span>
+              </a>
+              <a target="_blank" href="http://fedorandsamat.com/" class="nav__link">
+                <span class="nav__label">Нанять меня</span>
+              </a>
+            </nav>
+          </div>
+        </div>
         <main class="home-page__lead">
           Руковожу <a class="home-page__link" href="http://tough-dev.school">Школой Сильных Программистов</a>, где
           мы&nbsp;делаем синьёров, тимлидов и&nbsp;архитекторов из&nbsp;ребят мидл-уровня. А&nbsp;ещё&nbsp;у&nbsp;меня
@@ -65,9 +74,7 @@
           </li>
           <li>
             Выложил много <a class="home-page__link" href="/opensource-projects/" class="home-page__link">опенсорса</a>,
-            включая <a class="home-page__link" href="/selfmailbot/">@selfmailbot</a>,
-            <a class="home-page__link" href="https://github.com/f213/postgres-backup-s3">докер-образ</a> для бекапа
-            PostgreSQL в S3, <a class="home-page__link" href="https://github.com/tough-dev-school/">весь код Школы</a> и
+            включая <a class="home-page__link" href="/selfmailbot/">@selfmailbot</a>, <a class="home-page__link" href="https://github.com/tough-dev-school/">весь код Школы</a> и
             даже <a class="home-page__link" href="https://github.com/f213/website">этот сайт</a>.
           </li>
         </ul>
@@ -81,6 +88,11 @@
         <h2 class="title is-3 mb-1 mt-6">Написал</h2>
         <div class="fixed-grid has-1-cols-mobile">
           <div class="grid">
+          {% for post in posts %}
+            <div class="cell">
+              <a class="home-page__link" href="/{{ post.slug }}/">{{ post.title }}</a>
+            </div>
+          {% endfor %}
             <div class="cell">
               <a class="home-page__link" href="/slack-productivity/">Как корпоративный чат убивает продуктивность</a>
             </div>
@@ -122,7 +134,7 @@
     <footer class="footer px-3">
       <p>© <a class="footer__email" href="mailto:fedor@borshev.com">Фёдор Борщёв</a></p>
       <div id="poop" class="footer__poop is-size-4">
-        <p>💩</p>
+        <p class="is-unselectable">💩</p>
       </div>
       <script type="text/javascript">
         const poop = document.getElementById("poop");

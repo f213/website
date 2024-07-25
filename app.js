@@ -31,7 +31,7 @@ app.use("/blog", require("./routes/blog"));
 app.use("/tags", require("./routes/tags"));
 app.use(require("./routes/ghost"));
 app.use(require("./routes/page"));
-app.use("/", (req, res) => res.render("home_page"));
+app.use(require("./routes/home_page"));
 
 // catch 404 and forward to error handler
 //app.use(function (req, res, next) {
