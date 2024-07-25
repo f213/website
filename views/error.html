@@ -1,5 +1,15 @@
+{% extends "layout.html" %}
+{% block title %}
+  <title>¯\_(ツ)_/¯</title>
+{% endblock %}
 {% block body %}
-  <h1>Error</h1>
-  <h2>{{ error.status }}</h2>
-  <pre>{{ error.stack }}</pre>
+  {% include "partial/blog_header.html" %}
+  <section class="section default-section">
+    <div class="container is-max-desktop">
+      <h1 class="title is-3 mb-3">Случилась какая-то фигня</h1>
+      <p class="mb-5">Кажется что-то сломалось. Если вас это беспокоит, напишите мне</p>
+      <a class="button is-dark" href="mailto:fedor@borshev.com?subject=У тебя сайт упал, {{ path }}">Написать</a>
+    </div>
+  </section>
+  {% include "partial/footer.html" %}
 {% endblock %}
