@@ -1,9 +1,12 @@
 {
-  "name": "frontend-1",
+  "name": "f213-website",
   "version": "0.0.0",
   "private": true,
+  "engines": {
+    "node": ">=20 <21"
+  },
   "scripts": {
-    "start": "node server.js",
+    "serve": "node server.js",
     "dev": "cross-env NODE_ENV=development nodemon server.js",
     "lint": "npx prettier . --check",
     "test": "cross-env BACKEND_URL=http://localhost:2368 node --test",

@@ -1,0 +1,11 @@
+node_modules
+.git
+.env
+test
+.gitignore
+.DS_Store
+.dockerignore
+.editorconfig
+.prettierrc
+Dockerfile
+docker-compose.yml
