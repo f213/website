@@ -190,6 +190,7 @@
   cursor: pointer;
   position: relative;
   left: -0.2rem;
+  -webkit-tap-highlight-color: transparent;
   p {
     position: relative;
     top: -0.2rem;
