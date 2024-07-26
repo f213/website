@@ -31,6 +31,8 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/bulma-bundled.css", (req, res) =>
   res.sendFile(__dirname + "/node_modules/bulma/css/versions/bulma-no-dark-mode.min.css"),
 );
+app.use("/a.js", (req, res) => res.sendFile(__dirname + "/node_modules/ackee-tracker/dist/ackee-tracker.min.js"));
+
 app.use(require("./middleware/fancy_urls"));
 app.use(require("./middleware/redirects"));
 

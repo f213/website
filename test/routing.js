@@ -10,6 +10,12 @@ describe("Static file routing", async () => {
     assert.equal(response.status, 200);
     assert.match(response.headers["content-type"], /text\/css/);
   });
+  it("Serves ackee tracker js", async () => {
+    const response = await request(app).get("/a.js");
+    assert.equal(response.status, 200);
+    assert.match(response.headers["content-type"], /application\/javascript/);
+
+  });
   it("Serves static files", async () => {
     const response = await request(app).get("/css/style.css");
     assert.equal(response.status, 200);
