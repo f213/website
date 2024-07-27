@@ -17,7 +17,7 @@
   </section>
   {% if pagination.prev %}
     <section class="section mt-6 py-0">
-      <div class="container is-max-desktop pagination">
+      <div class="container is-max-desktop">
         <aside class="pagination__arrow">↑</aside>
         <a class="pagination__link" href="/tags/{{ tag.slug }}/page/{{ pagination.prev }}/">Новее</a>
       </div>
@@ -32,7 +32,7 @@
   </section>
   {% if pagination.next %}
     <section class="section py-0">
-      <div class="container is-max-desktop pagination">
+      <div class="container is-max-desktop">
         <aside class="pagination__arrow">↓</aside>
         <a class="pagination__link" href="/tags/{{ tag.slug }}/page/{{ pagination.next }}/">Старее</a>
       </div>
