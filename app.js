@@ -46,6 +46,11 @@ app.use(require("./routes/ghost")); // ghost admin
 app.use(require("./routes/page")); // blog page
 app.use(require("./routes/home_page")); // home page
 
+app.use(() => {
+  // send 404 by default
+  throw new Error("404");
+});
+
 if (process.env.NODE_ENV !== "development") {
   Sentry.setupExpressErrorHandler(app);
   app.use((err, req, res, next) => res.status(404).render("error", { path: req.path }));
