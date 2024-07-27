@@ -40,6 +40,7 @@ app.use("/featured", require("./routes/featured"));
 app.use("/blog", require("./routes/blog"));
 app.use("/tags", require("./routes/tags"));
 app.use("/p", require("./routes/preview"));
+app.use(require("./routes/fake"));
 app.use(require("./routes/ghost")); // ghost admin
 app.use(require("./routes/page")); // blog page
 app.use(require("./routes/home_page")); // home page
