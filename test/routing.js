@@ -33,4 +33,9 @@ describe("Redirects", async () => {
     assert.equal(response.status, 301);
     assert.equal(response.headers["location"], "/tags/favorites/");
   });
+  it("Redirects old AMP urls", async () => {
+    const response = await request(app).get("/amp/any-post/");
+    assert.equal(response.status, 301);
+    assert.equal(response.headers["location"], "/any-post/");
+  });
 });

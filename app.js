@@ -34,6 +34,7 @@ app.use("/bulma-bundled.css", (req, res) =>
 app.use("/a.js", (req, res) => res.sendFile(__dirname + "/node_modules/ackee-tracker/dist/ackee-tracker.min.js"));
 
 app.use(require("./middleware/fancy_urls"));
+app.use(require("./middleware/old_amp_urls"));
 app.use(require("./middleware/redirects"));
 
 app.use("/featured", require("./routes/featured"));
