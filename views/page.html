@@ -8,6 +8,7 @@
   {% endif %}
 {% endblock %}
 {% block head %}
+  <link rel="canonical" href="{{ origin }}/{{ post.slug }}/" />
   {% if not post.is_page %}
     {% include "partial/seo/opengraph.html" %}
     {% include "partial/seo/jsonld.html" %}

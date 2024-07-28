@@ -7,6 +7,9 @@
     <meta name="description" content="{{ tag.description }}" />
   {% endif %}
 {% endblock %}
+{% block head %}
+  <link rel="canonical" href="{{ origin }}/tags/{{ tag.slug }}/" />
+{% endblock %}
 {% block body %}
   {% include "partial/blog_header.html" %}
   <section class="section default-section">

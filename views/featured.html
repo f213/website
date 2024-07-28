@@ -2,6 +2,9 @@
 {% block title %}
   <title>Избранные заметки — блог Фёдора Борщёва</title>
 {% endblock %}
+{% block head %}
+  <link rel="canonical" href="{{ origin }}/featured/" />
+{% endblock %}
 {% block body %}
   {% include "partial/blog_header.html" %}
   {% if pagination.prev %}
