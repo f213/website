@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+  <loc>{{ origin }}/</loc>
+  <lastmod>{{ today }}</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>{{ origin }}/blog/</loc>
+  <lastmod>{{ today }}</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>{{ origin }}/featured/</loc>
+  <lastmod>{{ today }}</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.5</priority>
+</url>
+{% for post in posts %}
+  <url>
+    <loc>{{ origin }}/{{ post.slug }}/</loc>
+    <lastmod>{{ post.lastmod }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+{% endfor %}
+{% for tag in tags %}
+  <url>
+    <loc>{{ origin }}/tags/{{ tag.slug }}/</loc>
+    <lastmod>{{ tag.lastmod }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+{% endfor %}
+</urlset>
+

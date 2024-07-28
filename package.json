@@ -44,6 +44,6 @@
       "middleware",
       "."
     ],
-    "ext": "js,json,html"
+    "ext": "js,json,xml,html"
   }
 }

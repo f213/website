@@ -25,6 +25,7 @@ if (process.env.SENTRY_DSN) {
 // view engine setup
 app.set("view engine", "html");
 app.engine("html", require("./lib/nunjucks"));
+app.engine("xml", require("./lib/nunjucks"));
 
 app.use(compression());
 app.use(express.static(path.join(__dirname, "public")));
@@ -41,6 +42,7 @@ app.use("/featured", require("./routes/featured"));
 app.use("/blog", require("./routes/blog"));
 app.use("/tags", require("./routes/tags"));
 app.use("/p", require("./routes/preview"));
+app.use("/sitemap.xml", require("./routes/sitemap"));
 app.use(require("./routes/fake"));
 app.use(require("./routes/ghost")); // ghost admin
 app.use(require("./routes/page")); // blog page
