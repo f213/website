@@ -11,16 +11,16 @@
   {% endif %}
   "dateCreated": "{{ post.created_at }}",
   {% if post.published_at %}
-    "datePublished": "{{ post.published_at }},
+    "datePublished": "{{ post.published_at }}",
   {% endif %}
   "dateModified": "{{ post.updated_at }}",
   "inLanguage": "ru-RU",
   "author": {
     "@type": "Person",
     "name": "Фёдор Борщёв",
-    "url": "https://borshev.com",
+    "url": "https://borshev.com"
   },
-  "articleBody": {{ post.plaintext }}"
+  "articleBody": "{{ post.plaintext }}"
 }
 </script>
 <!-- prettier-ignore-end -->
