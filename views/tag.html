@@ -8,7 +8,7 @@
   {% endif %}
 {% endblock %}
 {% block head %}
-  <link rel="canonical" href="{{ origin }}/tags/{{ tag.slug }}/" />
+  <link rel="canonical" href="{{ origin }}/tags/{{ tag.slug }}/{% if page %}page/{{ page }}/{% endif %}" />
 {% endblock %}
 {% block body %}
   {% include "partial/blog_header.html" %}

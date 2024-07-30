@@ -34,6 +34,7 @@ router.get("/page/:page", async (req, res, next) => {
   res.append("Last-Modified", latestDate(posts).toUTCString());
   res.status(200).render("blog", {
     route: "blog",
+    page,
     posts: posts.map(format),
     ...meta,
   });

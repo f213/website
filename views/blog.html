@@ -1,5 +1,8 @@
 {% extends "layout.html" %}
 {% block title %}<title>Блог Фёдора Борщёва</title>{% endblock %}
+{% block head %}
+  <link rel="canonical" href="{{ origin }}/blog/{% if page %}page/{{ page }}/{% endif %}" />
+{% endblock %}
 {% block body %}
   {% include "partial/blog_header.html" %}
   {% if pagination.prev %}

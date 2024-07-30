@@ -57,6 +57,7 @@ router.get("/:slug/page/:page", async (req, res, next) => {
   res.status(200).render("tag", {
     route: "blog",
     tag,
+    page,
     posts: posts.map(format),
     ...meta,
   });
