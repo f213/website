@@ -20,7 +20,7 @@
     "name": "Фёдор Борщёв",
     "url": "https://borshev.com"
   },
-  "articleBody": "{{ post.plaintext }}"
+  "articleBody": "{{ post.plaintext | singleline | safe }}"
 }
 </script>
 <!-- prettier-ignore-end -->
