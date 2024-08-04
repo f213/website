@@ -1,5 +1,7 @@
 {% extends "layout.html" %}
-{% block title %}<title>Блог Фёдора Борщёва</title>{% endblock %}
+<!-- prettier-ignore-start -->
+{% block title %}<title>Блог Фёдора Борщёва{% if page %} — страница {{ page }}{% endif %}</title>{% endblock %}
+<!-- prettier-ignore-end -->
 {% block head %}
   <link rel="canonical" href="{{ origin }}/blog/{% if page %}page/{{ page }}/{% endif %}" />
 {% endblock %}

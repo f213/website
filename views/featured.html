@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block title %}
-  <title>Избранные заметки — блог Фёдора Борщёва</title>
+  <title>Избранные заметки{% if page %}, страница {{ page }}{% endif %} — блог Фёдора Борщёва</title>
 {% endblock %}
 {% block head %}
   <link rel="canonical" href="{{ origin }}/featured/{% if page %}page/{{ page }}/{% endif %}" />

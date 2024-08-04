@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block title %}
-  <title>Заметки с тегом «{{ tag.name }}» — блог Фёдора Борщёва</title>
+  <title>Заметки с тегом «{{ tag.name }}»{% if page %}, страница {{ page }}{% endif %} — блог Фёдора Борщёва</title>
 {% endblock %}
 {% block description %}
   {% if tag.description %}
