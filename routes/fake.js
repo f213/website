@@ -16,4 +16,8 @@ router.get(/^\/wp-(.*)\//, (req, res) => {
   res.send("<h1>Database connection error</h1>");
 });
 
+router.get(/.*wlwmanifest.xml$/, (req, res) =>
+  res.set("Content-Type", "application/xml").render("fake/wlwmanifest.xml"),
+);
+
 module.exports = router;
