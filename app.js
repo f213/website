@@ -43,6 +43,16 @@ app.use("/blog", require("./routes/blog"));
 app.use("/tags", require("./routes/tags"));
 app.use("/p", require("./routes/preview"));
 app.use("/sitemap.xml", require("./routes/sitemap"));
+app.use("/.well-known/traffic-advice", (req, res) =>
+  res.set("Content-Type", "application/trafficadvice+json").send([
+    {
+      user_agent: "prefetch-proxy",
+      google_prefetch_proxy_eap: {
+        fraction: 1.0,
+      },
+    },
+  ]),
+);
 app.use(require("./routes/fake"));
 app.use(require("./routes/ghost")); // ghost admin
 app.use(require("./routes/page")); // blog page
