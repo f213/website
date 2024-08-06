@@ -21,7 +21,7 @@ router.get("/:slug", async (req, res, next) => {
   const similar = post.primary_tag
     ? (
         await ghost.get({
-          url: `/api/v2/content/posts/?tag=${post.primary_tag.slug}&limit=10`,
+          url: `/api/v2/content/posts/?tag=${post.primary_tag.slug}&limit=11`,
           req,
           cache: true,
         })
@@ -32,7 +32,7 @@ router.get("/:slug", async (req, res, next) => {
   res.status(200).render("page", {
     route: post.is_page ? "page" : "blog",
     post: format(post),
-    similar,
+    similar: similar.filter((similarPost) => similarPost.slug !== req.params.slug),
   });
 });
 
