@@ -8,9 +8,9 @@
 {% endif %}
 
 {% if post.og_image %}
-  <meta property="og:description" content="{{ post.og_image }}" />
+  <meta property="og:image" content="{{ post.og_image }}" />
 {% elif post.og_feature_image %}
-  <meta property="og:description" content="{{ post.feature_image }}" />
+  <meta property="og:image" content="{{ post.feature_image }}" />
 {% endif %}
 
 {% if post.og_description %}
