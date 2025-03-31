@@ -13,7 +13,7 @@
     "fmt": "npx prettier . --write"
   },
   "dependencies": {
-    "@sentry/node": "^8.47.0",
+    "@sentry/node": "^9",
     "ackee-tracker": "^5.1.0",
     "axios": "^1.7.2",
     "bulma": "^1.0.1",
