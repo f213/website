@@ -13,7 +13,7 @@
     "fmt": "npx prettier . --write"
   },
   "dependencies": {
-    "@sentry/node": "^9",
+    "@sentry/node": "^10",
     "ackee-tracker": "^5.1.0",
     "axios": "^1.7.2",
     "bulma": "^1.0.1",
@@ -28,8 +28,8 @@
     "timeago.js": "^4.0.2"
   },
   "devDependencies": {
-    "cross-env": "^7.0.3",
-    "dotenv": "^16.4.5",
+    "cross-env": "^10",
+    "dotenv": "^17",
     "nodemon": "^3.1.4",
     "prettier": "^3.3.2",
     "prettier-plugin-jinja-template": "^2.0.0",
