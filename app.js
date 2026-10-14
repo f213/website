@@ -30,9 +30,11 @@ app.engine("xml", require("./lib/nunjucks"));
 app.use(compression());
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/bulma-bundled.css", (req, res) =>
-  res.sendFile(__dirname + "/node_modules/bulma/css/versions/bulma-no-dark-mode.min.css"),
+  res.sendFile("node_modules/bulma/css/versions/bulma-no-dark-mode.min.css", { root: __dirname }),
 );
-app.use("/a.js", (req, res) => res.sendFile(__dirname + "/node_modules/ackee-tracker/dist/ackee-tracker.min.js"));
+app.use("/a.js", (req, res) =>
+  res.sendFile("node_modules/ackee-tracker/dist/ackee-tracker.min.js", { root: __dirname }),
+);
 
 app.use(require("./middleware/fancy_urls"));
 app.use(require("./middleware/old_amp_urls"));

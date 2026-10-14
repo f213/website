@@ -7,15 +7,15 @@ const router = express.Router();
 const target = process.env.BACKEND_URL || "https://borshev.com";
 
 consola.info("Setting ghost proxy to", target);
-["/content/images", "/ghost", "/rss"].forEach((path) =>
-  router.use(
-    path,
-    createProxyMiddleware({
-      target: `${target}${path}`,
-      changeOrigin: true,
-      xfwd: true,
-    }),
-  ),
+const prefixes = ["/content/images", "/ghost", "/rss"];
+
+router.use(
+  createProxyMiddleware({
+    target,
+    pathFilter: (path) => prefixes.some((prefix) => path === prefix || path.startsWith(`${prefix}/`)),
+    changeOrigin: true,
+    xfwd: true,
+  }),
 );
 
 module.exports = router;

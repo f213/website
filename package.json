@@ -3,24 +3,24 @@
   "version": "0.0.0",
   "private": true,
   "engines": {
-    "node": ">=22 <23"
+    "node": ">=24 <25"
   },
   "scripts": {
     "serve": "node server.js",
     "dev": "cross-env NODE_ENV=development nodemon server.js",
     "lint": "npx prettier . --check",
-    "test": "cross-env BACKEND_URL=http://localhost:2368 node --test",
+    "test": "node --test",
     "fmt": "npx prettier . --write"
   },
   "dependencies": {
-    "@sentry/node": "^10",
+    "@sentry/node": "^11",
     "ackee-tracker": "^5.1.0",
     "axios": "^1.7.2",
     "bulma": "^1.0.1",
     "compression": "^1.7.4",
     "consola": "^3.2.3",
     "express": "^5.0.1",
-    "http-proxy-middleware": "^3.0.0",
+    "http-proxy-middleware": "^4.0.0",
     "jsonwebtoken": "^9.0.2",
     "morgan": "^1.10.0",
     "node-cache": "^5.1.2",
@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "cross-env": "^10",
-    "dotenv": "^17",
+    "dotenv": "^18",
     "nodemon": "^3.1.4",
     "prettier": "^3.3.2",
     "prettier-plugin-jinja-template": "^2.0.0",

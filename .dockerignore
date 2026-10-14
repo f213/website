@@ -8,4 +8,5 @@ test
 .editorconfig
 .prettierrc
 Dockerfile
-docker-compose.yml
+AGENTS.md
+CLAUDE.md
