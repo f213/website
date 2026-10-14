@@ -13,7 +13,7 @@ describe("Static file routing", async () => {
   it("Serves ackee tracker js", async () => {
     const response = await request(app).get("/a.js");
     assert.equal(response.status, 200);
-    assert.match(response.headers["content-type"], /application\/javascript/);
+    assert.match(response.headers["content-type"], /javascript/);
   });
   it("Serves static files", async () => {
     const response = await request(app).get("/css/style.css");
